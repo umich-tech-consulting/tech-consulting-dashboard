@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className='block'>
-        <div className='p-10 sm:ml-[96px] md:ml-[96px] lg:ml-[96px] xl:ml-[276px] box-border h-screen bg-neutral-1 dark:bg-neutral-10'>
+        <div className='p-10 sm:ml-[96px] md:ml-[96px] lg:ml-[96px] xl:ml-[276px] box-border h-screen bg-white dark:bg-black'>
           <div className='inset-0 fixed box-border w-fit'>
             <LeftNav />
             <TopNav />

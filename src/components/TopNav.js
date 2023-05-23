@@ -29,7 +29,7 @@ const TopNav = () => {
   }, [darkMode]);
 
     return (
-      <div className="box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] xl:left-[276px] fixed top-0 w-full bg-neutral-1 border-b border-neutral-4 dark:bg-neutral-10 dark:border-neutral-8">
+      <div className="box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] xl:left-[276px] fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8">
         <div className="flex justify-between h-full items-center sm:mr-[96px] md:mr-[96px] lg:mr-[96px] xl:mr-[276px] pl-8 pr-8">
           <div className=" hidden sm:block md:block lg:block xl:block headline-medium text-neutral-9 dark:text-neutral-3">Tech Consultant Dashboard</div>
           <div className="flex gap-x-6">
