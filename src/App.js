@@ -5,6 +5,7 @@ import TopNav from './components/TopNav';
 import LeftNav from './components/LeftNav';
 import CheckIn from './components/CheckIn';
 import CheckOut from './components/CheckOut';
+import LaptopManagement from './components/LaptopManagment';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <div className='flex flex-wrap gap-10 mt-[74px]'>
             <CheckIn />
             <CheckOut />
+            <LaptopManagement />
           </div>
         </div>
       </div>
