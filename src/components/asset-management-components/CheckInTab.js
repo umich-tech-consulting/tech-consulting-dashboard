@@ -60,7 +60,7 @@ const CheckInTab = () => {
               value={noteContent}
               onChange={handleNoteChange}
             ></textarea>
-            <div className="flex justify-end gap-x-2">
+            <div className="flex justify-end gap-x-2 mt-2">
               <button
                 className="label-large w-full border-none bg-neutral-3 text-black dark:bg-neutral-9 dark:text-neutral-1 rounded-md h-10 max-w-md"
                 onClick={handleNoteCancel}
@@ -106,7 +106,7 @@ const CheckInTab = () => {
 
           </div>
           <button
-            className={`mb-2 h-7 dark:text-blue-7 ${
+            className={`mb-2 mt-2 h-7 dark:text-blue-7 ${
               noteContent
                 ? "text-neutral-9 dark:text-neutral-1 dark:bg-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal"
                 : " text-blue-9 label-large"
