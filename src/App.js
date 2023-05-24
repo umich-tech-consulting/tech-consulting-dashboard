@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import './normalize.css'
 import './App.css';
 import './index.css';
 import TopNav from './components/TopNav';
