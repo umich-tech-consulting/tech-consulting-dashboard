@@ -6,12 +6,12 @@ const Layout = () => {
     return (
         <>
             <div className='block'>
-                <div className='p-10 sm:ml-[96px] md:ml-[96px] lg:ml-[96px] xl:ml-[276px] box-border min-h-screen bg-white dark:bg-black'>
+                <div className='pt-10 sm:p-10 sm:ml-[96px] xl:ml-[276px] box-border min-h-screen bg-white dark:bg-black'>
                     <div className='inset-0 fixed box-border w-fit'>
                         <LeftNav />
                         <TopNav />
                     </div>
-                    <div className='flex flex-wrap gap-10 mt-[74px]'>
+                    <div className='justify-center sm:justify-normal flex flex-wrap gap-10 mt-[74px]'>
                         <Outlet />
                     </div>
                 </div>

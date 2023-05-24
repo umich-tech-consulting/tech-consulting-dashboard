@@ -11,7 +11,7 @@ const AssetManagement = () => {
   };
 
   return (
-    <div className="rounded-md max-w-md w-full h-full shadow-light dark:shadow-dark bg-white dark:bg-black">
+    <div className="rounded-md max-w-lg w-full h-full shadow-light dark:shadow-dark bg-white dark:bg-black">
       <div className="flex mb-3">
         <button
           className={`py-3 flex-1 label-large rounded-tl-md bg-white dark:bg-black ${

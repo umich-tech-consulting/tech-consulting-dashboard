@@ -103,12 +103,12 @@ const SwapTab = () => {
               >
                 Current Asset ID #
               </label>
-              <div className="flex max-w-md h-40 flex-col sm:flex-row mr-4">
+              <div className="flex max-w-md h-40 flex-row mr-4">
                 <div className="flex-1 text-right flex justify-center items-center">
                   <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
                 </div>
                 <input
-                  className={`flex-1 sm:flex-2 w-full text-center sm:text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                  className={`flex-1 sm:flex-2 w-full text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                     isInputCurrentIdFocused
                       ? 'focus:bg-white dark:focus:bg-black'
                       : ' focus:placeholder-transparent'
@@ -159,7 +159,7 @@ const SwapTab = () => {
             {noteContent ? `${noteContent.slice(0, 40)}${noteContent.length > 40 ? '...' : ''}` : 'Add Note +'}
           </button>
           <button
-            className={`label-large w-full border-none rounded-md h-10 max-w-md ${
+            className={`label-large w-full border-none rounded-md h-10 ${
               isSubmitDisabled ? 'bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed' : 'bg-blue-9 text-white'
             }`}
             disabled={isSubmitDisabled}

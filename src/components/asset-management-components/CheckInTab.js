@@ -120,7 +120,7 @@ const CheckInTab = () => {
               : "Add Note +"}
           </button>
           <button
-            className={`label-large w-full border-none rounded-md h-10 max-w-md ${
+            className={`label-large w-full border-none rounded-md h-10 ${
               isSubmitButtonDisabled
                 ? "bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed"
                 : "bg-blue-9 text-white"
