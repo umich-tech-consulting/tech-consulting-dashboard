@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import CheckInTab from "./management_util/CheckInTab";
 import CheckOutTab from "./management_util/CheckOutTab";
-import CheckIn from "./CheckIn";
 import SwapTab from "./management_util/SwapTab";
-
-import CheckInTest from "./management_util/CheckInTest";
 
 const LaptopManagement = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -56,8 +53,7 @@ const LaptopManagement = () => {
           <CheckOutTab />
           )}
         {activeTab === 3 && (
-          <CheckInTest />
-          // <SwapTab />
+          <SwapTab />
           )}
       </div>
     </div>

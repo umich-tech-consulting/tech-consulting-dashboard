@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CheckIn = () => {
+const CheckInTab = () => {
   const [assetId, setAssetId] = useState('');
   const [isInputAssetIdFocused, setIsInputAssetIdFocused] = useState(false);
   const [isAddingNote, setIsAddingNote] = useState(false);
@@ -112,4 +112,4 @@ const CheckIn = () => {
   );
 };
 
-export default CheckIn;
+export default CheckInTab;

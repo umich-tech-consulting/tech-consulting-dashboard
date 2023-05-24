@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CheckOut = () => {
+const CheckOutTab = () => {
   const [assetId, setAssetId] = useState('');
   const [uniqname, setUniqname] = useState('');
   const [isInputAssetIdFocused, setIsInputAssetIdFocused] = useState(false);
@@ -157,4 +157,4 @@ const CheckOut = () => {
   );
 };
 
-export default CheckOut;
+export default CheckOutTab;
