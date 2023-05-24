@@ -108,7 +108,7 @@ const SwapTab = () => {
                   <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
                 </div>
                 <input
-                  className={`flex-1 sm:flex-2 w-full text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                  className={`flex-1 sm:flex-2 w-full text-center sm:text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                     isInputCurrentIdFocused
                       ? 'focus:bg-white dark:focus:bg-black'
                       : ' focus:placeholder-transparent'
