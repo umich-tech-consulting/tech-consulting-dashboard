@@ -7,6 +7,7 @@ const SwapTab = () => {
   const [isInputNewIdFocused, setIsInputNewIdFocused] = useState(false);
   const [isAddingNote, setIsAddingNote] = useState(false);
   const [noteContent, setNoteContent] = useState('');
+  const [buttonText, setButtonText] = useState("SAH");
 
   const handleCurrentAssetIdChange = (e) => {
     const input = e.target.value;
@@ -60,6 +61,10 @@ const SwapTab = () => {
   
   const isSubmitDisabled = currentAssetId.length < 5 || newAssetId.length < 5;
 
+  const handleToggleButtonText = () => {
+    setButtonText((prevText) => (prevText === "SAH" ? "TRL" : "SAH"));
+  };
+
   return (
     <div className="p-4">
       <div className="relative">
@@ -98,21 +103,26 @@ const SwapTab = () => {
               >
                 Current Asset ID #
               </label>
-              <input
-                className={`text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
-                  isInputCurrentIdFocused
-                    ? 'focus:bg-white dark:focus:bg-black'
-                    : ' focus:placeholder-transparent'
-                }`}
-                placeholder={isInputCurrentIdFocused ? '' : '00000'}
-                name="current-asset-id"
-                type="text"
-                pattern="\d*"
-                value={currentAssetId}
-                onChange={handleCurrentAssetIdChange}
-                onFocus={handleInputCurrentIdFocus}
-                onBlur={handleInputCurrentIdBlur}
-              />
+              <div className="flex max-w-md h-40 flex-col sm:flex-row">
+                <div className="flex-1 text-right flex justify-center items-center">
+                  <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
+                </div>
+                <input
+                  className={`flex-1 sm:flex-2 w-full text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                    isInputCurrentIdFocused
+                      ? 'focus:bg-white dark:focus:bg-black'
+                      : ' focus:placeholder-transparent'
+                  }`}
+                  placeholder={isInputCurrentIdFocused ? '' : '00000'}
+                  name="current-asset-id"
+                  type="text"
+                  pattern="\d*"
+                  value={currentAssetId}
+                  onChange={handleCurrentAssetIdChange}
+                  onFocus={handleInputCurrentIdFocus}
+                  onBlur={handleInputCurrentIdBlur}
+                />
+              </div>
             </div>
             <div className="flex flex-col gap-y-1 w-6/12">
               <label

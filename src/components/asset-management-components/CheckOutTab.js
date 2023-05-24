@@ -7,6 +7,7 @@ const CheckOutTab = () => {
   const [isInputUniqnameFocused, setIsInputUniqnameFocused] = useState(false);
   const [isAddingNote, setIsAddingNote] = useState(false);
   const [noteContent, setNoteContent] = useState('');
+  const [buttonText, setButtonText] = useState("SAH");
 
   const handleAssetIDChange = (e) => {
     const input = e.target.value;
@@ -61,6 +62,10 @@ const CheckOutTab = () => {
   
   const isSubmitDisabled = assetId.length < 5 || uniqname.length < 3;
 
+  const handleToggleButtonText = () => {
+    setButtonText((prevText) => (prevText === "SAH" ? "TRL" : "SAH"));
+  };
+
   return (
     <div className="p-4">
       <div className="relative">
@@ -99,21 +104,26 @@ const CheckOutTab = () => {
               >
                 Asset ID #
               </label>
-              <input
-                className={`headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
-                  isInputAssetIdFocused
-                    ? 'focus:bg-white dark:focus:bg-black'
-                    : ' focus:placeholder-transparent'
-                }`}
-                placeholder={isInputAssetIdFocused ? '' : '00000'}
-                name="check-out-asset-id"
-                type="text"
-                pattern="\d*"
-                value={assetId}
-                onChange={handleAssetIDChange}
-                onFocus={handleInputAssetIdFocus}
-                onBlur={handleInputAssetIdBlur}
-              />
+              <div className="flex max-w-md h-40 flex-col sm:flex-row">
+                <div className="flex-1 text-right flex justify-center items-center">
+                  <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
+                </div>
+                <input
+                  className={`flex-1 sm:flex-2 w-full headline-large rounded-md box-border outline-none text-center sm:text-left h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                    isInputAssetIdFocused
+                      ? 'focus:bg-white dark:focus:bg-black'
+                      : ' focus:placeholder-transparent'
+                  }`}
+                  placeholder={isInputAssetIdFocused ? '' : '00000'}
+                  name="check-out-asset-id"
+                  type="text"
+                  pattern="\d*"
+                  value={assetId}
+                  onChange={handleAssetIDChange}
+                  onFocus={handleInputAssetIdFocus}
+                  onBlur={handleInputAssetIdBlur}
+                />
+              </div>
             </div>
             <div className="flex flex-col gap-y-1 w-6/12">
               <label

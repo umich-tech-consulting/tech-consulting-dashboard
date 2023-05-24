@@ -86,7 +86,7 @@ const CheckInTab = () => {
           </label>
           <div className="flex max-w-md h-40">
             <div className="flex-1 text-right flex justify-end items-center">
-            <button className="rounded-md mr-2 p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
+              <button className="rounded-md mr-2 p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
             </div>
             <input
               className={`flex-1 w-full headline-large rounded-md box-border outline-none text-left border-none indent-2 bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
