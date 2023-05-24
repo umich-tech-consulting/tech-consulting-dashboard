@@ -47,8 +47,10 @@ const SwapTab = () => {
   };
 
   const handleNoteSave = () => {
-    setNoteContent('');
-    setIsAddingNote(false);
+    // const firstLine = noteContent.split('\n')[0]; // Extract the first line of the note
+    // setAssetId(firstLine.slice(0, 25)); // Update the assetId with the first 25 characters of the note
+    setNoteContent(noteContent); // Clear the note content
+    setIsAddingNote(false); // Return to the default screen
   };
   
   const handleNoteCancel = () => {
@@ -97,7 +99,7 @@ const SwapTab = () => {
                 Current Asset ID #
               </label>
               <input
-                className={`text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`no-spinner text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                   isInputCurrentIdFocused
                     ? 'focus:bg-white dark:focus:bg-black'
                     : ' focus:placeholder-transparent'
@@ -120,7 +122,7 @@ const SwapTab = () => {
                 New Asset ID #
               </label>
               <input
-                className={`text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`no-spinner text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                   isInputNewIdFocused
                     ? 'focus:bg-white dark:focus:bg-black'
                     : ' focus:placeholder-transparent'
@@ -148,7 +150,7 @@ const SwapTab = () => {
           </button>
           <button
             className={`label-large w-full border-none rounded-md h-10 max-w-md ${
-              isSubmitDisabled ? 'bg-neutral-5' : 'bg-blue-9 text-white'
+              isSubmitDisabled ? 'bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed' : 'bg-blue-9 text-white'
             }`}
             disabled={isSubmitDisabled}
           >

@@ -48,8 +48,10 @@ const CheckOutTab = () => {
   };
 
   const handleNoteSave = () => {
-    setNoteContent('');
-    setIsAddingNote(false);
+    // const firstLine = noteContent.split('\n')[0]; // Extract the first line of the note
+    // setAssetId(firstLine.slice(0, 25)); // Update the assetId with the first 25 characters of the note
+    setNoteContent(noteContent); // Clear the note content
+    setIsAddingNote(false); // Return to the default screen
   };
   
   const handleNoteCancel = () => {
@@ -98,7 +100,7 @@ const CheckOutTab = () => {
                 Asset ID #
               </label>
               <input
-                className={`headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`no-spinner headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                   isInputAssetIdFocused
                     ? 'focus:bg-white dark:focus:bg-black'
                     : ' focus:placeholder-transparent'
@@ -149,7 +151,7 @@ const CheckOutTab = () => {
           </button>
           <button
             className={`label-large w-full border-none rounded-md h-10 max-w-md ${
-              isSubmitDisabled ? 'bg-neutral-5' : 'bg-blue-9 text-white'
+              isSubmitDisabled ? 'bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed' : 'bg-blue-9 text-white'
             }`}
             disabled={isSubmitDisabled}
           >

@@ -82,7 +82,7 @@ const CheckInTab = () => {
             Asset ID #
           </label>
           <input
-            className={`headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+            className={`no-spinner headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
               isInputAssetIdFocused
                 ? "focus:bg-white dark:focus:bg-black"
                 : " focus:placeholder-transparent"
@@ -113,7 +113,7 @@ const CheckInTab = () => {
           <button
             className={`label-large w-full border-none rounded-md h-10 max-w-md ${
               isSubmitButtonDisabled
-                ? "bg-neutral-5 cursor-not-allowed"
+                ? "bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed"
                 : "bg-blue-9 text-white"
             }`}
             disabled={isSubmitButtonDisabled}
