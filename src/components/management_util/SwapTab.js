@@ -99,7 +99,7 @@ const SwapTab = () => {
                 Current Asset ID #
               </label>
               <input
-                className={`no-spinner text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                   isInputCurrentIdFocused
                     ? 'focus:bg-white dark:focus:bg-black'
                     : ' focus:placeholder-transparent'
@@ -122,7 +122,7 @@ const SwapTab = () => {
                 New Asset ID #
               </label>
               <input
-                className={`no-spinner text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`text-center headline-large rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
                   isInputNewIdFocused
                     ? 'focus:bg-white dark:focus:bg-black'
                     : ' focus:placeholder-transparent'
