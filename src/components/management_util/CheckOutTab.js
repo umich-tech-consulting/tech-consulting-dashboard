@@ -48,17 +48,16 @@ const CheckOutTab = () => {
   };
 
   const handleNoteSave = () => {
-    // const firstLine = noteContent.split('\n')[0]; // Extract the first line of the note
-    // setAssetId(firstLine.slice(0, 25)); // Update the assetId with the first 25 characters of the note
-    setNoteContent(noteContent); // Clear the note content
-    setIsAddingNote(false); // Return to the default screen
+    setNoteContent('');
+    setIsAddingNote(false);
   };
   
   const handleNoteCancel = () => {
-    setNoteContent(''); // Clear the note content
-    setIsAddingNote(false); // Return to the default screen
+    setNoteContent('');
+    setIsAddingNote(false);
   };
   
+  const isSubmitDisabled = assetId.length < 5 || uniqname.length < 3;
 
   return (
     <div className="p-4">
@@ -90,66 +89,71 @@ const CheckOutTab = () => {
         )}
 
         <div className="flex flex-col gap-y-1">
-            <div className='flex'>
-                <div className="flex flex-col gap-y-1 w-6/12">
-                    <label
-                        htmlFor="check-out-asset-id"
-                        className="title-small text-neutral-9 dark:text-neutral-2 text-center"
-                    >
-                        Asset ID #
-                    </label>
-                    <input
-                        className={`headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
-                        isInputAssetIdFocused
-                            ? 'focus:bg-white dark:focus:bg-black'
-                            : ' focus:placeholder-transparent'
-                        }`}
-                        placeholder={isInputAssetIdFocused ? '' : '00000'}
-                        name="check-out-asset-id"
-                        type="text"
-                        pattern="\d*"
-                        value={assetId}
-                        onChange={handleAssetIDChange}
-                        onFocus={handleInputAssetIdFocus}
-                        onBlur={handleInputAssetIdBlur}
-                    />
-                </div>
-                <div className="flex flex-col gap-y-1 w-6/12">
-                    <label
-                        htmlFor="check-out-uniqname"
-                        className="title-small text-neutral-9 dark:text-neutral-2 text-center"
-                    >
-                        Uniqname
-                    </label>
-                    <input
-                        className={`headline-large text-center rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
-                        isInputUniqnameFocused
-                            ? "focus:bg-white dark:focus:bg-black"
-                            : " focus:placeholder-transparent"
-                        }`}
-                        placeholder={isInputUniqnameFocused ? "" : "uniqname"}
-                        name="check-out-uniqname"
-                        type="text"
-                        pattern="\d*"
-                        value={uniqname}
-                        onChange={handleUniqnameChange}
-                        onFocus={handleInputUniqnameFocus}
-                        onBlur={handleInputUniqnameBlur}
-                    />
-                </div>
-            </div>
-            <button
-                className={`mb-2 h-7 dark:text-blue-7 ${
-                    noteContent
-                        ? 'text-neutral-9 dark:text-neutral-1 dark:bg-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal'
-                        : ' text-blue-9 label-large'
+          <div className="flex">
+            <div className="flex flex-col gap-y-1 w-6/12">
+              <label
+                htmlFor="check-out-asset-id"
+                className="title-small text-neutral-9 dark:text-neutral-2 text-center"
+              >
+                Asset ID #
+              </label>
+              <input
+                className={`headline-large rounded-md box-border outline-none text-center h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                  isInputAssetIdFocused
+                    ? 'focus:bg-white dark:focus:bg-black'
+                    : ' focus:placeholder-transparent'
                 }`}
-                onClick={handleAddNoteClick}
-            >
-                {noteContent ? `${noteContent.slice(0, 40)}${noteContent.length > 40 ? '...' : ''}` : 'Add Note +'}
-            </button>
-            <button className="label-large w-full border-none bg-blue-9 text-white rounded-md h-10 max-w-md">
-          Submit
+                placeholder={isInputAssetIdFocused ? '' : '00000'}
+                name="check-out-asset-id"
+                type="text"
+                pattern="\d*"
+                value={assetId}
+                onChange={handleAssetIDChange}
+                onFocus={handleInputAssetIdFocus}
+                onBlur={handleInputAssetIdBlur}
+              />
+            </div>
+            <div className="flex flex-col gap-y-1 w-6/12">
+              <label
+                htmlFor="check-out-uniqname"
+                className="title-small text-neutral-9 dark:text-neutral-2 text-center"
+              >
+                Uniqname
+              </label>
+              <input
+                className={`headline-large text-center rounded-md box-border outline-none h-40 border-none indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                  isInputUniqnameFocused
+                    ? 'focus:bg-white dark:focus:bg-black'
+                    : ' focus:placeholder-transparent'
+                }`}
+                placeholder={isInputUniqnameFocused ? '' : 'uniqname'}
+                name="check-out-uniqname"
+                type="text"
+                pattern="\d*"
+                value={uniqname}
+                onChange={handleUniqnameChange}
+                onFocus={handleInputUniqnameFocus}
+                onBlur={handleInputUniqnameBlur}
+              />
+            </div>
+          </div>
+          <button
+            className={`mb-2 h-7 dark:text-blue-7 ${
+              noteContent
+                ? 'text-neutral-9 dark:text-neutral-1 dark:bg-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal'
+                : ' text-blue-9 label-large'
+            }`}
+            onClick={handleAddNoteClick}
+          >
+            {noteContent ? `${noteContent.slice(0, 40)}${noteContent.length > 40 ? '...' : ''}` : 'Add Note +'}
+          </button>
+          <button
+            className={`label-large w-full border-none rounded-md h-10 max-w-md ${
+              isSubmitDisabled ? 'bg-neutral-5' : 'bg-blue-9 text-white'
+            }`}
+            disabled={isSubmitDisabled}
+          >
+            Submit
           </button>
         </div>
       </div>

@@ -17,8 +17,8 @@ function App() {
             <TopNav />
           </div>
           <div className='flex flex-wrap gap-10 mt-[74px]'>
-            <CheckIn />
-            <CheckOut />
+            {/* <CheckIn />
+            <CheckOut /> */}
             <LaptopManagement />
           </div>
         </div>
