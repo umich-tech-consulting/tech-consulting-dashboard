@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const CheckInTab = () => {
   const [assetId, setAssetId] = useState("");
@@ -30,8 +30,6 @@ const CheckInTab = () => {
   };
 
   const handleNoteSave = () => {
-    // const firstLine = noteContent.split('\n')[0]; // Extract the first line of the note
-    // setAssetId(firstLine.slice(0, 25)); // Update the assetId with the first 25 characters of the note
     setNoteContent(noteContent); // Clear the note content
     setIsAddingNote(false); // Return to the default screen
   };

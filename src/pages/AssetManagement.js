@@ -1,15 +1,14 @@
-import React, { useState } from "react";
-import CheckInTab from "./management_util/CheckInTab";
-import CheckOutTab from "./management_util/CheckOutTab";
-import SwapTab from "./management_util/SwapTab";
+import { useState } from "react";
+import CheckInTab from "../components/asset-management-components/CheckInTab";
+import CheckOutTab from "../components/asset-management-components/CheckOutTab";
+import SwapTab from "../components/asset-management-components/SwapTab";
 
-const LaptopManagement = () => {
+const AssetManagement = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabClick = (tabNumber) => {
     setActiveTab(tabNumber);
   };
-
 
   return (
     <div className="rounded-md max-w-md w-full h-full shadow-light dark:shadow-dark bg-white dark:bg-black">
@@ -60,4 +59,4 @@ const LaptopManagement = () => {
   );
 };
 
-export default LaptopManagement;
+export default AssetManagement;

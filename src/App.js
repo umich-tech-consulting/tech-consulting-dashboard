@@ -2,29 +2,29 @@ import logo from './logo.svg';
 import './normalize.css'
 import './App.css';
 import './index.css';
-import TopNav from './components/TopNav';
-import LeftNav from './components/LeftNav';
-import CheckIn from './components/CheckIn';
-import CheckOut from './components/CheckOut';
-import LaptopManagement from './components/LaptopManagmentTabs';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import Layout from './Layout';
+import AssetManagement from './pages/AssetManagement';
+import Announcements from './pages/Announcements';
+import Resources from './pages/Resources';
 
 function App() {
   return (
-    <>
-      <div className='block'>
-        <div className='p-10 sm:ml-[96px] md:ml-[96px] lg:ml-[96px] xl:ml-[276px] box-border min-h-screen bg-white dark:bg-black'>
-          <div className='inset-0 fixed box-border w-fit'>
-            <LeftNav />
-            <TopNav />
-          </div>
-          <div className='flex flex-wrap gap-10 mt-[74px]'>
-            {/* <CheckIn />
-            <CheckOut /> */}
-            <LaptopManagement />
-          </div>
-        </div>
+    <HashRouter>
+      <div>
+        <Helmet>
+          <title>Asset Management</title>
+        </Helmet>
       </div>
-    </>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index path="asset-management" element={<AssetManagement />} />
+          <Route path='announcements' element={<Announcements />} />
+          <Route path='resources' element={<Resources />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   );
 }
 
