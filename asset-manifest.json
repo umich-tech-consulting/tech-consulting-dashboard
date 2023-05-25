@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tech-consulting-automation/static/css/main.7a808a62.css",
-    "main.js": "/tech-consulting-automation/static/js/main.0833a12c.js",
+    "main.css": "/tech-consulting-automation/static/css/main.82358d4f.css",
+    "main.js": "/tech-consulting-automation/static/js/main.3e4f8440.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js",
     "static/media/logo.svg": "/tech-consulting-automation/static/media/logo.1ef12d6b2078045e191320688adfb82e.svg",
     "index.html": "/tech-consulting-automation/index.html",
-    "main.7a808a62.css.map": "/tech-consulting-automation/static/css/main.7a808a62.css.map",
-    "main.0833a12c.js.map": "/tech-consulting-automation/static/js/main.0833a12c.js.map",
+    "main.82358d4f.css.map": "/tech-consulting-automation/static/css/main.82358d4f.css.map",
+    "main.3e4f8440.js.map": "/tech-consulting-automation/static/js/main.3e4f8440.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a808a62.css",
-    "static/js/main.0833a12c.js"
+    "static/css/main.82358d4f.css",
+    "static/js/main.3e4f8440.js"
   ]
 }
