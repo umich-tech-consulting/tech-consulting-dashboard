@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const TopNav = () => {
   const [userPrefersDarkMode, setUserPrefersDarkMode] = useState(false);
+  const location = useLocation();
   const [darkMode, setDarkMode] = useState(() => {
     const storedDarkMode = localStorage.getItem('darkMode');
     return storedDarkMode === 'true' || userPrefersDarkMode;
@@ -28,9 +30,96 @@ const TopNav = () => {
     }
   }, [darkMode]);
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
     return (
       <div className="box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] xl:left-[276px] fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8">
-        <div className="flex justify-between h-full items-center sm:mr-[96px] md:mr-[96px] lg:mr-[96px] xl:mr-[276px] pl-8 pr-8">
+        <div className="flex justify-between h-full items-center sm:mr-[96px] xl:mr-[276px] pl-8 pr-8">
+        {dropdownOpen && (
+          <div className="absolute bg-white dark:bg-black w-full h-screen top-0 left-0 z-50 pt-[24.5px] pl-[52px] pr-[52px]">
+            <button id='toggle-button' className="box-border sm:hidden" onClick={toggleDropdown}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" className="stroke-neutral-9 dark:stroke-neutral-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div className="flex flex-col mt-4 gap-y-4 w-full">
+              <Link
+                onClick={toggleDropdown}
+                to="/"
+                className={`p-4 rounded-xl flex gap-x-4 w-full ${
+                  location.pathname === "/"
+                    ? "bg-neutral-3 dark:bg-neutral-9"
+                    : "bg-white dark:bg-black"
+                }`}
+              >
+                {location.pathname === "/" ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" className="fill-neutral-9 dark:fill-neutral-3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 20V18.5H3.525V17.45C3.125 17.45 2.775 17.3 2.475 17C2.175 16.7 2.025 16.35 2.025 15.95V4.5C2.025 4.1 2.175 3.75 2.475 3.45C2.775 3.15 3.125 3 3.525 3H20.475C20.875 3 21.225 3.15 21.525 3.45C21.825 3.75 21.975 4.1 21.975 4.5V15.95C21.975 16.35 21.825 16.7 21.525 17C21.225 17.3 20.875 17.45 20.475 17.45V18.5H24V20H0Z"/>
+                  </svg>
+                ) : (
+                  <svg className="fill-neutral-9 dark:fill-neutral-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 20V18.5H3.525V17.45C3.125 17.45 2.775 17.3 2.475 17C2.175 16.7 2.025 16.35 2.025 15.95V4.5C2.025 4.1 2.175 3.75 2.475 3.45C2.775 3.15 3.125 3 3.525 3H20.475C20.875 3 21.225 3.15 21.525 3.45C21.825 3.75 21.975 4.1 21.975 4.5V15.95C21.975 16.35 21.825 16.7 21.525 17C21.225 17.3 20.875 17.45 20.475 17.45V18.5H24V20H0ZM3.525 15.95H20.475V4.5H3.525V15.95Z"/>
+                  </svg>
+                )}
+                <div className="title-medium text-neutral-9 dark:text-neutral-3">
+                  Asset Management
+                </div>
+              </Link>
+              <Link
+                onClick={toggleDropdown}
+                to="/announcements"
+                className={`p-4 rounded-xl flex gap-x-4 w-full ${
+                  location.pathname === "/announcements"
+                    ? "bg-neutral-3 dark:bg-neutral-9"
+                    : "bg-white dark:bg-black"
+                }`}
+              >
+                <svg
+                  className="fill-neutral-9 dark:fill-neutral-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 96 960 960"
+                  width="24"
+                >
+                  <path d="M730 606v-60h150v60H730Zm50 290-121-90 36-48 121 90-36 48Zm-82-503-36-48 118-89 36 48-118 89ZM210 856V696h-70q-24.75 0-42.375-17.625T80 636V516q0-24.75 17.625-42.375T140 456h180l200-120v480L320 696h-50v160h-60Zm90-280Zm260 134V442q27 24 43.5 58.5T620 576q0 41-16.5 75.5T560 710ZM140 516v120h196l124 74V442l-124 74H140Z" />
+                </svg>
+                <div className="title-medium text-neutral-9 dark:text-neutral-4">
+                  Announcements
+                </div>
+              </Link>
+              <Link
+                onClick={toggleDropdown}
+                to="/resources"
+                className={`p-4 rounded-xl flex gap-x-4 w-full ${
+                  location.pathname === "/resources"
+                    ? "bg-neutral-3 dark:bg-neutral-9"
+                    : "bg-white dark:bg-black"
+                }`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="fill-neutral-9 dark:fill-neutral-4"
+                  height="24"
+                  viewBox="0 96 960 960"
+                  width="24"
+                >
+                  <path d="M480 996q-78-69-170.5-106T120 853V424q94 0 186.5 43T480 587q81-77 173.5-120T840 424v429q-97 0-189.5 37T480 996Zm0-77q71-51 146.5-81.5T780 799V489q-68 11-143.5 54.5T480 664q-88-81-160-123t-140-52v310q78 8 153.5 38.5T480 919Zm3-475q-65 0-109.5-44.5T329 290q0-65 44.5-109.5T483 136q65 0 109.5 44.5T637 290q0 65-44.5 109.5T483 444Zm.159-60Q522 384 549.5 356.341q27.5-27.66 27.5-66.5Q577 251 549.341 223.5q-27.66-27.5-66.5-27.5Q444 196 416.5 223.659q-27.5 27.66-27.5 66.5Q389 329 416.659 356.5q27.66 27.5 66.5 27.5ZM482 288Zm-2 416Z" />
+                </svg>
+                <div className="title-medium text-neutral-9 dark:text-neutral-4">
+                  Resources
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+          <button className="box-border sm:hidden" onClick={toggleDropdown}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 9H20.25M3.75 15.75H20.25" className="stroke-neutral-9 dark:stroke-neutral-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
           <div className=" hidden sm:block md:block lg:block xl:block headline-medium text-neutral-9 dark:text-neutral-3">Tech Consultant Dashboard</div>
           <div className="flex gap-x-6">
             <button className="w-[24px] h-[24px]">
