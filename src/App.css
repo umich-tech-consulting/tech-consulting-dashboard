@@ -108,3 +108,14 @@
 }
 /* ----- Text End ----- */
 /* ----------- Default Styles End----------- */
+/* ----------- Asset Management Check In Start----------- */
+.add-note {
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1
+}
+.add-note-title {
+  @apply title-small text-neutral-9 dark:text-neutral-1
+}
+.add-note-textarea {
+  @apply w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none
+}
+/* ----------- Asset Management Check In End----------- */

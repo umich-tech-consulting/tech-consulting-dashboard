@@ -50,12 +50,12 @@ const CheckInTab = () => {
     <div className="p-4">
       <div className="relative">
         {isAddingNote && (
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1">
-            <div className="title-small text-neutral-9 dark:text-neutral-1">
+          <div className="add-note">
+            <div className="add-note-title">
               Note
             </div>
             <textarea
-              className="w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none"
+              className="add-note-textarea"
               placeholder="Enter your note..."
               value={noteContent}
               onChange={handleNoteChange}
