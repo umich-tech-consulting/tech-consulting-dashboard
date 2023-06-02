@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const TopNav = () => {
+const TopNav = ({isToggleOn, handleToggleClick}) => {
   const [userPrefersDarkMode, setUserPrefersDarkMode] = useState(false);
   const location = useLocation();
   const [darkMode, setDarkMode] = useState(() => {
@@ -36,8 +36,8 @@ const TopNav = () => {
   };
 
     return (
-      <div className="box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] xl:left-[276px] fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8">
-        <div className="flex justify-between h-full items-center sm:mr-[96px] xl:mr-[276px] pl-8 pr-8">
+      <div className={`box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] xl:left-${isToggleOn ? "[96px]" : "[276px]"} fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8`}>
+        <div className={`flex justify-between h-full items-center sm:mr-[96px] xl:mr-${isToggleOn ? "[96px]" : "[276px]"} pl-8 pr-8`}>
         {dropdownOpen && (
           <div className="absolute bg-white dark:bg-black w-full h-screen top-0 left-0 z-50 pt-[24.5px] pl-[52px] pr-[52px]">
             <button id='toggle-button' className="box-border sm:hidden" onClick={toggleDropdown}>
