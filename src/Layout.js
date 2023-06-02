@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TopNav from './components/layout-components/TopNav';
 import LeftNav from './components/layout-components/LeftNav';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
-    const [isToggleOn, setIsToggleOn] = useState(false);
+    const [isToggleOn, setIsToggleOn] = useState(() => {
+        return localStorage.getItem('isToggleOn') === 'true';
+    });
 
     const handleToggleClick = () => {
-        setIsToggleOn((prevState) => !prevState);
+        setIsToggleOn(prevState => !prevState);
     };
+
+    useEffect(() => {
+        setIsToggleOn((prevState) => !prevState);
+      }, []);
+
+    useEffect(() => {
+        localStorage.setItem('isToggleOn', JSON.stringify(isToggleOn));
+    }, [isToggleOn]);
 
     return (
         <>
