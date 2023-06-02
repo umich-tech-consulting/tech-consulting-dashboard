@@ -23,7 +23,7 @@ const Layout = () => {
     return (
         <>
             <div className='block'>
-                <div className={`pt-10 sm:p-10 sm:ml-[96px] xl:ml-${isToggleOn ? "[96px]" : "[276px]"} box-border min-h-screen bg-white dark:bg-black`}>
+                <div className={`pt-10 sm:p-10 sm:ml-[96px] ${isToggleOn ? "xl:ml-[96px]" : "xl:ml-[276px]"} box-border min-h-screen bg-white dark:bg-black`}>
                     <div className='inset-0 fixed box-border w-fit z-50'>
                         <TopNav isToggleOn={isToggleOn} handleToggleClick={handleToggleClick} />
                         <LeftNav isToggleOn={isToggleOn} handleToggleClick={handleToggleClick} />

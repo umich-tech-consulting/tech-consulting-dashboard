@@ -49,7 +49,7 @@ module.exports = {
       boxShadow: {
         'light': '0px 0px 4px 0px #E0E0E0',
         'dark': '0px 0px 4px 0px #424242',
-      }
+      },
     },
   },
   plugins: [],
