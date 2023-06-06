@@ -36,10 +36,10 @@ const TopNav = ({isToggleOn, handleToggleClick}) => {
   };
 
     return (
-      <div className={`box-border p-5 h-[74px] sm:left-[96px] md:left-[96px] lg:left-[96px] ${isToggleOn ? "xl:left-[96px]" : "xl:left-[276px]"} fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8`}>
-        <div className={`flex justify-between h-full items-center sm:mr-[96px] ${isToggleOn ? "xl:mr-[96px]" : "xl:mr-[276px]"} pl-8 pr-8`}>
+      <div className={`box-border p-5 h-[50px] sm:left-[72px] md:left-[72px] lg:left-[72px] ${isToggleOn ? "xl:left-[72px]" : "xl:left-[230px]"} fixed top-0 w-full bg-white border-b border-neutral-4 dark:bg-black dark:border-neutral-8`}>
+        <div className={`flex justify-between h-full items-center sm:mr-[72px] ${isToggleOn ? "xl:mr-[72px]" : "xl:mr-[230px]"} sm:pl-8 sm:pr-8`}>
         {dropdownOpen && (
-          <div className="absolute bg-white dark:bg-black w-full h-screen top-0 left-0 z-50 pt-[24.5px] pl-[52px] pr-[52px]">
+          <div className="absolute bg-white dark:bg-black w-full h-screen top-0 left-0 z-50 pt-[14.5px] pl-[20px] pr-[20px]">
             <button id='toggle-button' className="box-border sm:hidden" onClick={toggleDropdown}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 18L18 6M6 6L18 18" className="stroke-neutral-9 dark:stroke-neutral-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,7 +120,7 @@ const TopNav = ({isToggleOn, handleToggleClick}) => {
               <path d="M3.75 9H20.25M3.75 15.75H20.25" className="stroke-neutral-9 dark:stroke-neutral-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
-          <div className=" hidden sm:block md:block lg:block xl:block headline-medium text-neutral-9 dark:text-neutral-3">Tech Consultant Dashboard</div>
+          <div className=" hidden sm:block md:block lg:block xl:block title-medium text-neutral-9 dark:text-neutral-3">Tech Consultant Dashboard</div>
           <div className="flex gap-x-6">
             <button className="w-[24px] h-[24px]">
               <svg className="hidden" width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">

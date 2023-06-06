@@ -4,7 +4,7 @@ const LeftNav = ({isToggleOn, handleToggleClick}) => {
   const location = useLocation();
 
   return (
-    <div className={`box-border p-5 h-screen border-r bg-white border-neutral-4 dark:bg-black dark:border-neutral-8 hidden sm:w-[96px] sm:block md:w-[96px] md:block lg:w-[96px] lg:block ${isToggleOn ? " xl:w-[96px]" : " xl:w-[276px]"} xl:block`}>
+    <div className={`box-border pt-5 pl-2 pr-2 h-screen border-r bg-white border-neutral-4 dark:bg-black dark:border-neutral-8 hidden sm:w-[72px] sm:block md:w-[72px] md:block lg:w-[72px] lg:block ${isToggleOn ? " xl:w-[72px]" : " xl:w-[230px]"} xl:block`}>
       <button onClick={handleToggleClick}>
         <svg
           width="40"
@@ -19,7 +19,7 @@ const LeftNav = ({isToggleOn, handleToggleClick}) => {
           />
         </svg>
       </button>
-      <div className="mt-24">
+      <div className="mt-10 w-fit">
         <Link
           to="/"
           className={`p-4 rounded-xl flex content-center gap-x-4 ${
