@@ -69,17 +69,17 @@ const SwapTab = () => {
     <div className="p-4">
       <div className="relative">
         {isAddingNote && (
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1">
-            <div className="title-small text-neutral-9 dark:text-neutral-1">Note</div>
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white rounded-md flex flex-col gap-y-1">
+            <div className="title-small text-neutral-9">Note</div>
             <textarea
-              className="w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none"
+              className="w-full h-44 rounded-md resize-none mb-6 bg-white text-neutral-9 pt-3 outline-none"
               placeholder="Enter your note..."
               value={noteContent}
               onChange={handleNoteChange}
             ></textarea>
             <div className="flex justify-end gap-x-2 mt-2">
               <button
-                className="label-large w-full border-none bg-neutral-3 text-black dark:bg-neutral-9 dark:text-neutral-1 rounded-md h-10 max-w-md"
+                className="label-large w-full border-none bg-neutral-3 text-black rounded-md h-10 max-w-md"
                 onClick={handleNoteCancel}
               >
                 Discard
@@ -99,18 +99,18 @@ const SwapTab = () => {
             <div className="flex flex-col gap-y-1 w-6/12">
               <label
                 htmlFor="current-asset-id"
-                className="title-small text-center text-neutral-9 dark:text-neutral-2"
+                className="title-small text-center text-neutral-9"
               >
                 Current Asset ID #
               </label>
               <div className="flex max-w-md h-40 flex-row mr-4">
                 <div className="flex-1 text-right flex justify-center items-center">
-                  <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
+                  <button className="rounded-md p-2 headline-large w-20 h-fit text-neutral-8 hover:shadow-light" onClick={handleToggleButtonText}>{buttonText}</button>
                 </div>
                 <input
-                  className={`flex-1 sm:flex-2 w-full text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                  className={`flex-1 sm:flex-2 w-full text-left headline-large rounded-md box-border outline-none h-40 border-none max-w-md bg-white text-neutral-9 ${
                     isInputCurrentIdFocused
-                      ? 'focus:bg-white dark:focus:bg-black'
+                      ? 'focus:bg-white'
                       : ' focus:placeholder-transparent'
                   }`}
                   placeholder={isInputCurrentIdFocused ? '' : '00000'}
@@ -127,14 +127,14 @@ const SwapTab = () => {
             <div className="flex flex-col gap-y-1 w-6/12">
               <label
                 htmlFor="new-asset-id"
-                className="title-small text-center text-neutral-9 dark:text-neutral-2"
+                className="title-small text-center text-neutral-9"
               >
                 New Asset ID #
               </label>
               <input
-                className={`text-center headline-large box-border outline-none h-40 border-l border-neutral-3 dark:border-neutral-8 indent-3 max-w-md bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+                className={`text-center headline-large box-border outline-none h-40 border-l border-neutral-3 indent-3 max-w-md bg-white text-neutral-9 ${
                   isInputNewIdFocused
-                    ? 'focus:bg-white dark:focus:bg-black'
+                    ? 'focus:bg-white'
                     : ' focus:placeholder-transparent'
                 }`}
                 placeholder={isInputNewIdFocused ? '' : '00000'}
@@ -149,9 +149,9 @@ const SwapTab = () => {
             </div>
           </div>
           <button
-            className={`mb-2 mt-2 h-7 dark:text-blue-7 ${
+            className={`mb-2 mt-2 h-7 ${
               noteContent
-                ? 'text-neutral-9 dark:text-neutral-1 dark:bg-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal'
+                ? 'text-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal'
                 : ' text-blue-9 label-large'
             }`}
             onClick={handleAddNoteClick}
@@ -160,7 +160,7 @@ const SwapTab = () => {
           </button>
           <button
             className={`label-large w-full border-none rounded-md h-10 ${
-              isSubmitDisabled ? 'bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed' : 'bg-blue-9 text-white'
+              isSubmitDisabled ? 'bg-neutral-5 cursor-not-allowed' : 'bg-blue-9 text-white'
             }`}
             disabled={isSubmitDisabled}
           >

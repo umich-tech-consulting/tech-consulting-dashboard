@@ -62,7 +62,7 @@ const CheckInTab = () => {
             ></textarea>
             <div className="flex justify-end gap-x-2 mt-2">
               <button
-                className="label-large w-full border-none bg-neutral-3 text-black dark:bg-neutral-9 dark:text-neutral-1 rounded-md h-10 max-w-md"
+                className="label-large w-full border-none bg-neutral-3 text-black rounded-md h-10 max-w-md"
                 onClick={handleNoteCancel}
               >
                 Discard
@@ -80,18 +80,18 @@ const CheckInTab = () => {
         <div className="flex flex-col gap-y-1">
           <label
             htmlFor="check-in-asset-id"
-            className="title-small text-neutral-9 dark:text-neutral-2 text-center"
+            className="title-small text-neutral-9 text-center"
           >
             Asset ID #
           </label>
           <div className="flex max-w-md h-40">
             <div className="flex-1 text-right flex justify-end items-center">
-              <button className="rounded-md mr-2 p-2 headline-large w-20 h-fit text-neutral-8 dark:text-neutral-2 hover:shadow-light dark:hover:shadow-dark" onClick={handleToggleButtonText}>{buttonText}</button>
+              <button className="rounded-md mr-2 p-2 headline-large w-20 h-fit text-neutral-8 hover:shadow-light" onClick={handleToggleButtonText}>{buttonText}</button>
             </div>
             <input
-              className={`flex-1 w-full headline-large rounded-md box-border outline-none text-left border-none indent-2 bg-white text-neutral-9 dark:bg-black dark:text-neutral-1 ${
+              className={`flex-1 w-full headline-large rounded-md box-border outline-none text-left border-none indent-2 bg-white text-neutral-9 ${
                 isInputAssetIdFocused
-                  ? "focus:bg-white dark:focus:bg-black"
+                  ? "focus:bg-white"
                   : " focus:placeholder-transparent"
               }`}
               placeholder={isInputAssetIdFocused ? "" : "00000"}
@@ -106,9 +106,9 @@ const CheckInTab = () => {
 
           </div>
           <button
-            className={`mb-2 mt-2 h-7 dark:text-blue-7 ${
+            className={`mb-2 mt-2 h-7 ${
               noteContent
-                ? "text-neutral-9 dark:text-neutral-1 dark:bg-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal"
+                ? "text-neutral-9 bg-neutral-2 label-large rounded-md text-left pl-3 font-normal"
                 : " text-blue-9 label-large"
             }`}
             onClick={handleAddNoteClick}
@@ -122,7 +122,7 @@ const CheckInTab = () => {
           <button
             className={`label-large w-full border-none rounded-md h-10 ${
               isSubmitButtonDisabled
-                ? "bg-neutral-5 dark:bg-neutral-8 cursor-not-allowed"
+                ? "bg-neutral-5 cursor-not-allowed"
                 : "bg-blue-9 text-white"
             }`}
             disabled={isSubmitButtonDisabled}

@@ -31,6 +31,9 @@ module.exports = {
         7: '#0488E1',
         8: '#0477CC',
         9: '#0D57AA',
+      },
+      'base': {
+        light: '#F6F8FC'
       }
     },
     extend: {
@@ -48,7 +51,6 @@ module.exports = {
       },
       boxShadow: {
         'light': '0px 0px 4px 0px #E0E0E0',
-        'dark': '0px 0px 4px 0px #424242',
       },
     },
   },
