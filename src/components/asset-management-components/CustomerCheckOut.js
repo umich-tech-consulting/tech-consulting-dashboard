@@ -38,16 +38,14 @@ const CustomerCheckOut = ({setIsCheckOutClicked}) => {
   return (
     <>
       <div className="w-full flex flex-col h-screen p-6 justify-center items-center">
-        <div className="bg-white w-full max-w-2xl p-6 rounded-2xl shadow-light flex flex-col gap-y-20">
-          <div>
-            <button id="close-checkout" onClick={handleCheckOutClick}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 22L22 6M6 6L22 22" stroke="#0D57AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <div className="bg-white w-full max-w-2xl p-6 rounded-2xl shadow-light flex flex-col gap-y-16">
+        <button className="absolute" onClick={handleCheckOutClick}>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 22L22 6M6 6L22 22" stroke="#0D57AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
 
-            </button>
-            <div className="mb-6 headline-large text-center font-medium">Check Out Laptop</div>
-          </div>
+        </button>
+            <div className="mb-6 headline-large text-center font-medium">Laptop Check Out</div>
           <div className="flex flex-col gap-y-12">
             <div className="flex justify-between items-center">
               <div className="flex gap-2">
