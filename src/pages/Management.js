@@ -3,10 +3,12 @@ import { useState } from "react"; // Import useState
 import CustomerCheckOut from "../components/asset-management-components/CustomerCheckOut";
 import AssetDefault from "../components/asset-management-components/AssetDefault";
 import CustomerReturn from "../components/asset-management-components/CustomerReturn";
+import CustomerSwap from "../components/asset-management-components/CustomerSwap";
 
 const Management = () => {
   const [isCheckOutClicked, setIsCheckOutClicked] = useState(false); // State variable for tracking button click
   const [isReturnClicked, setIsReturnClicked] = useState(false); // State variable for tracking button click
+  const [isSwapClicked, setIsSwapClicked] = useState(false); // State variable for tracking button click
 
   return (
     <>
@@ -17,7 +19,8 @@ const Management = () => {
         <div className="mb-6 headline-large">Asset Management</div>
         {isReturnClicked ? <CustomerReturn setIsReturnClicked={setIsReturnClicked} /> : null }
         {isCheckOutClicked ? <CustomerCheckOut setIsCheckOutClicked={setIsCheckOutClicked} /> : null }
-        {isCheckOutClicked || isReturnClicked ? null : <AssetDefault setIsCheckOutClicked={setIsCheckOutClicked} setIsReturnClicked={setIsReturnClicked} /> }
+        {isSwapClicked ? <CustomerSwap setIsSwapClicked={setIsSwapClicked} /> : null }
+        {isCheckOutClicked || isReturnClicked || isSwapClicked ? null : <AssetDefault setIsCheckOutClicked={setIsCheckOutClicked} setIsReturnClicked={setIsReturnClicked} setIsSwapClicked={setIsSwapClicked} /> }
       </div>
     </>
   );
