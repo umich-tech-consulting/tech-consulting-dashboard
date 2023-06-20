@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tech-consulting-automation/static/css/main.7e119827.css",
-    "main.js": "/tech-consulting-automation/static/js/main.eab7a660.js",
+    "main.js": "/tech-consulting-automation/static/js/main.8e3b2d8c.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js",
     "index.html": "/tech-consulting-automation/index.html",
     "main.7e119827.css.map": "/tech-consulting-automation/static/css/main.7e119827.css.map",
-    "main.eab7a660.js.map": "/tech-consulting-automation/static/js/main.eab7a660.js.map",
+    "main.8e3b2d8c.js.map": "/tech-consulting-automation/static/js/main.8e3b2d8c.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e119827.css",
-    "static/js/main.eab7a660.js"
+    "static/js/main.8e3b2d8c.js"
   ]
 }
