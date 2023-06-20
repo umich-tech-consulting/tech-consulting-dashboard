@@ -27,6 +27,14 @@ function App() {
           <Route path='resources' element={<Resources />} />
         </Route>
       </Routes>
+      <Routes>
+        {/* http://localhost:3001/tech-consulting-automation#/google-sites/management */}
+        <Route path='/google-sites'>
+          <Route path='management' element={<Management />} />
+          <Route path='asset-management' element={<AssetManagement />} />
+
+        </Route>
+      </Routes>
     </HashRouter>
   );
 }
