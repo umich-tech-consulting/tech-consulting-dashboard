@@ -1,7 +1,7 @@
 /* ----------- Default Styles Start ----------- */
 /* ----- Text Start ----- */
 .display-large {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 57px;
@@ -9,98 +9,98 @@
   letter-spacing: -0.25px;
 }
 .display-medium {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 45px;
   line-height: 52px;
 }
 .display-small {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
 }
 .headline-large {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
 }
 .headline-medium {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 36px;
 }
 .headline-small {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
 }
 .title-large {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
 }
 .title-medium {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
 }
 .title-small {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
 }
 .body-large {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
 .body-medium {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
 .body-small {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
 }
 .label-large {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
 }
 .label-medium {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
 }
 .label-small {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -108,14 +108,79 @@
 }
 /* ----- Text End ----- */
 /* ----------- Default Styles End----------- */
+
+/* ----------- Asset Management Start----------- */
+/* Default Management Component Start */
+.am-default-container {
+  @apply flex flex-wrap gap-10 headline-medium text-neutral-9;
+}
+.am-default-container button {
+  @apply bg-white border-2 border-white hover:border-blue-9 shadow-light rounded-2xl w-[300px] py-4 px-8 flex flex-col gap-y-6;
+}
+/* Default Management Component End */
+/* Default Action Component Start */
+.am-action-container {
+  @apply w-full flex flex-col h-screen p-6 justify-center items-center;
+}
+.am-action-component {
+  @apply bg-white w-full max-w-xl p-6 rounded-2xl shadow-light flex flex-col gap-y-10;
+}
+.am-action-componenet-title {
+  @apply mb-6 title-large text-center;
+  font-weight: 500
+}
+.am-action-component-main {
+  @apply flex flex-col gap-y-8;
+}
+.am-action-component-item {
+  @apply flex justify-between items-center;
+}
+.am-action-component-item div {
+  @apply flex gap-2;
+}
+.am-action-component-item label {
+  @apply title-medium;
+  font-weight: 600;
+}
+.am-uniqname-item {
+  @apply p-2 border-2 rounded-lg border-neutral-5 focus:outline-none focus:border-blue-9 focus:border-2 w-64;
+  font-weight: 500;
+}
+.am-laptop-item {
+  @apply w-64
+}
+.am-laptop-item select {
+  @apply p-2 rounded-lg border-2 border-neutral-5 focus:outline-none focus:border-blue-9 text-neutral-9 font-medium
+}
+.am-laptop-item input {
+  font-weight: 500;
+  @apply pl-2 border-2 rounded-lg border-neutral-5 focus:outline-none focus:border-blue-9 focus:border-2 w-full
+}
+.am-comments {
+  @apply flex flex-col justify-between gap-y-3
+}
+.am-comments label {
+  @apply title-medium;
+  font-weight: 600;
+}
+.am-comments textarea {
+  @apply p-2 border-2 h-20 resize-none rounded-lg border-neutral-5 focus:outline-none focus:border-blue-9 focus:border-2 w-full body-medium text-neutral-9
+}
+.am-submit-button {
+  @apply label-large w-full border-none rounded-md h-14
+}
+/* Default Action Component End */
+
+/* ----------- Asset Management End----------- */
+
 /* ----------- Asset Management Check In Start----------- */
 .add-note {
-  @apply absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1;
 }
 .add-note-title {
-  @apply title-small text-neutral-9 dark:text-neutral-1
+  @apply title-small text-neutral-9 dark:text-neutral-1;
 }
 .add-note-textarea {
-  @apply w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none
+  @apply w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none;
 }
 /* ----------- Asset Management Check In End----------- */
