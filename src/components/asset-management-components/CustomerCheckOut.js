@@ -42,54 +42,47 @@ const CustomerCheckOut = ({ setIsCheckOutClicked }) => {
     <>
       <div className="am-action-container">
         <div className="am-action-component">
-          <button className="absolute" onClick={handleCheckOutClick}>
-            <img src={x_close} alt="Close Icon" />
-          </button>
-          <div className="am-action-componenet-title">Laptop Check Out</div>
+          <div className="am-action-component-title">Laptop Check Out</div>
           <div className="am-action-component-main">
-            <div className="am-action-component-item">
-              <div>
+            <div className="flex justify-between">
+              <div className="am-action-component-item">
                 <label for="uniqname">
-                  Customer Uniqname<span className="text-blue-9">*</span>
+                  Uniqname<span className="text-blue-9">*</span>
                 </label>
-                <img src={information} alt="Information Icon" />
-              </div>
-              <input
-                className="am-uniqname-item"
-                type="text"
-                id="uniqname"
-                name="uniqname"
-                placeholder="uniqname"
-                pattern="\d*"
-                spellCheck="false"
-                value={uniqname}
-                onChange={handleUniqnameChange}
-              />
-            </div>
-            <div className="am-action-component-item">
-              <div>
-                <label for="asset">
-                  Asset Number<span className="text-blue-9">*</span>
-                </label>
-                <img src={information} alt="Information Icon" />
-              </div>
-              <div className="am-laptop-item">
-                <select
-                  value={dropdownValue}
-                  onChange={handleDropdownChange}
-                >
-                  <option value="SAH">SAH</option>
-                  <option value="TRL">TRL</option>
-                </select>
                 <input
+                  className="am-uniqname-item"
                   type="text"
-                  id="asset"
-                  name="asset"
-                  placeholder="00000"
+                  id="uniqname"
+                  name="uniqname"
+                  placeholder="uniqname"
                   pattern="\d*"
-                  value={assetId}
-                  onChange={handleAssetIDChange}
+                  spellCheck="false"
+                  value={uniqname}
+                  onChange={handleUniqnameChange}
                 />
+              </div>
+              <div className="am-action-component-item">
+                <label for="asset">
+                  Asset #<span className="text-blue-9">*</span>
+                </label>
+                <div className="am-laptop-item">
+                  <select
+                    value={dropdownValue}
+                    onChange={handleDropdownChange}
+                  >
+                    <option value="SAH">SAH</option>
+                    <option value="TRL">TRL</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="asset"
+                    name="asset"
+                    placeholder="00000"
+                    pattern="\d*"
+                    value={assetId}
+                    onChange={handleAssetIDChange}
+                  />
+                </div>
               </div>
             </div>
             <div className="am-comments">
@@ -106,16 +99,19 @@ const CustomerCheckOut = ({ setIsCheckOutClicked }) => {
               />
             </div>
           </div>
-          <button
-            className={`am-submit-button ${
-              isSubmitDisabled
-                ? "bg-neutral-3 text-neutral-7 cursor-not-allowed"
-                : "bg-blue-9 text-white"
-            }`}
-            disabled={isSubmitDisabled}
-          >
-            Check and Submit
-          </button>
+          <div className="am-submit-cancel-container">
+            <button className="text-blue-9" onClick={handleCheckOutClick}>Cancel</button>
+            <button
+              className={`am-submit-button ${
+                isSubmitDisabled
+                  ? "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                  : "bg-blue-9 text-white"
+              }`}
+              disabled={isSubmitDisabled}
+            >
+              Check and Submit
+            </button>
+          </div>
         </div>
       </div>
     </>

@@ -33,21 +33,14 @@ const CustomerReturn = ({ setIsReturnClicked }) => {
     <>
       <div className="am-action-container">
         <div className="am-action-component">
-          <button className="absolute" onClick={handleReturnClick}>
-            <img src={x_close} alt="Close Icon" />
-          </button>
-          <div className="am-action-componenet-title">Laptop Return</div>
+          <div className="am-action-component-title">Laptop Return</div>
           <div className="am-action-component-main">
             <div className="am-action-component-item">
-              <div>
-                <label for="asset">
-                  Asset Number<span className="text-blue-9">*</span>
-                </label>
-                <img src={information} alt="Information Icon" />
-              </div>
-              <div className="flex gap-x-2 w-64">
+              <label for="asset">
+                Asset #<span className="text-blue-9">*</span>
+              </label>
+              <div className="am-laptop-item">
                 <select
-                  className="p-2 rounded-lg border-2 border-neutral-5 focus:outline-none focus:border-blue-9 text-neutral-9 font-medium"
                   value={dropdownValue}
                   onChange={handleDropdownChange}
                 >
@@ -55,7 +48,6 @@ const CustomerReturn = ({ setIsReturnClicked }) => {
                   <option value="TRL">TRL</option>
                 </select>
                 <input
-                  className="p-2 border-2 rounded-lg border-neutral-5 focus:outline-none focus:border-blue-9 focus:border-2 w-full font-medium"
                   type="text"
                   id="asset"
                   name="asset"
@@ -80,16 +72,19 @@ const CustomerReturn = ({ setIsReturnClicked }) => {
               />
             </div>
           </div>
-          <button
-            className={`am-submit-button ${
-              isSubmitDisabled
-                ? "bg-neutral-3 text-neutral-7 cursor-not-allowed"
-                : "bg-blue-9 text-white"
-            }`}
-            disabled={isSubmitDisabled}
-          >
-            Check and Submit
-          </button>
+          <div className="am-submit-cancel-container">
+            <button className="text-blue-9" onClick={handleReturnClick}>Cancel</button>
+            <button
+              className={`am-submit-button ${
+                isSubmitDisabled
+                  ? "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                  : "bg-blue-9 text-white"
+              }`}
+              disabled={isSubmitDisabled}
+            >
+              Check and Submit
+            </button>
+          </div>
         </div>
       </div>
     </>

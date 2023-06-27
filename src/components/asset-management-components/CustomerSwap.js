@@ -41,61 +41,54 @@ const CustomerSwap = ({ setIsSwapClicked }) => {
     <>
       <div className="am-action-container">
         <div className="am-action-component">
-          <button className="absolute" onClick={handleSwapClick}>
-            <img src={x_close} alt="Close Icon" />
-          </button>
-          <div className="am-action-componenet-title">Laptop Swap</div>
+          <div className="am-action-component-title">Laptop Swap</div>
           <div className="am-action-component-main">
-            <div className="am-action-component-item">
-              <div>
+            <div className="flex justify-between">
+              <div className="am-action-component-item">
                 <label for="oldasset">
-                  Old Laptop Asset Number<span className="text-blue-9">*</span>
+                  Old Asset #<span className="text-blue-9">*</span>
                 </label>
-                <img src={information} alt="Information Icon" />
+                <div className="am-laptop-item">
+                  <select
+                    value={dropdownValue}
+                    onChange={handleDropdownChange}
+                  >
+                    <option value="SAH">SAH</option>
+                    <option value="TRL">TRL</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="oldasset"
+                    name="oldasset"
+                    placeholder="00000"
+                    pattern="\d*"
+                    value={oldAssetId}
+                    onChange={handleOldAssetIdChange}
+                  />
+                </div>
               </div>
-              <div className="am-laptop-item">
-                <select
-                  value={dropdownValue}
-                  onChange={handleDropdownChange}
-                >
-                  <option value="SAH">SAH</option>
-                  <option value="TRL">TRL</option>
-                </select>
-                <input
-                  type="text"
-                  id="oldasset"
-                  name="oldasset"
-                  placeholder="00000[old]"
-                  pattern="\d*"
-                  value={oldAssetId}
-                  onChange={handleOldAssetIdChange}
-                />
-              </div>
-            </div>
-            <div className="am-action-component-item">
-              <div>
+              <div className="am-action-component-item">
                 <label for="newasset">
-                  New Laptop Asset Number<span className="text-blue-9">*</span>
+                  New Asset #<span className="text-blue-9">*</span>
                 </label>
-                <img src={information} alt="Information Icon" />
-              </div>
-              <div className="am-laptop-item">
-                <select
-                  value={dropdownValue}
-                  onChange={handleDropdownChange}
-                >
-                  <option value="SAH">SAH</option>
-                  <option value="TRL">TRL</option>
-                </select>
-                <input
-                  type="text"
-                  id="newasset"
-                  name="newasset"
-                  placeholder="00000[new]"
-                  pattern="\d*"
-                  value={newAssetId}
-                  onChange={handleNewAssetIdChange}
-                />
+                <div className="am-laptop-item">
+                  <select
+                    value={dropdownValue}
+                    onChange={handleDropdownChange}
+                  >
+                    <option value="SAH">SAH</option>
+                    <option value="TRL">TRL</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="newasset"
+                    name="newasset"
+                    placeholder="00000"
+                    pattern="\d*"
+                    value={newAssetId}
+                    onChange={handleNewAssetIdChange}
+                  />
+                </div>
               </div>
             </div>
             <div className="am-comments">
@@ -112,16 +105,19 @@ const CustomerSwap = ({ setIsSwapClicked }) => {
               />
             </div>
           </div>
-          <button
-            className={`am-submit-button ${
-              isSubmitDisabled
-                ? "bg-neutral-3 text-neutral-7"
-                : "bg-blue-9 text-white"
-            }`}
-            disabled={isSubmitDisabled}
-          >
-            Check and Submit
-          </button>
+          <div className="am-submit-cancel-container">
+            <button className="text-blue-9" onClick={handleSwapClick}>Cancel</button>
+            <button
+              className={`am-submit-button ${
+                isSubmitDisabled
+                  ? "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                  : "bg-blue-9 text-white"
+              }`}
+              disabled={isSubmitDisabled}
+            >
+              Check and Submit
+            </button>
+          </div>
         </div>
       </div>
     </>
