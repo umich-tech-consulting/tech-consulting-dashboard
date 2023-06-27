@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/tech-consulting-automation/static/css/main.eb180fa7.css",
-    "main.js": "/tech-consulting-automation/static/js/main.ef5d4b79.js",
+    "main.css": "/tech-consulting-automation/static/css/main.0fad5572.css",
+    "main.js": "/tech-consulting-automation/static/js/main.e8475305.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js",
     "static/media/laptop_return.svg": "/tech-consulting-automation/static/media/laptop_return.cad60e5a008e7cfbf5af635a3203dc74.svg",
-    "static/media/laptop_check_in.svg": "/tech-consulting-automation/static/media/laptop_check_in.b038036305207612e6e9d2a3c0f111f6.svg",
+    "static/media/laptop_check_out.svg": "/tech-consulting-automation/static/media/laptop_check_out.b038036305207612e6e9d2a3c0f111f6.svg",
     "static/media/laptop_swap.svg": "/tech-consulting-automation/static/media/laptop_swap.5080961b9b7c3160687592781605049e.svg",
-    "static/media/information.svg": "/tech-consulting-automation/static/media/information.2736d4e7cd7ba4b7671f16c14ee75b43.svg",
     "index.html": "/tech-consulting-automation/index.html",
-    "static/media/x_close.svg": "/tech-consulting-automation/static/media/x_close.9cd80dd0d381d94d57f03f49167a1a61.svg",
-    "main.eb180fa7.css.map": "/tech-consulting-automation/static/css/main.eb180fa7.css.map",
-    "main.ef5d4b79.js.map": "/tech-consulting-automation/static/js/main.ef5d4b79.js.map",
+    "main.0fad5572.css.map": "/tech-consulting-automation/static/css/main.0fad5572.css.map",
+    "main.e8475305.js.map": "/tech-consulting-automation/static/js/main.e8475305.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-automation/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb180fa7.css",
-    "static/js/main.ef5d4b79.js"
+    "static/css/main.0fad5572.css",
+    "static/js/main.e8475305.js"
   ]
 }
