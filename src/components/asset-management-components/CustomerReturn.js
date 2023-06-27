@@ -1,5 +1,5 @@
-import x_close from "../../icons/asset-management/x_close.svg";
-import information from "../../icons/asset-management/information.svg";
+import laptop_return from "../../icons/asset-management/laptop_return.svg"
+
 
 import { useState } from "react"; // Import useState
 
@@ -33,7 +33,10 @@ const CustomerReturn = ({ setIsReturnClicked }) => {
     <>
       <div className="am-action-container">
         <div className="am-action-component">
-          <div className="am-action-component-title">Laptop Return</div>
+          <div className="flex justify-between items-center">
+            <div className="am-action-component-title">Laptop Return</div>
+            <img className="h-5 w-fit" src={laptop_return} alt='Laptop Return Icon' />
+          </div>
           <div className="am-action-component-main">
             <div className="am-action-component-item">
               <label for="asset">

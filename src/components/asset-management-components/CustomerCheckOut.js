@@ -1,5 +1,5 @@
-import x_close from "../../icons/asset-management/x_close.svg";
-import information from "../../icons/asset-management/information.svg";
+import laptop_check_in from "../../icons/asset-management/laptop_check_out.svg"
+
 
 import { useState } from "react"; // Import useState
 
@@ -42,7 +42,10 @@ const CustomerCheckOut = ({ setIsCheckOutClicked }) => {
     <>
       <div className="am-action-container">
         <div className="am-action-component">
-          <div className="am-action-component-title">Laptop Check Out</div>
+          <div className="flex justify-between items-center">
+            <div className="am-action-component-title">Laptop Check Out</div>
+            <img className="h-5 w-fit" src={laptop_check_in} alt='Laptop Return Icon' />
+          </div>
           <div className="am-action-component-main">
             <div className="flex flex-wrap justify-between gap-y-4">
               <div className="am-action-component-item">
