@@ -16,7 +16,7 @@ const Management = () => {
         <title>Management</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="mb-6 headline-large">Asset Management</div>
+        <div className="headline-large">Asset Management</div>
         {isReturnClicked ? <CustomerReturn setIsReturnClicked={setIsReturnClicked} /> : null }
         {isCheckOutClicked ? <CustomerCheckOut setIsCheckOutClicked={setIsCheckOutClicked} /> : null }
         {isSwapClicked ? <CustomerSwap setIsSwapClicked={setIsSwapClicked} /> : null }

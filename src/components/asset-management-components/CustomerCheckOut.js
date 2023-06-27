@@ -44,7 +44,7 @@ const CustomerCheckOut = ({ setIsCheckOutClicked }) => {
         <div className="am-action-component">
           <div className="am-action-component-title">Laptop Check Out</div>
           <div className="am-action-component-main">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-y-4">
               <div className="am-action-component-item">
                 <label for="uniqname">
                   Uniqname<span className="text-blue-9">*</span>

@@ -16,7 +16,7 @@ const AssetDefault = ({setIsCheckOutClicked, setIsReturnClicked, setIsSwapClicke
 
   return (
     <>
-        <div className="am-default-container">
+        <div className="am-default-container mt-6">
             <button onClick={handleReturnClick}>
               <img src={laptop_return} alt='Laptop Return Icon' />
               <div><span className="font-semibold">Return</span> Laptop</div>

@@ -43,7 +43,7 @@ const CustomerSwap = ({ setIsSwapClicked }) => {
         <div className="am-action-component">
           <div className="am-action-component-title">Laptop Swap</div>
           <div className="am-action-component-main">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-y-4">
               <div className="am-action-component-item">
                 <label for="oldasset">
                   Old Asset #<span className="text-blue-9">*</span>
