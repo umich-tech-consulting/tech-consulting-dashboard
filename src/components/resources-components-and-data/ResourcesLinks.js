@@ -22,9 +22,9 @@ const ResourceLinks = ({ links }) => {
             <div className="flex flex-wrap gap-6">
               {subgroupLinks.map((link, index) => (
                 <a
+                  className="title-medium bg-neutral-2 hover:bg-neutral-3 px-3 py-2 rounded-lg"
                   title={link.description}
                   key={index}
-                  className="title-medium bg-neutral-2 px-3 py-2 rounded-lg"
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
