@@ -17,7 +17,7 @@ const ResourceLinks = ({ links }) => {
         {Object.entries(groupBySubgroup).map(([subgroup, subgroupLinks]) => (
           <div key={subgroup}>
             {subgroup !== 'default' && (
-              <div className="title-small mt-6 mb-2">{subgroup}</div>
+              <div className="title-small mt-9 mb-2">{subgroup}</div>
             )}
             <div className="flex flex-wrap gap-6">
               {subgroupLinks.map((link, index) => (

@@ -10,9 +10,9 @@ const ResourcesAccordion = ({ items }) => {
   };
 
   return (
-    <div className="w-full mx-auto flex flex-col gap-6">
+    <div className="w-full mx-auto flex flex-col gap-6 items-center">
       {items.map((item) => (
-        <div key={item.id} className="bg-white hover:bg-neutral-1 rounded-2xl px-6 py-5 shadow-light w-full">
+        <div key={item.id} className="bg-white hover:bg-neutral-1 rounded-2xl px-6 py-5 shadow-light max-w-5xl w-full">
           <button
             className="flex justify-between items-center w-full hover:bg-gray-200 focus:outline-none"
             onClick={() => handleItemClick(item.id)}
