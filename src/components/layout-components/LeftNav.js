@@ -66,18 +66,18 @@ const LeftNav = () => {
         <Link
           to="/asset-management"
           className={`link-container ${
-            location.pathname === "/asset-management"
+            location.pathname.startsWith("/asset-management")
               ? "bg-blue-9"
               : "bg-base-light"
           }`}
         >
-          {location.pathname === "/asset-management" ? (
+          {location.pathname.startsWith("/asset-management") ? (
             <img src={asset_management_active} alt='Active Asset Management Logo' />
           ) : (
             <img src={asset_management_inactive} alt='Inactive Asset Management Logo' />
           )}
           <div className={`body-medium leading-none ${
-            location.pathname === "/asset-management"
+            location.pathname.startsWith("/asset-management")
               ? "text-neutral-1"
               : "text-neutral-9"
           }`}>
