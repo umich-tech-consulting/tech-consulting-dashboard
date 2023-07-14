@@ -1,110 +1,342 @@
 [
-    {
-        "id": 1,
-        "headerTitle": "Tech Consulting Tools",
-        "links": [
-        { "label": "ITS Slack", "url": "http://umich-its-annarbor.slack.com/", "description": "Information Technology Services Slack workspace" },
-        { "label": "GSX Login", "url": "http://gsx2.apple.com/", "description": "Apple Global Service Exchange login" },
-        { "label": "TeamDynamix", "url": "https://teamdynamix.umich.edu/", "description": "Ticket and asset management system" }
-        ]
-    },
-    {
-        "id": 2,
-        "headerTitle": "Shift/Scheduling",
-        "links": [
-        { "label": "When I Work", "url": "http://wheniwork.com/", "description": "Enter work availability and view work schedule" },
-        { "label": "Employee Self Service", "url": "https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700", "description": "Clock in and out of work using the Time Reporting tab" },
-        { "label": "Missed Punch Log", "url": "https://docs.google.com/spreadsheets/d/1khPS11xJAnSa19Mpi6IIKo_Ks7u0kT-kipo24r2bomQ/edit#gid=0", "description": "Report a missed clock-in or clock-out" }
-        ]
-    },
-    {
-        "id": 3,
-        "headerTitle": "Apple Official Documentation",
-        "links": [
-        { "label": "How to reset NVRAM on a Mac", "url": "https://support.apple.com/en-us/HT204063", "description": "If one or more settings stored in NVRAM don't work as expected on an Intel-based Mac, resetting NVRAM might help." },
-        { "label": "Mac Keyboard Shortcuts", "url": "https://support.apple.com/en-us/HT201236", "description": "Comprehensive list of Mac keyboard shortcuts" },
-        { "label": "GSX Login", "url": "http://gsx2.apple.com/", "description": "Apple Global Service Exchange login" },
-        { "label": "Remove a device from Find Devices on iCloud.com", "url": "https://support.apple.com/guide/icloud/remove-a-device-mmfc0eeddd/icloud", "description": "You can use Find Devices on iCloud.com to temporarily remove a device from the Devices list or turn off Activation Lock on a device you already gave away or sold." },
-        { "label": "How to back up your iPhone, iPad, and iPod touch", "url": "https://support.apple.com/en-us/HT203977", "description": "If you back up your iPhone, iPad, or iPod touch, you'll have a copy of your information to use in case your device is ever replaced, lost, or damaged." },
-        { "label": "Reset the SMC of your Mac", "url": "https://support.apple.com/en-us/HT201295", "description": "The SMC is responsible for managing power on your Intel-based Mac. Resetting it can resolve certain uncommon issues related to power or thermal management." },
-        { "label": "Set up iCloud on your iPhone, iPad, or iPod touch", "url": "https://support.apple.com/guide/icloud/set-up-icloud-on-your-devices-mmfc0f1e2a/icloud", "description": "To set up iCloud on your devices, sign in to each of them with the same Apple ID and password. You can choose which apps store information in iCloud and which iCloud features you're using separately on each device. Learn more about how each app or feature uses iCloud." }
+  {
+    "id": 1,
+    "headerTitle": "Tech Consulting Tools",
+    "links": [
+      {
+        "label": "ITS Slack",
+        "url": "http://umich-its-annarbor.slack.com/",
+        "description": "Information Technology Services Slack workspace"
+      },
+      {
+        "label": "GSX Login",
+        "url": "http://gsx2.apple.com/",
+        "description": "Apple Global Service Exchange login"
+      },
+      {
+        "label": "TeamDynamix",
+        "url": "https://teamdynamix.umich.edu/",
+        "description": "Ticket and asset management system"
+      }
     ]
-    },
-    {
-        "id": 4,
-        "headerTitle": "Warranty Checking",
-        "links": [
-        { "label": "GSX Login", "url": "http://gsx2.apple.com/", "description": "Apple Global Service Exchange login" },
-        { "label": "Check Safeware Coverage", "url": "https://www.safeware.com/lookup", "description": "Check warranty coverage for Safeware ensured devices" },
-        { "label": "Check Dell Coverage", "url": "https://www.dell.com/support/home/en-us/products?app=warranty", "description": "https://www.dell.com/support/home/en-us/products?app=warranty" },
-        { "label": "Check Apple Coverage", "url": "https://checkcoverage.apple.com/?locale=en_US", "description": "Review Apple warranty status and eligibility to purchase additional AppleCare coverage" }
-        ]
-    },
-    {
-        "id": 5,
-        "headerTitle": "TeamDynamix",
-        "links": [
-        { "label": "TeamDynamix", "url": "https://teamdynamix.umich.edu/", "description": "Ticket and asset management system" },
-        { "label": "TeamDynamix Knowledge Base", "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/", "description": "Internal ITS documentation" },
-        { "label": "TeamDynamix Guide", "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#", "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair" }
-        ]
-    },
-    {
-        "id": 6,
-        "headerTitle": "Repairs",
-        "links": [
-        { "label": "Tech Repair Loaner Program", "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit", "description": "Information on loaners for customers while their devices are being repaired" },
-        { "label": "Diagnostic Turnaround", "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0", "description": "Digital Signage information about diagnostic turnaround times" },
-        { "label": "Current Repair Turnaround", "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0", "description": "Digital Signage information about repair turnaround times" },
-        { "label": "Data Transfer Turnaround", "url": "https://docs.google.com/spreadsheets/d/1XEU-VPlcS7GsS3LKkbPUbM0e3X-Ewa7yWtM3ypfFQMQ/edit#gid=0", "description": "Digital Signage information about data transfer turnaround times" },
-        { "label": "Loaner Attestation Form", "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service", "description": "Form customers need to fill out to obtain a loaner" },
-        { "label": "Repair Ticket Guide", "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#", "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair" },
-        { "label": "Wipe and Reinstall OS on Mac Loaners", "url": "https://docs.google.com/document/d/1E-zuBELCIu1W7xtZquCfbSlh8LiENJKvFsNpyaeQZ3o/edit", "description": "How to wipe and reinstall the operating system on Tech Repair loaner laptops (which are all MacBook Air laptops)" }
-        ]
-    },
-    {
-        "id": 7,
-        "headerTitle": "Printing",
-        "links": [
-        { "label": "Poster Pre-Order Printing Process", "url": "https://docs.google.com/document/d/1jvz_tmej80aKVT9X9zFTnzVWwaqg49L3dYzIp6Ffrm8/edit", "description": "Description of the poster pre-ordering service for next day pick-up at the Fishbowl and at the Duderstadt Groundworks lab" },
-        { "label": "How to Load Printer Paper", "url": "https://drive.google.com/file/d/18aaqq5pfFN1aJ2trSbMicmzACLgjMEJX/view", "description": "Video tutorial of how to load printer paper at the Fishbowl" },
-        { "label": "Printing Support", "url": "https://docs.google.com/document/d/1xYb77XazAIgSB0FcPdTArPihdUn0EJL4EjbrJ-_Tb40/edit", "description": "General Printing Information" },
-        { "label": "PaperCut Account", "url": "https://accounts.miprint.it.umich.edu/", "description": "View printing account summary, transaction history, recent print jobs, pending jobs, order a poster" },
-        { "label": "Poster Printing Statuses", "url": "https://accounts.miprint.it.umich.edu/job-ticketing/operator/rooms/1/workflow", "description": "View and manage poster printing orders" },
-        { "label": "Mprint - Printer Search and Info", "url": "https://mprint.umich.edu/info", "description": "View printer statuses and availability" }
-        ]
-    },
-    {
-        "id": 8,
-        "headerTitle": "Fishbowl",
-        "links": [
-        { "label": "Fishbowl Instructor Station Guide", "url": "https://docs.google.com/document/d/1szQqdrahOqV9boghvz6PeFiMfD_DbLjJciF6TKwXZMA/edit", "description": "Guide that explains how instructors can use the Fishbowl hardware to teach classes" },
-        { "label": "Fishbowl Furniture Reset", "url": "https://docs.google.com/document/d/19q-9jV8RL4I8Pu0MQlGO83YJD_4h0seImETVvJgdm3o/edit#heading=h.avoh5uoc5cl7", "description": "How to keep the Fishbowl furniture organized and tidy" },
-        { "label": "Fishbowl Lost & Found Form", "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0XdIDDcX1oBG1oF3qyTJ9ati_TOfZ-p4L3CZwDTz5tpeSgA/viewform", "description": "Google Form to report lost and found items at the Fishbowl" },
-        { "label": "Fishbowl Tasks", "url": "https://docs.google.com/document/d/1Y6CQRYQtV36qTh0WK9rA8L507zVf5wXaGNA0JDHu9V0/edit", "description": "Description of common tasks performed at the Fishbowl" },
-        { "label": "Supplies Request Form", "url": "https://docs.google.com/forms/d/e/1FAIpQLScg4WppGS5uoMKHZBmevrmhQxr4tYlcqxXINg4yZl3mBufBoQ/viewform", "description": "Request office supplies" }
-        ]
-    },
-    {
-        "id": 9,
-        "headerTitle": "Training, Information & Resources",
-        "links": [
-        { "label": "Tech Consulting Student Employee Guidebook", "url": "https://docs.google.com/document/d/1Cykif6zIOVbn61ZRs_ce74dhqS-wVURXTsQNdZwTzjo/edit", "description": "General information about expectations and rules for tech consultants", "subgroup": "References" },
-        { "label": "Union Cheat Sheet", "url": "https://docs.google.com/document/d/1Bp2U4dQeeAvaFpty1B8awZqSZoPt3QYfDB0rwu4WdTo/edit?usp=sharing", "description": "Union specific shift information", "subgroup": "References" },
-        { "label": "Pierpont Cheat Sheet", "url": "https://docs.google.com/document/d/1V1v3DeSjVhfxu026IGNs-MBvsB-vXGWESJdIAP4gpc8/edit?usp=sharing", "description": "Pierpont specific shift information", "subgroup": "References" },
-        { "label": "TeamDynamix Guide", "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#", "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair", "subgroup": "References" },
-        { "label": "TeamDynamix Knowledge Base", "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/", "description": "Internal ITS documentation", "subgroup": "References" },
-        { "label": "Safeware FAQ", "url": "https://www.safeware.com/Resources/FAQ", "description": "Safeware and Warranty FAQ and overview", "subgroup": "References" },
-        { "label": "Campus Computing Software List", "url": "https://its.umich.edu/computing/computers-software/campus-computing-sites/software", "description": "ITS Campus Computing software service offerings", "subgroup": "References" },
-        { "label": "Tech Consulting Point of Sale Resources", "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_Resources.html#consulting", "description": "How to perform POS tasks such as: tech repair orders, laptop loaners and returns, managing receipts, and billing to a shortcode", "subgroup": "References" },
-        { "label": "Tech Consultant Passwords", "url": "https://docs.google.com/document/d/1Is8N86Gvx1U0ezujvBEZ4HdUmCcELBnKRNgS149aV3k/edit", "description": "Door code and login for tech consulting laptops", "subgroup": "References" },
-        { "label": "Sites at Home Process Documentation", "url": "https://docs.google.com/document/d/1xEcUP3Z9aop-21ePp4X7pvTPu02xkDeriqxcAnG6A6s/edit#heading=h.rjyqdln6b017", "description": "Info about S@H asset, ticket, and device management", "subgroup": "References" },
-        { "label": "Checkout a Tech Repair Order (MyLinc)", "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html", "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application", "subgroup": "References" },
-        { "label": "Slack Best Practices", "url": "https://docs.google.com/document/d/1HXVWx-_UKGEULlCObCLGnBXXfeN-c6F7cvZoJnAVnxA/edit", "description": "Tech consultant Slack guidelines", "subgroup": "Onboarding" },
-        { "label": "Required MyLinc Trainings", "url": "https://mylinc.umich.edu/core/viewPlaylistDetails/7023", "description": "Playlist of required trainings on MyLinc", "subgroup": "Onboarding" },
-        { "label": "Atlas Training - iPhone Repair Prep", "url": "https://docs.google.com/document/d/11TGxMbsO-_bFNzDKGn8cAk8bV_aJc4DqrkxwimQ7UqA/edit", "description": "Required Apple certification trainings to take before checking warranties", "subgroup": "Onboarding" },
-        { "label": "Effective Tech Consulting", "url": "https://docs.google.com/presentation/d/1cl8TspT-oRfSCpijxtH2mNLCMlBoFw-g/edit#slide=id.p1", "description": "How to work effectively as a tech consulting employee", "subgroup": "Onboarding" },
-        { "label": "Lost and Found Policy", "url": "https://docs.google.com/document/d/19yhBnfsd1iEc-qvW8aEtPL-EbyWh0ujCV68OWoBoQ8o/edit", "description": "How to deal with and report lost and found items", "subgroup": "Onboarding" }
-        ]
-    }
+  },
+  {
+    "id": 2,
+    "headerTitle": "Shift/Scheduling",
+    "links": [
+      {
+        "label": "When I Work",
+        "url": "http://wheniwork.com/",
+        "description": "Enter work availability and view work schedule"
+      },
+      {
+        "label": "Employee Self Service",
+        "url": "https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700",
+        "description": "Clock in and out of work using the Time Reporting tab"
+      },
+      {
+        "label": "Missed Punch Log",
+        "url": "https://docs.google.com/spreadsheets/d/1khPS11xJAnSa19Mpi6IIKo_Ks7u0kT-kipo24r2bomQ/edit#gid=0",
+        "description": "Report a missed clock-in or clock-out"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "headerTitle": "Apple Official Documentation",
+    "links": [
+      {
+        "label": "How to reset NVRAM on a Mac",
+        "url": "https://support.apple.com/en-us/HT204063",
+        "description": "If one or more settings stored in NVRAM don't work as expected on an Intel-based Mac, resetting NVRAM might help."
+      },
+      {
+        "label": "Mac Keyboard Shortcuts",
+        "url": "https://support.apple.com/en-us/HT201236",
+        "description": "Comprehensive list of Mac keyboard shortcuts"
+      },
+      {
+        "label": "GSX Login",
+        "url": "http://gsx2.apple.com/",
+        "description": "Apple Global Service Exchange login"
+      },
+      {
+        "label": "Remove a device from Find Devices on iCloud.com",
+        "url": "https://support.apple.com/guide/icloud/remove-a-device-mmfc0eeddd/icloud",
+        "description": "You can use Find Devices on iCloud.com to temporarily remove a device from the Devices list or turn off Activation Lock on a device you already gave away or sold."
+      },
+      {
+        "label": "How to back up your iPhone, iPad, and iPod touch",
+        "url": "https://support.apple.com/en-us/HT203977",
+        "description": "If you back up your iPhone, iPad, or iPod touch, you'll have a copy of your information to use in case your device is ever replaced, lost, or damaged."
+      },
+      {
+        "label": "Reset the SMC of your Mac",
+        "url": "https://support.apple.com/en-us/HT201295",
+        "description": "The SMC is responsible for managing power on your Intel-based Mac. Resetting it can resolve certain uncommon issues related to power or thermal management."
+      },
+      {
+        "label": "Set up iCloud on your iPhone, iPad, or iPod touch",
+        "url": "https://support.apple.com/guide/icloud/set-up-icloud-on-your-devices-mmfc0f1e2a/icloud",
+        "description": "To set up iCloud on your devices, sign in to each of them with the same Apple ID and password. You can choose which apps store information in iCloud and which iCloud features you're using separately on each device. Learn more about how each app or feature uses iCloud."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "headerTitle": "Warranty Checking",
+    "links": [
+      {
+        "label": "GSX Login",
+        "url": "http://gsx2.apple.com/",
+        "description": "Apple Global Service Exchange login"
+      },
+      {
+        "label": "Check Safeware Coverage",
+        "url": "https://www.safeware.com/lookup",
+        "description": "Check warranty coverage for Safeware ensured devices"
+      },
+      {
+        "label": "Check Dell Coverage",
+        "url": "https://www.dell.com/support/home/en-us/products?app=warranty",
+        "description": "Check warranty coverage for Dell devices"
+      },
+      {
+        "label": "Check Apple Coverage",
+        "url": "https://checkcoverage.apple.com/?locale=en_US",
+        "description": "Review Apple warranty status and eligibility to purchase additional AppleCare coverage"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "headerTitle": "TeamDynamix",
+    "links": [
+      {
+        "label": "TeamDynamix",
+        "url": "https://teamdynamix.umich.edu/",
+        "description": "Ticket and asset management system"
+      },
+      {
+        "label": "TeamDynamix Knowledge Base",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
+        "description": "Internal ITS documentation"
+      },
+      {
+        "label": "TeamDynamix Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "headerTitle": "Repairs",
+    "links": [
+      {
+        "label": "Tech Repair Loaner Program",
+        "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit",
+        "description": "Information on loaners for customers while their devices are being repaired"
+      },
+      {
+        "label": "Diagnostic Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
+        "description": "Digital Signage information about diagnostic turnaround times"
+      },
+      {
+        "label": "Current Repair Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
+        "description": "Digital Signage information about repair turnaround times"
+      },
+      {
+        "label": "Data Transfer Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1XEU-VPlcS7GsS3LKkbPUbM0e3X-Ewa7yWtM3ypfFQMQ/edit#gid=0",
+        "description": "Digital Signage information about data transfer turnaround times"
+      },
+      {
+        "label": "Loaner Attestation Form",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service",
+        "description": "Form customers need to fill out to obtain a loaner"
+      },
+      {
+        "label": "Repair Ticket Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
+      },
+      {
+        "label": "Wipe and Reinstall OS on Mac Loaners",
+        "url": "https://docs.google.com/document/d/1E-zuBELCIu1W7xtZquCfbSlh8LiENJKvFsNpyaeQZ3o/edit",
+        "description": "How to wipe and reinstall the operating system on Tech Repair loaner laptops (which are all MacBook Air laptops)"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "headerTitle": "Printing",
+    "links": [
+      {
+        "label": "Poster Pre-Order Printing Process",
+        "url": "https://docs.google.com/document/d/1jvz_tmej80aKVT9X9zFTnzVWwaqg49L3dYzIp6Ffrm8/edit",
+        "description": "Description of the poster pre-ordering service for next day pick-up at the Fishbowl and at the Duderstadt Groundworks lab"
+      },
+      {
+        "label": "How to Load Printer Paper",
+        "url": "https://drive.google.com/file/d/18aaqq5pfFN1aJ2trSbMicmzACLgjMEJX/view",
+        "description": "Video tutorial of how to load printer paper at the Fishbowl"
+      },
+      {
+        "label": "Printing Support",
+        "url": "https://docs.google.com/document/d/1xYb77XazAIgSB0FcPdTArPihdUn0EJL4EjbrJ-_Tb40/edit",
+        "description": "General Printing Information"
+      },
+      {
+        "label": "PaperCut Account",
+        "url": "https://accounts.miprint.it.umich.edu/",
+        "description": "View printing account summary, transaction history, recent print jobs, pending jobs, order a poster"
+      },
+      {
+        "label": "Poster Printing Statuses",
+        "url": "https://accounts.miprint.it.umich.edu/job-ticketing/operator/rooms/1/workflow",
+        "description": "View and manage poster printing orders"
+      },
+      {
+        "label": "Mprint - Printer Search and Info",
+        "url": "https://mprint.umich.edu/info",
+        "description": "View printer statuses and availability"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "headerTitle": "Fishbowl",
+    "links": [
+      {
+        "label": "Fishbowl Instructor Station Guide",
+        "url": "https://docs.google.com/document/d/1szQqdrahOqV9boghvz6PeFiMfD_DbLjJciF6TKwXZMA/edit",
+        "description": "Guide that explains how instructors can use the Fishbowl hardware to teach classes"
+      },
+      {
+        "label": "Fishbowl Furniture Reset",
+        "url": "https://docs.google.com/document/d/19q-9jV8RL4I8Pu0MQlGO83YJD_4h0seImETVvJgdm3o/edit#heading=h.avoh5uoc5cl7",
+        "description": "How to keep the Fishbowl furniture organized and tidy"
+      },
+      {
+        "label": "Fishbowl Lost & Found Form",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0XdIDDcX1oBG1oF3qyTJ9ati_TOfZ-p4L3CZwDTz5tpeSgA/viewform",
+        "description": "Google Form to report lost and found items at the Fishbowl"
+      },
+      {
+        "label": "Fishbowl Tasks",
+        "url": "https://docs.google.com/document/d/1Y6CQRYQtV36qTh0WK9rA8L507zVf5wXaGNA0JDHu9V0/edit",
+        "description": "Description of common tasks performed at the Fishbowl"
+      },
+      {
+        "label": "Supplies Request Form",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScg4WppGS5uoMKHZBmevrmhQxr4tYlcqxXINg4yZl3mBufBoQ/viewform",
+        "description": "Request office supplies"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "headerTitle": "Training, Information & Resources",
+    "links": [
+      {
+        "label": "Tech Consulting Student Employee Guidebook",
+        "url": "https://docs.google.com/document/d/1Cykif6zIOVbn61ZRs_ce74dhqS-wVURXTsQNdZwTzjo/edit",
+        "description": "General information about expectations and rules for tech consultants",
+        "subgroup": "References"
+      },
+      {
+        "label": "Union Cheat Sheet",
+        "url": "https://docs.google.com/document/d/1Bp2U4dQeeAvaFpty1B8awZqSZoPt3QYfDB0rwu4WdTo/edit?usp=sharing",
+        "description": "Union specific shift information",
+        "subgroup": "References"
+      },
+      {
+        "label": "Pierpont Cheat Sheet",
+        "url": "https://docs.google.com/document/d/1V1v3DeSjVhfxu026IGNs-MBvsB-vXGWESJdIAP4gpc8/edit?usp=sharing",
+        "description": "Pierpont specific shift information",
+        "subgroup": "References"
+      },
+      {
+        "label": "TeamDynamix Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair",
+        "subgroup": "References"
+      },
+      {
+        "label": "TeamDynamix Knowledge Base",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
+        "description": "Internal ITS documentation",
+        "subgroup": "References"
+      },
+      {
+        "label": "Safeware FAQ",
+        "url": "https://www.safeware.com/Resources/FAQ",
+        "description": "Safeware and Warranty FAQ and overview",
+        "subgroup": "References"
+      },
+      {
+        "label": "Campus Computing Software List",
+        "url": "https://its.umich.edu/computing/computers-software/campus-computing-sites/software",
+        "description": "ITS Campus Computing software service offerings",
+        "subgroup": "References"
+      },
+      {
+        "label": "Tech Consulting Point of Sale Resources",
+        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_Resources.html#consulting",
+        "description": "How to perform POS tasks such as: tech repair orders, laptop loaners and returns, managing receipts, and billing to a shortcode",
+        "subgroup": "References"
+      },
+      {
+        "label": "Tech Consultant Passwords",
+        "url": "https://docs.google.com/document/d/1Is8N86Gvx1U0ezujvBEZ4HdUmCcELBnKRNgS149aV3k/edit",
+        "description": "Door code and login for tech consulting laptops",
+        "subgroup": "References"
+      },
+      {
+        "label": "Sites at Home Process Documentation",
+        "url": "https://docs.google.com/document/d/1xEcUP3Z9aop-21ePp4X7pvTPu02xkDeriqxcAnG6A6s/edit#heading=h.rjyqdln6b017",
+        "description": "Info about S@H asset, ticket, and device management",
+        "subgroup": "References"
+      },
+      {
+        "label": "Checkout a Tech Repair Order (MyLinc)",
+        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html",
+        "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application",
+        "subgroup": "References"
+      },
+      {
+        "label": "Slack Best Practices",
+        "url": "https://docs.google.com/document/d/1HXVWx-_UKGEULlCObCLGnBXXfeN-c6F7cvZoJnAVnxA/edit",
+        "description": "Tech consultant Slack guidelines",
+        "subgroup": "Onboarding"
+      },
+      {
+        "label": "Required MyLinc Trainings",
+        "url": "https://mylinc.umich.edu/core/viewPlaylistDetails/7023",
+        "description": "Playlist of required trainings on MyLinc",
+        "subgroup": "Onboarding"
+      },
+      {
+        "label": "Atlas Training - iPhone Repair Prep",
+        "url": "https://docs.google.com/document/d/11TGxMbsO-_bFNzDKGn8cAk8bV_aJc4DqrkxwimQ7UqA/edit",
+        "description": "Required Apple certification trainings to take before checking warranties",
+        "subgroup": "Onboarding"
+      },
+      {
+        "label": "Effective Tech Consulting",
+        "url": "https://docs.google.com/presentation/d/1cl8TspT-oRfSCpijxtH2mNLCMlBoFw-g/edit#slide=id.p1",
+        "description": "How to work effectively as a tech consulting employee",
+        "subgroup": "Onboarding"
+      },
+      {
+        "label": "Lost and Found Policy",
+        "url": "https://docs.google.com/document/d/19yhBnfsd1iEc-qvW8aEtPL-EbyWh0ujCV68OWoBoQ8o/edit",
+        "description": "How to deal with and report lost and found items",
+        "subgroup": "Onboarding"
+      }
+    ]
+  }
 ]
