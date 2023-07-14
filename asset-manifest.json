@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tech-consulting-dashboard/static/css/main.02f70fe2.css",
-    "main.js": "/tech-consulting-dashboard/static/js/main.f97d1680.js",
+    "main.css": "/tech-consulting-dashboard/static/css/main.8b285b95.css",
+    "main.js": "/tech-consulting-dashboard/static/js/main.e3b44616.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js",
     "static/media/tdxlogo.png": "/tech-consulting-dashboard/static/media/tdxlogo.5542ef78eb0e1acc816d.png",
     "static/media/laptop_return.svg": "/tech-consulting-dashboard/static/media/laptop_return.67091636c85ba0fe45f02de1cc294c3d.svg",
@@ -17,12 +17,12 @@
     "index.html": "/tech-consulting-dashboard/index.html",
     "static/media/resources_inactive.svg": "/tech-consulting-dashboard/static/media/resources_inactive.4a358fe89f17d23e866490e9cd005881.svg",
     "static/media/home_inactive.svg": "/tech-consulting-dashboard/static/media/home_inactive.478331808bd0e335a47c26a9b5e00a9f.svg",
-    "main.02f70fe2.css.map": "/tech-consulting-dashboard/static/css/main.02f70fe2.css.map",
-    "main.f97d1680.js.map": "/tech-consulting-dashboard/static/js/main.f97d1680.js.map",
+    "main.8b285b95.css.map": "/tech-consulting-dashboard/static/css/main.8b285b95.css.map",
+    "main.e3b44616.js.map": "/tech-consulting-dashboard/static/js/main.e3b44616.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02f70fe2.css",
-    "static/js/main.f97d1680.js"
+    "static/css/main.8b285b95.css",
+    "static/js/main.e3b44616.js"
   ]
 }
