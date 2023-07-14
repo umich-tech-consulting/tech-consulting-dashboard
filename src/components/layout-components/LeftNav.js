@@ -106,7 +106,7 @@ const LeftNav = () => {
           </div>
         </Link>
       </div>
-      <div className="absolute bottom-0 pb-5 w-[213.3px] body-medium text-neutral-9">
+      <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9">
         <div className="bg-white p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
