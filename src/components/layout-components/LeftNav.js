@@ -110,15 +110,15 @@ const LeftNav = () => {
         <div className="bg-white p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
-            <a href="/" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Information Technology Services Slack workspace">
+            <a href="http://umich-its-annarbor.slack.com/" target="blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Information Technology Services Slack workspace">
               <img className="w-4 h-4" src={slack_logo} alt='Slack Logo' />
               <div>Slack</div>
             </a>
-            <a href="/" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Ticket and asset management system">
+            <a href="https://teamdynamix.umich.edu/" target="blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Ticket and asset management system">
               <img className="w-4 h-4" src={tdxlogo} alt='TDX Logo' />
               <div>TDX</div>
             </a>
-            <a href="/" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Apple Global Service Exchange login">
+            <a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Apple Global Service Exchange login">
               <img className="w-4 h-4" src={gsxicon} alt='GSX Icon' />
               <div>GSX</div>
             </a>
