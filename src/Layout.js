@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import LeftNav from './components/layout-components/LeftNav';
 import { Outlet } from 'react-router-dom';
 

@@ -109,6 +109,12 @@
 /* ----- Text End ----- */
 /* ----------- Default Styles End----------- */
 
+/* ----------- Left Nav Start----------- */
+.link-container {
+  @apply pl-2 h-8 rounded-full flex content-center items-center gap-x-4
+}
+/* ----------- Left Nav End----------- */
+
 /* ----------- Asset Management Start----------- */
 /* Default Management Component Start */
 .am-default-container {
