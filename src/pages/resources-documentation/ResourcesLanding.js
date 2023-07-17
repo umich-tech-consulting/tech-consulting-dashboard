@@ -41,17 +41,17 @@ const Resources = () => {
           <div className='w-full flex flex-col gap-4'>
             <div className='flex flex-col gap-4 lg:flex-row'>
                 <div className='flex-1 flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
-                    <img className='rounded-md h-10 w-10' src={slasheye} alt='globe'></img>
-                    <div>
-                        <div className='title-large pb-7'>Internal</div>
-                        <div className='body-medium'>Internal ITS resources you can use to do your everyday work</div>
-                    </div>
-                </div>
-                <div className='flex-1 flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
                     <img className='rounded-md h-10 w-10' src={group} alt='globe'></img>
                     <div>
                         <div className='title-large pb-7'>Customer</div>
                         <div className='body-medium'>The links you can use to help customers with their requests</div>
+                    </div>
+                </div>
+                <div className='flex-1 flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
+                    <img className='rounded-md h-10 w-10' src={slasheye} alt='globe'></img>
+                    <div>
+                        <div className='title-large pb-7'>Internal</div>
+                        <div className='body-medium'>Internal ITS resources you can use to do your everyday work</div>
                     </div>
                 </div>
             </div>
