@@ -40,7 +40,6 @@ const AssetManagementCheckOut = () => {
         <title>Laptop Check Out</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="headline-large">Asset Management</div>
         <div className="am-action-container">
           <div className="am-action-component">
             <div className="flex justify-between items-center">
