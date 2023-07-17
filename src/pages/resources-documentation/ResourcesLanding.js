@@ -8,12 +8,15 @@ import group from '../../icons/resources/group.svg'
 import document from "../../icons/resources/document.svg";
 
 
-const Resources = () => {
+const ResourcesLanding = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
+
+  const uniqueGroups = [...new Set(resourcesData.map((data) => data.group))];
+
 
   return (
     <>
@@ -59,20 +62,6 @@ const Resources = () => {
                 <img className='rounded-md h-10 w-10' src={document} alt='globe'></img>
                 <div className='title-large'>Training</div>
             </div>
-            {/* <div className='flex items-center bg-white p-3 rounded-md gap-4'>
-                <img className='rounded-md h-10 w-10' src={document} alt='globe'></img>
-                <div className='flex justify-between w-full items-center'>
-                    <div className='title-large'>Training</div>
-                    <div className='body-medium'>Learn how to work as a Tech Consultant</div>
-                </div>
-            </div>
-            <div className='flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
-                <img className='rounded-md h-10 w-10' src={document} alt='globe'></img>
-                <div>
-                    <div className='title-large pb-7'>Training</div>
-                    <div className='body-medium'>Learn how to work as a Tech Consultant</div>
-                </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -80,4 +69,4 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default ResourcesLanding;

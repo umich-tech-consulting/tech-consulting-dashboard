@@ -87,18 +87,18 @@ const LeftNav = () => {
         <Link
           to="/resources"
           className={`link-container ${
-            location.pathname === "/resources"
+            location.pathname.startsWith("/resources")
               ? "bg-blue-9"
               : "bg-base-light"
           }`}
         >
-          {location.pathname === "/resources" ? (
+          {location.pathname.startsWith("/resources") ? (
             <img src={resources_active} alt='Active Resources Logo' />
           ) : (
             <img src={resources_inactive} alt='Inactive Resources Logo' />
           )}
           <div className={`body-medium leading-none ${
-            location.pathname === "/resources"
+            location.pathname.startsWith("/resources")
               ? "text-neutral-1"
               : "text-neutral-9"
           }`}>

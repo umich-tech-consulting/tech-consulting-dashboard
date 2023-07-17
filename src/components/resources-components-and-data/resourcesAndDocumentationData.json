@@ -2,6 +2,7 @@
   {
     "category": "Customer Help",
     "group": "Apple",
+    "slug": "apple",
     "icon": "apple",
     "links": [
       {
@@ -44,6 +45,7 @@
   {
     "category": "Customer Help",
     "group": "Warranty Checking",
+    "slug": "warranty-checking",
     "icon": "shield",
     "links": [
       {
@@ -71,6 +73,7 @@
   {
     "category": "Customer Help",
     "group": "Repairs",
+    "slug": "repairs",
     "icon": "tools",
     "links": [
       {
@@ -113,6 +116,7 @@
   {
     "category": "Customer Help",
     "group": "Printing",
+    "slug": "printing",
     "icon": "printer",
     "links": [
       {
@@ -150,6 +154,7 @@
   {
     "category": "Customer Help",
     "group": "Fishbowl",
+    "slug": "fishbowl",
     "icon": "fishbowl",
     "links": [
       {
@@ -182,6 +187,7 @@
   {
     "category": "Customer Help",
     "group": "Training, Information & Resources",
+    "slug": "training-information-resources",
     "icon": "document",
     "links": [
       {
@@ -285,6 +291,7 @@
   {
     "category": "Internal",
     "group": "Tech Consulting Tools",
+    "slug": "tech-consulting-tools",
     "icon": "wrench",
     "links": [
       {
@@ -307,6 +314,7 @@
   {
     "category": "Internal",
     "group": "Shift/Scheduling",
+    "slug": "shift-scheduling",
     "icon": "clock",
     "links": [
       {
@@ -329,6 +337,7 @@
   {
     "category": "Internal",
     "group": "TeamDynamix",
+    "slug": "tdx",
     "icon": "tdx",
     "links": [
       {

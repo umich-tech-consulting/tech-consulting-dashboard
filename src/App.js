@@ -1,3 +1,5 @@
+// App.jsx
+
 import './normalize.css'
 import './App.css';
 import './index.css';
@@ -10,8 +12,8 @@ import AssetManagementCheckOut from './pages/asset-management/AssetManagementChe
 import AssetManagementReturn from './pages/asset-management/AssetManagementReturn';
 import AssetManagementSwap from './pages/asset-management/AssetManagementSwap';
 import Announcements from './pages/Announcements';
-// import Resources from './pages/Resources';
 import ResourcesLanding from './pages/resources-documentation/ResourcesLanding';
+import GroupPage from './pages/resources-documentation/GroupPage';  //Need to probably update the name
 
 function App() {
   return (
@@ -29,8 +31,8 @@ function App() {
           <Route path='asset-management/return' element={<AssetManagementReturn />} />
           <Route path='asset-management/swap' element={<AssetManagementSwap />} />
           <Route path='announcements' element={<Announcements />} />
-          <Route path='resources' element={<ResourcesLanding />} />
-          {/* <Route path='resources' element={<Resources />} /> */}
+          <Route path='resources/*' element={<ResourcesLanding />} />
+          <Route path="resources/:slug" element={<GroupPage />} />
         </Route>
       </Routes>
     </HashRouter>

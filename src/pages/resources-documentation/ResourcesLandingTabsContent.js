@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import tools from "../../icons/resources/tools.svg";
 import apple from "../../icons/resources/apple.svg";
@@ -35,17 +36,21 @@ const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
   const uniqueGroups = [...new Set(filteredData.map((tab) => tab.group))];
 
   return (
-    <div className="mt-4 flex flex-wrap gap-4">
+    <div className="mt-4 flex flex-wrap gap-4 justify-center">
       {uniqueGroups.map((group, index) => {
         const groupData = filteredData.find((tab) => tab.group === group);
         const icon = groupData ? groupData.icon : '';
         const IconComponent = iconMapping[icon] || null;
 
         return (
-          <div className="p-3 w-60 flex items-center gap-3 bg-white border-2 border-white hover:border-blue-9 rounded-lg body-medium text-neutral-9" key={index}>
+          <Link
+            key={index}
+            to={`${groupData.slug}`}
+            className="p-3 w-60 flex items-center gap-3 bg-white border-2 border-white hover:border-blue-9 rounded-lg body-medium text-neutral-9"
+            >
             {IconComponent && <img src={IconComponent} alt={icon} className='h-10 w-10 rounded-md' />}
             {group && <div>{group}</div>}
-          </div>
+          </Link>
         );
       })}
     </div>
