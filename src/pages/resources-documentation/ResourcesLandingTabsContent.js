@@ -1,13 +1,30 @@
 import React from 'react';
 import tools from "../../icons/resources/tools.svg";
+import apple from "../../icons/resources/apple.svg";
 import clock from "../../icons/resources/clock.svg";
+import document from "../../icons/resources/document.svg";
+import fishbowl from "../../icons/resources/fishbowl.svg";
+import globe from "../../icons/resources/globe.svg";
+import group from "../../icons/resources/group.svg";
 import tdx from "../../icons/resources/tdx.svg";
+import shield from "../../icons/resources/shield.svg";
+import slasheye from "../../icons/resources/slasheye.svg";
+import printer from "../../icons/resources/printer.svg";
+import wrench from "../../icons/resources/wrench.svg";
 
 const iconMapping = {
-  tools: tools,
-  clock: clock,
-  tdx: tdx
-
+    apple: apple,
+    clock: clock,
+    document: document,
+    fishbowl: fishbowl,
+    globe: globe,
+    group: group,
+    printer: printer,
+    shield: shield,
+    slasheye: slasheye,
+    tdx: tdx,
+    tools: tools,
+    wrench: wrench,
 };
 
 const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
@@ -25,7 +42,7 @@ const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
         const IconComponent = iconMapping[icon] || null;
 
         return (
-          <div className="p-3 w-60 flex items-center gap-3 border-2 border-white bg-white hover:border-blue-9 hover:border-2 rounded-lg body-medium text-neutral-9" key={index}>
+          <div className="p-3 w-60 flex items-center gap-3 bg-white border-2 border-white hover:border-blue-9 rounded-lg body-medium text-neutral-9" key={index}>
             {IconComponent && <img src={IconComponent} alt={icon} className='h-10 w-10 rounded-md' />}
             {group && <div>{group}</div>}
           </div>

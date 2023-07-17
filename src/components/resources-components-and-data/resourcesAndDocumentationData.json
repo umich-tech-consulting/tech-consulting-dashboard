@@ -2,7 +2,7 @@
   {
     "category": "Internal",
     "group": "Tech Consulting Tools",
-    "icon": "tools",
+    "icon": "wrench",
     "links": [
       {
         "label": "ITS Slack",
@@ -68,7 +68,7 @@
   {
     "category": "Customer Help",
     "group": "Apple",
-    "icon": "tools",
+    "icon": "apple",
     "links": [
       {
         "label": "How to reset NVRAM on a Mac",
@@ -110,7 +110,7 @@
   {
     "category": "Customer Help",
     "group": "Warranty Checking",
-    "icon": "tools",
+    "icon": "shield",
     "links": [
       {
         "label": "GSX Login",
@@ -179,7 +179,7 @@
   {
     "category": "Customer Help",
     "group": "Printing",
-    "icon": "tools",
+    "icon": "printer",
     "links": [
       {
         "label": "Poster Pre-Order Printing Process",
@@ -216,7 +216,7 @@
   {
     "category": "Customer Help",
     "group": "Fishbowl",
-    "icon": "tools",
+    "icon": "fishbowl",
     "links": [
       {
         "label": "Fishbowl Instructor Station Guide",
@@ -248,7 +248,7 @@
   {
     "category": "Customer Help",
     "group": "Training, Information & Resources",
-    "icon": "tools",
+    "icon": "document",
     "links": [
       {
         "label": "Tech Consulting Student Employee Guidebook",
