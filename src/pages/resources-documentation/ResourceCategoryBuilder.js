@@ -37,7 +37,7 @@ const ResourceCategoryBuilder = () => {
       </div>
       {categoryData.map((groupData, index) => (
         <div key={index} className="max-w-3xl w-full mt-8 mb-8">
-            <div className='mb-6 flex gap-4 items-center'>
+            <div className='mb-6 flex gap-2 items-center'>
                 <h2 className="headline-small">{groupData.group}</h2>
                 <Link to={`${groupData.group.toLowerCase().replace(/\s+/g, '').replace(/[^a-zA-Z0-9-]/g, '-')}`}>
                     <img src={rightarrow} alt='Right Arrow' />
