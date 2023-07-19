@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tech-consulting-dashboard/static/css/main.9a8d0512.css",
-    "main.js": "/tech-consulting-dashboard/static/js/main.32bb05be.js",
+    "main.css": "/tech-consulting-dashboard/static/css/main.900718ce.css",
+    "main.js": "/tech-consulting-dashboard/static/js/main.07daca7f.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js",
     "static/media/tdxlogo.png": "/tech-consulting-dashboard/static/media/tdxlogo.5542ef78eb0e1acc816d.png",
     "static/media/laptop_return.svg": "/tech-consulting-dashboard/static/media/laptop_return.67091636c85ba0fe45f02de1cc294c3d.svg",
@@ -25,16 +25,19 @@
     "static/media/tdx.svg": "/tech-consulting-dashboard/static/media/tdx.b8b4de99d086d5feaab8ab43ee32e2b0.svg",
     "static/media/asset_management_inactive.svg": "/tech-consulting-dashboard/static/media/asset_management_inactive.051e9a5277cb2e682ea93160ea844349.svg",
     "index.html": "/tech-consulting-dashboard/index.html",
+    "static/media/bluex.svg": "/tech-consulting-dashboard/static/media/bluex.20d749a77fec6ff43578c3e505b7333e.svg",
+    "static/media/grayx.svg": "/tech-consulting-dashboard/static/media/grayx.f6887ea800856dc358c4af793d8c14a9.svg",
     "static/media/clock.svg": "/tech-consulting-dashboard/static/media/clock.be0be60f5b3d2f01b83e84bf2e95566e.svg",
+    "static/media/rightarrow.svg": "/tech-consulting-dashboard/static/media/rightarrow.56522229a36c370f5758d0f9485025ce.svg",
     "static/media/resources_inactive.svg": "/tech-consulting-dashboard/static/media/resources_inactive.4a358fe89f17d23e866490e9cd005881.svg",
     "static/media/home_inactive.svg": "/tech-consulting-dashboard/static/media/home_inactive.478331808bd0e335a47c26a9b5e00a9f.svg",
     "static/media/shield.svg": "/tech-consulting-dashboard/static/media/shield.649cee02ec290f76ea403d2a4337d755.svg",
-    "main.9a8d0512.css.map": "/tech-consulting-dashboard/static/css/main.9a8d0512.css.map",
-    "main.32bb05be.js.map": "/tech-consulting-dashboard/static/js/main.32bb05be.js.map",
+    "main.900718ce.css.map": "/tech-consulting-dashboard/static/css/main.900718ce.css.map",
+    "main.07daca7f.js.map": "/tech-consulting-dashboard/static/js/main.07daca7f.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a8d0512.css",
-    "static/js/main.32bb05be.js"
+    "static/css/main.900718ce.css",
+    "static/js/main.07daca7f.js"
   ]
 }
