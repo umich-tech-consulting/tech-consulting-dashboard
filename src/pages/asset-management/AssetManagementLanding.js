@@ -12,19 +12,19 @@ const AssetManagementLanding = () => {
         <title>Asset Management</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="headline-small">Asset Management</div>
+        <div className="headline-small">Laptop Asset Management</div>
         <div className="am-landing-container mt-6">
             <Link className="am-landing-container-button" to="/asset-management/return">
               <img src={laptop_return} alt='Laptop Return Icon'/>
-              <div><span className="font-semibold">Return</span> Laptop</div>
+              <div><span className="font-semibold">Return</span></div>
             </Link>
             <Link className="am-landing-container-button" to="/asset-management/checkout">
               <img src={laptop_check_in} alt='Laptop Check In Icon'/>
-              <div><span className="font-semibold">Check Out</span> Laptop</div>
+              <div><span className="font-semibold">Check Out</span></div>
             </Link>
             <Link className="am-landing-container-button" to="/asset-management/swap">
               <img src={laptop_swap} alt='Laptop Swap Icon'/>
-              <div><span className="font-semibold">Swap</span> Laptop</div>
+              <div><span className="font-semibold">Swap</span></div>
             </Link>
         </div>
       </div>
