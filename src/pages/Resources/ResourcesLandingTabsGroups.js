@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import tools from "../../icons/resources/tools.svg";
-import apple from "../../icons/resources/apple.svg";
-import clock from "../../icons/resources/clock.svg";
-import document from "../../icons/resources/document.svg";
-import fishbowl from "../../icons/resources/fishbowl.svg";
-import globe from "../../icons/resources/globe.svg";
-import group from "../../icons/resources/group.svg";
-import rightarrow from "../../icons/resources/rightarrow.svg";
-import tdx from "../../icons/resources/tdx.svg";
-import shield from "../../icons/resources/shield.svg";
-import slasheye from "../../icons/resources/slasheye.svg";
-import printer from "../../icons/resources/printer.svg";
-import wrench from "../../icons/resources/wrench.svg";
+import tools from "../../icons/resources/group-category-icons/tools.svg";
+import apple from "../../icons/resources/group-category-icons/apple.svg";
+import clock from "../../icons/resources/group-category-icons/clock.svg";
+import document from "../../icons/resources/group-category-icons/document.svg";
+import fishbowl from "../../icons/resources/group-category-icons/fishbowl.svg";
+import globe from "../../icons/resources/group-category-icons/globe.svg";
+import group from "../../icons/resources/group-category-icons/group.svg";
+import tdx from "../../icons/resources/group-category-icons/tdx.svg";
+import shield from "../../icons/resources/group-category-icons/shield.svg";
+import slasheye from '../../icons/resources/group-category-icons/slasheye.svg'
+import printer from "../../icons/resources/group-category-icons/printer.svg";
+import wrench from "../../icons/resources/group-category-icons/wrench.svg";
 
 const iconMapping = {
     apple: apple,
@@ -20,7 +19,6 @@ const iconMapping = {
     document: document,
     fishbowl: fishbowl,
     globe: globe,
-    rightarrow: rightarrow,
     group: group,
     printer: printer,
     shield: shield,
