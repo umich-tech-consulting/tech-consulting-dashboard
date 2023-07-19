@@ -2,7 +2,6 @@
   {
     "category": "Customer Help",
     "group": "Apple",
-    "slug": "apple",
     "icon": "apple",
     "links": [
       {
@@ -45,7 +44,6 @@
   {
     "category": "Customer Help",
     "group": "Warranty Checking",
-    "slug": "warranty-checking",
     "icon": "shield",
     "links": [
       {
@@ -73,7 +71,6 @@
   {
     "category": "Customer Help",
     "group": "Repairs",
-    "slug": "repairs",
     "icon": "tools",
     "links": [
       {
@@ -116,7 +113,6 @@
   {
     "category": "Customer Help",
     "group": "Printing",
-    "slug": "printing",
     "icon": "printer",
     "links": [
       {
@@ -154,7 +150,6 @@
   {
     "category": "Customer Help",
     "group": "Fishbowl",
-    "slug": "fishbowl",
     "icon": "fishbowl",
     "links": [
       {
@@ -186,8 +181,7 @@
   },
   {
     "category": "Customer Help",
-    "group": "Training, Information & Resources",
-    "slug": "training-information-resources",
+    "group": "General Resources",
     "icon": "document",
     "links": [
       {
@@ -255,7 +249,80 @@
         "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html",
         "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application",
         "subgroup": "References"
+      }
+    ]
+  },
+  {
+    "category": "Internal",
+    "group": "Tech Consulting Tools",
+    "icon": "wrench",
+    "links": [
+      {
+        "label": "ITS Slack",
+        "url": "http://umich-its-annarbor.slack.com/",
+        "description": "Information Technology Services Slack workspace"
       },
+      {
+        "label": "GSX Login",
+        "url": "http://gsx2.apple.com/",
+        "description": "Apple Global Service Exchange login"
+      },
+      {
+        "label": "TeamDynamix",
+        "url": "https://teamdynamix.umich.edu/",
+        "description": "Ticket and asset management system"
+      }
+    ]
+  },
+  {
+    "category": "Internal",
+    "group": "Shift/Scheduling",
+    "icon": "clock",
+    "links": [
+      {
+        "label": "When I Work",
+        "url": "http://wheniwork.com/",
+        "description": "Enter work availability and view work schedule"
+      },
+      {
+        "label": "Employee Self Service",
+        "url": "https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700",
+        "description": "Clock in and out of work using the Time Reporting tab"
+      },
+      {
+        "label": "Missed Punch Log",
+        "url": "https://docs.google.com/spreadsheets/d/1khPS11xJAnSa19Mpi6IIKo_Ks7u0kT-kipo24r2bomQ/edit#gid=0",
+        "description": "Report a missed clock-in or clock-out"
+      }
+    ]
+  },
+  {
+    "category": "Internal",
+    "group": "TeamDynamix",
+    "icon": "tdx",
+    "links": [
+      {
+        "label": "TeamDynamix",
+        "url": "https://teamdynamix.umich.edu/",
+        "description": "Ticket and asset management system"
+      },
+      {
+        "label": "TeamDynamix Knowledge Base",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
+        "description": "Internal ITS documentation"
+      },
+      {
+        "label": "TeamDynamix Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
+      }
+    ]
+  },
+  {
+    "category": "Training",
+    "group": "Training & Onboarding",
+    "icon": "document",
+    "links": [
       {
         "label": "Slack Best Practices",
         "url": "https://docs.google.com/document/d/1HXVWx-_UKGEULlCObCLGnBXXfeN-c6F7cvZoJnAVnxA/edit",
@@ -285,75 +352,6 @@
         "url": "https://docs.google.com/document/d/19yhBnfsd1iEc-qvW8aEtPL-EbyWh0ujCV68OWoBoQ8o/edit",
         "description": "How to deal with and report lost and found items",
         "subgroup": "Onboarding"
-      }
-    ]
-  },
-  {
-    "category": "Internal",
-    "group": "Tech Consulting Tools",
-    "slug": "tech-consulting-tools",
-    "icon": "wrench",
-    "links": [
-      {
-        "label": "ITS Slack",
-        "url": "http://umich-its-annarbor.slack.com/",
-        "description": "Information Technology Services Slack workspace"
-      },
-      {
-        "label": "GSX Login",
-        "url": "http://gsx2.apple.com/",
-        "description": "Apple Global Service Exchange login"
-      },
-      {
-        "label": "TeamDynamix",
-        "url": "https://teamdynamix.umich.edu/",
-        "description": "Ticket and asset management system"
-      }
-    ]
-  },
-  {
-    "category": "Internal",
-    "group": "Shift/Scheduling",
-    "slug": "shift-scheduling",
-    "icon": "clock",
-    "links": [
-      {
-        "label": "When I Work",
-        "url": "http://wheniwork.com/",
-        "description": "Enter work availability and view work schedule"
-      },
-      {
-        "label": "Employee Self Service",
-        "url": "https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700",
-        "description": "Clock in and out of work using the Time Reporting tab"
-      },
-      {
-        "label": "Missed Punch Log",
-        "url": "https://docs.google.com/spreadsheets/d/1khPS11xJAnSa19Mpi6IIKo_Ks7u0kT-kipo24r2bomQ/edit#gid=0",
-        "description": "Report a missed clock-in or clock-out"
-      }
-    ]
-  },
-  {
-    "category": "Internal",
-    "group": "TeamDynamix",
-    "slug": "tdx",
-    "icon": "tdx",
-    "links": [
-      {
-        "label": "TeamDynamix",
-        "url": "https://teamdynamix.umich.edu/",
-        "description": "Ticket and asset management system"
-      },
-      {
-        "label": "TeamDynamix Knowledge Base",
-        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
-        "description": "Internal ITS documentation"
-      },
-      {
-        "label": "TeamDynamix Guide",
-        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
-        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
       }
     ]
   }

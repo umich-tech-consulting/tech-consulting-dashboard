@@ -1,6 +1,7 @@
 // App.jsx
 
-import './normalize.css'
+import React from 'react';
+import './normalize.css';
 import './App.css';
 import './index.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
@@ -13,7 +14,8 @@ import AssetManagementReturn from './pages/asset-management/AssetManagementRetur
 import AssetManagementSwap from './pages/asset-management/AssetManagementSwap';
 import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/resources-documentation/ResourcesLanding';
-import GroupPage from './pages/resources-documentation/GroupPage';  //Need to probably update the name
+import ResourceGroupBuilder from './pages/resources-documentation/ResourceGroupBuilder';
+import ResourceCategoryBuilder from './pages/resources-documentation/ResourceCategoryBuilder';
 
 function App() {
   return (
@@ -26,13 +28,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='asset-management' element={<AssetManagementLanding />} />
-          <Route path='asset-management/checkout' element={<AssetManagementCheckOut />} />
-          <Route path='asset-management/return' element={<AssetManagementReturn />} />
-          <Route path='asset-management/swap' element={<AssetManagementSwap />} />
-          <Route path='announcements' element={<Announcements />} />
-          <Route path='resources/*' element={<ResourcesLanding />} />
-          <Route path="resources/:slug" element={<GroupPage />} />
+          <Route path="asset-management" element={<AssetManagementLanding />} />
+          <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
+          <Route path="asset-management/return" element={<AssetManagementReturn />} />
+          <Route path="asset-management/swap" element={<AssetManagementSwap />} />
+          <Route path="announcements" element={<Announcements />} />
+          <Route path="resources/" element={<ResourcesLanding />} />
+          <Route path="resources/:category" element={<ResourceCategoryBuilder />} />
+          <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />
         </Route>
       </Routes>
     </HashRouter>
