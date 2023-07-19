@@ -11,6 +11,7 @@ import resources_active from "../../icons/left-nav/resources_active.svg";
 import slack_logo from "../../icons/left-nav/slack_logo.png";
 import tdxlogo from "../../icons/left-nav/tdxlogo.png";
 import gsxicon from "../../icons/left-nav/gsxicon.png";
+import umichicon from "../../icons/left-nav/umichicon.png";
 
 const LeftNav = () => {
   const location = useLocation();
@@ -110,6 +111,10 @@ const LeftNav = () => {
         <div className="bg-white p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
+            <a href="https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700" target="blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Clock in and out of work using the Time Reporting tab">
+              <img className="w-4 h-4" src={umichicon} alt='Umich Icon' />
+              <div>TimeClock</div>
+            </a>
             <a href="http://umich-its-annarbor.slack.com/" target="blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Information Technology Services Slack workspace">
               <img className="w-4 h-4" src={slack_logo} alt='Slack Logo' />
               <div>Slack</div>
@@ -123,6 +128,14 @@ const LeftNav = () => {
               <div>GSX</div>
             </a>
           </div>
+        </div>
+        <div className="flex mt-2">
+          <a href="https://forms.gle/kb1CQuKLGzneFGRj8" target="blank" rel="noopener noreferrer" className="hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Feedback Form">
+            <div className="body-small">Feedback</div>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1sVpM8OqohlyAYyO8vc_9vOE845Q3UEgG?usp=drive_link" target="blank" rel="noopener noreferrer" className="hover:bg-neutral-2 w-fit py-1 px-2 rounded-md" title="Dashboard Documentation">
+            <div className="body-small">Documentation</div>
+          </a>
         </div>
       </div>
     </div>

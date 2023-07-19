@@ -56,7 +56,7 @@ const ResourcesLandingSearch = () => {
     <>
       <div className="relative mt-14 w-full border border-neutral-4 rounded-lg">
         <input
-          className="w-full rounded-lg p-3 bg-white body-medium pr-12"
+          className="w-full rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
           type="text"
           name="query"
           placeholder="Search Resources and Documentation"
@@ -86,12 +86,14 @@ const ResourcesLandingSearch = () => {
           <ul className="flex flex-col gap-4">
             {categoryData.links.map((link, index) => (
               <li
-                className="bg-white p-4 rounded-md border-2 border-white hover:border-blue-9"
                 key={index}
               >
                 <a href={link.url} target="_blank" rel="noreferrer noopener">
-                  <div className="title-medium text-blue-9 mb-2">{link.label}</div>
-                  <div className="body-medium text-neutral-9">{link.description}</div>
+                    <div className="bg-white p-4 rounded-md border-2 border-white hover:border-blue-9">
+                        <div className="title-medium text-blue-9 mb-2">{link.label}</div>
+                        <div className="body-medium text-neutral-9">{link.description}</div>
+
+                    </div>
                 </a>
               </li>
             ))}

@@ -121,7 +121,7 @@
   @apply flex flex-wrap gap-6 title-large text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white border-2 border-white hover:border-blue-9 shadow-light rounded-2xl w-[260px] py-3 px-4 flex flex-col gap-y-2 text-left;
+  @apply bg-white border-2 border-white hover:border-blue-9 shadow-light rounded-2xl w-[280px] py-6 px-4 flex justify-center gap-x-4 text-left;
 }
 .am-landing-container img {
   @apply h-7 w-fit

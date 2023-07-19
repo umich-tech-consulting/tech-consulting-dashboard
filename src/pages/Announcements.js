@@ -9,7 +9,7 @@ const Announcements = () => {
             </Helmet>
             <div className="w-full flex flex-col h-screen p-6">
                 <div className="flex justify-between w-full">
-                    <div className="mb-6 headline-large">Announcements</div>
+                    <div className="mb-6 headline-large">Announcements - WIP/Placeholder</div>
                     <a className="text-neutral-1 max-w-5xl p-3 rounded-lg h-fit bg-blue-9 hover:bg-blue-8" target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/17ceEJafaJGeUuE6_80vNzljyxHxb85WeLege8BwM-AQ/edit#">Announcement History</a>
                 </div>
                 <div className="w-full h-full flex flex-col items-center bg-white rounded-2xl shadow-light overflow-y-auto">

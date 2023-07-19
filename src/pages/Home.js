@@ -7,7 +7,7 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <div>Home</div>
+            <div className="headline-medium">Coming Soon</div>
         </>
     );
   };
