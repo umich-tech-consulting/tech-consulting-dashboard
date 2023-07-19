@@ -13,9 +13,9 @@ import AssetManagementCheckOut from './pages/asset-management/AssetManagementChe
 import AssetManagementReturn from './pages/asset-management/AssetManagementReturn';
 import AssetManagementSwap from './pages/asset-management/AssetManagementSwap';
 import Announcements from './pages/Announcements';
-import ResourcesLanding from './pages/resources-documentation/ResourcesLanding';
-import ResourceGroupBuilder from './pages/resources-documentation/ResourceGroupBuilder';
-import ResourceCategoryBuilder from './pages/resources-documentation/ResourceCategoryBuilder';
+import ResourcesLanding from './pages/Resources/ResourcesLanding';
+import ResourceGroupBuilder from './pages/Resources/ResourceGroupBuilder';
+import ResourceCategoryBuilder from './pages/Resources/ResourceCategoryBuilder';
 
 function App() {
   return (

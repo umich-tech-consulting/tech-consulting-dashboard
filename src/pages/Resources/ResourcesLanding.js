@@ -43,7 +43,7 @@ const ResourcesLanding = () => {
           <div className="mb-6 headline-small text-left mt-20">All Resources</div>
           <div className='w-full flex flex-col gap-4'>
             <div className='flex flex-col gap-4 lg:flex-row'>
-                <Link to="customerhelp" className='flex-1 flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
+                <Link to="customer" className='flex-1 flex bg-white p-3 rounded-md gap-4 border-2 border-white hover:border-blue-9'>
                     <img className='rounded-md h-10 w-10' src={group} alt='globe'></img>
                     <div>
                         <div className='title-large pb-7'>Customer</div>
