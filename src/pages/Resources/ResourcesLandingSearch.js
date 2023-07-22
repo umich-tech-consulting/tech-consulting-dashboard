@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import resourcesData from '../../components/resources-components-and-data/resourcesAndDocumentationData.json';
+import resourcesData from './ResourcesData.json';
 import grayx from '../../icons/resources/grayx.svg';
 import bluex from '../../icons/resources/bluex.svg';
 

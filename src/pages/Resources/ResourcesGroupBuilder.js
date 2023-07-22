@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import resourcesData from "../../components/resources-components-and-data/resourcesAndDocumentationData.json";
+import resourcesData from './ResourcesData.json';
 
 const ResourceGroupBuilder = () => {
   const { category, group } = useParams();

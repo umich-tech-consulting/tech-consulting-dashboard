@@ -1,21 +1,19 @@
-// App.jsx
-
 import React from 'react';
-import './normalize.css';
-import './App.css';
-import './index.css';
+import './styles/normalize.css';
+import './styles/App.css'
+import './styles/index.css'
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Layout from './Layout';
+import Layout from './navigation/Layout';
 import Home from './pages/Home';
-import AssetManagementLanding from './pages/asset-management/AssetManagementLanding';
-import AssetManagementCheckOut from './pages/asset-management/AssetManagementCheckOut';
-import AssetManagementReturn from './pages/asset-management/AssetManagementReturn';
-import AssetManagementSwap from './pages/asset-management/AssetManagementSwap';
+import AssetManagementLanding from './pages/AssetManagement/AssetManagementLanding';
+import AssetManagementCheckOut from './pages/AssetManagement/AssetManagementCheckOut';
+import AssetManagementReturn from './pages/AssetManagement/AssetManagementReturn';
+import AssetManagementSwap from './pages/AssetManagement/AssetManagementSwap';
 import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/Resources/ResourcesLanding';
-import ResourceGroupBuilder from './pages/Resources/ResourceGroupBuilder';
-import ResourceCategoryBuilder from './pages/Resources/ResourceCategoryBuilder';
+import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
+import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
 
 function App() {
   return (

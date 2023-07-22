@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import resourcesData from '../../components/resources-components-and-data/resourcesAndDocumentationData.json';
+import resourcesData from './ResourcesData.json';
 import ResourcesLandingSearch from './ResourcesLandingSearch';
 import ResourcesLandingTabs from './ResourcesLandingTabs';
 import ResourcesLandingTabsContent from './ResourcesLandingTabsGroups';

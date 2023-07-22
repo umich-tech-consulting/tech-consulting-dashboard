@@ -1,4 +1,4 @@
-import LeftNav from './components/layout-components/LeftNav';
+import LeftNav from './LeftNav';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
