@@ -1,7 +1,4 @@
 import React from 'react';
-import './styles/normalize.css';
-import './styles/App.css'
-import './styles/index.css'
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './navigation/Layout';
