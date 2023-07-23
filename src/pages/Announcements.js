@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 
 const Announcements = () => {
-  const googleDocUrl = "https://docs.google.com/document/d/17ceEJafaJGeUuE6_80vNzljyxHxb85WeLege8BwM-AQ/edit#";
+  const googleDocUrl = "https://docs.google.com/document/d/17ceEJafaJGeUuE6_80vNzljyxHxb85WeLege8BwM-AQ/preview";
 
   return (
     <>
@@ -9,7 +9,8 @@ const Announcements = () => {
         <title>Announcements</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="w-full h-full flex flex-col items-center bg-white rounded-xl overflow-y-auto">
+        <div className="headline-small">Announcements</div>
+        <div className="w-full h-full bg-white rounded-xl overflow-y-auto mt-6">
           <iframe
             title="Google Doc Embed"
             src={googleDocUrl}
