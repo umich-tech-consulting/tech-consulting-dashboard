@@ -10,13 +10,13 @@ const Announcements = () => {
         <title>Announcements</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="headline-small">Announcements</div>
-        <div className="w-full h-full bg-white rounded-xl overflow-y-auto mt-6">
+        <div className="headline-large text-center">Announcements</div>
+        <div className="flex justify-center h-full w-full rounded-xl overflow-y-auto mt-6">
           <iframe
             title="Google Doc Embed"
             src={googleDocUrl}
-            width="100%"
-            height="100%" // Adjust the height as needed
+            width="816px"
+            // height="100%" // Adjust the height as needed
 
           />
         </div>
