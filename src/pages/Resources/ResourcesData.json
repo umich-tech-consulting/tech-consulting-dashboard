@@ -10,6 +10,11 @@
         "description": "If one or more settings stored in NVRAM don't work as expected on an Intel-based Mac, resetting NVRAM might help."
       },
       {
+        "label": "If you can't reset your Mac login password",
+        "url": "https://support.apple.com/en-us/HT212190",
+        "description": "If the standard steps to reset the password of your Mac user account don't succeed, try these additional steps."
+      },
+      {
         "label": "Mac Keyboard Shortcuts",
         "url": "https://support.apple.com/en-us/HT201236",
         "description": "Comprehensive list of Mac keyboard shortcuts"

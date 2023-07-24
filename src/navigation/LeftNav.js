@@ -27,7 +27,7 @@ const LeftNav = () => {
           className={`pl-2 h-8 rounded-full flex content-center items-center gap-x-4 ${
             location.pathname === "/"
               ? "bg-blue-9"
-              : "bg-base-light"
+              : "bg-base-light hover:bg-neutral-3"
           }`}
         >
           {location.pathname === "/" ? (
@@ -48,7 +48,7 @@ const LeftNav = () => {
           className={`link-container ${
             location.pathname === "/announcements"
               ? "bg-blue-9"
-              : "bg-base-light"
+              : "bg-base-light hover:bg-neutral-3"
           }`}
         >
           {location.pathname === "/announcements" ? (
@@ -69,7 +69,7 @@ const LeftNav = () => {
           className={`link-container ${
             location.pathname.startsWith("/asset-management")
               ? "bg-blue-9"
-              : "bg-base-light"
+              : "bg-base-light hover:bg-neutral-3"
           }`}
         >
           {location.pathname.startsWith("/asset-management") ? (
@@ -90,7 +90,7 @@ const LeftNav = () => {
           className={`link-container ${
             location.pathname.startsWith("/resources")
               ? "bg-blue-9"
-              : "bg-base-light"
+              : "bg-base-light hover:bg-neutral-3"
           }`}
         >
           {location.pathname.startsWith("/resources") ? (

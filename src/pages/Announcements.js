@@ -16,8 +16,6 @@ const Announcements = () => {
             title="Google Doc Embed"
             src={googleDocUrl}
             width="816px"
-            // height="100%" // Adjust the height as needed
-
           />
         </div>
       </div>
