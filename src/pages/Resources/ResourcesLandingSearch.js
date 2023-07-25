@@ -22,7 +22,7 @@ const ResourcesLandingSearch = () => {
     const results = resourcesData.reduce((accumulator, categoryData) => {
       const matchingLinks = categoryData.links.filter(
         (link) =>
-          link.label.toLowerCase().includes(lowercaseValue) || // Use lowercase value for comparison
+          link.name.toLowerCase().includes(lowercaseValue) || // Use lowercase value for comparison
           link.description.toLowerCase().includes(lowercaseValue) // Use lowercase value for comparison
       );
 
@@ -69,7 +69,7 @@ const ResourcesLandingSearch = () => {
             onClick={handleClear}
             onMouseEnter={handleClearMouseEnter}
             onMouseLeave={handleClearMouseLeave}
-            aria-label="Clear Search"
+            aria-name="Clear Search"
           >
             <img
               src={isClearHovered ? bluex : grayx}
@@ -90,7 +90,7 @@ const ResourcesLandingSearch = () => {
               >
                 <a href={link.url} target="_blank" rel="noreferrer noopener">
                     <div className="bg-white p-4 rounded-md border-2 border-white hover:border-blue-9">
-                        <div className="title-medium text-blue-9 mb-2">{link.label}</div>
+                        <div className="title-medium text-blue-9 mb-2">{link.name}</div>
                         <div className="body-medium text-neutral-9">{link.description}</div>
 
                     </div>

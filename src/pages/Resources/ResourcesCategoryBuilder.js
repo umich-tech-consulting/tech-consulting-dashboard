@@ -67,7 +67,7 @@ const ResourceCategoryBuilder = () => {
                 <a href={link.url} target="_blank" rel="noreferrer noopener">
                   <div className="bg-white p-4 rounded-md border-2 border-white hover:border-blue-9">
                     <div className="title-medium text-blue-9 mb-2">
-                      {link.label}
+                      {link.name}
                     </div>
                     <div className="body-medium text-neutral-9">
                       {link.description}
