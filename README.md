@@ -1,4 +1,10 @@
-# Scripts
+# Tech Consulting Dashboard
+
+
+## Scripts
+
+### `npm install`
+Set up code for the first time
 
 ### `npm start`
 Starts development server

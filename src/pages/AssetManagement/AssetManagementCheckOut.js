@@ -42,7 +42,7 @@ const AssetManagementCheckOut = () => {
       <div className="w-full flex flex-col h-screen p-6">
         <div className="am-action-container">
           <div className="am-action-component">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-6">
               <div className="am-action-component-title">Laptop Check Out</div>
               <img className="h-5 w-fit" src={laptop_check_out} alt='Laptop Return Icon' />
             </div>
@@ -50,14 +50,14 @@ const AssetManagementCheckOut = () => {
               <div className="flex flex-wrap justify-between gap-y-4">
                 <div className="am-action-component-item">
                   <label for="uniqname">
-                    Uniqname<span className="text-blue-9">*</span>
+                    Uniqname <span className="text-blue-9">*</span>
                   </label>
                   <input
                     className="am-uniqname-item"
                     type="text"
                     id="uniqname"
                     name="uniqname"
-                    placeholder="uniqname"
+                    // placeholder="uniqname"
                     pattern="\d*"
                     spellCheck="false"
                     value={uniqname}
@@ -66,7 +66,7 @@ const AssetManagementCheckOut = () => {
                 </div>
                 <div className="am-action-component-item">
                   <label for="asset">
-                    Asset #<span className="text-blue-9">*</span>
+                    Asset Number <span className="text-blue-9">*</span>
                   </label>
                   <div className="am-laptop-item">
                     <select
@@ -80,7 +80,7 @@ const AssetManagementCheckOut = () => {
                       type="text"
                       id="asset"
                       name="asset"
-                      placeholder="00000"
+                      // placeholder="00000"
                       pattern="\d*"
                       value={assetId}
                       onChange={handleAssetIDChange}
@@ -96,23 +96,23 @@ const AssetManagementCheckOut = () => {
                   type="text"
                   id="comments"
                   name="comments"
-                  placeholder="Optional"
+                  // placeholder="Optional"
                   value={noteContent}
                   onChange={handleNoteChange}
                 />
               </div>
             </div>
             <div className="am-submit-cancel-container">
-              <Link to="/asset-management" className="text-blue-9 flex items-center">Cancel</Link>
+              <Link to="/asset-management" className="text-base-red flex items-center">Cancel</Link>
               <button
                 className={`am-submit-button ${
                   isSubmitDisabled
-                    ? "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                    ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
                     : "bg-blue-9 text-white"
                 }`}
                 disabled={isSubmitDisabled}
               >
-                Check and Submit
+                Submit
               </button>
             </div>
           </div>

@@ -33,7 +33,8 @@ module.exports = {
         9: '#0D57AA',
       },
       'base': {
-        light: '#F6F8FC'
+        light: '#F6F8FC',
+        red: '#FF3B30'
       }
     },
     extend: {

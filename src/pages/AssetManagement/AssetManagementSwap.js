@@ -42,7 +42,7 @@ const AssetManagementSwap = () => {
       <div className="w-full flex flex-col h-screen p-6">
         <div className="am-action-container">
           <div className="am-action-component">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-6">
               <div className="am-action-component-title">Laptop Swap</div>
               <img className="h-5 w-fit" src={laptop_swap} alt='Laptop Return Icon' />
             </div>
@@ -50,7 +50,7 @@ const AssetManagementSwap = () => {
               <div className="flex flex-wrap justify-between gap-y-4">
                 <div className="am-action-component-item">
                   <label for="oldasset">
-                    Old Asset #<span className="text-blue-9">*</span>
+                    Old Asset Number <span className="text-blue-9">*</span>
                   </label>
                   <div className="am-laptop-item">
                     <select
@@ -64,7 +64,7 @@ const AssetManagementSwap = () => {
                       type="text"
                       id="oldasset"
                       name="oldasset"
-                      placeholder="00000"
+                      // placeholder="00000"
                       pattern="\d*"
                       value={oldAssetId}
                       onChange={handleOldAssetIdChange}
@@ -73,7 +73,7 @@ const AssetManagementSwap = () => {
                 </div>
                 <div className="am-action-component-item">
                   <label for="newasset">
-                    New Asset #<span className="text-blue-9">*</span>
+                    New Asset Number <span className="text-blue-9">*</span>
                   </label>
                   <div className="am-laptop-item">
                     <select
@@ -87,7 +87,7 @@ const AssetManagementSwap = () => {
                       type="text"
                       id="newasset"
                       name="newasset"
-                      placeholder="00000"
+                      // placeholder="00000"
                       pattern="\d*"
                       value={newAssetId}
                       onChange={handleNewAssetIdChange}
@@ -103,23 +103,23 @@ const AssetManagementSwap = () => {
                   type="text"
                   id="comments"
                   name="comments"
-                  placeholder="Optional"
+                  // placeholder="Optional"
                   value={noteContent}
                   onChange={handleNoteChange}
                 />
               </div>
             </div>
             <div className="am-submit-cancel-container">
-              <Link to="/asset-management" className="text-blue-9 flex items-center">Cancel</Link>
+              <Link to="/asset-management" className="text-base-red flex items-center">Cancel</Link>
               <button
                 className={`am-submit-button ${
                   isSubmitDisabled
-                    ? "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                    ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
                     : "bg-blue-9 text-white"
                 }`}
                 disabled={isSubmitDisabled}
               >
-                Check and Submit
+                Submit
               </button>
             </div>
           </div>
