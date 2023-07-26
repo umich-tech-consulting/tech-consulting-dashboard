@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import resourcesData from './ResourcesData.json';
 import grayx from '../../icons/resources/grayx.svg';
 import bluex from '../../icons/resources/bluex.svg';
+import search from '../../icons/resources/search.svg';
 
 const ResourcesLandingSearch = () => {
   const [query, setQuery] = useState('');
@@ -54,22 +55,22 @@ const ResourcesLandingSearch = () => {
 
   return (
     <>
-      <div className="relative mt-14 w-full border border-neutral-4 rounded-lg">
+      <div className="relative mt-14 w-full border border-neutral-3 rounded-lg">
         <input
-          className="w-full rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
+          className="w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
           type="text"
           name="query"
           placeholder="Search Resources and Documentation"
           value={query}
           onChange={handleSearch}
         />
+        <img src={search} alt="Search" className="absolute top-0 left-0 flex items-center justify-center h-full p-3" />
         {query && (
           <button
             className="absolute top-0 right-0 flex items-center justify-center h-full p-2"
             onClick={handleClear}
             onMouseEnter={handleClearMouseEnter}
             onMouseLeave={handleClearMouseLeave}
-            aria-name="Clear Search"
           >
             <img
               src={isClearHovered ? bluex : grayx}
