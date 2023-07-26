@@ -166,16 +166,16 @@ code {
   font-weight: 500;
 }
 .am-uniqname-item {
-  @apply p-2 px-2 ring-1 ring-base-light rounded-md border-neutral-5 focus:outline-none focus:ring-blue-9 w-40 bg-base-light;
+  @apply p-2 px-2 ring-1 ring-base-light rounded-md border-neutral-5 focus:outline-none focus:ring-blue-9 focus:bg-white w-40 bg-base-light;
 }
 .am-laptop-item {
   @apply flex
 }
 .am-laptop-item select {
-  @apply p-1 rounded-l-md ring-1 ring-neutral-2 focus:outline-none focus:ring-blue-9 text-neutral-9 bg-neutral-2 cursor-pointer mr-[2px]
+  @apply p-1 rounded-l-md ring-1 ring-neutral-2 focus:outline-none focus:ring-blue-9 focus:bg-white text-neutral-9 bg-neutral-2 cursor-pointer mr-[2px]
 }
 .am-laptop-item input {
-  @apply p-2 px-2 ring-1 ring-base-light rounded-r-md focus:outline-none focus:ring-blue-9 h-fit w-36 bg-base-light
+  @apply p-2 px-2 ring-1 ring-base-light rounded-r-md focus:outline-none focus:ring-blue-9 focus:bg-white h-fit w-36 bg-base-light
 }
 .am-comments {
   @apply flex flex-col justify-between gap-y-1 mb-6
@@ -185,7 +185,7 @@ code {
   font-weight: 500;
 }
 .am-comments textarea {
-  @apply p-2 h-16 resize-none rounded-md ring-1 ring-base-light focus:outline-none focus:ring-blue-9 w-full body-medium text-neutral-9 bg-base-light
+  @apply p-2 h-16 resize-none rounded-md ring-1 ring-base-light focus:outline-none focus:ring-blue-9 focus:bg-white w-full body-medium text-neutral-9 bg-base-light
 }
 .am-submit-cancel-container {
   @apply w-full flex justify-between
