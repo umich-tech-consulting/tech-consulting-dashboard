@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tech-consulting-dashboard/static/css/main.5b88f641.css",
-    "main.js": "/tech-consulting-dashboard/static/js/main.29cf6e6b.js",
+    "main.css": "/tech-consulting-dashboard/static/css/main.f603ebf3.css",
+    "main.js": "/tech-consulting-dashboard/static/js/main.7e350191.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js",
     "static/media/tdxlogo.png": "/tech-consulting-dashboard/static/media/tdxlogo.5542ef78eb0e1acc816d.png",
     "static/media/laptop_swap.svg": "/tech-consulting-dashboard/static/media/laptop_swap.5647e34b2d90837ae44ffd1a4475ae19.svg",
@@ -31,15 +31,16 @@
     "static/media/grayx.svg": "/tech-consulting-dashboard/static/media/grayx.9111ebe78bd7137d4fc87d8879e5a9c1.svg",
     "static/media/rightarrow.svg": "/tech-consulting-dashboard/static/media/rightarrow.8e634089f911827ff9d41ef799dc725e.svg",
     "static/media/clock.svg": "/tech-consulting-dashboard/static/media/clock.8addaf3d8b7977abad1efae0b500c4c8.svg",
+    "static/media/search.svg": "/tech-consulting-dashboard/static/media/search.5975e7fe60afab5fb5b05730c92398d5.svg",
     "static/media/resources_inactive.svg": "/tech-consulting-dashboard/static/media/resources_inactive.4a358fe89f17d23e866490e9cd005881.svg",
     "static/media/home_inactive.svg": "/tech-consulting-dashboard/static/media/home_inactive.478331808bd0e335a47c26a9b5e00a9f.svg",
     "static/media/shield.svg": "/tech-consulting-dashboard/static/media/shield.b78ef241e3289d0ea45a7c58f183ff9a.svg",
-    "main.5b88f641.css.map": "/tech-consulting-dashboard/static/css/main.5b88f641.css.map",
-    "main.29cf6e6b.js.map": "/tech-consulting-dashboard/static/js/main.29cf6e6b.js.map",
+    "main.f603ebf3.css.map": "/tech-consulting-dashboard/static/css/main.f603ebf3.css.map",
+    "main.7e350191.js.map": "/tech-consulting-dashboard/static/js/main.7e350191.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b88f641.css",
-    "static/js/main.29cf6e6b.js"
+    "static/css/main.f603ebf3.css",
+    "static/js/main.7e350191.js"
   ]
 }
