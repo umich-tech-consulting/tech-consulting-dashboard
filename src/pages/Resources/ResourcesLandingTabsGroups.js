@@ -10,6 +10,7 @@ import group from "../../icons/resources/group-category-icons/group.svg";
 import tdx from "../../icons/resources/group-category-icons/tdx.svg";
 import shield from "../../icons/resources/group-category-icons/shield.svg";
 import slasheye from '../../icons/resources/group-category-icons/slasheye.svg'
+import umich from '../../icons/resources/group-category-icons/umich.svg'
 import printer from "../../icons/resources/group-category-icons/printer.svg";
 import wrench from "../../icons/resources/group-category-icons/wrench.svg";
 
@@ -24,6 +25,7 @@ const iconMapping = {
     shield: shield,
     slasheye: slasheye,
     tdx: tdx,
+    umich: umich,
     tools: tools,
     wrench: wrench,
 };
@@ -49,7 +51,7 @@ const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
           <Link
             key={index}
             to={`${formattedCategory}/${formattedGroup}`}
-            className="p-3 w-60 flex items-center gap-3 bg-white hover:bg-blue-0 rounded-lg title-small text-neutral-9"
+            className="p-3 w-60 flex items-center gap-3 bg-white hover:bg-blue-0 focus:bg-blue-1 rounded-lg title-small text-neutral-9"
             >
             {IconComponent && <img src={IconComponent} alt={icon} className='h-10 w-10 rounded-md' />}
             {group && <div>{group}</div>}

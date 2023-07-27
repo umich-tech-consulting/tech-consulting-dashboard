@@ -34,10 +34,15 @@ const ResourceGroupBuilder = () => {
     return <div>Group not found</div>;
   }
 
+  // Sort the links alphabetically based on the 'name' property
+  const sortedLinks = categoryData.links.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <div className="w-full flex flex-col p-6 items-center">
       <div className="max-w-3xl w-full">
-        <div className="text-neutral-6 w-full max-w-3xl flex gap-1">
+        <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
           <Link to="/resources" className="hover:text-blue-9">
             Resources
           </Link>
@@ -57,10 +62,8 @@ const ResourceGroupBuilder = () => {
           {categoryData.group}
         </div>
         <ul className="flex flex-col gap-4">
-          {categoryData.links.map((link, index) => (
-            <li
-              key={index}
-            >
+          {sortedLinks.map((link, index) => (
+            <li key={index}>
               <a href={link.url} target="_blank" rel="noreferrer noopener">
                 <div className="bg-white rounded-md p-4 hover:bg-blue-0">
                   <div className="title-medium text-blue-9 mb-2">
@@ -69,7 +72,6 @@ const ResourceGroupBuilder = () => {
                   <div className="body-medium text-neutral-9">
                     {link.description}
                   </div>
-
                 </div>
               </a>
             </li>

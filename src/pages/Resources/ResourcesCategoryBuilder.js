@@ -21,6 +21,7 @@ const ResourceCategoryBuilder = () => {
         .replace(/\s+/g, "")
         .replace(/[^a-zA-Z0-9-]/g, "-") === formattedCategory
   );
+
   const categoryName = resourcesData.find(
     (data) =>
       data.category
@@ -34,9 +35,14 @@ const ResourceCategoryBuilder = () => {
     return <div>Category not found</div>;
   }
 
+  // Sort the categoryData array alphabetically based on the 'group' property
+  const sortedCategoryData = categoryData.sort((a, b) =>
+    a.group.localeCompare(b.group)
+  );
+
   return (
     <div className="w-full flex flex-col p-6 items-center">
-        <div className="text-neutral-6 w-full max-w-3xl flex gap-1">
+        <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
           <Link to="/resources" className="hover:text-blue-9">Resources</Link>
           <div>/</div>
           <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>
@@ -45,7 +51,7 @@ const ResourceCategoryBuilder = () => {
         <h1 className="headline-large mb-6 text-center">{categoryName.category}</h1>{" "}
         {/* Display the appropriate header */}
       </div>
-      {categoryData.map((groupData, index) => (
+      {sortedCategoryData.map((groupData, index) => (
         <div key={index} className="max-w-3xl w-full mb-16">
           <div className="mb-6 flex gap-2 items-center">
             <h2 className="headline-small">{groupData.group}</h2>
@@ -61,9 +67,7 @@ const ResourceCategoryBuilder = () => {
 
           <ul className="flex flex-col gap-4">
             {groupData.links.map((link, index) => (
-              <li
-                key={index}
-              >
+              <li key={index}>
                 <a href={link.url} target="_blank" rel="noreferrer noopener">
                   <div className="bg-white p-4 rounded-md hover:bg-blue-0">
                     <div className="title-medium text-blue-9 mb-2">

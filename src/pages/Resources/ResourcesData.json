@@ -1,6 +1,6 @@
 [
   {
-    "category": "Customer",
+    "category": "Customer Support",
     "group": "Apple",
     "icon": "apple",
     "links": [
@@ -47,76 +47,39 @@
     ]
   },
   {
-    "category": "Customer",
-    "group": "Warranty Checking",
-    "icon": "shield",
+    "category": "Customer Support",
+    "group": "Fishbowl",
+    "icon": "fishbowl",
     "links": [
       {
-        "name": "GSX Login",
-        "url": "http://gsx2.apple.com/",
-        "description": "Apple Global Service Exchange login"
+        "name": "Fishbowl Instructor Station Guide",
+        "url": "https://docs.google.com/document/d/1szQqdrahOqV9boghvz6PeFiMfD_DbLjJciF6TKwXZMA/edit",
+        "description": "Guide that explains how instructors can use the Fishbowl hardware to teach classes"
       },
       {
-        "name": "Check Safeware Coverage",
-        "url": "https://www.safeware.com/lookup",
-        "description": "Check warranty coverage for Safeware ensured devices"
+        "name": "Fishbowl Furniture Reset",
+        "url": "https://docs.google.com/document/d/19q-9jV8RL4I8Pu0MQlGO83YJD_4h0seImETVvJgdm3o/edit#heading=h.avoh5uoc5cl7",
+        "description": "How to keep the Fishbowl furniture organized and tidy"
       },
       {
-        "name": "Check Dell Coverage",
-        "url": "https://www.dell.com/support/home/en-us/products?app=warranty",
-        "description": "Check warranty coverage for Dell devices"
+        "name": "Fishbowl Lost & Found Form",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0XdIDDcX1oBG1oF3qyTJ9ati_TOfZ-p4L3CZwDTz5tpeSgA/viewform",
+        "description": "Google Form to report lost and found items at the Fishbowl"
       },
       {
-        "name": "Check Apple Coverage",
-        "url": "https://checkcoverage.apple.com/?locale=en_US",
-        "description": "Review Apple warranty status and eligibility to purchase additional AppleCare coverage"
+        "name": "Fishbowl Tasks",
+        "url": "https://docs.google.com/document/d/1Y6CQRYQtV36qTh0WK9rA8L507zVf5wXaGNA0JDHu9V0/edit",
+        "description": "Description of common tasks performed at the Fishbowl"
+      },
+      {
+        "name": "Supplies Request Form",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScg4WppGS5uoMKHZBmevrmhQxr4tYlcqxXINg4yZl3mBufBoQ/viewform",
+        "description": "Request office supplies"
       }
     ]
   },
   {
-    "category": "Customer",
-    "group": "Repairs",
-    "icon": "tools",
-    "links": [
-      {
-        "name": "Tech Repair Loaner Program",
-        "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit",
-        "description": "Information on loaners for customers while their devices are being repaired"
-      },
-      {
-        "name": "Diagnostic Turnaround",
-        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
-        "description": "Digital Signage information about diagnostic turnaround times"
-      },
-      {
-        "name": "Current Repair Turnaround",
-        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
-        "description": "Digital Signage information about repair turnaround times"
-      },
-      {
-        "name": "Data Transfer Turnaround",
-        "url": "https://docs.google.com/spreadsheets/d/1XEU-VPlcS7GsS3LKkbPUbM0e3X-Ewa7yWtM3ypfFQMQ/edit#gid=0",
-        "description": "Digital Signage information about data transfer turnaround times"
-      },
-      {
-        "name": "Loaner Attestation Form",
-        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service",
-        "description": "Form customers need to fill out to obtain a loaner"
-      },
-      {
-        "name": "Repair Ticket Guide",
-        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
-        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
-      },
-      {
-        "name": "Wipe and Reinstall OS on Mac Loaners",
-        "url": "https://docs.google.com/document/d/1E-zuBELCIu1W7xtZquCfbSlh8LiENJKvFsNpyaeQZ3o/edit",
-        "description": "How to wipe and reinstall the operating system on Tech Repair loaner laptops (which are all MacBook Air laptops)"
-      }
-    ]
-  },
-  {
-    "category": "Customer",
+    "category": "Customer Support",
     "group": "Printing",
     "icon": "printer",
     "links": [
@@ -153,134 +116,155 @@
     ]
   },
   {
-    "category": "Customer",
-    "group": "Fishbowl",
-    "icon": "fishbowl",
+    "category": "Customer Support",
+    "group": "Repairs",
+    "icon": "tools",
     "links": [
       {
-        "name": "Fishbowl Instructor Station Guide",
-        "url": "https://docs.google.com/document/d/1szQqdrahOqV9boghvz6PeFiMfD_DbLjJciF6TKwXZMA/edit",
-        "description": "Guide that explains how instructors can use the Fishbowl hardware to teach classes"
+        "name": "Tech Repair Loaner Program",
+        "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit",
+        "description": "Information on loaners for Customer Supports while their devices are being repaired"
       },
       {
-        "name": "Fishbowl Furniture Reset",
-        "url": "https://docs.google.com/document/d/19q-9jV8RL4I8Pu0MQlGO83YJD_4h0seImETVvJgdm3o/edit#heading=h.avoh5uoc5cl7",
-        "description": "How to keep the Fishbowl furniture organized and tidy"
+        "name": "Diagnostic Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
+        "description": "Digital Signage information about diagnostic turnaround times"
       },
       {
-        "name": "Fishbowl Lost & Found Form",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0XdIDDcX1oBG1oF3qyTJ9ati_TOfZ-p4L3CZwDTz5tpeSgA/viewform",
-        "description": "Google Form to report lost and found items at the Fishbowl"
+        "name": "Current Repair Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
+        "description": "Digital Signage information about repair turnaround times"
       },
       {
-        "name": "Fishbowl Tasks",
-        "url": "https://docs.google.com/document/d/1Y6CQRYQtV36qTh0WK9rA8L507zVf5wXaGNA0JDHu9V0/edit",
-        "description": "Description of common tasks performed at the Fishbowl"
+        "name": "Data Transfer Turnaround",
+        "url": "https://docs.google.com/spreadsheets/d/1XEU-VPlcS7GsS3LKkbPUbM0e3X-Ewa7yWtM3ypfFQMQ/edit#gid=0",
+        "description": "Digital Signage information about data transfer turnaround times"
       },
       {
-        "name": "Supplies Request Form",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLScg4WppGS5uoMKHZBmevrmhQxr4tYlcqxXINg4yZl3mBufBoQ/viewform",
-        "description": "Request office supplies"
+        "name": "Loaner Attestation Form",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service",
+        "description": "Form Customer Supports need to fill out to obtain a loaner"
+      },
+      {
+        "name": "Repair Ticket Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
+      },
+      {
+        "name": "Wipe and Reinstall OS on Mac Loaners",
+        "url": "https://docs.google.com/document/d/1E-zuBELCIu1W7xtZquCfbSlh8LiENJKvFsNpyaeQZ3o/edit",
+        "description": "How to wipe and reinstall the operating system on Tech Repair loaner laptops (which are all MacBook Air laptops)"
       }
     ]
   },
   {
-    "category": "Customer",
-    "group": "General Resources",
-    "icon": "document",
+    "category": "Customer Support",
+    "group": "UMICH",
+    "icon": "umich",
     "links": [
       {
-        "name": "Tech Consulting Student Employee Guidebook",
-        "url": "https://docs.google.com/document/d/1Cykif6zIOVbn61ZRs_ce74dhqS-wVURXTsQNdZwTzjo/edit",
-        "description": "General information about expectations and rules for tech consultants",
-        "subgroup": "References"
-      },
-      {
-        "name": "Union Cheat Sheet",
-        "url": "https://docs.google.com/document/d/1Bp2U4dQeeAvaFpty1B8awZqSZoPt3QYfDB0rwu4WdTo/edit?usp=sharing",
-        "description": "Union specific shift information",
-        "subgroup": "References"
-      },
-      {
-        "name": "Pierpont Cheat Sheet",
-        "url": "https://docs.google.com/document/d/1V1v3DeSjVhfxu026IGNs-MBvsB-vXGWESJdIAP4gpc8/edit?usp=sharing",
-        "description": "Pierpont specific shift information",
-        "subgroup": "References"
-      },
-      {
-        "name": "TeamDynamix Guide",
-        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
-        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair",
-        "subgroup": "References"
+        "name": "Campus Computing Software List",
+        "url": "https://its.umich.edu/computing/computers-software/campus-computing-sites/software",
+        "description": "ITS Campus Computing software service offerings"
       },
       {
         "name": "TeamDynamix Knowledge Base",
         "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
-        "description": "Internal ITS documentation",
-        "subgroup": "References"
-      },
-      {
-        "name": "Safeware FAQ",
-        "url": "https://www.safeware.com/Resources/FAQ",
-        "description": "Safeware and Warranty FAQ and overview",
-        "subgroup": "References"
-      },
-      {
-        "name": "Campus Computing Software List",
-        "url": "https://its.umich.edu/computing/computers-software/campus-computing-sites/software",
-        "description": "ITS Campus Computing software service offerings",
-        "subgroup": "References"
-      },
-      {
-        "name": "Tech Consulting Point of Sale Resources",
-        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_Resources.html#consulting",
-        "description": "How to perform POS tasks such as: tech repair orders, laptop loaners and returns, managing receipts, and billing to a shortcode",
-        "subgroup": "References"
-      },
-      {
-        "name": "Tech Consultant Passwords",
-        "url": "https://docs.google.com/document/d/1Is8N86Gvx1U0ezujvBEZ4HdUmCcELBnKRNgS149aV3k/edit",
-        "description": "Door code and login for tech consulting laptops",
-        "subgroup": "References"
-      },
-      {
-        "name": "Sites at Home Process Documentation",
-        "url": "https://docs.google.com/document/d/1xEcUP3Z9aop-21ePp4X7pvTPu02xkDeriqxcAnG6A6s/edit#heading=h.rjyqdln6b017",
-        "description": "Info about S@H asset, ticket, and device management",
-        "subgroup": "References"
-      },
-      {
-        "name": "Checkout a Tech Repair Order (MyLinc)",
-        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html",
-        "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application",
-        "subgroup": "References"
+        "description": "Internal ITS documentation"
       }
     ]
   },
   {
-    "category": "Internal",
-    "group": "Tech Consulting Tools",
-    "icon": "wrench",
+    "category": "Customer Support",
+    "group": "Warranty Checking",
+    "icon": "shield",
     "links": [
-      {
-        "name": "ITS Slack",
-        "url": "http://umich-its-annarbor.slack.com/",
-        "description": "Information Technology Services Slack workspace"
-      },
       {
         "name": "GSX Login",
         "url": "http://gsx2.apple.com/",
         "description": "Apple Global Service Exchange login"
       },
       {
-        "name": "TeamDynamix",
-        "url": "https://teamdynamix.umich.edu/",
-        "description": "Ticket and asset management system"
+        "name": "Check Safeware Coverage",
+        "url": "https://www.safeware.com/lookup",
+        "description": "Check warranty coverage for Safeware ensured devices"
+      },
+      {
+        "name": "Check Dell Coverage",
+        "url": "https://www.dell.com/support/home/en-us/products?app=warranty",
+        "description": "Check warranty coverage for Dell devices"
+      },
+      {
+        "name": "Check Apple Coverage",
+        "url": "https://checkcoverage.apple.com/?locale=en_US",
+        "description": "Review Apple warranty status and eligibility to purchase additional AppleCare coverage"
+      },
+      {
+        "name": "Safeware FAQ",
+        "url": "https://www.safeware.com/Resources/FAQ",
+        "description": "Safeware and Warranty FAQ and overview"
+      },
+      {
+        "name": "Check HP Coverage",
+        "url": "https://support.hp.com/us-en/check-warranty",
+        "description": "Check warranty coverage for HP devices"
+      },
+      {
+        "name": "Check Lenovo Coverage",
+        "url": "https://pcsupport.lenovo.com/us/en/warranty-lookup#/",
+        "description": "Check warranty coverage for Lenovo devices"
       }
     ]
   },
   {
-    "category": "Internal",
+    "category": "Employee Resources",
+    "group": "Guides & Documentation",
+    "icon": "document",
+    "links": [
+      {
+        "name": "Tech Consulting Student Employee Guidebook",
+        "url": "https://docs.google.com/document/d/1Cykif6zIOVbn61ZRs_ce74dhqS-wVURXTsQNdZwTzjo/edit",
+        "description": "General information about expectations and rules for tech consultants"
+      },
+      {
+        "name": "Union Cheat Sheet",
+        "url": "https://docs.google.com/document/d/1Bp2U4dQeeAvaFpty1B8awZqSZoPt3QYfDB0rwu4WdTo/edit?usp=sharing",
+        "description": "Union specific shift information"
+      },
+      {
+        "name": "Pierpont Cheat Sheet",
+        "url": "https://docs.google.com/document/d/1V1v3DeSjVhfxu026IGNs-MBvsB-vXGWESJdIAP4gpc8/edit?usp=sharing",
+        "description": "Pierpont specific shift information"
+      },
+      {
+        "name": "Tech Consulting Point of Sale Resources",
+        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_Resources.html#consulting",
+        "description": "How to perform POS tasks such as: tech repair orders, laptop loaners and returns, managing receipts, and billing to a shortcode"
+      },
+      {
+        "name": "Tech Consultant Passwords",
+        "url": "https://docs.google.com/document/d/1Is8N86Gvx1U0ezujvBEZ4HdUmCcELBnKRNgS149aV3k/edit",
+        "description": "Door code and login for tech consulting laptops"
+      },
+      {
+        "name": "Sites at Home Process Documentation",
+        "url": "https://docs.google.com/document/d/1xEcUP3Z9aop-21ePp4X7pvTPu02xkDeriqxcAnG6A6s/edit#heading=h.rjyqdln6b017",
+        "description": "Info about S@H asset, ticket, and device management"
+      },
+      {
+        "name": "Checkout a Tech Repair Order (MyLinc)",
+        "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html",
+        "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application"
+      },
+      {
+        "name": "TeamDynamix Guide",
+        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
+        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
+      }
+    ]
+  },
+  {
+    "category": "Employee Resources",
     "group": "Shift/Scheduling",
     "icon": "clock",
     "links": [
@@ -302,24 +286,24 @@
     ]
   },
   {
-    "category": "Internal",
-    "group": "TeamDynamix",
-    "icon": "tdx",
+    "category": "Employee Resources",
+    "group": "Tech Consulting Tools",
+    "icon": "wrench",
     "links": [
+      {
+        "name": "ITS Slack",
+        "url": "http://umich-its-annarbor.slack.com/",
+        "description": "Information Technology Services Slack workspace"
+      },
+      {
+        "name": "GSX Login",
+        "url": "http://gsx2.apple.com/",
+        "description": "Apple Global Service Exchange login"
+      },
       {
         "name": "TeamDynamix",
         "url": "https://teamdynamix.umich.edu/",
         "description": "Ticket and asset management system"
-      },
-      {
-        "name": "TeamDynamix Knowledge Base",
-        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/KB/",
-        "description": "Internal ITS documentation"
-      },
-      {
-        "name": "TeamDynamix Guide",
-        "url": "https://docs.google.com/document/d/13KntghmXaMhGQFE50KqRTQ_sZ9BwOIwFlYFGVUA4-3c/edit#",
-        "description": "Comprehensive guide on creating and managing TDX tickets for Tech Repair"
       }
     ]
   },

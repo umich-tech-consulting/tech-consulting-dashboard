@@ -139,7 +139,7 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white hover:bg-blue-0 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white hover:bg-blue-0 focus:bg-blue-1 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
 }
 .am-landing-container img {
   @apply h-7 w-fit

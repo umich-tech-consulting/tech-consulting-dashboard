@@ -83,7 +83,7 @@ const ResourcesLandingSearch = () => {
 
       {searchResults.map((categoryData, index) => (
         <div key={index} className="max-w-3xl w-full mt-8">
-          <div className="title-medium mb-3">{categoryData.group}</div>
+          <div className="title-medium mb-3"><span className='text-neutral-7'>{categoryData.category} /</span> {categoryData.group}</div>
           <ul className="flex flex-col gap-4">
             {categoryData.links.map((link, index) => (
               <li
