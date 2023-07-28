@@ -70,7 +70,7 @@ const AssetManagementCheckOut = () => {
               <img className="h-[86px] w-fit" src={checkmark} alt='Checkmark Icon' />
               <div className="flex flex-col gap-3">
                 <div className="title-large text-blue-9 text-center">SAH#12345</div>
-                <div className="body-large text-neutral-7 text-center">Successfully returned for bengrnb</div>
+                <div className="body-large text-neutral-7 text-center">Successfully checked out for bengrnb</div>
               </div>
               <Link to="/asset-management" className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white">Close</Link>
             </div>
