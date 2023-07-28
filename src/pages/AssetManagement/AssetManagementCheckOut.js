@@ -10,6 +10,19 @@ const AssetManagementCheckOut = () => {
   const [noteContent, setNoteContent] = useState("");
   const [dropdownValue, setDropdownValue] = useState("TRL");
   const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  const [tdxResponse, setTdxResponse] = useState(null); // This is where the TXD response json should be assigned
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  const tdxBridge = async() => { //This function should be called onclick for the submit button
+    // setResponseMessage('LOADING...')  // This might be where we add the "spinner" that appears when the request is immediately submitted
+    const res = await fetch('https://tdxurlhere') // This is the url to fetch the response from, need to add a failure state here
+    const json = await res.json() 
+    setTdxResponse(json)
+    // setResponseMessage(`${imageCount} Results`) // This might be where we remove the loading spinner once we have the result
+  }
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   const handleAssetIDChange = (e) => {
     const input = e.target.value;
@@ -54,12 +67,13 @@ const AssetManagementCheckOut = () => {
   };
 
   const isSubmitDisabled =
-    uniqname.length < 3 ||
-    (dropdownValue !== "SAHM" && assetId.length < 5) ||
+  uniqname.length < 3 ||
+  (dropdownValue !== "SAHM" && assetId.length < 5) ||
     (dropdownValue === "SAHM" && assetId.length < 4);
 
-  return (
-    <>
+
+    return (
+      <>
       <Helmet>
         <title>Laptop Check Out</title>
       </Helmet>
