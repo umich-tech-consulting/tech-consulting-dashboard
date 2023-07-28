@@ -104,7 +104,7 @@
         "description": "View printing account summary, transaction history, recent print jobs, pending jobs, order a poster"
       },
       {
-        "name": "Poster Printing Statuses",
+        "name": "Poster Printing Queue",
         "url": "https://accounts.miprint.it.umich.edu/job-ticketing/operator/rooms/1/workflow",
         "description": "View and manage poster printing orders"
       },
@@ -219,7 +219,7 @@
   {
     "category": "Employee Resources",
     "group": "Guides & Documentation",
-    "icon": "document",
+    "icon": "infobook",
     "links": [
       {
         "name": "Tech Consulting Student Employee Guidebook",

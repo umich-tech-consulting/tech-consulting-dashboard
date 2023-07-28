@@ -172,7 +172,7 @@ code {
   @apply flex
 }
 .am-laptop-item select {
-  @apply p-1 rounded-l-md ring-1 ring-neutral-2 focus:outline-none focus:ring-blue-9 focus:bg-white text-neutral-9 bg-neutral-2 cursor-pointer mr-[2px]
+  @apply p-1 rounded-l-md ring-1 ring-neutral-2 focus:outline-none focus:ring-blue-9 focus:bg-white text-neutral-9 bg-neutral-2 cursor-pointer mr-[2px] w-fit
 }
 .am-laptop-item input {
   @apply p-2 px-2 ring-1 ring-base-light rounded-r-md focus:outline-none focus:ring-blue-9 focus:bg-white h-fit w-36 bg-base-light

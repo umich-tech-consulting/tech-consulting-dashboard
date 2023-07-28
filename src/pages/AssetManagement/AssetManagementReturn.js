@@ -6,7 +6,7 @@ import laptop_return from "../../icons/asset-management/laptop_return.svg"
 const AssetManagementReturn = () => {
   const [assetId, setAssetId] = useState("");
   const [noteContent, setNoteContent] = useState("");
-  const [dropdownValue, setDropdownValue] = useState("SAH"); // Default dropdown value is "SAH"
+  const [dropdownValue, setDropdownValue] = useState("TRL"); // Default dropdown value is "SAH"
 
   const handleAssetIDChange = (e) => {
     const input = e.target.value;
@@ -48,8 +48,9 @@ const AssetManagementReturn = () => {
                     value={dropdownValue}
                     onChange={handleDropdownChange}
                   >
-                    <option value="SAH">SAH</option>
                     <option value="TRL">TRL</option>
+                    <option value="SAH">SAH</option>
+                    <option value="SAHM">SAHM</option>
                   </select>
                   <input
                     type="text"

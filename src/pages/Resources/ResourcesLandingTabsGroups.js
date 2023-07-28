@@ -7,6 +7,7 @@ import document from "../../icons/resources/group-category-icons/document.svg";
 import fishbowl from "../../icons/resources/group-category-icons/fishbowl.svg";
 import globe from "../../icons/resources/group-category-icons/globe.svg";
 import group from "../../icons/resources/group-category-icons/group.svg";
+import infobook from "../../icons/resources/group-category-icons/infobook.svg";
 import tdx from "../../icons/resources/group-category-icons/tdx.svg";
 import shield from "../../icons/resources/group-category-icons/shield.svg";
 import slasheye from '../../icons/resources/group-category-icons/slasheye.svg'
@@ -21,6 +22,7 @@ const iconMapping = {
     fishbowl: fishbowl,
     globe: globe,
     group: group,
+    infobook: infobook,
     printer: printer,
     shield: shield,
     slasheye: slasheye,

@@ -4,7 +4,7 @@ import { useState } from "react"; // Import useState
 import laptop_swap from "../../icons/asset-management/laptop_swap.svg"
 
 const AssetManagementSwap = () => {
-  const [dropdownValue, setDropdownValue] = useState("SAH"); // Default dropdown value is "SAH"
+  const [dropdownValue, setDropdownValue] = useState("TRL"); // Default dropdown value is "TRL"
   const [oldAssetId, setOldAssetId] = useState("");
   const [newAssetId, setNewAssetId] = useState("");
   const [noteContent, setNoteContent] = useState("");
@@ -57,8 +57,9 @@ const AssetManagementSwap = () => {
                       value={dropdownValue}
                       onChange={handleDropdownChange}
                     >
-                      <option value="SAH">SAH</option>
                       <option value="TRL">TRL</option>
+                      <option value="SAH">SAH</option>
+                      <option value="SAHM">SAHM</option>
                     </select>
                     <input
                       type="text"
@@ -80,8 +81,9 @@ const AssetManagementSwap = () => {
                       value={dropdownValue}
                       onChange={handleDropdownChange}
                     >
-                      <option value="SAH">SAH</option>
                       <option value="TRL">TRL</option>
+                      <option value="SAH">SAH</option>
+                      <option value="SAHM">SAHM</option>
                     </select>
                     <input
                       type="text"
