@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import resourcesData from './ResourcesData.json';
@@ -41,49 +42,54 @@ const ResourceCategoryBuilder = () => {
   );
 
   return (
-    <div className="w-full flex flex-col p-6 items-center">
-        <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
-          <Link to="/resources" className="hover:text-blue-9">Resources</Link>
-          <div>/</div>
-          <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>
-        </div>
-      <div className="max-w-3xl w-full mt-8">
-        <h1 className="headline-large mb-6 text-center">{categoryName.category}</h1>{" "}
-        {/* Display the appropriate header */}
-      </div>
-      {sortedCategoryData.map((groupData, index) => (
-        <div key={index} className="max-w-3xl w-full mb-16">
-          <div className="mb-6 flex gap-2 items-center">
-            <h2 className="headline-small">{groupData.group}</h2>
-            <Link
-              to={`${groupData.group
-                .toLowerCase()
-                .replace(/\s+/g, "")
-                .replace(/[^a-zA-Z0-9-]/g, "-")}`}
-            >
-              <img src={rightarrow} alt="Right Arrow" />
-            </Link>
+    <>
+      <Helmet>
+        <title>Resources</title>
+      </Helmet>
+      <div className="w-full flex flex-col p-6 items-center">
+          <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
+            <Link to="/resources" className="hover:text-blue-9">Resources</Link>
+            <div>/</div>
+            <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>
           </div>
-
-          <ul className="flex flex-col gap-4">
-            {groupData.links.map((link, index) => (
-              <li key={index}>
-                <a href={link.url} target="_blank" rel="noreferrer noopener">
-                  <div className="bg-white p-4 rounded-md hover:bg-blue-0">
-                    <div className="title-medium text-blue-9 mb-2">
-                      {link.name}
-                    </div>
-                    <div className="body-medium text-neutral-9">
-                      {link.description}
-                    </div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+        <div className="max-w-3xl w-full mt-8">
+          <h1 className="headline-large mb-6 text-center">{categoryName.category}</h1>{" "}
+          {/* Display the appropriate header */}
         </div>
-      ))}
-    </div>
+        {sortedCategoryData.map((groupData, index) => (
+          <div key={index} className="max-w-3xl w-full mb-16">
+            <div className="mb-6 flex gap-2 items-center">
+              <h2 className="headline-small">{groupData.group}</h2>
+              <Link
+                to={`${groupData.group
+                  .toLowerCase()
+                  .replace(/\s+/g, "")
+                  .replace(/[^a-zA-Z0-9-]/g, "-")}`}
+              >
+                <img src={rightarrow} alt="Right Arrow" />
+              </Link>
+            </div>
+
+            <ul className="flex flex-col gap-4">
+              {groupData.links.map((link, index) => (
+                <li key={index}>
+                  <a href={link.url} target="_blank" rel="noreferrer noopener">
+                    <div className="bg-white p-4 rounded-md hover:bg-blue-0">
+                      <div className="title-medium text-blue-9 mb-2">
+                        {link.name}
+                      </div>
+                      <div className="body-medium text-neutral-9">
+                        {link.description}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

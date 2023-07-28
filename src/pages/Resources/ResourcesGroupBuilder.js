@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import resourcesData from './ResourcesData.json';
@@ -40,45 +41,51 @@ const ResourceGroupBuilder = () => {
   );
 
   return (
-    <div className="w-full flex flex-col p-6 items-center">
-      <div className="max-w-3xl w-full">
-        <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
-          <Link to="/resources" className="hover:text-blue-9">
-            Resources
-          </Link>
-          <div>/</div>
-          <Link to={`/resources/${category}`} className="hover:text-blue-9">
-            {categoryData.category}
-          </Link>
-          <div>/</div>
-          <Link
-            to={`/resources/${category}/${group}`}
-            className="hover:text-blue-9"
-          >
+    <>
+      <Helmet>
+        <title>Resources</title>
+      </Helmet>
+      <div className="w-full flex flex-col p-6 items-center">
+        <div className="max-w-3xl w-full">
+          <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
+            <Link to="/resources" className="hover:text-blue-9">
+              Resources
+            </Link>
+            <div>/</div>
+            <Link to={`/resources/${category}`} className="hover:text-blue-9">
+              {categoryData.category}
+            </Link>
+            <div>/</div>
+            <Link
+              to={`/resources/${category}/${group}`}
+              className="hover:text-blue-9"
+            >
+              {categoryData.group}
+            </Link>
+          </div>
+          <div className="headline-large mb-6 text-center mt-8">
             {categoryData.group}
-          </Link>
-        </div>
-        <div className="headline-large mb-6 text-center mt-8">
-          {categoryData.group}
-        </div>
-        <ul className="flex flex-col gap-4">
-          {sortedLinks.map((link, index) => (
-            <li key={index}>
-              <a href={link.url} target="_blank" rel="noreferrer noopener">
-                <div className="bg-white rounded-md p-4 hover:bg-blue-0">
-                  <div className="title-medium text-blue-9 mb-2">
-                    {link.name}
+          </div>
+          <ul className="flex flex-col gap-4">
+            {sortedLinks.map((link, index) => (
+              <li key={index}>
+                <a href={link.url} target="_blank" rel="noreferrer noopener">
+                  <div className="bg-white rounded-md p-4 hover:bg-blue-0">
+                    <div className="title-medium text-blue-9 mb-2">
+                      {link.name}
+                    </div>
+                    <div className="body-medium text-neutral-9">
+                      {link.description}
+                    </div>
                   </div>
-                  <div className="body-medium text-neutral-9">
-                    {link.description}
-                  </div>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
+    
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ResourcesLandingTabs = ({ resourcesData, activeTab, handleTabChange }) => {
   const categories = [...new Set(resourcesData.map((tab) => tab.category))];
 
