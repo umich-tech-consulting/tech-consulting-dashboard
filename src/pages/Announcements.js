@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet";
 
 const Announcements = () => {
-  const googleDocUrl = "https://docs.google.com/document/d/e/2PACX-1vTRJn6RGxzJMgk_QDidSwXAvTlYrPOQmRNx_EmNdlRiTWFhfPSaEAB1BzCMkMH7XKui8ZW_LC1pg2RN/pub?embedded=true";
-//   const googleDocUrl = "https://docs.google.com/document/d/17ceEJafaJGeUuE6_80vNzljyxHxb85WeLege8BwM-AQ/preview";
+  const googleDocUrl = "https://docs.google.com/document/d/e/2PACX-1vRteqKEYcjVdCR7zlhwXHLs1iL_sxEqjp7luzWFDbVhpM1lRjVhgEUMy04cTVbCp4QW5k855rAgEFXn/pub?embedded=true";
 
   return (
     <>

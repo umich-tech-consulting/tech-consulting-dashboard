@@ -18,7 +18,7 @@ const AssetManagementCheckOut = () => {
   const tdxBridge = async() => { //This function should be called onclick for the submit button
     // setResponseMessage('LOADING...')  // This might be where we add the "spinner" that appears when the request is immediately submitted
     const res = await fetch('https://tdxurlhere') // This is the url to fetch the response from, need to add a failure state here
-    const json = await res.json() 
+    const json = await res.json()
     setTdxResponse(json)
     // setResponseMessage(`${imageCount} Results`) // This might be where we remove the loading spinner once we have the result
   }
