@@ -5,24 +5,43 @@ import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg"
 import checkmark from "../../icons/asset-management/checkmark.svg";
 
 const AssetManagementCheckOut = () => {
+  // Make a helper function to combine sah with number and renamde dropdown value using f2
   const [assetId, setAssetId] = useState("");
   const [uniqname, setUniqname] = useState("");
   const [noteContent, setNoteContent] = useState("");
   const [dropdownValue, setDropdownValue] = useState("TRL");
   const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
-  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
   const [tdxResponse, setTdxResponse] = useState(null); // This is where the TXD response json should be assigned
-  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+  const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
+  const apiUrl = "http://192.168.1.15:8080"
 
-  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  const tdxBridge = async() => { //This function should be called onclick for the submit button
-    // setResponseMessage('LOADING...')  // This might be where we add the "spinner" that appears when the request is immediately submitted
-    const res = await fetch('https://tdxurlhere') // This is the url to fetch the response from, need to add a failure state here
-    const json = await res.json()
-    setTdxResponse(json)
-    // setResponseMessage(`${imageCount} Results`) // This might be where we remove the loading spinner once we have the result
+  const tdxCheckoutLoan = async() => {
+    setSubmitButtonValue(
+      <>
+        <div className="w-full flex justify-center">
+          <div className="pr-2">Loading</div>
+          <svg aria-hidden="true" class="w-5 h-5 animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" className="fill-blue-8"/>
+              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" className="fill-white"/>
+          </svg>
+        </div>
+      </>
+    )
+    const res = await fetch(`${apiUrl}/tdx/loan/checkout`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "uniqname": uniqname,
+        "asset": `${dropdownValue}${assetId}`
+      })
+    })
+    const data = await res.json()
+    setIsSubmitted(true)
+    setTdxResponse(data)
   }
-  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   const handleAssetIDChange = (e) => {
     const input = e.target.value;
@@ -59,12 +78,12 @@ const AssetManagementCheckOut = () => {
     }
   }, [dropdownValue, assetId]);
 
-  const handleSubmit = () => {
-    // Handle form submission here, e.g., send data to the server
+  // const handleSubmit = () => {
+  //   // Handle form submission here, e.g., send data to the server
 
-    // After successful submission, set the isSubmitted state to true
-    setIsSubmitted(true);
-  };
+  //   // After successful submission, set the isSubmitted state to true
+  //   setIsSubmitted(true);
+  // };
 
   const isSubmitDisabled =
   uniqname.length < 3 ||
@@ -83,8 +102,16 @@ const AssetManagementCheckOut = () => {
             <div className="submitted-successfully w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center">
               <img className="h-[86px] w-fit" src={checkmark} alt='Checkmark Icon' />
               <div className="flex flex-col gap-3">
-                <div className="title-large text-blue-9 text-center">SAH#12345</div>
-                <div className="body-large text-neutral-7 text-center">Successfully checked out for bengrnb</div>
+                <div className="title-large text-blue-9 text-center">Success</div>
+                <div className="body-large text-neutral-7 text-center">
+                  Loaned
+                  <span> <a className="underline" href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`} target="_blank" rel="noreferrer noopener">{tdxResponse.asset.tag}</a> </span>
+                  to
+                  <span> <a className="underline" href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`} target="_blank" rel="noreferrer noopener">{tdxResponse.loan.name}</a> </span>
+                  in
+                  <span> <a className="underline" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} target="_blank" rel="noreferrer noopener">TDX{tdxResponse.ticket.id}</a> </span>
+                  until {tdxResponse.loan.date}.
+                </div>
               </div>
               <Link to="/asset-management" className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white">Close</Link>
             </div>
@@ -154,9 +181,9 @@ const AssetManagementCheckOut = () => {
                       : "bg-blue-9 text-white"
                   }`}
                   disabled={isSubmitDisabled}
-                  onClick={handleSubmit} // Call handleSubmit function on button click
+                  onClick={tdxCheckoutLoan} // Call handleSubmit function on button click
                 >
-                  Submit
+                  {submitButtonValue}
                 </button>
               </div>
             </div>
