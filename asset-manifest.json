@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tech-consulting-dashboard/static/css/main.9aa040f2.css",
-    "main.js": "/tech-consulting-dashboard/static/js/main.b129bdad.js",
+    "main.js": "/tech-consulting-dashboard/static/js/main.0bd1915f.js",
     "static/js/787.3ad9acc0.chunk.js": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js",
     "static/media/tdxlogo.png": "/tech-consulting-dashboard/static/media/tdxlogo.5542ef78eb0e1acc816d.png",
     "static/media/infobook.svg": "/tech-consulting-dashboard/static/media/infobook.3216b3c3c6ffd6172a7f2c49a05f3493.svg",
@@ -39,11 +39,11 @@
     "static/media/shield.svg": "/tech-consulting-dashboard/static/media/shield.b78ef241e3289d0ea45a7c58f183ff9a.svg",
     "static/media/umich.svg": "/tech-consulting-dashboard/static/media/umich.e10e6f4932692d49b9636b85ff90708c.svg",
     "main.9aa040f2.css.map": "/tech-consulting-dashboard/static/css/main.9aa040f2.css.map",
-    "main.b129bdad.js.map": "/tech-consulting-dashboard/static/js/main.b129bdad.js.map",
+    "main.0bd1915f.js.map": "/tech-consulting-dashboard/static/js/main.0bd1915f.js.map",
     "787.3ad9acc0.chunk.js.map": "/tech-consulting-dashboard/static/js/787.3ad9acc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9aa040f2.css",
-    "static/js/main.b129bdad.js"
+    "static/js/main.0bd1915f.js"
   ]
 }
