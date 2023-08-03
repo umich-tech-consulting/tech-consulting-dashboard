@@ -50,7 +50,7 @@ const AssetManagementCheckOut = () => {
 
       if (!res.ok) {
         const data = await res.json();
-        setSubmitError(data.error);
+        setSubmitError(data.message);
         setSubmitButtonValue("Retry")
       }
 
@@ -59,7 +59,7 @@ const AssetManagementCheckOut = () => {
       // setSubmitButtonValue("Success");
     } catch (error) {
       // If there's an error, set submitButtonValue to "failed"
-      setSubmitButtonValue("Retry");
+      setSubmitButtonValue("Timeout");
     }
   };
 
