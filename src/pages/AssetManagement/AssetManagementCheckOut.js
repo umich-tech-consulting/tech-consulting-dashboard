@@ -13,10 +13,11 @@ const AssetManagementCheckOut = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
   const [tdxResponse, setTdxResponse] = useState(null); // This is where the TXD response json should be assigned
+  const [submitError, setSubmitError] = useState(null);
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
   const apiUrl = "http://192.168.1.15:8080"
 
-  const tdxCheckoutLoan = async() => {
+  const tdxCheckoutLoan = async () => {
     setSubmitButtonValue(
       <>
         <div className="w-full flex justify-center">
@@ -27,21 +28,45 @@ const AssetManagementCheckOut = () => {
           </svg>
         </div>
       </>
-    )
-    const res = await fetch(`${apiUrl}/tdx/loan/checkout`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        "uniqname": uniqname,
-        "asset": `${dropdownValue}${assetId}`
-      })
-    })
-    const data = await res.json()
-    setIsSubmitted(true)
-    setTdxResponse(data)
+    );
+  
+    try {
+      const res = await fetch(`${apiUrl}/tdx/loan/checkout`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          uniqname: uniqname,
+          asset: `${dropdownValue}${assetId}`,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setIsSubmitted(true);
+        setTdxResponse(data);
+        setSubmitError(null);
+      }
+
+      if (!res.ok) {
+        const data = await res.json();
+        setSubmitError(data.error);
+        setSubmitButtonValue("Retry")
+      }
+
+      // If you want to set the submit button value to something specific after a successful fetch, you can do it here
+      // For example:
+      // setSubmitButtonValue("Success");
+    } catch (error) {
+      // If there's an error, set submitButtonValue to "failed"
+      setSubmitButtonValue("Retry");
+    }
+  };
+
+  const closeErrorNotification = () => {
+    setSubmitError(null)
   }
+
 
   const handleAssetIDChange = (e) => {
     const input = e.target.value;
@@ -78,13 +103,6 @@ const AssetManagementCheckOut = () => {
     }
   }, [dropdownValue, assetId]);
 
-  // const handleSubmit = () => {
-  //   // Handle form submission here, e.g., send data to the server
-
-  //   // After successful submission, set the isSubmitted state to true
-  //   setIsSubmitted(true);
-  // };
-
   const isSubmitDisabled =
   uniqname.length < 3 ||
   (dropdownValue !== "SAHM" && assetId.length < 5) ||
@@ -97,6 +115,24 @@ const AssetManagementCheckOut = () => {
         <title>Laptop Check Out</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
+        <div className="flex justify-center">
+          {submitError ? (
+            <div className=" bg-white p-4 fixed right-0 bottom-0 m-5 rounded-md min-w-[350px]">
+              <div className="border-l-2 border-base-red pl-3">
+                <div className="flex gap-4">
+                  <div>
+                    <div className="label-large text-neutral-9">Request failed</div>
+                    <div className="body-medium pt-1 text-neutral-7">{submitError}</div>
+                  </div>
+                </div>
+                <div className="flex gap-4 mt-4">
+                  <button className="label-medium text-blue-9" onClick={closeErrorNotification}>Dismiss</button>
+                  <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-neutral-7 hover:text-blue-9">Resolve in TDX</a>
+                </div>
+              </div>
+            </div>
+          ) : (null)}
+        </div>
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
             <div className="submitted-successfully w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center">
