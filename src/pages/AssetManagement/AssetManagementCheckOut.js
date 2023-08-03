@@ -29,7 +29,7 @@ const AssetManagementCheckOut = () => {
         </div>
       </>
     );
-  
+
     try {
       const res = await fetch(`${apiUrl}/tdx/loan/checkout`, {
         method: "POST",
