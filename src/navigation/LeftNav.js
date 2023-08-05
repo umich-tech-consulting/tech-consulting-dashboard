@@ -137,6 +137,7 @@ const LeftNav = () => {
             <div className="body-small">Documentation</div>
           </a>
         </div>
+        <div className="mt-2 px-2 body-small text-neutral-7">v.0.0.1(&alpha;)</div>
       </div>
     </div>
   );
