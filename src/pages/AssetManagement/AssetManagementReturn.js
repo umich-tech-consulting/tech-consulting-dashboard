@@ -33,10 +33,10 @@ const AssetManagementReturn = () => {
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
         <div className="am-action-container">
-          <div className="am-action-component">
-            <div className="flex justify-between items-center mb-6">
-              <div className="am-action-component-title">Laptop Return</div>
-              <img className="h-5 w-fit" src={laptop_return} alt='Laptop Return Icon' />
+          <div className="am-action-form">
+            <div className="am-action-form-header">
+              <div>Laptop Return</div>
+              <img src={laptop_return} alt='Laptop Return Icon' />
             </div>
             <div className="am-action-component-main">
               <div className="am-action-component-item">
