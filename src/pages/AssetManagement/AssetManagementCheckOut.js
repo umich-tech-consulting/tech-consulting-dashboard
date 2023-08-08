@@ -81,32 +81,28 @@ const AssetManagementCheckOut = () => {
           case 3: // Either Uniqname or Asset matched multiple objects
             if (data.attributes.type === "person") {
               setUniqnameError(true);
-              setUniqnameError(
-                "Multiple people found for uniqname. Contact manager for assistance"
-              );
+              setUniqnameErrorMessage(`Multiple people found for uniqname ${data.attributes.uniqname}. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
             }
             if (data.attributes.type === "asset") {
               setAssetError(true);
-              setAssetErrorMessage(
-                "Multiple assets found. Contact manager for assistance"
-              );
+              setAssetErrorMessage(`Multiple assets found. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
             }
             break;
           case 4: // Invalid Uniqname
             setUniqnameError(true);
-            setUniqnameErrorMessage("Invalid uniqname format");
+            setUniqnameErrorMessage(`Invalid uniqname format${(data.details) ?  `: ${data.details}` : ""}`);
             break;
           case 5: // Invalid Asset
             setAssetError(true);
-            setAssetErrorMessage("Invalid asset format");
+            setAssetErrorMessage(`Invalid asset format${(data.details) ?  `: ${data.details}` : ""}`);
             break;
           case 6: // No valid loan ticket
             setUniqnameError(true);
-            setUniqnameErrorMessage("Customer not eligible for a loan");
+            setUniqnameErrorMessage(`Customer ${data.attributes.uniqname} not eligible for a loan${(data.details) ?  `: ${data.details}` : ""}`);
             break;
           case 7: // Asset is not ready for loan
             setAssetError(true);
-            setAssetErrorMessage("Asset is not ready to loan");
+            setAssetErrorMessage(`Asset is not ready to loan${(data.details) ?  `: ${data.details}` : ""}`);
             break;
           default: // There is an error that wasn't caught
           // "Error Not recognized"
