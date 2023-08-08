@@ -7,29 +7,41 @@ import UniqnameFormField from "../../components/asset_management/UniqnameFormFie
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
 import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
-import spinner from "../../icons/asset-management/spinner.svg"
+import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
   // Make a helper function to combine sah with number and rename dropdown value using f2
+
+  // Form data Start
   const [uniqname, setUniqname] = useState("");
-  const [dropdownValue, setDropdownValue] = useState("TRL");
+  const [assetType, setAssetType] = useState("TRL");
   const [assetId, setAssetId] = useState("");
   const [comment, setComment] = useState("");
+  const asset = `${assetType}${assetId}`;
+  // Form Data End
+
+  // Api Data Start
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
   const [tdxResponse, setTdxResponse] = useState(null);
   const [uniqnameError, setUniqnameError] = useState(null);
+  const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
   const [assetError, setAssetError] = useState(null);
-  const [submitError, setSubmitError] = useState(null);
+  const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "http://192.168.1.15:8080"
+  const apiUrl = "http://192.168.1.15:8080";
+  // Api Data End
 
   const tdxCheckoutLoan = async () => {
+    setUniqnameError(null);
+    setUniqnameErrorMessage(null);
+    setAssetError(null);
+    setAssetErrorMessage(null);
     setSubmitButtonValue(
       <>
         <div className="am-action-submit-button-spinner">
           <div>Loading</div>
-          <img src={spinner} alt='Loading Spinner' />
+          <img src={spinner} alt="Loading Spinner" />
         </div>
       </>
     );
@@ -42,39 +54,77 @@ const AssetManagementCheckOut = () => {
         },
         body: JSON.stringify({
           uniqname: uniqname,
-          asset: `${dropdownValue}${assetId}`,
+          asset: asset,
+          comment: comment,
         }),
       });
       if (res.ok) {
         const data = await res.json();
         setIsSubmitted(true);
         setTdxResponse(data);
-        setSubmitError(null);
+        setUniqnameError(null);
+        setAssetError(null);
       }
       if (!res.ok) {
         const data = await res.json();
-        setUniqnameError(true) // this could be uniqname error
-        setAssetError(true) // this could be asset error
-        setSubmitError(data.message);
-        setSubmitButtonValue("Retry")
+        let error
+        switch (data.error_number) {
+          case 1: // Uniqname does not exist in TDX
+            setUniqnameError(true);
+            setUniqnameErrorMessage(`Uniqname ${data.attributes.uniqname} does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          case 2: // Asset does not exist in TDX
+            setAssetError(true);
+            setAssetErrorMessage(`Asset does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+
+            break;
+          case 3: // Either Uniqname or Asset matched multiple objects
+            if (data.attributes.type === "person") {
+              setUniqnameError(true);
+              setUniqnameError(
+                "Multiple people found for uniqname. Contact manager for assistance"
+              );
+            }
+            if (data.attributes.type === "asset") {
+              setAssetError(true);
+              setAssetErrorMessage(
+                "Multiple assets found. Contact manager for assistance"
+              );
+            }
+            break;
+          case 4: // Invalid Uniqname
+            setUniqnameError(true);
+            setUniqnameErrorMessage("Invalid uniqname format");
+            break;
+          case 5: // Invalid Asset
+            setAssetError(true);
+            setAssetErrorMessage("Invalid asset format");
+            break;
+          case 6: // No valid loan ticket
+            setUniqnameError(true);
+            setUniqnameErrorMessage("Customer not eligible for a loan");
+            break;
+          case 7: // Asset is not ready for loan
+            setAssetError(true);
+            setAssetErrorMessage("Asset is not ready to loan");
+            break;
+          default: // There is an error that wasn't caught
+          // "Error Not recognized"
+        }
+        setSubmitButtonValue("Retry");
       }
     } catch (error) {
-      setSubmitButtonValue("Timeout");
+      setSubmitButtonValue("Server Offline");
     }
   };
 
-  const closeErrorNotification = () => {
-    setSubmitError(null)
-  }
-
   const isSubmitDisabled =
-  uniqname.length < 3 ||
-  (dropdownValue !== "SAHM" && assetId.length < 5) ||
-    (dropdownValue === "SAHM" && assetId.length < 4);
+    uniqname.length < 3 ||
+    (assetType !== "SAHM" && assetId.length < 5) ||
+    (assetType === "SAHM" && assetId.length < 4);
 
-
-    return (
-      <>
+  return (
+    <>
       <Helmet>
         <title>Laptop Check Out</title>
       </Helmet>
@@ -100,33 +150,92 @@ const AssetManagementCheckOut = () => {
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
             <div className="submitted-successfully w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center">
-              <img className="h-[86px] w-fit" src={checkmark} alt='Checkmark Icon' />
+              <img
+                className="h-[86px] w-fit"
+                src={checkmark}
+                alt="Checkmark Icon"
+              />
               <div className="flex flex-col gap-3">
-                <div className="title-large text-blue-9 text-center">Success</div>
+                <div className="title-large text-blue-9 text-center">
+                  Success
+                </div>
                 <div className="body-large text-neutral-7 text-center">
                   Loaned
-                  <span> <a className="underline" href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`} target="_blank" rel="noreferrer noopener">{tdxResponse.asset.tag}</a> </span>
+                  <span>
+                    {" "}
+                    <a
+                      className="underline"
+                      href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {tdxResponse.asset.tag}
+                    </a>{" "}
+                  </span>
                   to
-                  <span> <a className="underline" href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`} target="_blank" rel="noreferrer noopener">{tdxResponse.loan.name}</a> </span>
+                  <span>
+                    {" "}
+                    <a
+                      className="underline"
+                      href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {tdxResponse.loan.name}
+                    </a>{" "}
+                  </span>
                   in
-                  <span> <a className="underline" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} target="_blank" rel="noreferrer noopener">TDX{tdxResponse.ticket.id}</a> </span>
+                  <span>
+                    {" "}
+                    <a
+                      className="underline"
+                      href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      TDX{tdxResponse.ticket.id}
+                    </a>{" "}
+                  </span>
                   until {tdxResponse.loan.date}.
                 </div>
               </div>
-              <Link to="/asset-management" className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white">Close</Link>
+              <Link
+                to="/asset-management"
+                className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white"
+              >
+                Close
+              </Link>
             </div>
           ) : (
             <div className="am-action-form">
               <div className="am-action-form-header">
                 <div>Laptop Check Out</div>
-                <img src={laptop_check_out} alt='Laptop Return Icon' />
+                <img src={laptop_check_out} alt="Laptop Return Icon" />
               </div>
               <div className="am-action-component-main">
-                <UniqnameFormField setUniqname={setUniqname} uniqname={uniqname} uniqnameError={uniqnameError} />
-                <AssetNumberFormField setAssetId={setAssetId} assetId={assetId} setDropdownValue={setDropdownValue} dropdownValue={dropdownValue} assetError={assetError} />
+                <UniqnameFormField
+                  setUniqname={setUniqname}
+                  uniqname={uniqname}
+                  uniqnameError={uniqnameError}
+                  setUniqnameError={setUniqnameError}
+                  uniqnameErrorMessage={uniqnameErrorMessage}
+                />
+                <AssetNumberFormField
+                  setAssetId={setAssetId}
+                  assetId={assetId}
+                  setAssetType={setAssetType}
+                  assetType={assetType}
+                  assetError={assetError}
+                  setAssetError={setAssetError}
+                  assetErrorMessage={assetErrorMessage}
+                />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
-              <SubmitOrCancelForm isSubmitDisabled={isSubmitDisabled} submitButtonValue={submitButtonValue} tdxCheckoutLoan={tdxCheckoutLoan} />
+              <SubmitOrCancelForm
+                isSubmitDisabled={isSubmitDisabled}
+                submitButtonValue={submitButtonValue}
+                tdxCheckoutLoan={tdxCheckoutLoan}
+              />
             </div>
           )}
         </div>

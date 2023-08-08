@@ -1,13 +1,22 @@
+import error_alert from "../../icons/asset-management/error_alert.svg";
+
 import { useEffect } from "react";
 
-const AssetNumberFormField = ({ setAssetId, assetId, setDropdownValue, dropdownValue, assetError }) => {
-
-  const handleAssetIDChange = (e) => {
+const AssetNumberFormField = ({
+  setAssetId,
+  assetId,
+  setAssetType,
+  assetType,
+  assetError,
+  setAssetError,
+  assetErrorMessage,
+}) => {
+  const handleAssetIdChange = (e) => {
     const input = e.target.value;
     const numberInput = input.replace(/\D/g, "");
     let maxLength = 5;
 
-    if (dropdownValue === "SAHM") {
+    if (assetType === "SAHM") {
       maxLength = 4;
     }
 
@@ -15,36 +24,59 @@ const AssetNumberFormField = ({ setAssetId, assetId, setDropdownValue, dropdownV
     setAssetId(truncatedInput);
   };
 
-  const handleDropdownChange = (e) => {
-    setDropdownValue(e.target.value);
+  const handleAssetTypeChange = (e) => {
+    setAssetType(e.target.value);
   };
 
   useEffect(() => {
-    if (dropdownValue === "SAHM" && assetId.length === 5) {
+    if (assetType === "SAHM" && assetId.length === 5) {
       setAssetId("");
     }
-  }, [dropdownValue, assetId, setAssetId]);
+  }, [assetType, assetId, setAssetId]);
 
   return (
     <>
       <div className="am-action-component-item">
         <label htmlFor="asset">Asset Number</label>
         <div className="am-laptop-item">
-          <select className="am-action-form-default" value={dropdownValue} onChange={handleDropdownChange}>
+          <select
+            className={`am-uniqname-item ${
+              !assetError ? "am-action-form-default" : "am-action-form-error"
+            }`}
+            value={assetType}
+            onChange={(e) => {
+              handleAssetTypeChange(e);
+              setAssetError(null);
+            }}
+
+          >
             <option value="TRL">TRL</option>
             <option value="SAH">SAH</option>
             <option value="SAHM">SAHM</option>
           </select>
-          <input className="am-action-form-default"
+          <input
+            className={`am-uniqname-item ${
+              !assetError ? "am-action-form-default" : "am-action-form-error"
+            }`}
             type="text"
             id="asset"
             name="asset"
             pattern="\d*"
             value={assetId}
-            onChange={handleAssetIDChange}
+            onChange={(e) => {
+              handleAssetIdChange(e);
+              setAssetError(null);
+            }}
           />
         </div>
-        <div className="h-5 mt-1 body-small">{assetError ? null : "Error with asset"}</div>
+        <div className="am-action-form-error-message">
+          {!assetErrorMessage ? null : (
+            <>
+              <img src={error_alert} alt="Error Alert" />
+              <div>{assetErrorMessage}</div>
+            </>
+          )}
+        </div>
       </div>
     </>
   );

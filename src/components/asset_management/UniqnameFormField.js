@@ -1,5 +1,5 @@
 import error_alert from "../../icons/asset-management/error_alert.svg";
-const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError }) => {
+const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError, setUniqnameError, uniqnameErrorMessage }) => {
   const handleUniqnameChange = (e) => {
     const input = e.target.value;
     const lowercaseInput = input.toLowerCase();
@@ -22,13 +22,16 @@ const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError }) => {
           pattern="\d*"
           spellCheck="false"
           value={uniqname}
-          onChange={handleUniqnameChange}
+          onChange={(e) => {
+            handleUniqnameChange(e);
+            setUniqnameError(null);
+          }}
         />
         <div className="am-action-form-error-message">
-          {!uniqnameError ? null : (
+          {!uniqnameErrorMessage ? null : (
             <>
               <img src={error_alert} alt="Error Alert" />
-              <div>Error with uniqname</div>
+              <div>{uniqnameErrorMessage}</div>
             </>
           )}
         </div>
