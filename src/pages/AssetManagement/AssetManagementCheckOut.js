@@ -1,31 +1,54 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
-import checkmark from "../../icons/asset-management/checkmark.svg";
+import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
+import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
+import CommentFormField from "../../components/asset_management/CommentFormField";
+import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
+import CheckoutSubmitSuccess from "../../components/asset_management/CheckoutSubmitSuccess";
+import spinner from "../../icons/asset-management/spinner.svg";
+import squirrel from "../../icons/asset-management/squirrel.svg";
 
 const AssetManagementCheckOut = () => {
-  // Make a helper function to combine sah with number and renamde dropdown value using f2
-  const [assetId, setAssetId] = useState("");
+
+  // Form data Start
   const [uniqname, setUniqname] = useState("");
-  const [noteContent, setNoteContent] = useState("");
-  const [dropdownValue, setDropdownValue] = useState("TRL");
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
+  const [assetType, setAssetType] = useState("TRL");
+  const [assetId, setAssetId] = useState("");
+  const [comment, setComment] = useState("");
+  const asset = `${assetType}${assetId}`;
+  // Form Data End
+
+  // Api Data Start
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
-  const [tdxResponse, setTdxResponse] = useState(null); // This is where the TXD response json should be assigned
-  const [submitError, setSubmitError] = useState(null);
+  const [tdxResponse, setTdxResponse] = useState(null);
+  const [uniqnameError, setUniqnameError] = useState(null);
+  const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
+  const [assetError, setAssetError] = useState(null);
+  const [assetErrorMessage, setAssetErrorMessage] = useState(null);
+  const [errorCount, setErrorCount] = useState(0)
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "http://0.0.0.0:8080"
+  const apiUrl = "http://192.168.1.15:8080";
+  // Api Data End
+
+  const increaseErrorCount = () => {
+    setErrorCount(errorCount + 1)
+  }
+  const resetErrorCount = () => {
+    setErrorCount(0)
+  }
 
   const tdxCheckoutLoan = async () => {
+    setUniqnameError(null);
+    setUniqnameErrorMessage(null);
+    setAssetError(null);
+    setAssetErrorMessage(null);
     setSubmitButtonValue(
       <>
-        <div className="w-full flex justify-center">
-          <div className="pr-2">Loading</div>
-          <svg aria-hidden="true" class="w-5 h-5 animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" className="fill-blue-8"/>
-              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" className="fill-white"/>
-          </svg>
+        <div className="am-action-submit-button-spinner">
+          <div>Loading</div>
+          <img src={spinner} alt="Loading Spinner" />
         </div>
       </>
     );
@@ -38,190 +61,135 @@ const AssetManagementCheckOut = () => {
         },
         body: JSON.stringify({
           uniqname: uniqname,
-          asset: `${dropdownValue}${assetId}`,
+          asset: asset,
+          comment: comment,
         }),
       });
       if (res.ok) {
         const data = await res.json();
         setIsSubmitted(true);
         setTdxResponse(data);
-        setSubmitError(null);
+        setUniqnameError(null);
+        setAssetError(null);
       }
-
       if (!res.ok) {
+        increaseErrorCount()
+        console.log(errorCount)
         const data = await res.json();
-        setSubmitError(data.message);
-        setSubmitButtonValue("Retry")
+        switch (data.error_number) {
+          case 1: // Uniqname does not exist in TDX
+            setUniqnameError(true);
+            setUniqnameErrorMessage(`Uniqname ${data.attributes.uniqname} does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          case 2: // Asset does not exist in TDX
+            setAssetError(true);
+            setAssetErrorMessage(`Asset does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+
+            break;
+          case 3: // Either Uniqname or Asset matched multiple objects
+            if (data.attributes.type === "person") {
+              setUniqnameError(true);
+              setUniqnameErrorMessage(`Multiple people found for uniqname ${data.attributes.uniqname}. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
+            }
+            if (data.attributes.type === "asset") {
+              setAssetError(true);
+              setAssetErrorMessage(`Multiple assets found. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
+            }
+            break;
+          case 4: // Invalid Uniqname
+            setUniqnameError(true);
+            setUniqnameErrorMessage(`Invalid uniqname format${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          case 5: // Invalid Asset
+            setAssetError(true);
+            setAssetErrorMessage(`Invalid asset format${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          case 6: // No valid loan ticket
+            setUniqnameError(true);
+            setUniqnameErrorMessage(`Customer ${data.attributes.uniqname} not eligible for a loan${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          case 7: // Asset is not ready for loan
+            setAssetError(true);
+            setAssetErrorMessage(`Asset is not ready to loan${(data.details) ?  `: ${data.details}` : ""}`);
+            break;
+          default: // There is an error that wasn't caught
+          // "Error Not recognized"
+        }
+        setSubmitButtonValue("Retry");
       }
-
-      // If you want to set the submit button value to something specific after a successful fetch, you can do it here
-      // For example:
-      // setSubmitButtonValue("Success");
     } catch (error) {
-      // If there's an error, set submitButtonValue to "failed"
-      setSubmitButtonValue("Timeout");
+      increaseErrorCount()  //need to figure out how to increase the error count when the response is not ok
+      console.log(errorCount)
+      setSubmitButtonValue("Server Offline");
     }
   };
-
-  const closeErrorNotification = () => {
-    setSubmitError(null)
-  }
-
-
-  const handleAssetIDChange = (e) => {
-    const input = e.target.value;
-    const numberInput = input.replace(/\D/g, "");
-    let maxLength = 5;
-
-    if (dropdownValue === "SAHM") {
-      maxLength = 4;
-    }
-
-    const truncatedInput = numberInput.slice(0, maxLength);
-    setAssetId(truncatedInput);
-  };
-
-  const handleUniqnameChange = (e) => {
-    const input = e.target.value;
-    const lowercaseInput = input.toLowerCase();
-    const alphanumericInput = lowercaseInput.replace(/[^a-z]/g, "");
-    const truncatedInput = alphanumericInput.slice(0, 8);
-    setUniqname(truncatedInput);
-  };
-
-  const handleNoteChange = (e) => {
-    setNoteContent(e.target.value);
-  };
-
-  const handleDropdownChange = (e) => {
-    setDropdownValue(e.target.value);
-  };
-
-  useEffect(() => {
-    if (dropdownValue === "SAHM" && assetId.length === 5) {
-      setAssetId("");
-    }
-  }, [dropdownValue, assetId]);
 
   const isSubmitDisabled =
-  uniqname.length < 3 ||
-  (dropdownValue !== "SAHM" && assetId.length < 5) ||
-    (dropdownValue === "SAHM" && assetId.length < 4);
+    uniqname.length < 3 ||
+    (assetType !== "SAHM" && assetId.length < 5) ||
+    (assetType === "SAHM" && assetId.length < 4);
 
-
-    return (
-      <>
+  return (
+    <>
       <Helmet>
         <title>Laptop Check Out</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
         <div className="flex justify-center">
-          {submitError ? (
-            <div className=" bg-white p-4 fixed right-0 bottom-0 m-5 rounded-md min-w-[350px]">
-              <div className="border-l-2 border-base-red pl-3">
-                <div className="flex gap-4">
-                  <div>
-                    <div className="label-large text-neutral-9">Request failed</div>
-                    <div className="body-medium pt-1 text-neutral-7">{submitError}</div>
+          {(errorCount  > 2) && ( // This is where we can decide how many failed attemps will trigger the help message
+            <>
+              <div className="fixed right-0 bottom-0 m-3">
+                <div className="flex flex-col">
+                  <div className="mr-8 flex flex-col gap-2 items-end">
+                    <div className="body-small bg-white p-3 rounded-md w-fit">Hey there!</div>
+                    <div className="body-small bg-white p-3 rounded-md w-fit">I may have misplaced one of my acorns</div>
+                    <div className="body-small bg-white p-3 rounded-md w-fit">There could be a problem with the dashboard</div>
+                    <div className="flex flex-col justify-between mt-2 gap-2 w-full">
+                      <button className="label-small flex-1 text-neutral-9 p-2 bg-neutral-2 rounded-full" onClick={resetErrorCount} >Leave me alone squirrel!</button>
+                      <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-white bg-blue-9 p-2 rounded-full label-small flex-1 text-center">Complete request in TDX</a>
+                    </div>
+                  </div>
+                  <div className="flex w-full justify-end">
+                    <img className="h-9 w-fit" src={squirrel} alt="Helper Squirrel" />
                   </div>
                 </div>
-                <div className="flex gap-4 mt-4">
-                  <button className="label-medium text-blue-9" onClick={closeErrorNotification}>Dismiss</button>
-                  <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-neutral-7 hover:text-blue-9">Resolve in TDX</a>
-                </div>
               </div>
-            </div>
-          ) : (null)}
+            </>
+          )}
         </div>
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
-            <div className="submitted-successfully w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center">
-              <img className="h-[86px] w-fit" src={checkmark} alt='Checkmark Icon' />
-              <div className="flex flex-col gap-3">
-                <div className="title-large text-blue-9 text-center">Success</div>
-                <div className="body-large text-neutral-7 text-center">
-                  Loaned
-                  <span> <a className="underline" href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`} target="_blank" rel="noreferrer noopener">{tdxResponse.asset.tag}</a> </span>
-                  to
-                  <span> <a className="underline" href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`} target="_blank" rel="noreferrer noopener">{tdxResponse.loan.name}</a> </span>
-                  in
-                  <span> <a className="underline" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} target="_blank" rel="noreferrer noopener">TDX{tdxResponse.ticket.id}</a> </span>
-                  until {tdxResponse.loan.date}.
-                </div>
-              </div>
-              <Link to="/asset-management" className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white">Close</Link>
-            </div>
+            <CheckoutSubmitSuccess tdxResponse={tdxResponse} tdxBaseUrl={tdxBaseUrl} />
           ) : (
-            <div className="am-action-component">
-              <div className="flex justify-between items-center mb-6">
-                <div className="am-action-component-title">Laptop Check Out</div>
-                <img className="h-5 w-fit" src={laptop_check_out} alt='Laptop Return Icon' />
+            <div className="am-action-form">
+              <div className="am-action-form-header">
+                <div>Laptop Check Out</div>
+                <img src={laptop_check_out} alt="Laptop Return Icon" />
               </div>
               <div className="am-action-component-main">
-                <div className="flex flex-wrap justify-between gap-y-4">
-                  <div className="am-action-component-item">
-                    <label htmlFor="uniqname">
-                      Uniqname <span className="text-blue-9">*</span>
-                    </label>
-                    <input
-                      className="am-uniqname-item"
-                      type="text"
-                      id="uniqname"
-                      name="uniqname"
-                      pattern="\d*"
-                      spellCheck="false"
-                      value={uniqname}
-                      onChange={handleUniqnameChange}
-                    />
-                  </div>
-                  <div className="am-action-component-item">
-                    <label htmlFor="asset">
-                      Asset Number <span className="text-blue-9">*</span>
-                    </label>
-                    <div className="am-laptop-item">
-                      <select value={dropdownValue} onChange={handleDropdownChange}>
-                        <option value="TRL">TRL</option>
-                        <option value="SAH">SAH</option>
-                        <option value="SAHM">SAHM</option>
-                      </select>
-                      <input
-                        type="text"
-                        id="asset"
-                        name="asset"
-                        pattern="\d*"
-                        value={assetId}
-                        onChange={handleAssetIDChange}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="am-comments">
-                  <label htmlFor="comments">
-                    Comments
-                  </label>
-                  <textarea
-                    type="text"
-                    id="comments"
-                    name="comments"
-                    value={noteContent}
-                    onChange={handleNoteChange}
-                  />
-                </div>
+                <UniqnameFormField
+                  setUniqname={setUniqname}
+                  uniqname={uniqname}
+                  uniqnameError={uniqnameError}
+                  setUniqnameError={setUniqnameError}
+                  uniqnameErrorMessage={uniqnameErrorMessage}
+                />
+                <AssetNumberFormField
+                  setAssetId={setAssetId}
+                  assetId={assetId}
+                  setAssetType={setAssetType}
+                  assetType={assetType}
+                  assetError={assetError}
+                  setAssetError={setAssetError}
+                  assetErrorMessage={assetErrorMessage}
+                />
+                <CommentFormField setComment={setComment} comment={comment} />
               </div>
-              <div className="am-submit-cancel-container">
-                <Link to="/asset-management" className="text-base-red flex items-center">Cancel</Link>
-                <button
-                  className={`am-submit-button ${
-                    isSubmitDisabled
-                      ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
-                      : "bg-blue-9 text-white"
-                  }`}
-                  disabled={isSubmitDisabled}
-                  onClick={tdxCheckoutLoan} // Call handleSubmit function on button click
-                >
-                  {submitButtonValue}
-                </button>
-              </div>
+              <SubmitOrCancelForm
+                isSubmitDisabled={isSubmitDisabled}
+                submitButtonValue={submitButtonValue}
+                tdxCheckoutLoan={tdxCheckoutLoan}
+              />
             </div>
           )}
         </div>

@@ -41,10 +41,10 @@ const AssetManagementSwap = () => {
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
         <div className="am-action-container">
-          <div className="am-action-component">
-            <div className="flex justify-between items-center mb-6">
-              <div className="am-action-component-title">Laptop Swap</div>
-              <img className="h-5 w-fit" src={laptop_swap} alt='Laptop Return Icon' />
+          <div className="am-action-form">
+            <div className="am-action-form-header">
+              <div>Laptop Swap</div>
+              <img src={laptop_swap} alt='Laptop Return Icon' />
             </div>
             <div className="am-action-component-main">
               <div className="flex flex-wrap justify-between gap-y-4">

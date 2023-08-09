@@ -161,61 +161,106 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white hover:bg-blue-0 focus:bg-blue-1 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white shadow-light hover:bg-blue-0 focus:bg-blue-1 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
 }
 .am-landing-container img {
   @apply h-7 w-fit
 }
 /* Default Management Component End */
-/* Default Action Component Start */
+/* Asset Management Action Component Start */
 .am-action-container {
-  @apply w-full flex flex-col h-screen p-6 justify-center items-center;
+  @apply w-full h-screen p-6 flex flex-col justify-center items-center;
 }
-.am-action-component {
-  @apply bg-white w-full max-w-lg p-6 rounded-xl flex flex-col gap-y-6;
+.am-action-form {
+  @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-6;
 }
-.am-action-component-title {
-  @apply title-large;
+.am-action-form-header {
+  @apply flex gap-3 justify-center items-center headline-small
+}
+.am-action-form-header img {
+  @apply h-5 w-fit
 }
 .am-action-component-main {
-  @apply flex flex-col gap-y-6;
+  @apply flex flex-col gap-y-1;
 }
 .am-action-component-item {
-  @apply flex justify-between body-medium flex-col gap-1;
+  @apply body-medium flex justify-between flex-col;
 }
-.am-action-component-item label {
-  @apply body-medium;
-  font-weight: 500;
+.am-action-component-item-header {
+  @apply w-fit mb-2 body-medium flex items-center gap-1;
+}
+.am-action-component-item-header img {
+  @apply w-fit h-[14px];
+}
+.am-action-form-default {
+  @apply bg-white rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 focus:ring-blue-9 focus:ring-2 focus:outline-none
+}
+.am-action-form-error {
+  @apply bg-white rounded-md ring-1 ring-base-red  focus:ring-base-red focus:ring-2 focus:outline-none
+}
+.am-action-form-error-message {
+  @apply min-h-[20px] mt-[4px] body-small flex items-start gap-1 text-base-red
+}
+.am-action-form-error-message img {
+  @apply mt-[2px]
 }
 .am-uniqname-item {
-  @apply p-2 px-2 ring-1 ring-base-light rounded-md border-neutral-5 focus:outline-none focus:ring-blue-9 focus:bg-white w-40 bg-base-light;
+  @apply w-28 px-2 p-[6px];
 }
 .am-laptop-item {
-  @apply flex
+  @apply w-fit flex
 }
 .am-laptop-item select {
-  @apply p-1 rounded-l-md ring-1 ring-neutral-2 focus:outline-none focus:ring-blue-9 focus:bg-white text-neutral-9 bg-neutral-2 cursor-pointer mr-[2px] w-fit
+  @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white text-neutral-9 bg-neutral-1
 }
 .am-laptop-item input {
-  @apply p-2 px-2 ring-1 ring-base-light rounded-r-md focus:outline-none focus:ring-blue-9 focus:bg-white h-fit w-36 bg-base-light
+  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10
 }
 .am-comments {
-  @apply flex flex-col justify-between gap-y-1 mb-6
+  @apply mb-6 flex flex-col justify-between gap-y-2
 }
-.am-comments label {
-  @apply body-medium;
-  font-weight: 500;
+.am-comments-header {
+  @apply w-fit body-medium flex items-center gap-1;
 }
 .am-comments textarea {
-  @apply p-2 h-16 resize-none rounded-md ring-1 ring-base-light focus:outline-none focus:ring-blue-9 focus:bg-white w-full body-medium text-neutral-9 bg-base-light
+  @apply bg-white w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9
 }
 .am-submit-cancel-container {
   @apply w-full flex justify-between
 }
 .am-submit-button {
-  @apply label-large w-[130px] text-center border-none rounded-full p-3
+  @apply p-3 w-[130px] label-large text-center border-none rounded-full
+}
+.am-action-submit-button-spinner {
+  @apply w-full flex justify-center
+}
+.am-action-submit-button-spinner img {
+  @apply w-5 h-5 animate-spin ml-2
 }
 /* Default Action Component End */
+/* Action Success Start */
+.am-action-success-container {
+  @apply w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center
+}
+.am-action-success-container img {
+  @apply h-[86px] w-fit
+}
+.am-action-success-container-main {
+  @apply flex flex-col gap-3
+}
+.am-action-success-header {
+  @apply title-large text-blue-9 text-center
+}
+.am-action-success-details {
+  @apply body-large text-neutral-7 text-center
+}
+.am-action-success-details a {
+  @apply underline
+}
+.am-action-success-close-button {
+  @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white
+}
+/* Action Success End */
 
 /* ----------- Asset Management End----------- */
 

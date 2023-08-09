@@ -74,7 +74,7 @@ const ResourceCategoryBuilder = () => {
               {groupData.links.map((link, index) => (
                 <li key={index}>
                   <a href={link.url} target="_blank" rel="noreferrer noopener">
-                    <div className="bg-white p-4 rounded-md hover:bg-blue-0">
+                    <div className="shadow-light bg-white p-4 rounded-md hover:bg-blue-0">
                       <div className="title-medium text-blue-9 mb-2">
                         {link.name}
                       </div>

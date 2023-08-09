@@ -16,7 +16,7 @@ const AssetManagementLanding = () => {
         <title>Asset Management</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        <div className="headline-small">Laptop Asset Management</div>
+        <div className="headline-small">Laptop Asset Management (WIP)</div>
         <div className="am-landing-container mt-6">
             <Link className="am-landing-container-button" to="/asset-management/return">
               <img src={laptop_return} alt='Laptop Return Icon'/>
@@ -30,7 +30,7 @@ const AssetManagementLanding = () => {
               <img src={laptop_swap} alt='Laptop Swap Icon'/>
               <div>Swap</div>
             </Link>
-            <Link className="am-landing-container-button" to="/asset-management">
+            {/* <Link className="am-landing-container-button" to="/asset-management">
               <img src={laptop_lookup} alt='Laptop Lookup'/>
               <div>Lookup</div>
             </Link>
@@ -45,7 +45,7 @@ const AssetManagementLanding = () => {
             <Link className="am-landing-container-button" to="/asset-management">
               <img src={laptop_quickscan_return} alt='Laptop Quickscan Return'/>
               <div>Quickscan Return</div>
-            </Link>
+            </Link> */}
         </div>
       </div>
     </>

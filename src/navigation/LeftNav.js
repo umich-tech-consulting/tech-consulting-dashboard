@@ -18,11 +18,12 @@ const LeftNav = () => {
 
   return (
     <div className="box-border pt-5 pl-2 pr-2 h-screen border-r bg-base-light border-neutral-3 w-[230px]">
-      <Link to='/'>
+      {/* THis is where the icon will link to */}
+      <Link to='/announcements'>
         <img className="h-10 w-10" src={logo} alt='Dashboard Logo' />
       </Link>
       <div className="mt-6 w-50">
-        <Link
+        {/* <Link
           to="/"
           className={`pl-2 h-8 rounded-full flex content-center items-center gap-x-4 ${
             location.pathname === "/"
@@ -42,7 +43,7 @@ const LeftNav = () => {
           }`}>
             Home
           </div>
-        </Link>
+        </Link> */}
         <Link
           to="/announcements"
           className={`link-container ${
