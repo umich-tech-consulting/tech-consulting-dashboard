@@ -15,7 +15,7 @@ const AssetManagementCheckOut = () => {
   const [tdxResponse, setTdxResponse] = useState(null); // This is where the TXD response json should be assigned
   const [submitError, setSubmitError] = useState(null);
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "http://192.168.1.15:8080"
+  const apiUrl = "http://0.0.0.0:8080"
 
   const tdxCheckoutLoan = async () => {
     setSubmitButtonValue(
