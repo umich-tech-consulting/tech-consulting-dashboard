@@ -1,4 +1,6 @@
 import error_alert from "../../icons/asset-management/error_alert.svg";
+import uniqname_icon from "../../icons/asset-management/uniqname_icon.svg"
+
 const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError, setUniqnameError, uniqnameErrorMessage }) => {
   const handleUniqnameChange = (e) => {
     const input = e.target.value;
@@ -11,7 +13,10 @@ const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError, setUniqnameEr
   return (
     <>
       <div className="am-action-component-item">
-        <label htmlFor="uniqname">Uniqname</label>
+        <div className="am-action-component-item-header">
+          <img src={uniqname_icon} alt="Uniqname Icon" />
+          <label htmlFor="uniqname">Uniqname</label>
+        </div>
         <input
           className={`am-uniqname-item ${
             !uniqnameError ? "am-action-form-default" : "am-action-form-error"

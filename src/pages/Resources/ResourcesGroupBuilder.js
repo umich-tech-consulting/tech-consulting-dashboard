@@ -70,7 +70,7 @@ const ResourceGroupBuilder = () => {
             {sortedLinks.map((link, index) => (
               <li key={index}>
                 <a href={link.url} target="_blank" rel="noreferrer noopener">
-                  <div className="bg-white rounded-md p-4 hover:bg-blue-0">
+                  <div className="shadow-light bg-white rounded-md p-4 hover:bg-blue-0">
                     <div className="title-medium text-blue-9 mb-2">
                       {link.name}
                     </div>

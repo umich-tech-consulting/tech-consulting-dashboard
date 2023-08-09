@@ -161,7 +161,7 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white hover:bg-blue-0 focus:bg-blue-1 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white shadow-light hover:bg-blue-0 focus:bg-blue-1 items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
 }
 .am-landing-container img {
   @apply h-7 w-fit
@@ -186,8 +186,11 @@ code {
 .am-action-component-item {
   @apply body-medium flex justify-between flex-col;
 }
-.am-action-component-item label {
-  @apply w-fit mb-2 body-medium;
+.am-action-component-item-header {
+  @apply w-fit mb-2 body-medium flex items-center gap-1;
+}
+.am-action-component-item-header img {
+  @apply w-fit h-[14px];
 }
 .am-action-form-default {
   @apply bg-white rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 focus:ring-blue-9 focus:ring-2 focus:outline-none
@@ -217,8 +220,8 @@ code {
 .am-comments {
   @apply mb-6 flex flex-col justify-between gap-y-2
 }
-.am-comments label {
-  @apply w-fit body-medium;
+.am-comments-header {
+  @apply w-fit body-medium flex items-center gap-1;
 }
 .am-comments textarea {
   @apply bg-white w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9

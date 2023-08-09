@@ -53,7 +53,7 @@ const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
           <Link
             key={index}
             to={`${formattedCategory}/${formattedGroup}`}
-            className="p-3 w-60 flex items-center gap-3 bg-white hover:bg-blue-0 focus:bg-blue-1 rounded-lg title-small text-neutral-9"
+            className="p-3 w-60 flex items-center gap-3 shadow-light bg-white hover:bg-blue-0 focus:bg-blue-1 rounded-lg title-small text-neutral-9"
             >
             {IconComponent && <img src={IconComponent} alt={icon} className='h-10 w-10 rounded-md' />}
             {group && <div>{group}</div>}
