@@ -203,7 +203,6 @@ code {
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
-
 }
 .am-uniqname-item {
   @apply w-28 px-2 p-[6px];
@@ -239,6 +238,29 @@ code {
   @apply w-5 h-5 animate-spin ml-2
 }
 /* Default Action Component End */
+/* Action Success Start */
+.am-action-success-container {
+  @apply w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center
+}
+.am-action-success-container img {
+  @apply h-[86px] w-fit
+}
+.am-action-success-container-main {
+  @apply flex flex-col gap-3
+}
+.am-action-success-header {
+  @apply title-large text-blue-9 text-center
+}
+.am-action-success-details {
+  @apply body-large text-neutral-7 text-center
+}
+.am-action-success-details a {
+  @apply underline
+}
+.am-action-success-close-button {
+  @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white
+}
+/* Action Success End */
 
 /* ----------- Asset Management End----------- */
 

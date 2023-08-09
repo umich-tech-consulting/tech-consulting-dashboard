@@ -1,16 +1,15 @@
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
-import checkmark from "../../icons/asset-management/checkmark.svg";
 import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
 import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
+import CheckoutSubmitSuccess from "../../components/asset_management/CheckoutSubmitSuccess";
 import spinner from "../../icons/asset-management/spinner.svg";
+import squirrel from "../../icons/asset-management/squirrel.svg";
 
 const AssetManagementCheckOut = () => {
-  // Make a helper function to combine sah with number and rename dropdown value using f2
 
   // Form data Start
   const [uniqname, setUniqname] = useState("");
@@ -28,9 +27,17 @@ const AssetManagementCheckOut = () => {
   const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
+  const [errorCount, setErrorCount] = useState(0)
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
   const apiUrl = "http://192.168.1.15:8080";
   // Api Data End
+
+  const increaseErrorCount = () => {
+    setErrorCount(errorCount + 1)
+  }
+  const resetErrorCount = () => {
+    setErrorCount(0)
+  }
 
   const tdxCheckoutLoan = async () => {
     setUniqnameError(null);
@@ -66,8 +73,9 @@ const AssetManagementCheckOut = () => {
         setAssetError(null);
       }
       if (!res.ok) {
+        increaseErrorCount()
+        console.log(errorCount)
         const data = await res.json();
-        let error
         switch (data.error_number) {
           case 1: // Uniqname does not exist in TDX
             setUniqnameError(true);
@@ -110,6 +118,8 @@ const AssetManagementCheckOut = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
+      increaseErrorCount()  //need to figure out how to increase the error count when the response is not ok
+      console.log(errorCount)
       setSubmitButtonValue("Server Offline");
     }
   };
@@ -125,83 +135,31 @@ const AssetManagementCheckOut = () => {
         <title>Laptop Check Out</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6">
-        {/* <div className="flex justify-center">
-          {submitError ? (
-            <div className=" bg-white p-4 fixed right-0 bottom-0 m-5 rounded-md min-w-[350px]">
-              <div className="border-l-2 border-base-red pl-3">
-                <div className="flex gap-4">
-                  <div>
-                    <div className="label-large text-neutral-9">Request failed</div>
-                    <div className="body-medium pt-1 text-neutral-7">{submitError}</div>
+        <div className="flex justify-center">
+          {(errorCount  > 2) && ( // This is where we can decide how many failed attemps will trigger the help message
+            <>
+              <div className="fixed right-0 bottom-0 m-3">
+                <div className="flex flex-col">
+                  <div className="mr-8 flex flex-col gap-2 items-end">
+                    <div className="body-small bg-white p-3 rounded-md w-fit">Hey there!</div>
+                    <div className="body-small bg-white p-3 rounded-md w-fit">I may have misplaced one of my acorns</div>
+                    <div className="body-small bg-white p-3 rounded-md w-fit">There could be a problem with the dashboard</div>
+                    <div className="flex flex-col justify-between mt-2 gap-2 w-full">
+                      <button className="label-small flex-1 text-neutral-9 p-2 bg-neutral-2 rounded-full" onClick={resetErrorCount} >Leave me alone squirrel!</button>
+                      <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-white bg-blue-9 p-2 rounded-full label-small flex-1 text-center">Complete request in TDX</a>
+                    </div>
+                  </div>
+                  <div className="flex w-full justify-end">
+                    <img className="h-9 w-fit" src={squirrel} alt="Helper Squirrel" />
                   </div>
                 </div>
-                <div className="flex gap-4 mt-4">
-                  <button className="label-medium text-blue-9" onClick={closeErrorNotification}>Dismiss</button>
-                  <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-neutral-7 hover:text-blue-9">Resolve in TDX</a>
-                </div>
               </div>
-            </div>
-          ) : (null)}
-        </div> */}
+            </>
+          )}
+        </div>
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
-            <div className="submitted-successfully w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center">
-              <img
-                className="h-[86px] w-fit"
-                src={checkmark}
-                alt="Checkmark Icon"
-              />
-              <div className="flex flex-col gap-3">
-                <div className="title-large text-blue-9 text-center">
-                  Success
-                </div>
-                <div className="body-large text-neutral-7 text-center">
-                  Loaned
-                  <span>
-                    {" "}
-                    <a
-                      className="underline"
-                      href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      {tdxResponse.asset.tag}
-                    </a>{" "}
-                  </span>
-                  to
-                  <span>
-                    {" "}
-                    <a
-                      className="underline"
-                      href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      {tdxResponse.loan.name}
-                    </a>{" "}
-                  </span>
-                  in
-                  <span>
-                    {" "}
-                    <a
-                      className="underline"
-                      href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      TDX{tdxResponse.ticket.id}
-                    </a>{" "}
-                  </span>
-                  until {tdxResponse.loan.date}.
-                </div>
-              </div>
-              <Link
-                to="/asset-management"
-                className="block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white"
-              >
-                Close
-              </Link>
-            </div>
+            <CheckoutSubmitSuccess tdxResponse={tdxResponse} tdxBaseUrl={tdxBaseUrl} />
           ) : (
             <div className="am-action-form">
               <div className="am-action-form-header">
