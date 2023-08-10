@@ -168,6 +168,9 @@ code {
 }
 /* Default Management Component End */
 /* Asset Management Action Component Start */
+.am-action-main {
+  @apply w-full flex flex-col h-screen p-6
+}
 .am-action-container {
   @apply w-full h-screen p-6 flex flex-col justify-center items-center;
 }
@@ -228,7 +231,7 @@ code {
 .am-submit-cancel-container {
   @apply w-full flex justify-between
 }
-.am-submit-button {
+.am-submit-close-button {
   @apply p-3 w-[130px] label-large text-center border-none rounded-full
 }
 .am-action-submit-button-spinner {
@@ -261,6 +264,34 @@ code {
   @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white
 }
 /* Action Success End */
+/* High Error Alert Start */
+.am-error-alert-container {
+  @apply fixed right-0 bottom-0 m-3 flex flex-col
+}
+.am-error-alert-main {
+  @apply mr-8 flex flex-col gap-2 items-end
+}
+.am-error-alert-message {
+  @apply body-small bg-white p-3 rounded-md w-fit
+}
+.am-error-alert-button-container {
+  @apply flex flex-col justify-between mt-2 gap-2 w-full
+}
+.am-error-alert-close-button {
+  @apply label-small flex-1 text-neutral-9 p-2 bg-neutral-2 rounded-full
+}
+.am-error-alert-tdx-button {
+  @apply label-small text-white bg-blue-9 p-2 rounded-full label-small flex-1 text-center
+}
+.am-error-alert-squirrel-container {
+  @apply flex w-full justify-end
+}
+.am-error-alert-squirrel-container img {
+  @apply h-9 w-fit
+}
+
+/* High Error Alert End */
+
 
 /* ----------- Asset Management End----------- */
 

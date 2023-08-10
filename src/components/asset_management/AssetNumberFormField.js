@@ -48,6 +48,7 @@ const AssetNumberFormField = ({
               !assetError ? "am-action-form-default" : "am-action-form-error"
             }`}
             value={assetType}
+            aria-label="Asset Type"
             onChange={(e) => {
               handleAssetTypeChange(e);
               setAssetError(null);

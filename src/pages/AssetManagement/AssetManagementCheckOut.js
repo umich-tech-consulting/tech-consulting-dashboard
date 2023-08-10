@@ -6,8 +6,8 @@ import AssetNumberFormField from "../../components/asset_management/AssetNumberF
 import CommentFormField from "../../components/asset_management/CommentFormField";
 import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
 import CheckoutSubmitSuccess from "../../components/asset_management/CheckoutSubmitSuccess";
+import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
-import squirrel from "../../icons/asset-management/squirrel.svg";
 
 const AssetManagementCheckOut = () => {
 
@@ -134,29 +134,8 @@ const AssetManagementCheckOut = () => {
       <Helmet>
         <title>Laptop Check Out</title>
       </Helmet>
-      <div className="w-full flex flex-col h-screen p-6">
-        <div className="flex justify-center">
-          {(errorCount  > 2) && ( // This is where we can decide how many failed attemps will trigger the help message
-            <>
-              <div className="fixed right-0 bottom-0 m-3">
-                <div className="flex flex-col">
-                  <div className="mr-8 flex flex-col gap-2 items-end">
-                    <div className="body-small bg-white p-3 rounded-md w-fit">Hey there!</div>
-                    <div className="body-small bg-white p-3 rounded-md w-fit">I may have misplaced one of my acorns</div>
-                    <div className="body-small bg-white p-3 rounded-md w-fit">There could be a problem with the dashboard</div>
-                    <div className="flex flex-col justify-between mt-2 gap-2 w-full">
-                      <button className="label-small flex-1 text-neutral-9 p-2 bg-neutral-2 rounded-full" onClick={resetErrorCount} >Leave me alone squirrel!</button>
-                      <a href="https://teamdynamix.umich.edu/" target="blank" rel="noreferrer noopener" className="label-medium text-white bg-blue-9 p-2 rounded-full label-small flex-1 text-center">Complete request in TDX</a>
-                    </div>
-                  </div>
-                  <div className="flex w-full justify-end">
-                    <img className="h-9 w-fit" src={squirrel} alt="Helper Squirrel" />
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+      <div className="am-action-main">
+        {(errorCount > 2) && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
             <CheckoutSubmitSuccess tdxResponse={tdxResponse} tdxBaseUrl={tdxBaseUrl} />
