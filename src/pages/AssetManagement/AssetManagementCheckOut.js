@@ -10,7 +10,6 @@ import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
-
   // Form data Start
   const [uniqname, setUniqname] = useState("");
   const [assetType, setAssetType] = useState("TRL");
@@ -27,17 +26,17 @@ const AssetManagementCheckOut = () => {
   const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
-  const [errorCount, setErrorCount] = useState(0)
+  const [errorCount, setErrorCount] = useState(0);
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
   const apiUrl = "https://tech-consulting-api.glavon.net";
   // Api Data End
 
   const increaseErrorCount = () => {
-    setErrorCount(errorCount + 1)
-  }
+    setErrorCount(errorCount + 1);
+  };
   const resetErrorCount = () => {
-    setErrorCount(0)
-  }
+    setErrorCount(0);
+  };
 
   const tdxCheckoutLoan = async () => {
     setUniqnameError(null);
@@ -73,44 +72,76 @@ const AssetManagementCheckOut = () => {
         setAssetError(null);
       }
       if (!res.ok) {
-        increaseErrorCount()
-        console.log(errorCount)
+        increaseErrorCount();
+        console.log(errorCount);
         const data = await res.json();
         switch (data.error_number) {
           case 1: // Uniqname does not exist in TDX
             setUniqnameError(true);
-            setUniqnameErrorMessage(`Uniqname ${data.attributes.uniqname} does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+            setUniqnameErrorMessage(
+              `Uniqname ${data.attributes.uniqname} does not exist in TDX${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
             break;
           case 2: // Asset does not exist in TDX
             setAssetError(true);
-            setAssetErrorMessage(`Asset does not exist in TDX${(data.details) ?  `: ${data.details}` : ""}`);
+            setAssetErrorMessage(
+              `Asset does not exist in TDX${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
 
             break;
           case 3: // Either Uniqname or Asset matched multiple objects
             if (data.attributes.type === "person") {
               setUniqnameError(true);
-              setUniqnameErrorMessage(`Multiple people found for uniqname ${data.attributes.uniqname}. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
+              setUniqnameErrorMessage(
+                `Multiple people found for uniqname ${
+                  data.attributes.uniqname
+                }. Contact manager for assistance${
+                  data.details ? `: ${data.details}` : ""
+                }`
+              );
             }
             if (data.attributes.type === "asset") {
               setAssetError(true);
-              setAssetErrorMessage(`Multiple assets found. Contact manager for assistance${(data.details) ?  `: ${data.details}` : ""}`);
+              setAssetErrorMessage(
+                `Multiple assets found. Contact manager for assistance${
+                  data.details ? `: ${data.details}` : ""
+                }`
+              );
             }
             break;
           case 4: // Invalid Uniqname
             setUniqnameError(true);
-            setUniqnameErrorMessage(`Invalid uniqname format${(data.details) ?  `: ${data.details}` : ""}`);
+            setUniqnameErrorMessage(
+              `Invalid uniqname format${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
             break;
           case 5: // Invalid Asset
             setAssetError(true);
-            setAssetErrorMessage(`Invalid asset format${(data.details) ?  `: ${data.details}` : ""}`);
+            setAssetErrorMessage(
+              `Invalid asset format${data.details ? `: ${data.details}` : ""}`
+            );
             break;
           case 6: // No valid loan ticket
             setUniqnameError(true);
-            setUniqnameErrorMessage(`Customer ${data.attributes.uniqname} not eligible for a loan${(data.details) ?  `: ${data.details}` : ""}`);
+            setUniqnameErrorMessage(
+              `Customer ${data.attributes.uniqname} not eligible for a loan${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
             break;
           case 7: // Asset is not ready for loan
             setAssetError(true);
-            setAssetErrorMessage(`Asset is not ready to loan${(data.details) ?  `: ${data.details}` : ""}`);
+            setAssetErrorMessage(
+              `Asset is not ready to loan${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
             break;
           default: // There is an error that wasn't caught
           // "Error Not recognized"
@@ -118,8 +149,8 @@ const AssetManagementCheckOut = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
-      increaseErrorCount()  //need to figure out how to increase the error count when the response is not ok
-      console.log(errorCount)
+      increaseErrorCount(); //need to figure out how to increase the error count when the response is not ok
+      console.log(errorCount);
       setSubmitButtonValue("Server Offline");
     }
   };
@@ -135,10 +166,13 @@ const AssetManagementCheckOut = () => {
         <title>Laptop Check Out</title>
       </Helmet>
       <div className="am-action-main">
-        {(errorCount > 2) && <HighErrorAlert resetErrorCount={resetErrorCount} />}
+        {errorCount > 2 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
-            <CheckoutSubmitSuccess tdxResponse={tdxResponse} tdxBaseUrl={tdxBaseUrl} />
+            <CheckoutSubmitSuccess
+              tdxResponse={tdxResponse}
+              tdxBaseUrl={tdxBaseUrl}
+            />
           ) : (
             <div className="am-action-form">
               <div className="am-action-form-header">

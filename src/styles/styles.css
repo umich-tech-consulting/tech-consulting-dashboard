@@ -243,7 +243,7 @@ code {
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center
+  @apply w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center shadow-light
 }
 .am-action-success-container img {
   @apply h-[86px] w-fit
