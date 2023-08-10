@@ -7,12 +7,12 @@ const Layout = () => {
         <>
             <div className='block'>
                 <div className={`ml-[230px] box-border min-h-screen bg-base-light`}>
-                    <div className='inset-0 fixed box-border w-fit z-50'>
+                    <nav className='inset-0 fixed box-border w-fit z-50'>
                         <LeftNav />
-                    </div>
-                    <div className='justify-center sm:justify-normal flex flex-wrap gap-10'>
+                    </nav>
+                    <main className='justify-center sm:justify-normal flex flex-wrap gap-10'>
                         <Outlet />
-                    </div>
+                    </main>
                 </div>
             </div>
         </>
