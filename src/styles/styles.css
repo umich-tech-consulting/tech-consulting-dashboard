@@ -261,7 +261,7 @@ code {
   @apply underline
 }
 .am-action-success-close-button {
-  @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white
+  @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white hover:bg-blue-8
 }
 /* Action Success End */
 /* High Error Alert Start */

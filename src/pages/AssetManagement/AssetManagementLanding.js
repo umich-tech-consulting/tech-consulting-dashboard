@@ -2,11 +2,11 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import laptop_check_in from "../../icons/asset-management/laptop_check_out.svg"
-import laptop_swap from "../../icons/asset-management/laptop_swap.svg"
-import laptop_lookup from "../../icons/asset-management/laptop_lookup.svg"
-import laptop_warranty from "../../icons/asset-management/laptop_warranty.svg"
-import laptop_quickscan_check_out from "../../icons/asset-management/laptop_quickscan_check_out.svg"
-import laptop_quickscan_return from "../../icons/asset-management/laptop_quickscan_return.svg"
+// import laptop_swap from "../../icons/asset-management/laptop_swap.svg"
+// import laptop_lookup from "../../icons/asset-management/laptop_lookup.svg"
+// import laptop_warranty from "../../icons/asset-management/laptop_warranty.svg"
+// import laptop_quickscan_check_out from "../../icons/asset-management/laptop_quickscan_check_out.svg"
+// import laptop_quickscan_return from "../../icons/asset-management/laptop_quickscan_return.svg"
 
 const AssetManagementLanding = () => {
 
@@ -26,10 +26,10 @@ const AssetManagementLanding = () => {
               <img src={laptop_check_in} alt='Laptop Check Out Icon'/>
               <div>Check Out</div>
             </Link>
-            <Link className="am-landing-container-button" to="/asset-management/swap">
+            {/* <Link className="am-landing-container-button" to="/asset-management/swap">
               <img src={laptop_swap} alt='Laptop Swap Icon'/>
               <div>Swap</div>
-            </Link>
+            </Link> */}
             {/* <Link className="am-landing-container-button" to="/asset-management">
               <img src={laptop_lookup} alt='Laptop Lookup'/>
               <div>Lookup</div>

@@ -4,8 +4,8 @@ import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg"
 import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
-import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
-import CheckoutSubmitSuccess from "../../components/asset_management/CheckoutSubmitSuccess";
+import CheckoutSubmitOrCancelForm from "../../components/asset_management/Checkout/CheckoutSubmitOrCancelForm";
+import CheckoutSubmitSuccess from "../../components/asset_management/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
 
@@ -177,7 +177,7 @@ const AssetManagementCheckOut = () => {
             <div className="am-action-form">
               <div className="am-action-form-header">
                 <div>Laptop Check Out</div>
-                <img src={laptop_check_out} alt="Laptop Return Icon" />
+                <img src={laptop_check_out} alt="Laptop Check Out Icon" />
               </div>
               <div className="am-action-component-main">
                 <UniqnameFormField
@@ -198,7 +198,7 @@ const AssetManagementCheckOut = () => {
                 />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
-              <SubmitOrCancelForm
+              <CheckoutSubmitOrCancelForm
                 isSubmitDisabled={isSubmitDisabled}
                 submitButtonValue={submitButtonValue}
                 tdxCheckoutLoan={tdxCheckoutLoan}

@@ -1,4 +1,4 @@
-import checkmark from "../../icons/asset-management/checkmark.svg";
+import checkmark from "../../../icons/asset-management/checkmark.svg";
 import { Link } from "react-router-dom";
 
 const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {

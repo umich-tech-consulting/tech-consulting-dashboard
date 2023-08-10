@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const SubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxCheckoutLoan }) => {
+const ReturnSubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxReturnLoan }) => {
 
 
   return (
@@ -15,10 +15,10 @@ const SubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxCheckoutLo
           className={`am-submit-close-button ${
             isSubmitDisabled
               ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
-              : "bg-blue-9 text-white"
+              : "bg-blue-9 text-white hover:bg-blue-8"
           }`}
           disabled={isSubmitDisabled}
-          onClick={tdxCheckoutLoan}
+          onClick={tdxReturnLoan}
         >
           {submitButtonValue}
         </button>
@@ -27,4 +27,4 @@ const SubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxCheckoutLo
   );
 };
 
-export default SubmitOrCancelForm;
+export default ReturnSubmitOrCancelForm;

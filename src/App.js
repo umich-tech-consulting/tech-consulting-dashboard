@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Layout from './navigation/Layout';
+import Layout from './Layout';
 import Home from './pages/Home';
 import AssetManagementLanding from './pages/AssetManagement/AssetManagementLanding';
 import AssetManagementCheckOut from './pages/AssetManagement/AssetManagementCheckOut';
