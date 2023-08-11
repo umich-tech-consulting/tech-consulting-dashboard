@@ -19,17 +19,17 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
         </div>
         <div className="am-action-success-container-main">
           <div className="am-action-success-asset-uniqname">
-            <a href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`} className="am-action-success-asset-uniqname-button">
+            <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponse.asset.id}`} className="am-action-success-asset-uniqname-button">
               <img src={asset_icon} alt="Asset Icon" />
               <div>{tdxResponse.asset.tag}</div>
             </a>
             <img className="h-8 w-8" src={link} alt="Link Icon" />
-            <a href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`} className="am-action-success-asset-uniqname-button">
+            <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`} className="am-action-success-asset-uniqname-button">
               <img src={uniqname_icon} alt="Asset Icon" />
               <div>{tdxResponse.loan.uniqname}</div>
             </a>
           </div>
-          <a href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} className="am-action-success-ticket-button">
+          <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} className="am-action-success-ticket-button">
             <div className="am-action-success-tdx-header">
               <img src={ticket} alt="Checkmark Icon" />
               <div>TDX {tdxResponse.ticket.id}</div>
@@ -41,7 +41,7 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
               </div>
               <div className="am-action-success-date-comments-info">
                 <img src={comments_icon} alt="Checkmark Icon" />
-                <div>Comments</div>
+                <div>{tdxResponse.ticket.comment}</div>
               </div>
             </div>
           </a>
