@@ -155,15 +155,10 @@ const AssetManagementCheckOut = () => {
     }
   };
 
-  const isSubmitDisabled =
-    uniqname.length < 3 ||
-    (assetType !== "SAHM" && assetId.length < 5) ||
-    (assetType === "SAHM" && assetId.length < 4);
-
   return (
     <>
       <Helmet>
-        <title>Laptop Check Out</title>
+        <title>Laptop Checkout</title>
       </Helmet>
       <div className="am-action-main">
         {errorCount > 2 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
@@ -176,7 +171,7 @@ const AssetManagementCheckOut = () => {
           ) : (
             <div className="am-action-form">
               <div className="am-action-form-header">
-                <div>Laptop Check Out</div>
+                <div>Laptop Checkout</div>
                 <img src={laptop_check_out} alt="Laptop Check Out Icon" />
               </div>
               <div className="am-action-component-main">
@@ -199,7 +194,9 @@ const AssetManagementCheckOut = () => {
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
               <CheckoutSubmitOrCancelForm
-                isSubmitDisabled={isSubmitDisabled}
+                assetType={assetType}
+                assetId={assetId}
+                uniqname={uniqname}
                 submitButtonValue={submitButtonValue}
                 tdxCheckoutLoan={tdxCheckoutLoan}
               />

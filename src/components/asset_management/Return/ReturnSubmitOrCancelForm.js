@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-const ReturnSubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxReturnLoan }) => {
+const ReturnSubmitOrCancelForm = ({ assetType, assetId, submitButtonValue, tdxReturnLoan }) => {
 
+  const isSubmitDisabled =
+  (assetType !== "SAHM" && assetId.length < 5) ||
+  (assetType === "SAHM" && assetId.length < 4);
 
   return (
     <>

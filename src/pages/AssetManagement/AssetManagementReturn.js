@@ -112,10 +112,6 @@ const AssetManagementReturn = () => {
     }
   };
 
-  const isSubmitDisabled =
-    (assetType !== "SAHM" && assetId.length < 5) ||
-    (assetType === "SAHM" && assetId.length < 4);
-
 
   return (
     <>
@@ -149,7 +145,8 @@ const AssetManagementReturn = () => {
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
               <ReturnSubmitOrCancelForm
-                isSubmitDisabled={isSubmitDisabled}
+                assetType={assetType}
+                assetId={assetId}
                 submitButtonValue={submitButtonValue}
                 tdxReturnLoan={tdxReturnLoan} // Need to fix this so that the button is more universal
               />

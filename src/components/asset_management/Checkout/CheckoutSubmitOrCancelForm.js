@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-const CheckoutSubmitOrCancelForm = ({ isSubmitDisabled, submitButtonValue, tdxCheckoutLoan }) => {
+const CheckoutSubmitOrCancelForm = ({ assetType, assetId, uniqname, submitButtonValue, tdxCheckoutLoan }) => {
+
+  const isSubmitDisabled =
+  uniqname.length < 3 ||
+  (assetType !== "SAHM" && assetId.length < 5) ||
+  (assetType === "SAHM" && assetId.length < 4);
 
 
   return (

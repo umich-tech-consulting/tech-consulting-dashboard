@@ -24,7 +24,7 @@ const AssetManagementLanding = () => {
             </Link>
             <Link className="am-landing-container-button" to="/asset-management/checkout">
               <img src={laptop_check_in} alt='Laptop Check Out Icon'/>
-              <div>Check Out</div>
+              <div>Checkout</div>
             </Link>
             {/* <Link className="am-landing-container-button" to="/asset-management/swap">
               <img src={laptop_swap} alt='Laptop Swap Icon'/>
