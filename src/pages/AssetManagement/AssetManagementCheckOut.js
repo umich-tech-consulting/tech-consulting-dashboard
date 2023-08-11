@@ -163,7 +163,7 @@ const AssetManagementCheckOut = () => {
       <div className="am-action-main">
         {errorCount > 2 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          {isSubmitted ? ( // Check if form is submitted
+          {!isSubmitted ? ( // Check if form is submitted
             <CheckoutSubmitSuccess
               tdxResponse={tdxResponse}
               tdxBaseUrl={tdxBaseUrl}

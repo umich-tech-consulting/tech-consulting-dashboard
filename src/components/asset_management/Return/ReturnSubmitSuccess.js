@@ -26,11 +26,11 @@ const ReturnSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
             <span>
               {" "}
               <a
-                href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.loan.owner_uid}`}
+                href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.previous_owner.uid}`}
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                {tdxResponse.loan.name}
+                {tdxResponse.previous_owner.uniqname}
               </a>{" "}
             </span>
             in

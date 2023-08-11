@@ -243,22 +243,43 @@ code {
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-10 max-w-sm bg-white p-6 rounded-lg items-center shadow-light
-}
-.am-action-success-container img {
-  @apply h-[86px] w-fit
-}
-.am-action-success-container-main {
-  @apply flex flex-col gap-3
+  @apply w-full flex flex-col gap-12 max-w-sm bg-white p-6 rounded-lg items-center shadow-light
 }
 .am-action-success-header {
-  @apply title-large text-blue-9 text-center
+  @apply title-large text-blue-9 text-center w-fit flex flex-col gap-6
 }
-.am-action-success-details {
-  @apply body-large text-neutral-7 text-center
+.am-action-success-header img {
+  @apply h-[78px]
 }
-.am-action-success-details a {
-  @apply underline
+.am-action-success-container-main {
+  @apply flex flex-col gap-6 w-full
+}
+.am-action-success-asset-uniqname {
+  @apply flex gap-2
+}
+.am-action-success-asset-uniqname-button {
+  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-[6px] rounded flex gap-2 body-large justify-center items-center flex-1 cursor-pointer
+}
+.am-action-success-asset-uniqname-button img {
+  @apply h-5 w-5
+}
+.am-action-success-ticket-button {
+  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-3 rounded cursor-pointer flex flex-col gap-4
+}
+.am-action-success-tdx-header {
+  @apply body-medium flex gap-2 items-center
+}
+.am-action-success-tdx-header img {
+  @apply h-5 w-5
+}
+.am-action-success-date-comments {
+  @apply pl-4 flex flex-col gap-2 body-small
+}
+.am-action-success-date-comments-info {
+  @apply flex gap-2
+}
+.am-action-success-date-comments-info img {
+  @apply h-4 w-4
 }
 .am-action-success-close-button {
   @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white hover:bg-blue-8
