@@ -33,17 +33,7 @@ const ReturnSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
                 {tdxResponse.previous_owner.uniqname}
               </a>{" "}
             </span>
-            in
-            <span>
-              {" "}
-              <a
-                href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                TDX{tdxResponse.ticket.id}
-              </a>{" ."}
-            </span>
+            .
           </div>
         </div>
         <Link to="/asset-management" className="am-action-success-close-button">

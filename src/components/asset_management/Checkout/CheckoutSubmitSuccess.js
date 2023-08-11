@@ -41,7 +41,7 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
               </div>
               <div className="am-action-success-date-comments-info">
                 <img src={comments_icon} alt="Checkmark Icon" />
-                <div>{tdxResponse.ticket.comment}</div>
+                <div>{`${tdxResponse.ticket.comment}`}</div>
               </div>
             </div>
           </a>
