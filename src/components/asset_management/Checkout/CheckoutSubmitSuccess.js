@@ -29,22 +29,22 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
               <div>{tdxResponse.loan.uniqname}</div>
             </a>
           </div>
-          <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} className="am-action-success-ticket-button">
-            <div className="am-action-success-tdx-header">
-              <img src={ticket} alt="Checkmark Icon" />
-              <div>TDX {tdxResponse.ticket.id}</div>
-            </div>
-            <div className="am-action-success-date-comments">
-              <div className="am-action-success-date-comments-info">
-                <img src={calendar} alt="Checkmark Icon" />
-                <div>{tdxResponse.loan.date}</div>
-              </div>
-              <div className="am-action-success-date-comments-info">
-                <img src={comments_icon} alt="Checkmark Icon" />
-                <div>{`${tdxResponse.ticket.comment}`}</div>
-              </div>
-            </div>
+          <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} className="am-action-success-tdx-button">
+            <img src={ticket} alt="Checkmark Icon" />
+            <div>TDX {tdxResponse.ticket.id}</div>
           </a>
+          <div className="am-action-success-date-comments">
+            <div className="am-action-success-date-comments-info">
+              <img src={calendar} alt="Checkmark Icon" />
+              <div>{tdxResponse.loan.date}</div>
+            </div>
+            {tdxResponse.ticket.comment &&
+            <div className="am-action-success-date-comments-info">
+              <img src={comments_icon} alt="Checkmark Icon" />
+              <div>{`${tdxResponse.ticket.comment}`}</div>
+            </div>
+            }
+          </div>
         </div>
         <Link to="/asset-management" className="am-action-success-close-button">
           Close

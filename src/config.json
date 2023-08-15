@@ -1,0 +1,7 @@
+{
+    "DASHBOARD_DOMAIN": "tech-consulting-dashboard.glavon.net",
+    "TDX": {
+        "TDX_DOMAIN": "teamdynamix.umich.edu",
+        "USE_SANDBOX": true
+    }
+}

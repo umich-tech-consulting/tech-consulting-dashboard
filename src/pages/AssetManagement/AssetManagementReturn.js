@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useState } from "react"; // Import useState
+import dashboard_settings from "../../config.json"
 import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
@@ -23,8 +24,11 @@ const AssetManagementReturn = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
-  const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "https://tech-consulting-api.glavon.net";
+  let tdxBaseUrl = `https://${dashboard_settings.DASHBOARD_DOMAIN}/`;
+  if (dashboard_settings.TDX.USE_SANDBOX) {
+    tdxBaseUrl = tdxBaseUrl + 'SB'
+  }
+  tdxBaseUrl = tdxBaseUrl + 'TDNext/apps'
   // Api Data End
 
   const increaseErrorCount = () => {
@@ -47,7 +51,7 @@ const AssetManagementReturn = () => {
     );
 
     try {
-      const res = await fetch(`${apiUrl}/tdx/loan/return`, {
+      const res = await fetch(`https://${dashboard_settings.DASHBOARD_DOMAIN}/api/tdx/loan/return`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

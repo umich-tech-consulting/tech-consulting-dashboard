@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import dashboard_settings from "../../config.json"
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
 import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
@@ -27,9 +28,7 @@ const AssetManagementCheckOut = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
-  const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "http://192.168.1.15:8000";
-  // Api Data End
+  const tdxBaseUrl = `https://${dashboard_settings.DASHBOARD_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   const increaseErrorCount = () => {
     setErrorCount(errorCount + 1);
@@ -53,7 +52,7 @@ const AssetManagementCheckOut = () => {
     );
 
     try {
-      const res = await fetch(`${apiUrl}/tdx/loan/checkout`, {
+      const res = await fetch(`https://${dashboard_settings.DASHBOARD_DOMAIN}/api/tdx/loan/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

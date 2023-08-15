@@ -264,23 +264,20 @@ code {
   @apply h-5 w-5
 }
 /* Start the edits here */
-.am-action-success-ticket-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-3 rounded cursor-pointer flex flex-col gap-4
+.am-action-success-tdx-button {
+  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-[6px] rounded flex gap-2 body-large justify-center items-center flex-1 cursor-pointer
 }
-.am-action-success-tdx-header {
-  @apply body-medium flex gap-2 items-center
-}
-.am-action-success-tdx-header img {
+.am-action-success-tdx-button img {
   @apply h-5 w-5
 }
 .am-action-success-date-comments {
-  @apply pl-4 flex flex-col gap-2 body-small
+  @apply flex flex-col gap-2 body-medium mt-3
 }
 .am-action-success-date-comments-info {
   @apply flex gap-2
 }
 .am-action-success-date-comments-info img {
-  @apply h-4 w-4
+  @apply h-5 w-5
 }
 .am-action-success-close-button {
   @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white hover:bg-blue-8
