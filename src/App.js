@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 import Home from './pages/Home';
@@ -14,7 +14,7 @@ import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename='/webui'>
       <div>
         <Helmet>
           <title>Asset Management</title>
@@ -33,7 +33,7 @@ function App() {
           <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

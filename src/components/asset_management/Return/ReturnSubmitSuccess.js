@@ -1,4 +1,6 @@
 import checkmark from "../../../icons/asset-management/checkmark.svg";
+import broken_link from "../../../icons/asset-management/broken_link.svg";
+
 import { Link } from "react-router-dom";
 
 const ReturnSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {

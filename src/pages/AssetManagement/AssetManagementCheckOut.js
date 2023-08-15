@@ -28,7 +28,7 @@ const AssetManagementCheckOut = () => {
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
   const tdxBaseUrl = "https://teamdynamix.umich.edu/SBTDNext/Apps";
-  const apiUrl = "https://tech-consulting-api.glavon.net";
+  const apiUrl = "http://192.168.1.15:8000";
   // Api Data End
 
   const increaseErrorCount = () => {

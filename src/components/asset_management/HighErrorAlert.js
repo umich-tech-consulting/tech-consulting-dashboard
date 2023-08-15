@@ -7,13 +7,7 @@ const HighErrorAlert = ({resetErrorCount}) => {
       <div className="am-error-alert-container">
         <div className="am-error-alert-main">
             <div className="am-error-alert-message">
-                Hey there!
-            </div>
-            <div className="am-error-alert-message">
-                I may have misplaced one of my acorns
-            </div>
-            <div className="am-error-alert-message">
-                There could be a problem with the dashboard
+              TDX may be able to help you complete your request!
             </div>
             <div className="am-error-alert-button-container">
                 <button
