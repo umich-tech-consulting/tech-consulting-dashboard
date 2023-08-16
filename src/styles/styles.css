@@ -199,10 +199,10 @@ code {
   @apply bg-white rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 focus:ring-blue-9 focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
-  @apply bg-white rounded-md ring-1 ring-base-red  focus:ring-base-red focus:ring-2 focus:outline-none
+  @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-small flex items-start gap-1 text-base-red
+  @apply min-h-[20px] mt-[4px] body-small flex items-start gap-1 text-red-5
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
@@ -308,8 +308,18 @@ code {
 .am-error-alert-squirrel-container img {
   @apply h-9 w-fit
 }
-
 /* High Error Alert End */
+/* Uncaught Error Alert Start */
+.am-action-uncaught-error-alert {
+  @apply body-medium bg-red-0 text-red-10 p-3 rounded-md flex items-start gap-3
+}
+.am-action-uncaught-error-alert img {
+  @apply h-5 w-5
+}
+.am-action-uncaught-error-alert a {
+  @apply underline
+}
+/* Uncaught Error Alert End */
 
 
 /* ----------- Asset Management End----------- */

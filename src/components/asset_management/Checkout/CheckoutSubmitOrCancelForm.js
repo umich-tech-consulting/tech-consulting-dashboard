@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-const CheckoutSubmitOrCancelForm = ({ assetType, assetId, uniqname, submitButtonValue, tdxCheckoutLoan }) => {
+const CheckoutSubmitOrCancelForm = ({ assetType, assetId, uniqname, submitButtonValue, tdxCheckoutLoan, setUncaughtError }) => {
+
+  const uncaughtErrorFalse = () => {
+    setUncaughtError(false);
+  };
 
   const isSubmitDisabled =
   uniqname.length < 3 ||
@@ -23,7 +27,10 @@ const CheckoutSubmitOrCancelForm = ({ assetType, assetId, uniqname, submitButton
               : "bg-blue-9 text-white hover:bg-blue-8"
           }`}
           disabled={isSubmitDisabled}
-          onClick={tdxCheckoutLoan}
+          onClick={() => {
+            tdxCheckoutLoan();
+            uncaughtErrorFalse();
+          }}
         >
           {submitButtonValue}
         </button>

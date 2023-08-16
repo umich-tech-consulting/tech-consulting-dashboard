@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-const ReturnSubmitOrCancelForm = ({ assetType, assetId, submitButtonValue, tdxReturnLoan }) => {
+const ReturnSubmitOrCancelForm = ({ assetType, assetId, submitButtonValue, tdxReturnLoan, setUncaughtError }) => {
+
+  const uncaughtErrorFalse = () => {
+    setUncaughtError(false);
+  };
 
   const isSubmitDisabled =
   (assetType !== "SAHM" && assetId.length < 5) ||
@@ -21,7 +25,10 @@ const ReturnSubmitOrCancelForm = ({ assetType, assetId, submitButtonValue, tdxRe
               : "bg-blue-9 text-white hover:bg-blue-8"
           }`}
           disabled={isSubmitDisabled}
-          onClick={tdxReturnLoan}
+          onClick={() => {
+            tdxReturnLoan();
+            uncaughtErrorFalse();
+          }}
         >
           {submitButtonValue}
         </button>

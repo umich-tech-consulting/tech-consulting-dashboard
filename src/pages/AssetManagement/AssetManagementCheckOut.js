@@ -8,6 +8,7 @@ import CommentFormField from "../../components/asset_management/CommentFormField
 import CheckoutSubmitOrCancelForm from "../../components/asset_management/Checkout/CheckoutSubmitOrCancelForm";
 import CheckoutSubmitSuccess from "../../components/asset_management/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
+import UncaughtErrorAlert from "../../components/asset_management/UncaughtErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
@@ -28,6 +29,7 @@ const AssetManagementCheckOut = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
+  const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
   const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   const increaseErrorCount = () => {
@@ -35,6 +37,9 @@ const AssetManagementCheckOut = () => {
   };
   const resetErrorCount = () => {
     setErrorCount(0);
+  };
+  const uncaughtErrorTrue = () => {
+    setUncaughtError(true);
   };
 
   const tdxCheckoutLoan = async () => {
@@ -142,13 +147,15 @@ const AssetManagementCheckOut = () => {
               }`
             );
             break;
-          default: // There is an error that wasn't caught
+          default:
+            uncaughtErrorTrue();
+            // There is an error that wasn't caught
           // "Error Not recognized"
         }
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
-      increaseErrorCount(); //need to figure out how to increase the error count when the response is not ok
+      increaseErrorCount();
       console.log(errorCount);
       setSubmitButtonValue("Server Offline");
     }
@@ -198,7 +205,9 @@ const AssetManagementCheckOut = () => {
                 uniqname={uniqname}
                 submitButtonValue={submitButtonValue}
                 tdxCheckoutLoan={tdxCheckoutLoan}
+                setUncaughtError={setUncaughtError}
               />
+              {uncaughtError && <UncaughtErrorAlert />}
             </div>
           )}
         </div>
