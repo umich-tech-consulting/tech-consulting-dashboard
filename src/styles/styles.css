@@ -208,7 +208,7 @@ code {
   @apply mt-[2px]
 }
 .am-uniqname-item {
-  @apply w-28 px-2 p-[6px];
+  @apply w-32 px-2 p-[6px];
 }
 .am-laptop-item {
   @apply w-fit flex

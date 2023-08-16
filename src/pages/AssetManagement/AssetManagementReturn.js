@@ -24,12 +24,7 @@ const AssetManagementReturn = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
-  let tdxBaseUrl = `https://${dashboard_settings.DASHBOARD_DOMAIN}/`;
-  if (dashboard_settings.TDX.USE_SANDBOX) {
-    tdxBaseUrl = tdxBaseUrl + 'SB'
-  }
-  tdxBaseUrl = tdxBaseUrl + 'TDNext/apps'
-  // Api Data End
+  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   const increaseErrorCount = () => {
     setErrorCount(errorCount + 1);
@@ -100,6 +95,14 @@ const AssetManagementReturn = () => {
             setAssetError(true);
             setAssetErrorMessage(
               `Asset is not ready to loan${
+                data.details ? `: ${data.details}` : ""
+              }`
+            );
+            break
+          case 8: // Asset already available
+            setAssetError(true);
+            setAssetErrorMessage(
+              `Asset has already been returned${
                 data.details ? `: ${data.details}` : ""
               }`
             );

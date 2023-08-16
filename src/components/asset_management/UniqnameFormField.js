@@ -15,7 +15,7 @@ const UniqnameFormField = ({ setUniqname, uniqname, uniqnameError, setUniqnameEr
       <div className="am-action-component-item">
         <div className="am-action-component-item-header">
           <img src={uniqname_icon} alt="Uniqname Icon" />
-          <label htmlFor="uniqname">Uniqname</label>
+          <label htmlFor="uniqname">Customer Uniqname</label>
         </div>
         <input
           className={`am-uniqname-item ${

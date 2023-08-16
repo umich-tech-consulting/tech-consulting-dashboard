@@ -38,10 +38,10 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
               <img src={calendar} alt="Checkmark Icon" />
               <div>{tdxResponse.loan.date}</div>
             </div>
-            {tdxResponse.ticket.comment &&
+            {tdxResponse.asset.comment &&
             <div className="am-action-success-date-comments-info">
               <img src={comments_icon} alt="Checkmark Icon" />
-              <div>{`${tdxResponse.ticket.comment}`}</div>
+              <div>{tdxResponse.asset.comment}</div>
             </div>
             }
           </div>
