@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import dashboard_settings from "../../config.json"
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
 import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
-import CheckoutSubmitOrCancelForm from "../../components/asset_management/Checkout/CheckoutSubmitOrCancelForm";
+import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
 import CheckoutSubmitSuccess from "../../components/asset_management/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/asset_management/UncaughtErrorAlert";
@@ -14,7 +14,7 @@ import spinner from "../../icons/asset-management/spinner.svg";
 const AssetManagementCheckOut = () => {
   // Form data Start
   const [uniqname, setUniqname] = useState("");
-  const [assetType, setAssetType] = useState("TRL");
+  const [assetType, setAssetType] = useState("SAH");
   const [assetId, setAssetId] = useState("");
   const [comment, setComment] = useState("");
   const asset = `${assetType}${assetId}`;
@@ -31,6 +31,16 @@ const AssetManagementCheckOut = () => {
   const [errorCount, setErrorCount] = useState(0);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
   const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
+ //Api Data End
+
+  const uniqnameInputRef = useRef(null);
+  const assetInputRef = useRef(null);
+
+  useEffect(() => {
+    if (uniqnameInputRef.current) {
+      uniqnameInputRef.current.focus();
+    }
+  }, []);
 
   const increaseErrorCount = () => {
     setErrorCount(errorCount + 1);
@@ -40,6 +50,9 @@ const AssetManagementCheckOut = () => {
   };
   const uncaughtErrorTrue = () => {
     setUncaughtError(true);
+  };
+  const uncaughtErrorFalse = () => {
+    setUncaughtError(false);
   };
 
   const tdxCheckoutLoan = async () => {
@@ -158,7 +171,18 @@ const AssetManagementCheckOut = () => {
       increaseErrorCount();
       console.log(errorCount);
       setSubmitButtonValue("Server Offline");
+      uncaughtErrorTrue();
     }
+  };
+
+  const isSubmitDisabled =
+  uniqname.length < 3 ||
+  (assetType !== "SAHM" && assetId.length < 5) ||
+  (assetType === "SAHM" && assetId.length < 4);
+
+  const handleSubmit = () => {
+    tdxCheckoutLoan();
+    uncaughtErrorFalse();
   };
 
   return (
@@ -187,6 +211,9 @@ const AssetManagementCheckOut = () => {
                   uniqnameError={uniqnameError}
                   setUniqnameError={setUniqnameError}
                   uniqnameErrorMessage={uniqnameErrorMessage}
+                  isSubmitDisabled={isSubmitDisabled}
+                  handleSubmit={handleSubmit}
+                  inputRef={uniqnameInputRef}
                 />
                 <AssetNumberFormField
                   setAssetId={setAssetId}
@@ -196,16 +223,16 @@ const AssetManagementCheckOut = () => {
                   assetError={assetError}
                   setAssetError={setAssetError}
                   assetErrorMessage={assetErrorMessage}
+                  isSubmitDisabled={isSubmitDisabled}
+                  handleSubmit={handleSubmit}
+                  inputRef={assetInputRef}
                 />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
-              <CheckoutSubmitOrCancelForm
-                assetType={assetType}
-                assetId={assetId}
-                uniqname={uniqname}
+              <SubmitOrCancelForm
                 submitButtonValue={submitButtonValue}
-                tdxCheckoutLoan={tdxCheckoutLoan}
-                setUncaughtError={setUncaughtError}
+                isSubmitDisabled={isSubmitDisabled}
+                handleSubmit={handleSubmit}
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>

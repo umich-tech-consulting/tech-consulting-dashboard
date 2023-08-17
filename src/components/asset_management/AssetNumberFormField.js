@@ -11,6 +11,9 @@ const AssetNumberFormField = ({
   assetError,
   setAssetError,
   assetErrorMessage,
+  isSubmitDisabled,
+  handleSubmit,
+  inputRef
 }) => {
   const handleAssetIdChange = (e) => {
     const input = e.target.value;
@@ -29,6 +32,12 @@ const AssetNumberFormField = ({
     setAssetType(e.target.value);
   };
 
+  const enterToSubmit = (e) => {
+    if (e.key === "Enter" && !isSubmitDisabled) {
+      handleSubmit();
+    }
+  };
+
   useEffect(() => {
     if (assetType === "SAHM" && assetId.length === 5) {
       setAssetId("");
@@ -44,6 +53,7 @@ const AssetNumberFormField = ({
         </div>
         <div className="am-laptop-item">
           <select
+            ref={inputRef}
             className={`am-uniqname-item ${
               !assetError ? "am-action-form-default" : "am-action-form-error"
             }`}
@@ -55,8 +65,8 @@ const AssetNumberFormField = ({
             }}
 
           >
-            <option value="TRL">TRL</option>
             <option value="SAH">SAH</option>
+            <option value="TRL">TRL</option>
             <option value="SAHM">SAHM</option>
           </select>
           <input
@@ -68,6 +78,7 @@ const AssetNumberFormField = ({
             name="asset"
             pattern="\d*"
             value={assetId}
+            onKeyDown={enterToSubmit}
             onChange={(e) => {
               handleAssetIdChange(e);
               setAssetError(null);

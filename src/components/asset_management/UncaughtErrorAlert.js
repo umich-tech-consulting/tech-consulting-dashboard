@@ -6,7 +6,7 @@ const UncaughtErrorAlert = () => {
       <div className="am-action-uncaught-error-alert">
         <img src={exclamation_triangle} alt="Exclamation Triangle" />
         <div>
-          <div>An error occurred that the dashboard couldn't handle.</div>
+          <div>An error occurred that can't be fixed from the dashboard.</div>
           <a
             href="https://teamdynamix.umich.edu/"
             target="blank"

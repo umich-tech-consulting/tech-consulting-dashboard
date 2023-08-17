@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet";
-import { useState } from "react"; // Import useState
+import React, { useState, useRef, useEffect } from "react";
 import dashboard_settings from "../../config.json"
 import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
 import CommentFormField from "../../components/asset_management/CommentFormField";
-import ReturnSubmitOrCancelForm from "../../components/asset_management/Return/ReturnSubmitOrCancelForm";
+import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
 import ReturnSubmitSuccess from "../../components/asset_management/Return/ReturnSubmitSuccess";
 import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/asset_management/UncaughtErrorAlert";
@@ -12,7 +12,7 @@ import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementReturn = () => {
  // Form data Start
-  const [assetType, setAssetType] = useState("TRL");
+  const [assetType, setAssetType] = useState("SAH");
   const [assetId, setAssetId] = useState("");
   const [comment, setComment] = useState("");
   const asset = `${assetType}${assetId}`;
@@ -28,6 +28,14 @@ const AssetManagementReturn = () => {
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
   const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
+  const assetInputRef = useRef(null);
+
+  useEffect(() => {
+    if (assetInputRef.current) {
+      assetInputRef.current.focus();
+    }
+  }, []);
+
   const increaseErrorCount = () => {
     setErrorCount(errorCount + 1);
   };
@@ -36,6 +44,9 @@ const AssetManagementReturn = () => {
   };
   const uncaughtErrorTrue = () => {
     setUncaughtError(true);
+  };
+  const uncaughtErrorFalse = () => {
+    setUncaughtError(false);
   };
 
   const tdxReturnLoan = async () => {
@@ -123,7 +134,17 @@ const AssetManagementReturn = () => {
       increaseErrorCount();
       console.log(errorCount);
       setSubmitButtonValue("Server Offline");
+      uncaughtErrorTrue();
     }
+  };
+
+  const isSubmitDisabled =
+  (assetType !== "SAHM" && assetId.length < 5) ||
+  (assetType === "SAHM" && assetId.length < 4);
+
+  const handleSubmit = () => {
+    tdxReturnLoan();
+    uncaughtErrorFalse();
   };
 
 
@@ -155,15 +176,16 @@ const AssetManagementReturn = () => {
                   assetError={assetError}
                   setAssetError={setAssetError}
                   assetErrorMessage={assetErrorMessage}
+                  isSubmitDisabled={isSubmitDisabled}
+                  handleSubmit={handleSubmit}
+                  inputRef={assetInputRef}
                 />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
-              <ReturnSubmitOrCancelForm
-                assetType={assetType}
-                assetId={assetId}
+              <SubmitOrCancelForm
                 submitButtonValue={submitButtonValue}
-                tdxReturnLoan={tdxReturnLoan}
-                setUncaughtError={setUncaughtError}
+                isSubmitDisabled={isSubmitDisabled}
+                handleSubmit={handleSubmit}
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
