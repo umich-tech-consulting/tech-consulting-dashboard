@@ -62,7 +62,7 @@ const AssetManagementReturn = () => {
     );
 
     try {
-      const res = await fetch(`https://${dashboard_settings.DASHBOARD_DOMAIN}/api/tdx/loan/return`, {
+      const res = await fetch(`${dashboard_settings.DASHBOARD_URL}tdx/loan/return`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

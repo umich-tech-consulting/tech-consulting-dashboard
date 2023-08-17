@@ -70,7 +70,7 @@ const AssetManagementCheckOut = () => {
     );
 
     try {
-      const res = await fetch(`https://${dashboard_settings.DASHBOARD_DOMAIN}/api/tdx/loan/checkout`, {
+      const res = await fetch(`${dashboard_settings.DASHBOARD_URL}/tdx/loan/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
