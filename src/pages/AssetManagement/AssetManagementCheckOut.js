@@ -160,6 +160,22 @@ const AssetManagementCheckOut = () => {
               }`
             );
             break;
+          case 10: // Unable to attach asset
+              setAssetError(true);
+              setAssetErrorMessage(
+                `Asset could not be attached to ticket${
+                  data.details ? `: ${data.details}` : ""
+                }`
+              )
+              break;
+          case 11: // Loan already fulfilled
+              setUniqnameError(true);
+              setUniqnameErrorMessage(
+                `Loan in TDx${data.attributes.ticket} has already been fulfilled with ${data.attributes.asset}${
+                  data.details ? `: ${data.details}` : ""
+                }`
+              )
+              break;
           default:
             uncaughtErrorTrue();
             // There is an error that wasn't caught
