@@ -30,17 +30,17 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
             </a>
           </div>
           <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponse.ticket.id}`} className="am-action-success-tdx-button">
-            <img src={ticket} alt="Checkmark Icon" />
+            <img src={ticket} alt="Ticket Icon" />
             <div>TDX {tdxResponse.ticket.id}</div>
           </a>
           <div className="am-action-success-date-comments">
             <div className="am-action-success-date-comments-info">
-              <img src={calendar} alt="Checkmark Icon" />
+              <img src={calendar} alt="Calendar Icon" />
               <div>{tdxResponse.loan.date}</div>
             </div>
             {tdxResponse.asset.comment &&
             <div className="am-action-success-date-comments-info">
-              <img src={comments_icon} alt="Checkmark Icon" />
+              <img src={comments_icon} alt="Comments Icon" />
               <div>{tdxResponse.asset.comment}</div>
             </div>
             }
