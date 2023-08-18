@@ -171,7 +171,7 @@ const AssetManagementCheckOut = () => {
           case 11: // Loan already fulfilled
               setUniqnameError(true);
               setUniqnameErrorMessage(
-                `Loan in TDx${data.attributes.ticket} has already been fulfilled with ${data.attributes.asset}${
+                `The customer already has a laptop loaned to them (${data.attributes.asset}) in TDX${data.attributes.ticket}${
                   data.details ? `: ${data.details}` : ""
                 }`
               )
