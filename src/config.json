@@ -1,5 +1,5 @@
 {
-    "DASHBOARD_URL": "http://localhost:8080",
+    "DASHBOARD_URL": "https://tech-consulting-dashboard.glavon.net/webui",
     "TDX": {
         "TDX_DOMAIN": "teamdynamix.umich.edu",
         "USE_SANDBOX": true
