@@ -265,7 +265,7 @@ code {
 }
 /* Start the edits here */
 .am-action-success-tdx-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-[6px] rounded flex gap-2 body-large justify-center items-center flex-1 cursor-pointer
+  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 py-1 px-[2px] rounded flex gap-2 body-medium items-center flex-1 cursor-pointer w-fit
 }
 .am-action-success-tdx-button img {
   @apply h-5 w-5

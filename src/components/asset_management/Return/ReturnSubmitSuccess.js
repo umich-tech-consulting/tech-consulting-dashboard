@@ -23,13 +23,13 @@ const ReturnSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
             </a>
             <img className="h-8 w-8" src={broken_link} alt="Link Icon" />
             <a target="_blank" rel="noopener noreferrer" href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponse.previous_owner.uid}`} className="am-action-success-asset-uniqname-button">
-              <img src={uniqname_icon} alt="Asset Icon" />
+              <img src={uniqname_icon} alt="Uniqname Icon" />
               <div>{tdxResponse.previous_owner.uniqname}</div>
             </a>
           </div>
           {tdxResponse.asset.comment &&
           <div className="am-action-success-date-comments-info mt-3">
-            <img src={comments_icon} alt="Checkmark Icon" />
+            <img src={comments_icon} alt="Comments Icon" />
             <div>{tdxResponse.asset.comment}</div>
           </div>
           }
