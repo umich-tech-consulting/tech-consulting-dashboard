@@ -2,6 +2,6 @@
     "API_URL": "https://tech-consulting-dashboard.glavon.net/api",
     "TDX": {
         "TDX_DOMAIN": "teamdynamix.umich.edu",
-        "USE_SANDBOX": true
+        "USE_SANDBOX": false
     }
 }
