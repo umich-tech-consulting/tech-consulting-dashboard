@@ -202,7 +202,7 @@ code {
   @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-small flex items-start gap-1 text-red-5
+  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
