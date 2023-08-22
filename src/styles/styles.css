@@ -252,7 +252,7 @@ code {
   @apply h-[78px]
 }
 .am-action-success-container-main {
-  @apply flex flex-col gap-6 w-full
+  @apply flex flex-col gap-9 w-full
 }
 .am-action-success-asset-uniqname {
   @apply flex gap-2
@@ -264,14 +264,17 @@ code {
   @apply h-5 w-5
 }
 /* Start the edits here */
+.am-action-success-extra-info {
+  @apply flex gap-4 flex-col
+}
 .am-action-success-tdx-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 py-1 px-[2px] rounded flex gap-2 body-medium items-center flex-1 cursor-pointer w-fit
+  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-1 rounded flex gap-2 body-medium items-center justify-center cursor-pointer w-fit
 }
 .am-action-success-tdx-button img {
   @apply h-5 w-5
 }
 .am-action-success-date-comments {
-  @apply flex flex-col gap-2 body-medium mt-3
+  @apply flex flex-col gap-2 body-medium
 }
 .am-action-success-date-comments-info {
   @apply flex gap-2
