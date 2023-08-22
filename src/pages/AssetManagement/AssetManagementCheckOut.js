@@ -207,7 +207,7 @@ const AssetManagementCheckOut = () => {
         <title>Laptop Checkout</title>
       </Helmet>
       <div className="am-action-main">
-        {errorCount > 2 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
+        {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
           {isSubmitted ? ( // Check if form is submitted
             <CheckoutSubmitSuccess
