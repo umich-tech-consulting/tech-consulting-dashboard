@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import resourcesData from './ResourcesData.json';
-import ResourcesLandingSearch from './ResourcesLandingSearch';
-import ResourcesLandingTabs from './ResourcesLandingTabs';
-import ResourcesLandingTabsContent from './ResourcesLandingTabsGroups';
-import ResourcesLandingCategories from './ResourcesLandingCategories';
+import resourcesData from '../../ResourcesData.json'
+import ResourcesLandingSearch from '../../components/Resources/Landing/ResourcesLandingSearch';
+import ResourcesLandingTabs from '../../components/Resources/Landing/ResourcesLandingTabs';
+import ResourcesLandingTabsContent from '../../components/Resources/Landing/ResourcesLandingTabsGroups';
+import ResourcesLandingCategories from '../../components/Resources/Landing/ResourcesLandingCategories';
 
 
 const ResourcesLanding = () => {

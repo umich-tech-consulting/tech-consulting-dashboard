@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import dashboard_settings from "../../config.json"
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
-import UniqnameFormField from "../../components/asset_management/UniqnameFormField";
-import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
-import CommentFormField from "../../components/asset_management/CommentFormField";
-import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
-import CheckoutSubmitSuccess from "../../components/asset_management/Checkout/CheckoutSubmitSuccess";
-import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
-import UncaughtErrorAlert from "../../components/asset_management/UncaughtErrorAlert";
+import UniqnameFormField from "../../components/AssetManagement/UniqnameFormField";
+import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
+import CommentFormField from "../../components/AssetManagement/CommentFormField";
+import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
+import CheckoutSubmitSuccess from "../../components/AssetManagement/Checkout/CheckoutSubmitSuccess";
+import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
+import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {

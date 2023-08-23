@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import slasheye from '../../icons/resources/slasheye_reducedheight.svg'
-import group from "../../icons/resources/group_reducedheight.svg";
-import document from "../../icons/resources/group-category-icons/document.svg";
+import slasheye from '../../../icons/resources/slasheye_reducedheight.svg'
+import group from "../../../icons/resources/group_reducedheight.svg";
+import document from "../../../icons/resources/group-category-icons/document.svg";
 
 const ResourcesLandingCategories = () => {
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import resourcesData from './ResourcesData.json';
-import grayx from '../../icons/resources/grayx.svg';
-import bluex from '../../icons/resources/bluex.svg';
-import search from '../../icons/resources/search.svg';
+import resourcesData from '../../../ResourcesData.json'
+import grayx from '../../../icons/resources/grayx.svg';
+import bluex from '../../../icons/resources/bluex.svg';
+import search from '../../../icons/resources/search.svg';
 
 const ResourcesLandingSearch = () => {
   const [query, setQuery] = useState('');

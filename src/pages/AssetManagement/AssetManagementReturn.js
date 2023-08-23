@@ -2,12 +2,12 @@ import { Helmet } from "react-helmet";
 import React, { useState, useRef, useEffect } from "react";
 import dashboard_settings from "../../config.json"
 import laptop_return from "../../icons/asset-management/laptop_return.svg"
-import AssetNumberFormField from "../../components/asset_management/AssetNumberFormField";
-import CommentFormField from "../../components/asset_management/CommentFormField";
-import SubmitOrCancelForm from "../../components/asset_management/SubmitOrCancelForm";
-import ReturnSubmitSuccess from "../../components/asset_management/Return/ReturnSubmitSuccess";
-import HighErrorAlert from "../../components/asset_management/HighErrorAlert";
-import UncaughtErrorAlert from "../../components/asset_management/UncaughtErrorAlert";
+import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
+import CommentFormField from "../../components/AssetManagement/CommentFormField";
+import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
+import ReturnSubmitSuccess from "../../components/AssetManagement/Return/ReturnSubmitSuccess";
+import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
+import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
 import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementReturn = () => {

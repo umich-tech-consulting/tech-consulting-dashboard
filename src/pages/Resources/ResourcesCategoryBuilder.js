@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import resourcesData from './ResourcesData.json';
+import resourcesData from '../../ResourcesData.json'
 import rightarrow from "../../icons/resources/rightarrow.svg";
 
 const ResourceCategoryBuilder = () => {
