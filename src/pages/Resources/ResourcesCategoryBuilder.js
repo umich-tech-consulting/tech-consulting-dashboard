@@ -47,8 +47,8 @@ const ResourceCategoryBuilder = () => {
       <Helmet>
         <title>Resources</title>
       </Helmet>
-      <div className="w-full flex flex-col p-6 items-center">
-          <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
+      <div className="r-page">
+          <div className="r-categorybuilder-nav">
             <Link to="/resources" className="hover:text-blue-9">Resources</Link>
             <div>/</div>
             <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>

@@ -343,13 +343,19 @@ code {
 /* Resource Landing End */
 
 /* Resource Group Start */
-.r-groupbuilder-container {
-  @apply max-w-3xl w-full
-}
 .r-groupbuilder-nav {
   @apply text-neutral-7 w-full max-w-3xl flex gap-1
 }
+.r-groupbuilder-container {
+  @apply max-w-3xl w-full
+}
 /* Resource Group End */
+
+/* Resource Category Start */
+.r-categorybuilder-nav {
+  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+}
+/* Resource Category End */
 
 /* Resource Links Start */
 .r-links-container {
