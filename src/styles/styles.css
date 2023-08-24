@@ -323,18 +323,47 @@ code {
   @apply underline
 }
 /* Uncaught Error Alert End */
-
-
 /* ----------- Asset Management End----------- */
 
-/* ----------- Asset Management Check In Start----------- */
-.add-note {
-  @apply absolute top-0 left-0 right-0 bottom-0 bg-white dark:bg-black rounded-md flex flex-col gap-y-1;
+
+/* ----------- Resources Start ----------- */
+.r-page {
+  @apply w-full flex flex-col p-6 items-center
 }
-.add-note-title {
-  @apply title-small text-neutral-9 dark:text-neutral-1;
+/* Resource Landing Start */
+.r-landing-container {
+  @apply max-w-3xl w-full mt-8
 }
-.add-note-textarea {
-  @apply w-full h-44 rounded-md resize-none mb-6 bg-white dark:bg-black text-neutral-9 dark:text-neutral-1 pt-3 outline-none;
+.r-landing-title {
+  @apply mb-6 headline-large text-center
 }
-/* ----------- Asset Management Check In End----------- */
+.r-landing-main {
+  @apply mt-14
+}
+/* Resource Landing End */
+
+/* Resource Group Start */
+.r-groupbuilder-container {
+  @apply max-w-3xl w-full
+}
+.r-groupbuilder-nav {
+  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+}
+/* Resource Group End */
+
+/* Resource Links Start */
+.r-links-container {
+  @apply flex flex-col gap-4
+}
+.r-individual-link {
+  @apply shadow-light bg-white rounded-md p-4 hover:bg-blue-0
+}
+.r-individual-link-name {
+  @apply title-medium text-blue-9 mb-2
+}
+.r-individual-link-description {
+  @apply body-medium text-neutral-9
+}
+/* Resource Links End */
+
+/* ----------- Resources End ----------- */

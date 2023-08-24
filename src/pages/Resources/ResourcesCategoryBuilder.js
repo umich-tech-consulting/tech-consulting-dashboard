@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import resourcesData from '../../ResourcesData.json'
 import rightarrow from "../../icons/resources/rightarrow.svg";
+import ResourceLinks from "../../components/Resources/ResourceLinks";
 
 const ResourceCategoryBuilder = () => {
   const { category } = useParams();
@@ -69,23 +70,7 @@ const ResourceCategoryBuilder = () => {
                 <img src={rightarrow} alt="Right Arrow" />
               </Link>
             </div>
-
-            <ul className="flex flex-col gap-4">
-              {groupData.links.map((link, index) => (
-                <li key={index}>
-                  <a href={link.url} target="_blank" rel="noreferrer noopener">
-                    <div className="shadow-light bg-white p-4 rounded-md hover:bg-blue-0">
-                      <div className="title-medium text-blue-9 mb-2">
-                        {link.name}
-                      </div>
-                      <div className="body-medium text-neutral-9">
-                        {link.description}
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <ResourceLinks linkData={groupData.links} />
           </div>
         ))}
       </div>

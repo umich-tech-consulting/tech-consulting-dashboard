@@ -3,6 +3,7 @@ import resourcesData from '../../../ResourcesData.json'
 import grayx from '../../../icons/resources/grayx.svg';
 import bluex from '../../../icons/resources/bluex.svg';
 import search from '../../../icons/resources/search.svg';
+import ResourceLinks from '../ResourceLinks';
 
 const ResourcesLandingSearch = () => {
   const [query, setQuery] = useState('');
@@ -86,21 +87,7 @@ const ResourcesLandingSearch = () => {
       {searchResults.map((categoryData, index) => (
         <div key={index} className="max-w-3xl w-full mt-8">
           <div className="title-medium mb-3"><span className='text-neutral-7'>{categoryData.category} /</span> {categoryData.group}</div>
-          <ul className="flex flex-col gap-4">
-            {categoryData.links.map((link, index) => (
-              <li
-                key={index}
-              >
-                <a href={link.url} target="_blank" rel="noreferrer noopener">
-                    <div className="bg-white p-4 rounded-md border-2 border-white hover:border-blue-9">
-                        <div className="title-medium text-blue-9 mb-2">{link.name}</div>
-                        <div className="body-medium text-neutral-9">{link.description}</div>
-
-                    </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <ResourceLinks linkData={categoryData.links} />
         </div>
       ))}
     </>
