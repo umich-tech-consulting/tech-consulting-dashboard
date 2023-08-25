@@ -57,7 +57,7 @@ const ResourcesLandingSearch = () => {
   return (
     <>
       <div className="relative mt-14 w-full border shadow-light border-neutral-3 rounded-lg">
-        <label className='hidden' htmlFor="searchbox">Uniqname</label>
+        <label className='hidden' htmlFor="searchbox">Resources Search</label>
         <input
           className="w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
           type="text"

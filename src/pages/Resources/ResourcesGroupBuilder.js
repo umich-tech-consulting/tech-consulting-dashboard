@@ -1,14 +1,19 @@
-import React from "react";
-import { Helmet } from 'react-helmet';
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import resourcesData from '../../ResourcesData.json'
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+import { Link, useParams } from "react-router-dom";
+import resourcesData from "../../ResourcesData.json";
 import ResourceLinks from "../../components/Resources/ResourceLinks";
+import search from "../../icons/resources/search.svg";
+import bluex from "../../icons/resources/bluex.svg";
+import grayx from "../../icons/resources/grayx.svg";
 
 const ResourceGroupBuilder = () => {
+  const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isClearHovered, setIsClearHovered] = useState(false);
+
   const { category, group } = useParams();
 
-  // Clean up the group value by replacing spaces, slashes, and non-alphanumeric characters with dashes
   const formattedCategory = category
     .toLowerCase()
     .replace(/\s+/g, "")
@@ -18,7 +23,6 @@ const ResourceGroupBuilder = () => {
     .replace(/\s+/g, "")
     .replace(/[^a-zA-Z0-9-]/g, "-");
 
-  // Find the data for the selected category and group
   const categoryData = resourcesData.find(
     (data) =>
       data.category
@@ -32,14 +36,40 @@ const ResourceGroupBuilder = () => {
   );
 
   if (!categoryData) {
-    // Handle case when category or group data is not found
     return <div>Group not found</div>;
   }
 
-  // Sort the links alphabetically based on the 'name' property
   const sortedLinks = categoryData.links.sort((a, b) =>
     a.name.localeCompare(b.name)
   );
+
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setQuery(value);
+
+    const lowercaseValue = value.toLowerCase();
+
+    if (lowercaseValue === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const results = sortedLinks.filter(
+      (link) =>
+        link.name.toLowerCase().includes(lowercaseValue) ||
+        link.description.toLowerCase().includes(lowercaseValue)
+    );
+
+    setSearchResults(results);
+  };
+
+  const handleClearMouseEnter = () => {
+    setIsClearHovered(true);
+  };
+
+  const handleClearMouseLeave = () => {
+    setIsClearHovered(false);
+  };
 
   return (
     <>
@@ -67,7 +97,42 @@ const ResourceGroupBuilder = () => {
           <div className="headline-large mb-6 text-center mt-8">
             {categoryData.group}
           </div>
-          <ResourceLinks linkData={sortedLinks} />
+          <div className="relative mt-8 mb-8 w-full border shadow-light border-neutral-3 rounded-lg">
+            <input
+              className="w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
+              type="text"
+              name="query"
+              placeholder={`Search ${categoryData.group} Links`}
+              value={query}
+              onChange={handleSearch}
+            />
+            <img
+              src={search} // Replace with your actual search icon
+              alt="Search"
+              className="absolute top-0 left-0 h-full p-3"
+            />
+            {query && (
+              <button
+                className="absolute top-0 right-0 h-full p-2"
+                onClick={() => setQuery("")}
+                onMouseEnter={handleClearMouseEnter}
+                onMouseLeave={handleClearMouseLeave}
+              >
+                <img
+                  src={isClearHovered ? bluex : grayx} // Replace with your actual clear icon
+                  alt="Clear"
+                  className="h-6 w-6"
+                />
+              </button>
+            )}
+          </div>
+          {query ? (
+            <div className="max-w-3xl w-full mt-8">
+              <ResourceLinks linkData={searchResults} />
+            </div>
+          ) : (
+            <ResourceLinks linkData={sortedLinks} />
+          )}
         </div>
       </div>
     </>
