@@ -53,8 +53,8 @@ const ResourceCategoryBuilder = () => {
             <div>/</div>
             <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>
           </div>
-        <div className="max-w-3xl w-full mt-8">
-          <h1 className="headline-large mb-6 text-center">{categoryName.category}</h1>{" "}
+        <div className="r-landing-container">
+          <h1 className="r-categorybuilder-title">{categoryName.category}</h1>{" "}
           {/* Display the appropriate header */}
         </div>
         {sortedCategoryData.map((groupData, index) => (

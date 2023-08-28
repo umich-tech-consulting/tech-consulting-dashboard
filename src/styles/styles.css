@@ -342,20 +342,86 @@ code {
 }
 /* Resource Landing End */
 
-/* Resource Group Start */
+/* Resource Landing Tabgroups Start */
+.r-landing-tabgroups {
+  @apply p-3 w-60 flex items-center gap-3 shadow-light bg-white hover:bg-blue-0 focus:bg-blue-1 rounded-lg title-small text-neutral-9
+}
+/* Resource Landing Tabgroups End */
+
+/* Resource Landing Tabs Start */
+.r-landing-tabs {
+  @apply py-2 px-4 title-medium focus:outline-none
+}
+/* Resource Landing Tabs End */
+
+/* Resource Landing Search Start */
+.r-landing-search {
+  @apply relative mt-14 w-full border shadow-light border-neutral-3 rounded-lg
+}
+.r-landing-search input {
+  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
+}
+.r-landing-search-icon {
+  @apply absolute top-0 left-0 flex items-center justify-center h-full p-3
+}
+.r-landing-search-clear {
+  @apply absolute top-0 right-0 flex items-center justify-center h-full p-2
+}
+/* Resource Landing Search End */
+
+/* Resource Landing Categories Start */
+.r-landing-categories-title {
+  @apply mb-6 headline-small text-left mt-20
+}
+.r-landing-categories-container {
+  @apply w-full flex flex-col gap-4
+}
+.r-landing-categories-cards {
+  @apply flex flex-col gap-4 lg:flex-row
+}
+.r-landing-categories-card {
+  @apply flex-1 flex shadow-light bg-white p-3 rounded-md gap-4 hover:bg-blue-0 focus:bg-blue-1
+}
+.r-landing-categories-card img {
+  @apply rounded-md h-6 w-10
+}
+.r-landing-categories-card-content {
+  @apply body-medium
+}
+.r-landing-categories-training-card {
+  @apply flex items-center justify-center shadow-light bg-white p-3 rounded-md gap-2 hover:bg-blue-0 focus:bg-blue-1 title-large
+}
+.r-landing-categories-training-card img {
+  @apply rounded-md h-10 w-10
+}
+/* Resource Landing Categories End */
+
+/* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
   @apply text-neutral-7 w-full max-w-3xl flex gap-1
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
 }
-/* Resource Group End */
+.r-groupbuilder-searchbox {
+  @apply relative mt-8 mb-8 w-full border shadow-light border-neutral-3 rounded-lg
+}
+.r-groupbuilder-searchbox input {
+  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
+}
+.r-groupbuilder-searchbox-clear {
+  @apply absolute top-0 right-0 h-full p-2
+}
+/* Resource GroupBuilder End */
 
-/* Resource Category Start */
+/* Resource CategoryBuilder Start */
 .r-categorybuilder-nav {
   @apply text-neutral-7 w-full max-w-3xl flex gap-1
 }
-/* Resource Category End */
+.r-categorybuilder-title {
+  @apply mb-6 headline-large text-center
+}
+/* Resource CategoryBuilder End */
 
 /* Resource Links Start */
 .r-links-container {

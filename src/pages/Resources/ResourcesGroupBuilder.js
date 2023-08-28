@@ -97,9 +97,8 @@ const ResourceGroupBuilder = () => {
           <div className="headline-large mb-6 text-center mt-8">
             {categoryData.group}
           </div>
-          <div className="relative mt-8 mb-8 w-full border shadow-light border-neutral-3 rounded-lg">
+          <div className="r-groupbuilder-searchbox">
             <input
-              className="w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9"
               type="text"
               name="query"
               placeholder={`Search ${categoryData.group} Links`}
@@ -107,19 +106,19 @@ const ResourceGroupBuilder = () => {
               onChange={handleSearch}
             />
             <img
-              src={search} // Replace with your actual search icon
+              src={search}
               alt="Search"
               className="absolute top-0 left-0 h-full p-3"
             />
             {query && (
               <button
-                className="absolute top-0 right-0 h-full p-2"
+                className="r-groupbuilder-searchbox-clear"
                 onClick={() => setQuery("")}
                 onMouseEnter={handleClearMouseEnter}
                 onMouseLeave={handleClearMouseLeave}
               >
                 <img
-                  src={isClearHovered ? bluex : grayx} // Replace with your actual clear icon
+                  src={isClearHovered ? bluex : grayx}
                   alt="Clear"
                   className="h-6 w-6"
                 />
@@ -127,7 +126,7 @@ const ResourceGroupBuilder = () => {
             )}
           </div>
           {query ? (
-            <div className="max-w-3xl w-full mt-8">
+            <div className="r-landing-container">
               <ResourceLinks linkData={searchResults} />
             </div>
           ) : (
