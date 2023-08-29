@@ -18,7 +18,7 @@ const ResourcesLandingTabs = ({ resourcesData, activeTab, handleTabChange }) => 
             return (
               <button
                 key={index}
-                className={`r-landing-tabs focus:outline-black ${
+                className={`r-landing-tabs ${
                   activeTab === index ? 'border-b-2 border-blue-9 text-blue-9' : ''
                 }`}
                 onClick={() => handleTabChange(index)}
