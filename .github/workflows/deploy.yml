@@ -13,12 +13,7 @@ jobs:
     
       - name: Setup Environment
         run: npm ci
-        
 
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - name: Build
         run: npm run build
 
@@ -28,7 +23,7 @@ jobs:
           path: build/
 
   deploy:
-    needs: build
+    needs: setup
     runs-on: ubuntu-latest
     permissions:
       pages: write
