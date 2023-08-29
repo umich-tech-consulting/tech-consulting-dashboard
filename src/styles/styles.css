@@ -237,7 +237,7 @@ code {
 .am-action-submit-button-spinner {
   @apply w-full flex justify-center
 }
-.am-action-submit-button-spinner img {
+.am-action-submit-button-spinner img, .am-action-submit-button-spinner svg {
   @apply w-5 h-5 animate-spin ml-2
 }
 /* Default Action Component End */
