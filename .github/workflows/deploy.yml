@@ -26,8 +26,9 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.GLAVON_SSH_KEY }}
-          ARGS: "-rlgoDzvc -i --port=${{ env.GLAVON_DEPLOY_PORT }}"
+          ARGS: "-rlgoDzvc -i"
           SOURCE: "dist/"
+          REMOTE_POROT: ${{ env.GLAVON_DEPLOY_PORT }}
           REMOTE_HOST: ${{ vars.GLAVON_DEPLOY_HOST }}
           REMOTE_USER: ${{ vars.GLAVON_DEPLOY_USER }}
           TARGET: ${{ vars.GLAVON_DEPLOY_TARGET }}
