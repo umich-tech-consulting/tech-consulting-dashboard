@@ -28,9 +28,9 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.GLAVON_SSH_KEY }}
           ARGS: "-rlgoDzvc -i --port=${{ env.GLAVON_DEPLOY_PORT }}"
           SOURCE: "dist/"
-          REMOTE_HOST: ${{ env.GLAVON_DEPLOY_HOST }}
-          REMOTE_USER: ${{ env.GLAVON_DEPLOY_USER }}
-          TARGET: ${{ env.GLAVON_DEPLOY_TARGET }}
+          REMOTE_HOST: ${{ vars.GLAVON_DEPLOY_HOST }}
+          REMOTE_USER: ${{ vars.GLAVON_DEPLOY_USER }}
+          TARGET: ${{ vars.GLAVON_DEPLOY_TARGET }}
           EXCLUDE: "/dist/, /node_modules/"
           SCRIPT_BEFORE: |
             whoami
