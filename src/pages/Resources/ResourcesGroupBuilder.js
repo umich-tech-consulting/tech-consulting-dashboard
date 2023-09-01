@@ -76,7 +76,7 @@ const ResourceGroupBuilder = () => {
       <Helmet>
         <title>Resources</title>
       </Helmet>
-      <div className="r-page">
+      <div className="r-page fade-in">
         <div className="r-groupbuilder-container">
           <div className="r-groupbuilder-nav">
             <Link to="/resources" className="hover:text-blue-9">

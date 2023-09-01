@@ -47,7 +47,7 @@ const ResourceCategoryBuilder = () => {
       <Helmet>
         <title>Resources</title>
       </Helmet>
-      <div className="r-page">
+      <div className="r-page fade-in">
           <div className="r-categorybuilder-nav">
             <Link to="/resources" className="hover:text-blue-9">Resources</Link>
             <div>/</div>
