@@ -149,6 +149,39 @@ code {
 /* ----- Text End ----- */
 /* ----------- Default Styles End----------- */
 
+/* ----------- Animation Styles Start----------- */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popupAnimation {
+  0% {
+    scale: 0%;
+  }
+  40% {
+    scale: 110%;
+  }
+  100% {
+    scale: 100%
+  }
+}
+.fade-in {
+  animation: fadeInAnimation;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in;
+}
+.popup {
+  animation: popupAnimation;
+  animation-duration: 500ms;
+}
+
+
+/* ----------- Animation Styles End----------- */
+
 /* ----------- Left Nav Start----------- */
 .link-container {
   @apply pl-2 h-8 rounded-full flex content-center items-center gap-x-4;
@@ -162,7 +195,7 @@ code {
 }
 .am-landing-container-button {
   @apply bg-white shadow-light hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
-  transition: ease-out 200ms;
+  transition: ease-out 400ms;
 }
 .am-landing-container img {
   @apply h-7 w-fit
@@ -177,6 +210,8 @@ code {
 }
 .am-action-form {
   @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-6;
+  animation: popupAnimation;
+  animation-duration: 500ms;
 }
 .am-action-form-header {
   @apply flex gap-3 justify-center items-center headline-small
@@ -346,7 +381,7 @@ code {
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
   @apply p-3 w-60 flex items-center gap-3 shadow-light bg-white hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue rounded-lg title-small text-neutral-9;
-  transition: ease-out 200ms;
+  transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
 
@@ -393,7 +428,7 @@ code {
 }
 .r-landing-categories-training-card {
   @apply flex items-center justify-center shadow-light hover:shadow-blue bg-white p-3 rounded-md gap-2 hover:bg-blue-0 focus:bg-blue-1 title-large;
-  transition: ease-out 200ms;
+  transition: ease-out 400ms;
 }
 .r-landing-categories-training-card img {
   @apply rounded-md h-10 w-10
@@ -433,7 +468,7 @@ code {
 }
 .r-individual-link {
   @apply shadow-light hover:shadow-blue bg-white rounded-md p-4 hover:bg-blue-0;
-  transition: ease-out 200ms;
+  transition: ease-out 400ms;
 }
 .r-individual-link-name {
   @apply title-medium text-blue-9 mb-2

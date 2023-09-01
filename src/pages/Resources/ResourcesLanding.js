@@ -21,7 +21,7 @@ const ResourcesLanding = () => {
       <Helmet>
         <title>Resources</title>
       </Helmet>
-      <div className="r-page">
+      <div className="r-page fade-in">
         <div className="r-landing-container">
           <div className="r-landing-title">Resources and Documentation</div>
           <ResourcesLandingSearch />
