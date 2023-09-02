@@ -48,7 +48,7 @@
   },
   {
     "category": "Customer Support",
-    "group": "Fishbowl",
+    "group": "Fishbowl / Printing",
     "icon": "fishbowl",
     "links": [
       {
@@ -75,14 +75,7 @@
         "name": "Supplies Request Form",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScg4WppGS5uoMKHZBmevrmhQxr4tYlcqxXINg4yZl3mBufBoQ/viewform",
         "description": "Request office supplies"
-      }
-    ]
-  },
-  {
-    "category": "Customer Support",
-    "group": "Printing",
-    "icon": "printer",
-    "links": [
+      },
       {
         "name": "Poster Pre-Order Printing Process",
         "url": "https://docs.google.com/document/d/1jvz_tmej80aKVT9X9zFTnzVWwaqg49L3dYzIp6Ffrm8/edit",
