@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../icons/left-nav/logo.svg";
+//import logo from "../icons/left-nav/logo.svg";
 // import home_inactive from "../icons/left-nav/home_inactive.svg"; // Hidden while homepage is disabled
 // import home_active from "../icons/left-nav/home_active.svg"; // Hidden while homepage is disabled
 import announcements_inactive from "../icons/left-nav/announcements_inactive.svg";
