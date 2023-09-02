@@ -4,8 +4,8 @@ import logo from "../icons/left-nav/logo.svg";
 // import home_active from "../icons/left-nav/home_active.svg"; // Hidden while homepage is disabled
 import announcements_inactive from "../icons/left-nav/announcements_inactive.svg";
 import announcements_active from "../icons/left-nav/announcements_active.svg";
-import asset_management_inactive from "../icons/left-nav/asset_management_inactive.svg";
-import asset_management_active from "../icons/left-nav/asset_management_active.svg";
+// import asset_management_inactive from "../icons/left-nav/asset_management_inactive.svg";
+// import asset_management_active from "../icons/left-nav/asset_management_active.svg";
 import resources_inactive from "../icons/left-nav/resources_inactive.svg";
 import resources_active from "../icons/left-nav/resources_active.svg";
 import slack_logo from "../icons/left-nav/slack_logo.png";
@@ -67,7 +67,7 @@ const LeftNav = () => {
             Announcements
           </div>
         </Link>
-        <Link
+        {/* <Link
           to="/asset-management"
           className={`link-container ${
             location.pathname.startsWith("/asset-management")
@@ -87,7 +87,7 @@ const LeftNav = () => {
           }`}>
             Asset Management
           </div>
-        </Link>
+        </Link> */}
         <Link
           to="/resources"
           className={`link-container ${
