@@ -2,8 +2,9 @@ import React from "react";
 import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import resourcesData from './ResourcesData.json';
+import resourcesData from '../../ResourcesData.json'
 import rightarrow from "../../icons/resources/rightarrow.svg";
+import ResourceLinks from "../../components/Resources/ResourceLinks";
 
 const ResourceCategoryBuilder = () => {
   const { category } = useParams();
@@ -46,14 +47,14 @@ const ResourceCategoryBuilder = () => {
       <Helmet>
         <title>Resources</title>
       </Helmet>
-      <div className="w-full flex flex-col p-6 items-center">
-          <div className="text-neutral-7 w-full max-w-3xl flex gap-1">
+      <div className="r-page fade-in">
+          <div className="r-categorybuilder-nav">
             <Link to="/resources" className="hover:text-blue-9">Resources</Link>
             <div>/</div>
             <Link to={`/resources/${category}`} className="hover:text-blue-9">{categoryName.category}</Link>
           </div>
-        <div className="max-w-3xl w-full mt-8">
-          <h1 className="headline-large mb-6 text-center">{categoryName.category}</h1>{" "}
+        <div className="r-landing-container">
+          <h1 className="r-categorybuilder-title">{categoryName.category}</h1>{" "}
           {/* Display the appropriate header */}
         </div>
         {sortedCategoryData.map((groupData, index) => (
@@ -69,23 +70,7 @@ const ResourceCategoryBuilder = () => {
                 <img src={rightarrow} alt="Right Arrow" />
               </Link>
             </div>
-
-            <ul className="flex flex-col gap-4">
-              {groupData.links.map((link, index) => (
-                <li key={index}>
-                  <a href={link.url} target="_blank" rel="noreferrer noopener">
-                    <div className="shadow-light bg-white p-4 rounded-md hover:bg-blue-0">
-                      <div className="title-medium text-blue-9 mb-2">
-                        {link.name}
-                      </div>
-                      <div className="body-medium text-neutral-9">
-                        {link.description}
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <ResourceLinks linkData={groupData.links} />
           </div>
         ))}
       </div>

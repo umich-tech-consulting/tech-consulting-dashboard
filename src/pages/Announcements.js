@@ -8,7 +8,7 @@ const Announcements = () => {
       <Helmet>
         <title>Announcements</title>
       </Helmet>
-      <div className="w-full flex flex-col h-screen p-6">
+      <div className="w-full flex flex-col h-screen p-6 fade-in">
         <div className="headline-large text-center">Announcements</div>
         <div className="flex justify-center h-full w-full rounded-xl overflow-y-auto mt-6">
           <iframe
