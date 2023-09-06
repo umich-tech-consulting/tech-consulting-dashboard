@@ -12,6 +12,7 @@ import slack_logo from "../icons/left-nav/slack_logo.png";
 import tdxlogo from "../icons/left-nav/tdxlogo.png";
 import gsxicon from "../icons/left-nav/gsxicon.png";
 import umichicon from "../icons/left-nav/umichicon.png";
+import umich_tcd_logo from "../icons/left-nav/umich_tcd_logo.svg";
 import google_slides from "../icons/left-nav/google_slides.png";
 
 const LeftNav = () => {
@@ -21,7 +22,8 @@ const LeftNav = () => {
     <div className="box-border pt-5 pl-2 pr-2 h-screen border-r bg-base-light border-neutral-3 w-[230px]">
       {/* THis is where the icon will link to */}
       <Link to='/announcements'>
-        <img className="h-10 w-10" src={logo} alt='Dashboard Logo' />
+        {/* <img className="h-10 w-10" src={logo} alt='Dashboard Logo' /> */}
+        <img className="h-10" src={umich_tcd_logo} alt='Dashboard Logo' />
       </Link>
       <div className="mt-6 w-50">
         {/* <Link
