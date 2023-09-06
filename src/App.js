@@ -11,6 +11,7 @@ import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
+import ScrollToTop from './components/ScrollTop';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />
         </Route>
       </Routes>
+      <ScrollToTop />
     </BrowserRouter>
   );
 }

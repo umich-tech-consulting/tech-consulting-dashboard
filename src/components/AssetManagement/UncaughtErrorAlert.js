@@ -8,7 +8,7 @@ const UncaughtErrorAlert = () => {
         <div>
           <div>An error occurred that can't be fixed from the dashboard.</div>
           <a
-            href="https://teamdynamix.umich.edu/"
+            href="https://teamdynamix.umich.edu/TDNext/Login.aspx"
             target="blank"
             rel="noreferrer noopener"
           >
