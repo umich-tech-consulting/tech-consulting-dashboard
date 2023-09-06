@@ -9,7 +9,7 @@ import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelF
 import CheckoutSubmitSuccess from "../../components/AssetManagement/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
-import spinner from "../../icons/asset-management/spinner.svg";
+// import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
   // Form data Start
