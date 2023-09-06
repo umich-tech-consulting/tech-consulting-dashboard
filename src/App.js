@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 import Home from './pages/Home';
@@ -15,7 +15,7 @@ import ScrollToTop from './components/ScrollTop';
 
 function App() {
   return (
-    <BrowserRouter basename='/webui'>
+    <HashRouter>
       <div>
         <Helmet>
           <title>Asset Management</title>
@@ -35,7 +35,7 @@ function App() {
         </Route>
       </Routes>
       <ScrollToTop />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
