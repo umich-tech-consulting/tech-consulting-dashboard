@@ -66,7 +66,6 @@ const AssetNumberFormField = ({
 
           >
             <option value="SAH">SAH</option>
-            <option value="TRL">TRL</option>
             <option value="SAHM">SAHM</option>
           </select>
           <input

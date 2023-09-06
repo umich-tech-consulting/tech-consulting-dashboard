@@ -213,14 +213,20 @@ code {
   animation: popupAnimation;
   animation-duration: 500ms;
 }
+.am-action-form-header-description {
+  @apply flex flex-col gap-2 pb-6
+}
 .am-action-form-header {
-  @apply flex gap-3 items-center title-large pb-6
+  @apply flex gap-2 items-center title-large
+}
+.am-action-form-description {
+  @apply text-neutral-7 body-medium
 }
 .am-action-form-header img {
   @apply h-5 w-fit
 }
 .am-action-component-main {
-  @apply flex flex-col gap-y-1;
+  @apply flex flex-col gap-y-2;
 }
 .am-action-component-item {
   @apply body-medium flex justify-between flex-col;
@@ -273,6 +279,47 @@ code {
 .am-action-submit-button-spinner {
   @apply w-full flex justify-center
 }
+/* Start submit button loading dots */
+.dot-container {
+  display: inline-block;
+  margin-bottom: 8px
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: jumpingAnimation 1.4s ease-in infinite;
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.4s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes jumpingAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* End submit button loading dots */
+
+
 .am-action-submit-button-spinner img, .am-action-submit-button-spinner svg {
   @apply w-5 h-5 animate-spin ml-2
 }
@@ -350,7 +397,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-0 text-red-10 p-3 rounded-md flex items-start gap-3
+  @apply body-medium bg-red-0 text-red-10 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5

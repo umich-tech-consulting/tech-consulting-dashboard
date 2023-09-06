@@ -142,7 +142,7 @@ const LeftNav = () => {
             <div className="body-small">Documentation</div>
           </a>
         </div>
-        <div className="mt-2 px-2 body-small text-neutral-7">Git Hash: {gitInfo.commit.shortHash}</div>
+        <a href="https://github.com/umich-tech-consulting/tech-consulting-dashboard" target="blank" rel="noopener noreferrer" className="mt-2 px-2 body-small text-neutral-7 hover:underline hover:text-neutral-9">Git Hash: {gitInfo.commit.shortHash}</a>
       </div>
     </div>
   );
