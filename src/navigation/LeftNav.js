@@ -12,6 +12,7 @@ import slack_logo from "../icons/left-nav/slack_logo.png";
 import tdxlogo from "../icons/left-nav/tdxlogo.png";
 import gsxicon from "../icons/left-nav/gsxicon.png";
 import umichicon from "../icons/left-nav/umichicon.png";
+import google_slides from "../icons/left-nav/google_slides.png";
 
 const LeftNav = () => {
   const location = useLocation();
@@ -109,6 +110,13 @@ const LeftNav = () => {
         </Link>
       </div>
       <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9">
+        <div className="bg-blue-9 p-3 rounded-md mb-3">
+          <div className="title-small text-neutral-1 mb-4">Password Reset</div>
+          <a href="https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700" target="blank" rel="noopener noreferrer" className="flex items-top gap-2 hover:bg-blue-7 w-fit py-1 px-2 rounded-md" title="Clock in and out of work using the Time Reporting tab">
+              <img className="mt-1 w-4 h-4" src={google_slides} alt='Umich Icon' />
+              <div className="text-neutral-1">In-person password reset training</div>
+            </a>
+        </div>
         <div className="bg-white p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
