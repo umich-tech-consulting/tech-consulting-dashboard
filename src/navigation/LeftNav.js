@@ -13,7 +13,9 @@ import tdxlogo from "../icons/left-nav/tdxlogo.png";
 import gsxicon from "../icons/left-nav/gsxicon.png";
 import umichicon from "../icons/left-nav/umichicon.png";
 import umich_tcd_logo from "../icons/left-nav/umich_tcd_logo.svg";
+import GitInfo from 'react-git-info/macro'
 
+const gitInfo = GitInfo();
 const LeftNav = () => {
   const location = useLocation();
 
@@ -140,7 +142,7 @@ const LeftNav = () => {
             <div className="body-small">Documentation</div>
           </a>
         </div>
-        <div className="mt-2 px-2 body-small text-neutral-7">v.0.0.2(&alpha;)</div>
+        <div className="mt-2 px-2 body-small text-neutral-7">Git Hash: {gitInfo.commit.shortHash}</div>
       </div>
     </div>
   );
