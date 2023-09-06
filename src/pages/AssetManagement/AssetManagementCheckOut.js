@@ -189,7 +189,7 @@ const AssetManagementCheckOut = () => {
     } catch (error) {
       increaseErrorCount();
       console.log(errorCount);
-      setSubmitButtonValue("Server Offline");
+      setSubmitButtonValue("Offline");
       uncaughtErrorTrue();
     }
   };

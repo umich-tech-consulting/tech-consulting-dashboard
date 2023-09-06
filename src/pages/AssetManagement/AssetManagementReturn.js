@@ -136,7 +136,7 @@ const AssetManagementReturn = () => {
     } catch (error) {
       increaseErrorCount();
       console.log(errorCount);
-      setSubmitButtonValue("Server Offline");
+      setSubmitButtonValue("Offline");
       uncaughtErrorTrue();
     }
   };
@@ -166,9 +166,12 @@ const AssetManagementReturn = () => {
             />
           ) : (
             <div className="am-action-form">
-              <div className="am-action-form-header">
-                <div>Laptop Return</div>
-                <img src={laptop_return} alt="Laptop Return Icon" />
+              <div className="am-action-form-header-description">
+                <div className="am-action-form-header">
+                  <div>Laptop Return</div>
+                  <img src={laptop_return} alt="Laptop Return Icon" />
+                </div>
+                <div className="am-action-form-description">Return a customer's Sites at Home Windows or Mac device</div>
               </div>
               <div className="am-action-component-main">
                 <AssetNumberFormField

@@ -12,7 +12,7 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
 
   return (
     <>
-      <div className="am-action-success-container">
+      <div className="am-action-success-container fade-in">
         <div className="am-action-success-header">
           <img src={checkmark} alt="Checkmark Icon" />
           <div className="am-action-success-header">Checkout Success</div>
