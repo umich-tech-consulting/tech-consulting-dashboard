@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../icons/left-nav/logo.svg";
+// import logo from "../icons/left-nav/logo.svg";
 // import home_inactive from "../icons/left-nav/home_inactive.svg"; // Hidden while homepage is disabled
 // import home_active from "../icons/left-nav/home_active.svg"; // Hidden while homepage is disabled
 import announcements_inactive from "../icons/left-nav/announcements_inactive.svg";
@@ -114,10 +114,22 @@ const LeftNav = () => {
       <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9">
         <div className="bg-blue-9 p-3 rounded-md mb-3">
           <div className="title-small text-neutral-1 mb-4">Password Reset</div>
-          <a href="https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700" target="blank" rel="noopener noreferrer" className="flex items-top gap-2 hover:bg-blue-7 w-fit py-1 px-2 rounded-md" title="Clock in and out of work using the Time Reporting tab">
-              <img className="mt-1 w-4 h-4" src={google_slides} alt='Umich Icon' />
-              <div className="text-neutral-1">In-person password reset training</div>
+          <a href="https://docs.google.com/presentation/d/1EtJ8yeuP5Aauassfl5urtBQLZLXla27xtrqyKBqfXrM/edit?usp=sharing" target="blank" rel="noopener noreferrer" className="flex items-top gap-2 hover:bg-blue-7 w-fit py-1 px-2 rounded-md" title="Google Slides outlining how to reset a password in person">
+            <img className="mt-1 w-4 h-4" src={google_slides} alt='Umich Icon' />
+            <div className="text-neutral-1">In-person password reset training</div>
+          </a>
+          <hr className="pb-[2px] mt-[2px] border-blue-8"></hr>
+          <div className="text-white body-small font-medium mt-2 mb-2">If cusomters cannot connect to Wifi after password reset:</div>
+          <div className="text-neutral-2 body-small mt-2">- Have them forget the network and reconnect</div>
+          <div className="flex">
+            <div className="text-neutral-2 body-small mt-2 mb-1">- Or use</div>
+            <a href="https://msetup.its.umich.edu/" target="blank" rel="noopener noreferrer" className="flex items-top gap-1 hover:bg-blue-7 w-fit py-1 px-1 m-1 mb-0 rounded-md items-center" title="Information about connecting to Mwireless">
+              <img className="w-3 h-3" src={umichicon} alt='Umich Icon' />
+              <div className="text-neutral-1 body-small">Msetup</div>
             </a>
+
+          </div>
+          {/* <div className="text-white body-small font-medium mt-2 mb-1">If customer has trouble with Wifi after password reset</div> */}
         </div>
         <div className="bg-white p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>

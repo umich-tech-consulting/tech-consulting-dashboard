@@ -8,7 +8,7 @@ import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelF
 import ReturnSubmitSuccess from "../../components/AssetManagement/Return/ReturnSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
-import spinner from "../../icons/asset-management/spinner.svg";
+// import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementReturn = () => {
  // Form data Start
