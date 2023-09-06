@@ -209,12 +209,12 @@ code {
   @apply w-full h-screen p-6 flex flex-col justify-center items-center;
 }
 .am-action-form {
-  @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-6;
+  @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-0;
   animation: popupAnimation;
   animation-duration: 500ms;
 }
 .am-action-form-header {
-  @apply flex gap-3 justify-center items-center headline-small
+  @apply flex gap-3 items-center title-large pb-6
 }
 .am-action-form-header img {
   @apply h-5 w-fit
@@ -265,10 +265,10 @@ code {
   @apply bg-white w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9
 }
 .am-submit-cancel-container {
-  @apply w-full flex justify-between
+  @apply w-full flex gap-3 justify-end
 }
 .am-submit-close-button {
-  @apply p-3 w-[130px] label-large text-center border-none rounded-full
+  @apply w-[80px] h-[32px] label-large text-center border-none rounded-full flex justify-center items-center
 }
 .am-action-submit-button-spinner {
   @apply w-full flex justify-center
