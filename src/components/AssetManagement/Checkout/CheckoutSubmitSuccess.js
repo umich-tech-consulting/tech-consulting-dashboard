@@ -7,6 +7,9 @@ import ticket from "../../../icons/asset-management/ticket.svg";
 import calendar from "../../../icons/asset-management/calendar.svg";
 import comments_icon from "../../../icons/asset-management/comments_icon.svg";
 
+import lottie_checkmark from "../../../lottie_checkmark.json"
+import LottieAnimation from "../../../LottieAnimation";
+
 const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
 
 
@@ -14,7 +17,8 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
     <>
       <div className="am-action-success-container fade-in">
         <div className="am-action-success-header">
-          <img src={checkmark} alt="Checkmark Icon" />
+          {/* <img src={checkmark} alt="Checkmark Icon" /> */}
+          <LottieAnimation animationData={lottie_checkmark} />
           <div className="am-action-success-header">Checkout Success</div>
         </div>
         <div className="am-action-success-container-main">
