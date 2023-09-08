@@ -18,7 +18,7 @@ const LottieAnimation = ({animationData}) => {
       }
     }, [animationData]);
     return (
-      <div ref={animationContainerRef} style={{ width: '78px', height: '78px' }}>
+      <div ref={animationContainerRef} style={{ width: '60px', height: '60px' }}>
         {/* The animation will be rendered here */}
       </div>
     );
