@@ -1,4 +1,3 @@
-import link from "../../../icons/asset-management/link.svg";
 import { Link } from "react-router-dom";
 
 import asset_icon from "../../../icons/asset-management/success-icons/asset_icon.svg"
