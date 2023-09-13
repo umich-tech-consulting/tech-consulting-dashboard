@@ -245,6 +245,7 @@ const AssetManagementCheckOut = () => {
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
                 inputRef={assetInputRef}
+                isLoading={isLoading}
               />
               <CommentFormField setComment={setComment} comment={comment} />
             </div>
