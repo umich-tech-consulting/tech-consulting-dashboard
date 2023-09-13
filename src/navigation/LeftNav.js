@@ -15,6 +15,7 @@ import umichicon from "../icons/left-nav/umichicon.png";
 import umich_tcd_logo from "../icons/left-nav/umich_tcd_logo.svg";
 import GitInfo from 'react-git-info/macro'
 import google_slides from "../icons/left-nav/google_slides.png";
+import google_forms from "../icons/left-nav/google_forms.png";
 
 const gitInfo = GitInfo();
 const LeftNav = () => {
@@ -117,12 +118,16 @@ const LeftNav = () => {
         <div className="bg-blue-9 p-3 rounded-md mb-3">
           <div className="title-small text-neutral-1 mb-4">Password Reset</div>
           <a href="https://docs.google.com/presentation/d/1EtJ8yeuP5Aauassfl5urtBQLZLXla27xtrqyKBqfXrM/edit?usp=sharing" target="blank" rel="noopener noreferrer" className="flex items-top gap-2 hover:bg-blue-7 w-fit py-1 px-2 rounded-md" title="Google Slides outlining how to reset a password in person">
-            <img className="mt-1 w-4 h-4" src={google_slides} alt='Umich Icon' />
+            <img className="mt-1 w-4 h-4" src={google_slides} alt='Google Slides' />
             <div className="text-neutral-1">In-person password reset training</div>
           </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSetry8noWpu3c0kF_JSpy3irZMYh9nhCeZUJagx329WMVxWnw/viewform" target="blank" rel="noopener noreferrer" className="flex items-top gap-2 hover:bg-blue-7 w-fit py-1 px-2 rounded-md" title="Please fill out this form when you help someone reset a password or work with someone on an issue following a self-service password reset">
+            <img className="mt-1 w-4 h-4" src={google_forms} alt='Google Forms' />
+            <div className="text-neutral-1">Password Project Tracking</div>
+          </a>
           <hr className="pb-[2px] mt-[2px] border-blue-8"></hr>
-          <div className="text-white body-small font-medium mt-2 mb-2">If cusomters cannot connect to Wifi after password reset:</div>
-          <div className="text-neutral-2 body-small mt-2">- Have them forget the network and reconnect</div>
+          <div className="text-white body-small font-medium mt-2 mb-2">If WiFi issues occur after reset:</div>
+          <div className="text-neutral-2 body-small mt-2">- Forget the network and reconnect</div>
           <div className="flex">
             <div className="text-neutral-2 body-small mt-2 mb-1">- Or use</div>
             <a href="https://msetup.its.umich.edu/" target="blank" rel="noopener noreferrer" className="flex items-top gap-1 hover:bg-blue-7 w-fit py-1 px-1 m-1 mb-0 rounded-md items-center" title="Information about connecting to Mwireless">
