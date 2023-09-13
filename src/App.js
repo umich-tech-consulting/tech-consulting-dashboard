@@ -23,7 +23,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Announcements />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
           <Route path="asset-management/return" element={<AssetManagementReturn />} />
