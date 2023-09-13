@@ -9,7 +9,8 @@ const UniqnameFormField = ({
   uniqnameErrorMessage,
   isSubmitDisabled,
   handleSubmit,
-  inputRef
+  inputRef,
+  isLoading
 }) => {
   const handleUniqnameChange = (e) => {
     const input = e.target.value;
@@ -20,7 +21,7 @@ const UniqnameFormField = ({
   };
 
   const enterToSubmit = (e) => {
-    if (e.key === "Enter" && !isSubmitDisabled) {
+    if (e.key === "Enter" && !isSubmitDisabled && !isLoading) {
       handleSubmit();
     }
   };

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const SubmitOrCancelForm = ({ submitButtonValue, isSubmitDisabled, handleSubmit }) => {
+const SubmitOrCancelForm = ({ submitButtonValue, isSubmitDisabled, handleSubmit, isLoading }) => {
 
   return (
     <>
@@ -11,7 +11,7 @@ const SubmitOrCancelForm = ({ submitButtonValue, isSubmitDisabled, handleSubmit 
           Cancel
         </Link>
         <button
-          className={`am-submit-close-button ${
+          className={`am-submit-close-button ${isLoading && "cursor-not-allowed"}  ${
             isSubmitDisabled
               ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
               : "bg-blue-9 text-white hover:bg-blue-8"

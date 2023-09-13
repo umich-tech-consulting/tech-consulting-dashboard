@@ -13,7 +13,8 @@ const AssetNumberFormField = ({
   assetErrorMessage,
   isSubmitDisabled,
   handleSubmit,
-  inputRef
+  inputRef,
+  isLoading
 }) => {
   const handleAssetIdChange = (e) => {
     const input = e.target.value;
@@ -33,7 +34,7 @@ const AssetNumberFormField = ({
   };
 
   const enterToSubmit = (e) => {
-    if (e.key === "Enter" && !isSubmitDisabled) {
+    if (e.key === "Enter" && !isSubmitDisabled && !isLoading) {
       handleSubmit();
     }
   };

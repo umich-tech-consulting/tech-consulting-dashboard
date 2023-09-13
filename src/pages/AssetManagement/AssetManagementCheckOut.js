@@ -27,6 +27,7 @@ const AssetManagementCheckOut = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
 
   const uniqnameInputRef = useRef(null);
@@ -53,6 +54,7 @@ const AssetManagementCheckOut = () => {
   };
 
   const tdxCheckoutLoan = async () => {
+    setIsLoading(true);
     setUniqnameError(null);
     setUniqnameErrorMessage(null);
     setAssetError(null);
@@ -82,6 +84,7 @@ const AssetManagementCheckOut = () => {
         }),
       });
       if (res.ok) {
+        setIsLoading(false);
         const data = await res.json();
         localStorage.setItem('tdxResponse', JSON.stringify(data));
         navigate('/asset-management/checkout/success');
@@ -89,6 +92,7 @@ const AssetManagementCheckOut = () => {
         setAssetError(null);
       }
       if (!res.ok) {
+        setIsLoading(false);
         increaseErrorCount();
         console.log(errorCount);
         const data = await res.json();
@@ -184,6 +188,7 @@ const AssetManagementCheckOut = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
+      setIsLoading(false);
       increaseErrorCount();
       console.log(errorCount);
       setSubmitButtonValue("Offline");
@@ -227,6 +232,7 @@ const AssetManagementCheckOut = () => {
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
                 inputRef={uniqnameInputRef}
+                isLoading={isLoading}
               />
               <AssetNumberFormField
                 setAssetId={setAssetId}
@@ -243,6 +249,7 @@ const AssetManagementCheckOut = () => {
               <CommentFormField setComment={setComment} comment={comment} />
             </div>
             <SubmitOrCancelForm
+              isLoading={isLoading}
               submitButtonValue={submitButtonValue}
               isSubmitDisabled={isSubmitDisabled}
               handleSubmit={handleSubmit}

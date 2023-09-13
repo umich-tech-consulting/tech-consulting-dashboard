@@ -24,6 +24,7 @@ const AssetManagementReturn = () => {
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
 
   const assetInputRef = useRef(null);
@@ -49,6 +50,7 @@ const AssetManagementReturn = () => {
   };
 
   const tdxReturnLoan = async () => {
+    setIsLoading(true);
     setAssetError(null);
     setAssetErrorMessage(null);
     setSubmitButtonValue(
@@ -75,14 +77,15 @@ const AssetManagementReturn = () => {
         }),
       });
       if (res.ok) {
+        setIsLoading(false);
         const data = await res.json();
         localStorage.setItem('tdxResponse', JSON.stringify(data));
         navigate('/asset-management/return/success');
         setAssetError(null);
       }
       if (!res.ok) {
+        setIsLoading(false);
         increaseErrorCount();
-        console.log(errorCount);
         const data = await res.json();
         switch (data.error_number) {
           case 2: // Asset does not exist in TDX
@@ -133,6 +136,7 @@ const AssetManagementReturn = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
+      setIsLoading(false);
       increaseErrorCount();
       console.log(errorCount);
       setSubmitButtonValue("Offline");
@@ -178,10 +182,12 @@ const AssetManagementReturn = () => {
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
                 inputRef={assetInputRef}
+                isLoading={isLoading}
               />
               <CommentFormField setComment={setComment} comment={comment} />
             </div>
             <SubmitOrCancelForm
+              isLoading={isLoading}
               submitButtonValue={submitButtonValue}
               isSubmitDisabled={isSubmitDisabled}
               handleSubmit={handleSubmit}
