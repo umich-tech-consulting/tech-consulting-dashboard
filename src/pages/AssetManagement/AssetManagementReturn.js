@@ -5,9 +5,10 @@ import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
-import ReturnSubmitSuccess from "../../components/AssetManagement/Return/ReturnSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
+import { useNavigate } from "react-router";
+
 // import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementReturn = () => {
@@ -19,16 +20,14 @@ const AssetManagementReturn = () => {
   // Form Data End
 
   // Api Data Start
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
-  const [tdxResponse, setTdxResponse] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
-  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   const assetInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (assetInputRef.current) {
@@ -77,8 +76,8 @@ const AssetManagementReturn = () => {
       });
       if (res.ok) {
         const data = await res.json();
-        setIsSubmitted(true);
-        setTdxResponse(data);
+        localStorage.setItem('tdxResponse', JSON.stringify(data));
+        navigate('/asset-management/return/success');
         setAssetError(null);
       }
       if (!res.ok) {
@@ -159,43 +158,36 @@ const AssetManagementReturn = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          {isSubmitted ? ( // Check if form is submitted
-            <ReturnSubmitSuccess
-              tdxResponse={tdxResponse}
-              tdxBaseUrl={tdxBaseUrl}
-            />
-          ) : (
-            <div className="am-action-form">
-              <div className="am-action-form-header-description">
-                <div className="am-action-form-header">
-                  <div>Laptop Return</div>
-                  <img src={laptop_return} alt="Laptop Return Icon" />
-                </div>
-                <div className="am-action-form-description">Return a customer's Sites at Home Windows or Mac device</div>
+          <div className="am-action-form">
+            <div className="am-action-form-header-description">
+              <div className="am-action-form-header">
+                <div>Laptop Return</div>
+                <img src={laptop_return} alt="Laptop Return Icon" />
               </div>
-              <div className="am-action-component-main">
-                <AssetNumberFormField
-                  setAssetId={setAssetId}
-                  assetId={assetId}
-                  setAssetType={setAssetType}
-                  assetType={assetType}
-                  assetError={assetError}
-                  setAssetError={setAssetError}
-                  assetErrorMessage={assetErrorMessage}
-                  isSubmitDisabled={isSubmitDisabled}
-                  handleSubmit={handleSubmit}
-                  inputRef={assetInputRef}
-                />
-                <CommentFormField setComment={setComment} comment={comment} />
-              </div>
-              <SubmitOrCancelForm
-                submitButtonValue={submitButtonValue}
+              <div className="am-action-form-description">Return a customer's Sites at Home Windows or Mac device</div>
+            </div>
+            <div className="am-action-component-main">
+              <AssetNumberFormField
+                setAssetId={setAssetId}
+                assetId={assetId}
+                setAssetType={setAssetType}
+                assetType={assetType}
+                assetError={assetError}
+                setAssetError={setAssetError}
+                assetErrorMessage={assetErrorMessage}
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
+                inputRef={assetInputRef}
               />
-              {uncaughtError && <UncaughtErrorAlert />}
+              <CommentFormField setComment={setComment} comment={comment} />
             </div>
-          )}
+            <SubmitOrCancelForm
+              submitButtonValue={submitButtonValue}
+              isSubmitDisabled={isSubmitDisabled}
+              handleSubmit={handleSubmit}
+            />
+            {uncaughtError && <UncaughtErrorAlert />}
+          </div>
         </div>
       </div>
     </>

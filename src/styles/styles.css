@@ -181,7 +181,15 @@ code {
   animation: popupAnimation;
   animation-duration: 500ms;
 }
-
+/* Announcements Styles Start */
+.announcement-bg {
+  background-image: url("../icons/announcements/campus_outline_bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Announcements Styles End */
 
 /* ----------- Animation Styles End----------- */
 
@@ -347,13 +355,16 @@ code {
   @apply flex flex-col gap-2 text-neutral-8
 }
 .am-action-success-summary {
-  @apply w-[500px] bg-neutral-1 text-neutral-9 p-9
+  @apply w-[500px] bg-neutral-1 text-neutral-9 p-9 border-l border-l-neutral-3 overflow-auto
 }
 .am-action-success-summary-info-container {
-  @apply flex flex-col gap-9
+  @apply flex flex-col gap-7 pb-20
 }
 .am-action-success-summary-info {
-  @apply flex flex-col gap-1
+  @apply flex flex-col gap-1 p-2
+}
+.am-action-success-summary-link {
+  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-0 rounded-md
 }
 .am-action-success-summary-info-name {
   @apply text-[14px] font-light text-neutral-8;

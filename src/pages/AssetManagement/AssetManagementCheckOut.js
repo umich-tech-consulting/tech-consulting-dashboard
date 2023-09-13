@@ -6,9 +6,9 @@ import UniqnameFormField from "../../components/AssetManagement/UniqnameFormFiel
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
-import CheckoutSubmitSuccess from "../../components/AssetManagement/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
+import { useNavigate } from "react-router";
 // import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
@@ -21,20 +21,17 @@ const AssetManagementCheckOut = () => {
   // Form Data End
 
   // Api Data Start
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
-  const [tdxResponse, setTdxResponse] = useState(null);
   const [uniqnameError, setUniqnameError] = useState(null);
   const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
-  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
- //Api Data End
 
   const uniqnameInputRef = useRef(null);
   const assetInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (uniqnameInputRef.current) {
@@ -86,8 +83,8 @@ const AssetManagementCheckOut = () => {
       });
       if (res.ok) {
         const data = await res.json();
-        setIsSubmitted(true);
-        setTdxResponse(data);
+        localStorage.setItem('tdxResponse', JSON.stringify(data));
+        navigate('/asset-management/checkout/success');
         setUniqnameError(null);
         setAssetError(null);
       }
@@ -212,53 +209,46 @@ const AssetManagementCheckOut = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          {isSubmitted ? ( // Check if form is submitted
-            <CheckoutSubmitSuccess
-              tdxResponse={tdxResponse}
-              tdxBaseUrl={tdxBaseUrl}
-            />
-          ) : (
-            <div className="am-action-form">
-              <div className="am-action-form-header-description">
-                <div className="am-action-form-header">
-                  <div>Laptop Checkout</div>
-                  <img src={laptop_check_out} alt="Laptop Check Out Icon" />
-                </div>
-                <div className="am-action-form-description">Loan a Sites at Home Windows or Mac device to a customer after approval</div>
+          <div className="am-action-form">
+            <div className="am-action-form-header-description">
+              <div className="am-action-form-header">
+                <div>Laptop Checkout</div>
+                <img src={laptop_check_out} alt="Laptop Check Out Icon" />
               </div>
-              <div className="am-action-component-main">
-                <UniqnameFormField
-                  setUniqname={setUniqname}
-                  uniqname={uniqname}
-                  uniqnameError={uniqnameError}
-                  setUniqnameError={setUniqnameError}
-                  uniqnameErrorMessage={uniqnameErrorMessage}
-                  isSubmitDisabled={isSubmitDisabled}
-                  handleSubmit={handleSubmit}
-                  inputRef={uniqnameInputRef}
-                />
-                <AssetNumberFormField
-                  setAssetId={setAssetId}
-                  assetId={assetId}
-                  setAssetType={setAssetType}
-                  assetType={assetType}
-                  assetError={assetError}
-                  setAssetError={setAssetError}
-                  assetErrorMessage={assetErrorMessage}
-                  isSubmitDisabled={isSubmitDisabled}
-                  handleSubmit={handleSubmit}
-                  inputRef={assetInputRef}
-                />
-                <CommentFormField setComment={setComment} comment={comment} />
-              </div>
-              <SubmitOrCancelForm
-                submitButtonValue={submitButtonValue}
+              <div className="am-action-form-description">Loan a Sites at Home Windows or Mac device to a customer after approval</div>
+            </div>
+            <div className="am-action-component-main">
+              <UniqnameFormField
+                setUniqname={setUniqname}
+                uniqname={uniqname}
+                uniqnameError={uniqnameError}
+                setUniqnameError={setUniqnameError}
+                uniqnameErrorMessage={uniqnameErrorMessage}
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
+                inputRef={uniqnameInputRef}
               />
-              {uncaughtError && <UncaughtErrorAlert />}
+              <AssetNumberFormField
+                setAssetId={setAssetId}
+                assetId={assetId}
+                setAssetType={setAssetType}
+                assetType={assetType}
+                assetError={assetError}
+                setAssetError={setAssetError}
+                assetErrorMessage={assetErrorMessage}
+                isSubmitDisabled={isSubmitDisabled}
+                handleSubmit={handleSubmit}
+                inputRef={assetInputRef}
+              />
+              <CommentFormField setComment={setComment} comment={comment} />
             </div>
-          )}
+            <SubmitOrCancelForm
+              submitButtonValue={submitButtonValue}
+              isSubmitDisabled={isSubmitDisabled}
+              handleSubmit={handleSubmit}
+            />
+            {uncaughtError && <UncaughtErrorAlert />}
+          </div>
         </div>
       </div>
     </>

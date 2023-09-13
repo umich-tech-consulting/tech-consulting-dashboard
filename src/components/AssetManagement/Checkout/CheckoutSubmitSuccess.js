@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import dashboard_settings from "../../../config.json"
 
 import asset_icon from "../../../icons/asset-management/success-icons/asset_icon.svg"
 import calendar_icon from "../../../icons/asset-management/success-icons/calendar_icon.svg"
@@ -9,8 +10,10 @@ import comment_icon from "../../../icons/asset-management/success-icons/comment_
 import lottie_checkmark from "../../../lottie_checkmark.json"
 import LottieAnimation from "../../../LottieAnimation";
 
-const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
 
+const CheckoutSubmitSuccess = () => {
+  const tdxResponseFromStorage = JSON.parse(localStorage.getItem('tdxResponse'));
+  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   return (
     <>
@@ -55,10 +58,10 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">Tell the Customer</div>
                 <div className="am-action-success-card-bullet-container">
-                  <div>&#8226; Loan lasts until {tdxResponse.loan.date}</div>
+                  <div>&#8226; Loan lasts until {tdxResponseFromStorage.loan.date}</div>
                   <div>&#8226; It is a bundle: comes with laptop, charger and case</div>
                   <div>&#8226; Make sure to return everything when you come back, or you will be charged for what is missing</div>
-                  <div>&#8226; Use it like your own personal device, you have adimn settings</div>
+                  <div>&#8226; Use it like your own personal device, you have admin settings</div>
                   <div>&#8226; If you have any issues with the computer, you can bring it in and we can troubleshoot</div>
                   <div>&#8226; The laptop is insured, if it gets damaged, bring it in and we can replace it</div>
                   <div>&#8226; If you put sensitive files on the laptop, make sure you back them up before returning the device because everything is going to be wiped once the laptop is returned</div>
@@ -81,40 +84,43 @@ const CheckoutSubmitSuccess = ({tdxResponse, tdxBaseUrl}) => {
           <div className="am-action-success-summary">
             <div className="title-large mb-12">Summary</div>
             <div className="am-action-success-summary-info-container">
-              <div className="am-action-success-summary-info">
+              <a href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponseFromStorage.asset.id}`} target="_blank"
+                rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Laptop</div>
                 <div className="am-action-success-summary-info-data">
                   <img src={asset_icon} alt="Asset Icon" />
-                  <div>{tdxResponse.asset.tag}</div>
+                  <div>{tdxResponseFromStorage.asset.tag}</div>
                 </div>
-              </div>
+              </a>
               <div className="am-action-success-summary-info">
                 <div className="am-action-success-summary-info-name">Loan Date</div>
                 <div className="am-action-success-summary-info-data">
                   <img src={calendar_icon} alt="Asset Icon" />
-                  <div>{tdxResponse.loan.date}</div>
+                  <div>{tdxResponseFromStorage.loan.date}</div>
                 </div>
               </div>
-              <div className="am-action-success-summary-info">
+              <a href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponseFromStorage.loan.owner_uid}`}
+                target="_blank"
+                rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Customer</div>
                 <div className="am-action-success-summary-info-data">
                   <img src={user_icon} alt="Asset Icon" />
-                  <div>{tdxResponse.loan.uniqname}</div>
+                  <div>{tdxResponseFromStorage.loan.uniqname}</div>
                 </div>
-              </div>
-              <div className="am-action-success-summary-info">
+              </a>
+              <a href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponseFromStorage.ticket.id}`} target="_blank" rel="noopener noreferrer" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Request Ticket</div>
                 <div className="am-action-success-summary-info-data">
                   <img src={ticket_icon} alt="Asset Icon" />
-                  <div>TDX {tdxResponse.ticket.id}</div>
+                  <div>TDX {tdxResponseFromStorage.ticket.id}</div>
                 </div>
-              </div>
-              {tdxResponse.asset.comment &&
+              </a>
+              {tdxResponseFromStorage.asset.comment &&
                 <div className="am-action-success-summary-info">
                   <div className="am-action-success-summary-info-name">Comments</div>
                   <div className="am-action-success-summary-info-data-comment">
                     <img src={comment_icon} alt="Asset Icon" />
-                    <div>{tdxResponse.asset.comment}</div>
+                    <div>{tdxResponseFromStorage.asset.comment}</div>
                   </div>
                 </div>
               }

@@ -3,10 +3,14 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 import Home from './pages/Home';
+// Asset Management Start
 import AssetManagementLanding from './pages/AssetManagement/AssetManagementLanding';
 import AssetManagementCheckOut from './pages/AssetManagement/AssetManagementCheckOut';
+import CheckoutSubmitSuccess from './components/AssetManagement/Checkout/CheckoutSubmitSuccess';
 import AssetManagementReturn from './pages/AssetManagement/AssetManagementReturn';
+import ReturnSubmitSuccess from './components/AssetManagement/Return/ReturnSubmitSuccess';
 import AssetManagementSwap from './pages/AssetManagement/AssetManagementSwap';
+// Asset Management End
 import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
@@ -26,7 +30,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
+          <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />
           <Route path="asset-management/return" element={<AssetManagementReturn />} />
+          <Route path="asset-management/return/success" element={<ReturnSubmitSuccess />} />
           <Route path="asset-management/swap" element={<AssetManagementSwap />} />
           <Route path="announcements" element={<Announcements />} />
           <Route path="resources/" element={<ResourcesLanding />} />
