@@ -119,7 +119,7 @@ const LeftNav = () => {
             <div className="text-neutral-1">In-person password reset training</div>
           </a>
           <hr className="pb-[2px] mt-[2px] border-blue-8"></hr>
-          <div className="text-white body-small font-medium mt-2 mb-2">If customers  cannot connect to Wifi after password reset:</div>
+          <div className="text-white body-small font-medium mt-2 mb-2">If customers cannot connect to Wifi after password reset:</div>
           <div className="text-neutral-2 body-small mt-2">- Have them forget the network and reconnect</div>
           <div className="flex">
             <div className="text-neutral-2 body-small mt-2 mb-1">- Or use</div>
