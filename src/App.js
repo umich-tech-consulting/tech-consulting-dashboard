@@ -12,13 +12,14 @@ import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
 import ScrollToTop from './components/ScrollTop';
+import { FormattedMessage, IntlProvider, injectIntl } from 'react-intl';
 
 function App() {
   return (
     <HashRouter>
       <div>
         <Helmet>
-          <title>Asset Management</title>
+          <title><FormattedMessage id="Page Title"/></title>
         </Helmet>
       </div>
       <Routes>

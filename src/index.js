@@ -4,12 +4,16 @@ import './styles/normalize.css';
 import './styles/styles.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { IntlProvider } from 'react-intl';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let language = navigator.language || 'en';
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <IntlProvider locale={language}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </IntlProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
