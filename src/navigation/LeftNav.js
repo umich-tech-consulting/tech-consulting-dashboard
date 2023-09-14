@@ -13,6 +13,7 @@ import gsxicon from "../icons/left-nav/gsxicon.png";
 import umichicon from "../icons/left-nav/umichicon.png";
 import GitInfo from 'react-git-info/macro'
 import google_slides from "../icons/left-nav/google_slides.png";
+import google_forms from "../icons/left-nav/google_forms.png";
 
 const gitInfo = GitInfo();
 const LeftNav = () => {
