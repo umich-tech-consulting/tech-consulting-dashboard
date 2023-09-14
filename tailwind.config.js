@@ -45,6 +45,18 @@ module.exports = {
         9: '#C30014',
         10: '#A30011'
       },
+      'yellow': {
+        1: '#FF6F00',
+        2: '#FF9000',
+        3: '#FFA200',
+        4: '#FFB600',
+        5: '#FFC400',
+        6: '#FFCD05',
+        7: '#FFD844',
+        8: '#FFE27D',
+        9: '#FFEDB0',
+        10: '#FFF9E0'
+      },
       'base': {
         light: '#F6F8FC'
       }
@@ -65,6 +77,8 @@ module.exports = {
       boxShadow: {
         'light': '0px 0px 4px 0px #E0E0E0',
         'blue': '0px 0px 4px 0px #48C4FF',
+        'dark': '0px 0px 4px 0px #424242',
+        'yellow': '0px 0px 4px 0px #FFCD05',
       },
     },
   },
