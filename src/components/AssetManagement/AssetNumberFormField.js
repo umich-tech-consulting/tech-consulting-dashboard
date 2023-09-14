@@ -1,4 +1,5 @@
 import error_alert from "../../icons/asset-management/error_alert.svg";
+import { Asseticon } from "./AssetNumberFormFieldSvgs";
 import asset_icon from "../../icons/asset-management/asset_icon.svg"
 
 import { useEffect } from "react";
@@ -49,7 +50,7 @@ const AssetNumberFormField = ({
     <>
       <div className="am-action-component-item">
         <div className="am-action-component-item-header">
-          <img src={asset_icon} alt="Uniqname Icon" />
+          <Asseticon />
           <label htmlFor="asset">Asset Number</label>
         </div>
         <div className="am-laptop-item">

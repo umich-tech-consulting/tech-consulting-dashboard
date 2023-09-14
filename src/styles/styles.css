@@ -214,9 +214,6 @@ code {
   @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
   transition: ease-out 400ms;
 }
-.am-landing-container-img {
-  @apply h-7 w-fit
-}
 /* Default Management Component End */
 /* Asset Management Action Component Start */
 .am-action-main {
@@ -478,7 +475,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-0 text-red-10 p-3 rounded-md flex items-start gap-3 mt-6
+  @apply body-medium bg-red-0 dark:bg-red-10 text-red-10 dark:text-red-1 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5

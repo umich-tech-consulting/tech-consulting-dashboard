@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { LaptopReturn, LaptopCheckOut } from "../../components/AssetManagement/AssetManagementLandingSvgs";
+import { LaptopReturn, LaptopCheckOut } from "../../icons/asset-management/AssetManagementLandingSvgs";
 // import laptop_swap from "../../icons/asset-management/laptop_swap.svg"
 // import laptop_lookup from "../../icons/asset-management/laptop_lookup.svg"
 // import laptop_warranty from "../../icons/asset-management/laptop_warranty.svg"

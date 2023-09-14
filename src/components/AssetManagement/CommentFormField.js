@@ -1,5 +1,4 @@
-import comments_icon from "../../icons/asset-management/comments_icon.svg"
-
+import { Commentsicon } from "./CommentsFormFieldSvg";
 const CommentFormField = ({ setComment, comment }) => {
     const handleCommentChange = (e) => {
         setComment(e.target.value);
@@ -9,7 +8,7 @@ const CommentFormField = ({ setComment, comment }) => {
     <>
       <div className="am-comments">
         <div className="am-comments-header">
-          <img src={comments_icon} alt="Uniqname Icon" />
+          <Commentsicon />
           <label htmlFor="comments">Comments (optional)</label>
         </div>
         <textarea className="am-action-form-default"

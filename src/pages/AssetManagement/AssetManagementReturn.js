@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { LaptopReturn } from "../../icons/asset-management/AssetManagementReturnSvgs";
 import React, { useState, useRef, useEffect } from "react";
 import dashboard_settings from "../../config.json"
 import laptop_return from "../../icons/asset-management/laptop_return.svg"
@@ -166,7 +167,7 @@ const AssetManagementReturn = () => {
             <div className="am-action-form-header-description">
               <div className="am-action-form-header">
                 <div>Laptop Return</div>
-                <img src={laptop_return} alt="Laptop Return Icon" />
+                <LaptopReturn />
               </div>
               <div className="am-action-form-description">Return a customer's Sites at Home Windows or Mac device</div>
             </div>

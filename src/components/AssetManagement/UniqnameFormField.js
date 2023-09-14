@@ -1,5 +1,5 @@
 import error_alert from "../../icons/asset-management/error_alert.svg";
-import uniqname_icon from "../../icons/asset-management/uniqname_icon.svg";
+import { Uniqnameicon } from "./UniqnameFormFieldSvgs";
 
 const UniqnameFormField = ({
   setUniqname,
@@ -30,7 +30,7 @@ const UniqnameFormField = ({
     <>
       <div className="am-action-component-item">
         <div className="am-action-component-item-header">
-          <img src={uniqname_icon} alt="Uniqname Icon" />
+          <Uniqnameicon />
           <label htmlFor="uniqname">Customer Uniqname</label>
         </div>
         <input

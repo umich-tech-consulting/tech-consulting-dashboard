@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { LaptopCheckOut } from "../../icons/asset-management/AssetManagementCheckoutSvgs";
 import dashboard_settings from "../../config.json"
 import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
 import UniqnameFormField from "../../components/AssetManagement/UniqnameFormField";
@@ -218,7 +219,7 @@ const AssetManagementCheckOut = () => {
             <div className="am-action-form-header-description">
               <div className="am-action-form-header">
                 <div>Laptop Checkout</div>
-                <img src={laptop_check_out} alt="Laptop Check Out Icon" />
+                <LaptopCheckOut />
               </div>
               <div className="am-action-form-description">Loan a Sites at Home Windows or Mac device to a customer after approval</div>
             </div>

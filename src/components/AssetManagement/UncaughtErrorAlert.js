@@ -1,10 +1,11 @@
 import exclamation_triangle from "../../icons/asset-management/exclamation_triangle.svg";
+import { ExclamationTriangle } from "./UncaughtErrorAlertSvgs";
 
 const UncaughtErrorAlert = () => {
   return (
     <>
       <div className="am-action-uncaught-error-alert">
-        <img src={exclamation_triangle} alt="Exclamation Triangle" />
+        <ExclamationTriangle />
         <div>
           <div>An error occurred that can't be fixed from the dashboard.</div>
           <a
