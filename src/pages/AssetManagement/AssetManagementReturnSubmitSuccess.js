@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import asset_icon from "../../../icons/asset-management/success-icons/asset_icon.svg"
-import user_icon from "../../../icons/asset-management/success-icons/user_icon.svg"
-import comment_icon from "../../../icons/asset-management/success-icons/comment_icon.svg"
-import dashboard_settings from "../../../config.json"
+import asset_icon from "../../icons/asset-management/success-icons/asset_icon.svg"
+import user_icon from "../../icons/asset-management/success-icons/user_icon.svg"
+import comment_icon from "../../icons/asset-management/success-icons/comment_icon.svg"
+import dashboard_settings from "../../config.json"
 
-import lottie_checkmark from "../../../lottie_checkmark.json"
-import LottieAnimation from "../../../LottieAnimation";
+import lottie_checkmark from "../../lottie_checkmark.json"
+import LottieAnimation from "../../LottieAnimation";
 
 const ReturnSubmitSuccess = () => {
   const tdxResponseFromStorage = JSON.parse(localStorage.getItem('tdxResponse'));

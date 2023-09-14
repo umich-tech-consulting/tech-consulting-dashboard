@@ -1,4 +1,19 @@
-// Announcements Inactive Svg
+
+export const HomeActive = () => (
+    <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="home_active">
+        <title id="home_active">Home Active</title>
+        <path d="M9.558 3.2a.625.625 0 0 1 .884 0l7.241 7.242a.625.625 0 1 0 .884-.884l-7.241-7.241a1.875 1.875 0 0 0-2.652 0L1.433 9.558a.625.625 0 0 0 .884.884L9.558 3.2Z"/><path d="m10 4.527 6.8 6.799c.024.025.05.048.075.071v5.165c0 .863-.7 1.563-1.563 1.563H12.5a.624.624 0 0 1-.625-.625v-3.75a.624.624 0 0 0-.625-.625h-2.5a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 1-.625.625H4.687a1.563 1.563 0 0 1-1.562-1.563v-5.165l.076-.071L10 4.525v.002Z"/>
+    </svg>
+);
+
+
+export const HomeInactive = () => (
+    <svg className="primary-nav-icon stroke-neutral-10 dark:stroke-neutral-1" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="home_inactive">
+        <title id="home_inactive">Home Inactive</title>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.875 10 7.462-7.462a.938.938 0 0 1 1.325 0L18.125 10M3.75 8.125v8.438c0 .517.42.937.938.937h3.437v-4.062c0-.518.42-.938.938-.938h1.874c.518 0 .938.42.938.938V17.5h3.438c.517 0 .937-.42.937-.937V8.125M6.875 17.5h6.875"/>
+    </svg>
+);
+
 export const AnnouncementsActive = () => (
     <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="announcements_active">
         <title id="announcements_active">Announcements Active</title>
@@ -28,21 +43,6 @@ export const AssetManagementInactive = () => (
     </svg>
 );
 
-// Not imported
-export const HomeActive = () => (
-    <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="home_active">
-        <title id="home_active">Home Active</title>
-        <path d="M9.558 3.2a.625.625 0 0 1 .884 0l7.241 7.242a.625.625 0 1 0 .884-.884l-7.241-7.241a1.875 1.875 0 0 0-2.652 0L1.433 9.558a.625.625 0 0 0 .884.884L9.558 3.2Z"/><path d="m10 4.527 6.8 6.799c.024.025.05.048.075.071v5.165c0 .863-.7 1.563-1.563 1.563H12.5a.624.624 0 0 1-.625-.625v-3.75a.624.624 0 0 0-.625-.625h-2.5a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 1-.625.625H4.687a1.563 1.563 0 0 1-1.562-1.563v-5.165l.076-.071L10 4.525v.002Z"/>
-    </svg>
-);
-
-// Not imported
-export const HomeInactive = () => (
-    <svg className="primary-nav-icon stroke-neutral-10 dark:stroke-neutral-1" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="home_inactive">
-        <title id="home_inactive">Home Inactive</title>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.875 10 7.462-7.462a.938.938 0 0 1 1.325 0L18.125 10M3.75 8.125v8.438c0 .517.42.937.938.937h3.437v-4.062c0-.518.42-.938.938-.938h1.874c.518 0 .938.42.938.938V17.5h3.438c.517 0 .937-.42.937-.937V8.125M6.875 17.5h6.875"/>
-    </svg>
-);
 export const ResourcesActive = () => (
     <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="resources_active">
         <title id="resources_active">Resources Active</title>

@@ -214,7 +214,7 @@ code {
   @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
   transition: ease-out 400ms;
 }
-.am-landing-container img {
+.am-landing-container-img {
   @apply h-7 w-fit
 }
 /* Default Management Component End */
@@ -226,7 +226,7 @@ code {
   @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center;
 }
 .am-action-form {
-  @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-0 mt-16;
+  @apply w-full max-w-sm p-6 rounded-xl shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 flex flex-col gap-y-0 mt-16;
   animation: popupAnimation;
   animation-duration: 500ms;
 }
@@ -234,10 +234,10 @@ code {
   @apply flex flex-col gap-2 pb-6
 }
 .am-action-form-header {
-  @apply flex gap-2 items-center title-large
+  @apply flex gap-2 items-center title-large dark:text-neutral-1
 }
 .am-action-form-description {
-  @apply text-neutral-7 body-medium
+  @apply text-neutral-7 body-medium dark:text-neutral-5
 }
 .am-action-form-header img {
   @apply h-5 w-fit
@@ -249,13 +249,13 @@ code {
   @apply body-medium flex justify-between flex-col;
 }
 .am-action-component-item-header {
-  @apply w-fit mb-2 body-medium flex items-center gap-1;
+  @apply w-fit mb-2 body-medium flex items-center gap-1 dark:text-neutral-1;
 }
 .am-action-component-item-header img {
   @apply w-fit h-[14px];
 }
 .am-action-form-default {
-  @apply bg-white rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 focus:ring-blue-9 focus:ring-2 focus:outline-none
+  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-9 dark:focus:ring-yellow-6 focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
   @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
@@ -267,25 +267,25 @@ code {
   @apply mt-[2px]
 }
 .am-uniqname-item {
-  @apply w-32 px-2 p-[6px];
+  @apply w-32 px-2 p-[6px] dark:text-neutral-1;
 }
 .am-laptop-item {
   @apply w-fit flex
 }
 .am-laptop-item select {
-  @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white text-neutral-9 bg-neutral-1
+  @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white dark:focus:bg-neutral-9 text-neutral-9 dark:text-neutral-1 bg-neutral-1 dark:bg-neutral-10
 }
 .am-laptop-item input {
-  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10
+  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10 dark:text-neutral-1
 }
 .am-comments {
   @apply mb-6 flex flex-col justify-between gap-y-2
 }
 .am-comments-header {
-  @apply w-fit body-medium flex items-center gap-1;
+  @apply w-fit body-medium flex items-center gap-1 dark:text-neutral-1;
 }
 .am-comments textarea {
-  @apply bg-white w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9
+  @apply bg-white dark:bg-neutral-9 w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9 dark:text-neutral-1
 }
 .am-submit-cancel-container {
   @apply w-full flex gap-3 justify-end

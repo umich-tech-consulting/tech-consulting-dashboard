@@ -6,9 +6,9 @@ import Layout from './Layout';
 // Asset Management Start
 import AssetManagementLanding from './pages/AssetManagement/AssetManagementLanding';
 import AssetManagementCheckOut from './pages/AssetManagement/AssetManagementCheckOut';
-import CheckoutSubmitSuccess from './components/AssetManagement/Checkout/CheckoutSubmitSuccess';
+import CheckoutSubmitSuccess from './pages/AssetManagement/AssetManagementCheckoutSubmitSuccess';
 import AssetManagementReturn from './pages/AssetManagement/AssetManagementReturn';
-import ReturnSubmitSuccess from './components/AssetManagement/Return/ReturnSubmitSuccess';
+import ReturnSubmitSuccess from './pages/AssetManagement/AssetManagementReturnSubmitSuccess';
 import AssetManagementSwap from './pages/AssetManagement/AssetManagementSwap';
 // Asset Management End
 import Announcements from './pages/Announcements';

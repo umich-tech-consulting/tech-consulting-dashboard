@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import dashboard_settings from "../../../config.json"
+import dashboard_settings from "../../config.json"
 
-import asset_icon from "../../../icons/asset-management/success-icons/asset_icon.svg"
-import calendar_icon from "../../../icons/asset-management/success-icons/calendar_icon.svg"
-import user_icon from "../../../icons/asset-management/success-icons/user_icon.svg"
-import ticket_icon from "../../../icons/asset-management/success-icons/ticket_icon.svg"
-import comment_icon from "../../../icons/asset-management/success-icons/comment_icon.svg"
+import asset_icon from "../../icons/asset-management/success-icons/asset_icon.svg"
+import calendar_icon from "../../icons/asset-management/success-icons/calendar_icon.svg"
+import user_icon from "../../icons/asset-management/success-icons/user_icon.svg"
+import ticket_icon from "../../icons/asset-management/success-icons/ticket_icon.svg"
+import comment_icon from "../../icons/asset-management/success-icons/comment_icon.svg"
 
-import lottie_checkmark from "../../../lottie_checkmark.json"
-import LottieAnimation from "../../../LottieAnimation";
+import lottie_checkmark from "../../lottie_checkmark.json"
+import LottieAnimation from "../../LottieAnimation";
 
 
 const CheckoutSubmitSuccess = () => {
