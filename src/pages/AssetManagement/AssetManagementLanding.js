@@ -16,7 +16,7 @@ const AssetManagementLanding = () => {
         <title>Asset Management</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6 fade-in">
-        <div className="headline-small">Laptop Asset Management</div>
+        <div className="headline-small dark:text-neutral-1">Laptop Asset Management</div>
         <div className="am-landing-container mt-6">
             <Link className="am-landing-container-button" to="/asset-management/return">
               <img src={laptop_return} alt='Laptop Return Icon'/>

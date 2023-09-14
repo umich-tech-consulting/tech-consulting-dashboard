@@ -5,7 +5,7 @@
 
 /* ----------- Default Styles Start ----------- */
 html {
-  @apply bg-base-light
+  @apply bg-base-light dark:bg-neutral-10
 }
 body {
   margin: 0;
@@ -183,7 +183,7 @@ code {
 }
 /* Announcements Styles Start */
 .announcement-bg {
-  background-image: url("../icons/announcements/campus_outline_bg.png");
+  /* background-image: url("../icons/announcements/campus_outline_bg.png"); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,6 +197,12 @@ code {
 .link-container {
   @apply pl-2 h-8 rounded-full flex content-center items-center gap-x-4;
 }
+.primary-nav-icon {
+  @apply w-5 h-5
+}
+.dashboard-logo {
+  @apply h-2 w-10
+}
 /* ----------- Left Nav End----------- */
 
 /* ----------- Asset Management Start----------- */
@@ -205,7 +211,7 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white shadow-light hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
   transition: ease-out 400ms;
 }
 .am-landing-container img {
