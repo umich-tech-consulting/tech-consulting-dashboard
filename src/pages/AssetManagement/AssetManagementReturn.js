@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { LaptopReturn } from "../../icons/asset-management/AssetManagementReturnSvgs";
 import React, { useState, useRef, useEffect } from "react";
 import dashboard_settings from "../../config.json"
-import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";

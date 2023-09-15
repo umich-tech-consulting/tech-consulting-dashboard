@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
-//import Home from './pages/Home';
+import Home from './pages/Home';
 // Asset Management Start
 import AssetManagementLanding from './pages/AssetManagement/AssetManagementLanding';
 import AssetManagementCheckOut from './pages/AssetManagement/AssetManagementCheckOut';
@@ -26,8 +26,9 @@ function App() {
         </Helmet>
       </div>
       <Routes>
+
+        <Route index element={<Home />} />
         <Route path="/" element={<Layout />}>
-          <Route index element={<Announcements />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
           <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />

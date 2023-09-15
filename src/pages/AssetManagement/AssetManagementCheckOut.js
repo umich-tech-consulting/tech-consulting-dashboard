@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { LaptopCheckOut } from "../../icons/asset-management/AssetManagementCheckoutSvgs";
 import dashboard_settings from "../../config.json"
-import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
 import UniqnameFormField from "../../components/AssetManagement/UniqnameFormField";
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";

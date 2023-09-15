@@ -1,4 +1,3 @@
-import exclamation_triangle from "../../icons/asset-management/exclamation_triangle.svg";
 import { ExclamationTriangle } from "./UncaughtErrorAlertSvgs";
 
 const UncaughtErrorAlert = () => {

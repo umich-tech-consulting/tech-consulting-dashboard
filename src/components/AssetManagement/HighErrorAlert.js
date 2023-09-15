@@ -1,4 +1,4 @@
-import squirrel from "../../icons/asset-management/squirrel.svg";
+import { HelperSquirrel } from "./HighErrorAlertSvgs";
 
 const HighErrorAlert = ({resetErrorCount}) => {
 
@@ -27,7 +27,7 @@ const HighErrorAlert = ({resetErrorCount}) => {
             </div>
         </div>
         <div className="am-error-alert-squirrel-container">
-            <img src={squirrel} alt="Helper Squirrel" />
+            <HelperSquirrel />
         </div>
       </div>
     </>

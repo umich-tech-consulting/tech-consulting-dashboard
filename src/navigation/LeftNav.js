@@ -13,7 +13,7 @@ const LeftNav = () => {
 
   return (
     <div className="box-border pt-5 pl-2 pr-2 h-screen border-r bg-base-light dark:bg-neutral-10 border-neutral-3 dark:border-neutral-8 w-[230px]">
-      <Link to='/announcements'>
+      <Link to='/'>
         <Logo />
       </Link>
       <div className="mt-6 w-50">

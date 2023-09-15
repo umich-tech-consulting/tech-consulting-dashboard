@@ -1,7 +1,5 @@
 import error_alert from "../../icons/asset-management/error_alert.svg";
 import { Asseticon } from "./AssetNumberFormFieldSvgs";
-import asset_icon from "../../icons/asset-management/asset_icon.svg"
-
 import { useEffect } from "react";
 
 const AssetNumberFormField = ({

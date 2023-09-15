@@ -181,6 +181,29 @@ code {
   animation: popupAnimation;
   animation-duration: 500ms;
 }
+/* Home Styles Start */
+.homepage {
+  @apply bg-blue-9 w-screen h-screen;
+    background-image: url("../icons/home/homepage_background.png");
+    background-attachment: fixed;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+.menu-button {
+  @apply text-white font-bold text-4xl flex flex-col gap-10 p-12 fixed bottom-0;
+  font-family: "Roboto";
+}
+.notification-pane {
+  @apply w-[350px] rounded-md p-3;
+  background: rgba(33, 33, 33, 0.90);
+}
+.link-bg {
+  background: rgba(7, 48, 95, 0.80);
+  /* background: rgba(4, 24, 47, 0.90); */
+  font-family: "Roboto";
+}
+/* Home Styles End */
 /* Announcements Styles Start */
 .announcement-bg {
   /* background-image: url("../icons/announcements/campus_outline_bg.png"); */
@@ -304,7 +327,7 @@ code {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: white;
+  @apply bg-white dark:bg-neutral-10;
   animation: jumpingAnimation 1.4s ease-in infinite;
   animation-delay: 0.1s;
 }
@@ -455,16 +478,16 @@ code {
   @apply mr-8 flex flex-col gap-2 items-end
 }
 .am-error-alert-message {
-  @apply body-small bg-white p-3 rounded-md w-[240px]
+  @apply body-small bg-white dark:bg-neutral-9 dark:text-neutral-1 p-3 rounded-md w-[240px]
 }
 .am-error-alert-button-container {
   @apply flex flex-col justify-between mt-2 gap-2 w-full
 }
 .am-error-alert-close-button {
-  @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 hover:bg-neutral-3 rounded-full
+  @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 dark:bg-neutral-8 hover:bg-neutral-3 dark:hover:bg-neutral-7 dark:text-neutral-1 rounded-full
 }
 .am-error-alert-tdx-button {
-  @apply body-small text-white bg-blue-9 hover:bg-blue-8 p-2 rounded-full flex-1 text-center
+  @apply body-small text-white dark:text-neutral-10 bg-blue-9 dark:bg-yellow-6 hover:bg-blue-8 dark:hover:bg-yellow-5 p-2 rounded-full flex-1 text-center
 }
 .am-error-alert-squirrel-container {
   @apply flex w-full justify-end
