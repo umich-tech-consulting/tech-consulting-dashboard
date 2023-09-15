@@ -25,7 +25,7 @@ const Home = () => {
         </div> */}
         <div className="text-2xl flex flex-col text-white p-12 w-[370px] gap-2 fixed bottom-0">
           <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/announcements">ANNOUNCEMENTS</Link>
-          {/* <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/asset-management">ASSET MANAGEMENT</Link> */}
+          <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/asset-management">ASSET MANAGEMENT</Link>
           <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/resources">RESOURCES</Link>
         </div>
         <div className="fixed top-0 right-0 p-8">
