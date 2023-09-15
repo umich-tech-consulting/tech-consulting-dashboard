@@ -25,15 +25,19 @@ const Home = () => {
         </div> */}
         <div className="text-2xl flex flex-col text-white p-12 w-[370px] gap-2 fixed bottom-0">
           <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/announcements">ANNOUNCEMENTS</Link>
-          <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/asset-management">ASSET MANAGEMENT</Link>
+          {/* <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/asset-management">ASSET MANAGEMENT</Link> */}
           <Link className="link-bg py-4 px-4 w-full hover:ml-6 rounded-xl text-lg" to="/resources">RESOURCES</Link>
         </div>
         <div className="fixed top-0 right-0 p-8">
           <div className="notification-pane flex flex-col gap-6 border border-neutral-8">
-            <div className="headline-medium text-neutral-2">New look!</div>
-            <div className="body-medium text-neutral-3">Welcome to the new and improved homepage! If you have any thoughts about how to improve this site, feel free to send us some feedback on the form!</div>
-            <a href="https://forms.gle/kb1CQuKLGzneFGRj8" target="blank" rel="noopener noreferrer" className="body-medium hover:bg-neutral-8 text-neutral-3 w-fit py-1 px-2 rounded-md" title="Feedback Form"><div>Feedback Form</div></a>
-
+            <div className="headline-medium text-neutral-2">Password Resets</div>
+            <div className="body-medium text-neutral-3">Fill out the <span><a href="https://docs.google.com/presentation/d/1EtJ8yeuP5Aauassfl5urtBQLZLXla27xtrqyKBqfXrM/edit?usp=sharing" target="blank" rel="noopener noreferrer">"<u>Password Project Tracking</u>"</a></span> form when you help someone reset a password or work with someone on an issue following a self-service password reset.</div>
+            <div className="body-medium text-neutral-3">Refer to the <span><a href="https://docs.google.com/presentation/d/1EtJ8yeuP5Aauassfl5urtBQLZLXla27xtrqyKBqfXrM/edit?usp=sharing" target="blank" rel="noopener noreferrer">"<u>In Person Password Reset Form</u>"</a></span> for training information about assisting customers with password resets.</div>
+            <div className="text-neutral-3 body-medium">
+              <div className="title-small text-neutral-2">If WiFi issues occur after a password reset:</div>
+              <div>- Forget the network and reconnect</div>
+              <div>- Or use <span><a href="https://msetup.its.umich.edu/" target="blank" rel="noopener noreferrer"><u>Msetup</u></a></span>.</div>
+            </div>
 
           </div>
         </div>
