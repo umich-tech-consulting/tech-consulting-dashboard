@@ -56,7 +56,7 @@ export const Printer = () => (
 );
 export const Shield = () => (
     <svg className="h-10 w-10 stroke-blue-9 dark:stroke-yellow-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="shield">
-        <title id="printer">Shield</title>
+        <title id="shield">Shield</title>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m17 20.7069 2.25 2.25 3.75-5.25m-3-7.036c-2.2643 2.1502-5.2797 3.3296-8.402 3.286-.3972 1.21-.599 2.4755-.598 3.749 0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
     </svg>
 );

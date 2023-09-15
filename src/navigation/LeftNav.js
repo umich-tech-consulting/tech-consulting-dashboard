@@ -13,7 +13,7 @@ const LeftNav = () => {
 
   return (
     <div className="box-border pt-5 pl-2 pr-2 h-screen border-r bg-base-light dark:bg-neutral-10 border-neutral-3 dark:border-neutral-8 w-[230px]">
-      <Link to='/'>
+      <Link to='/' aria-label="Home Button">
         <Logo />
       </Link>
       <div className="mt-6 w-50">
@@ -103,7 +103,6 @@ const LeftNav = () => {
         </Link>
       </div>
       <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9 dark:text-neutral-1">
-        <DarkModeButton />
         <div className="bg-white dark:bg-neutral-9 p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
@@ -125,6 +124,7 @@ const LeftNav = () => {
             </a>
           </div>
         </div>
+        <DarkModeButton />
         <div className="flex mt-2">
           <a href="https://forms.gle/kb1CQuKLGzneFGRj8" target="blank" rel="noopener noreferrer" className="hover:bg-blue-0 dark:hover:bg-neutral-9 w-fit py-1 px-2 rounded-md" title="Feedback Form">
             <div className="body-small">Feedback</div>
@@ -133,7 +133,7 @@ const LeftNav = () => {
             <div className="body-small">Documentation</div>
           </a>
         </div>
-        <a href="https://github.com/umich-tech-consulting/tech-consulting-dashboard" target="blank" rel="noopener noreferrer" className="mt-2 px-2 body-small text-neutral-5 dark:text-neutral-4 hover:underline hover:text-neutral-9 dark:hover:text-neutral-1">Git Hash: {gitInfo.commit.shortHash}</a>
+        <a href="https://github.com/umich-tech-consulting/tech-consulting-dashboard" target="blank" rel="noopener noreferrer" className="mt-2 px-2 body-small text-neutral-8 dark:text-neutral-4 hover:underline hover:text-neutral-9 dark:hover:text-neutral-1">Git Hash: {gitInfo.commit.shortHash}</a>
       </div>
     </div>
   );
