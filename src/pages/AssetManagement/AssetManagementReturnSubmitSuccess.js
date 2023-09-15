@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import asset_icon from "../../icons/asset-management/success-icons/asset_icon.svg"
-import user_icon from "../../icons/asset-management/success-icons/user_icon.svg"
-import comment_icon from "../../icons/asset-management/success-icons/comment_icon.svg"
+import { AssetIcon, CommentIcon, UserIcon } from "../../icons/asset-management/success-icons/AssetManagementSuccessSvgs";
 import dashboard_settings from "../../config.json"
 
 import lottie_checkmark from "../../lottie_checkmark.json"
@@ -14,7 +12,7 @@ const ReturnSubmitSuccess = () => {
 
   return (
     <>
-      <div className="am-action-success-container h-screen fade-in text-neutral-9">
+      <div className="am-action-success-container fade-in">
         <div className="flex w-full h-full">
           <div className="am-action-success-next-steps">
             <div className="am-action-success-header">
@@ -84,7 +82,7 @@ const ReturnSubmitSuccess = () => {
                 rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Laptop</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={asset_icon} alt="Asset Icon" />
+                  <AssetIcon />
                   <div>{tdxResponseFromStorage.asset.tag}</div>
                 </div>
               </a>
@@ -93,7 +91,7 @@ const ReturnSubmitSuccess = () => {
                 rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Customer</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={user_icon} alt="Asset Icon" />
+                  <UserIcon />
                   <div>{tdxResponseFromStorage.previous_owner.uniqname}</div>
                 </div>
               </a>
@@ -101,7 +99,9 @@ const ReturnSubmitSuccess = () => {
                 <div className="am-action-success-summary-info">
                   <div className="am-action-success-summary-info-name">Comments</div>
                   <div className="am-action-success-summary-info-data-comment">
-                    <img src={comment_icon} alt="Asset Icon" />
+                    <div className="mt-[3px]">
+                      <CommentIcon />
+                    </div>
                     <div>{tdxResponseFromStorage.asset.comment}</div>
                   </div>
                 </div>

@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import dashboard_settings from "../../config.json"
-
-import asset_icon from "../../icons/asset-management/success-icons/asset_icon.svg"
-import calendar_icon from "../../icons/asset-management/success-icons/calendar_icon.svg"
-import user_icon from "../../icons/asset-management/success-icons/user_icon.svg"
-import ticket_icon from "../../icons/asset-management/success-icons/ticket_icon.svg"
-import comment_icon from "../../icons/asset-management/success-icons/comment_icon.svg"
+import { AssetIcon, CalendarIcon, CommentIcon, TicketIcon, UserIcon } from "../../icons/asset-management/success-icons/AssetManagementSuccessSvgs";
 
 import lottie_checkmark from "../../lottie_checkmark.json"
 import LottieAnimation from "../../LottieAnimation";
@@ -17,7 +12,7 @@ const CheckoutSubmitSuccess = () => {
 
   return (
     <>
-      <div className="am-action-success-container h-screen fade-in text-neutral-9">
+      <div className="am-action-success-container fade-in">
         <div className="flex w-full h-full">
           <div className="am-action-success-next-steps">
             <div className="am-action-success-header">
@@ -88,14 +83,14 @@ const CheckoutSubmitSuccess = () => {
                 rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Laptop</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={asset_icon} alt="Asset Icon" />
+                  <AssetIcon />
                   <div>{tdxResponseFromStorage.asset.tag}</div>
                 </div>
               </a>
               <div className="am-action-success-summary-info">
                 <div className="am-action-success-summary-info-name">Loan Date</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={calendar_icon} alt="Asset Icon" />
+                  <CalendarIcon />
                   <div>{tdxResponseFromStorage.loan.date}</div>
                 </div>
               </div>
@@ -104,14 +99,14 @@ const CheckoutSubmitSuccess = () => {
                 rel="noreferrer noopener" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Customer</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={user_icon} alt="Asset Icon" />
+                  <UserIcon />
                   <div>{tdxResponseFromStorage.loan.uniqname}</div>
                 </div>
               </a>
               <a href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponseFromStorage.ticket.id}`} target="_blank" rel="noopener noreferrer" className="am-action-success-summary-link">
                 <div className="am-action-success-summary-info-name">Request Ticket</div>
                 <div className="am-action-success-summary-info-data">
-                  <img src={ticket_icon} alt="Asset Icon" />
+                  <TicketIcon />
                   <div>TDX {tdxResponseFromStorage.ticket.id}</div>
                 </div>
               </a>
@@ -119,7 +114,9 @@ const CheckoutSubmitSuccess = () => {
                 <div className="am-action-success-summary-info">
                   <div className="am-action-success-summary-info-name">Comments</div>
                   <div className="am-action-success-summary-info-data-comment">
-                    <img src={comment_icon} alt="Asset Icon" />
+                    <div className="mt-[3px]">
+                      <CommentIcon />
+                    </div>
                     <div>{tdxResponseFromStorage.asset.comment}</div>
                   </div>
                 </div>

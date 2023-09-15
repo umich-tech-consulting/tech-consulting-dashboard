@@ -281,13 +281,13 @@ code {
   @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10
+  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10 dark:text-red-5
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
 }
 .am-uniqname-item {
-  @apply w-32 px-2 p-[6px] dark:text-neutral-1;
+  @apply w-32 px-2 p-[6px] dark:text-neutral-1 bg-white dark:bg-neutral-9;
 }
 .am-laptop-item {
   @apply w-fit flex
@@ -296,7 +296,7 @@ code {
   @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white dark:focus:bg-neutral-9 text-neutral-9 dark:text-neutral-1 bg-neutral-1 dark:bg-neutral-10
 }
 .am-laptop-item input {
-  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10 dark:text-neutral-1
+  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10 dark:text-neutral-1 bg-white dark:bg-neutral-9
 }
 .am-comments {
   @apply mb-6 flex flex-col justify-between gap-y-2
@@ -363,25 +363,25 @@ code {
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-12 bg-white items-center
+  @apply w-full flex flex-col gap-12 bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1
 }
 .am-action-success-next-steps {
   @apply p-9 w-full flex flex-col gap-12 h-full overflow-auto
 }
 .am-action-success-header {
-  @apply headline-large text-blue-9 flex items-center gap-2
+  @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
 }
 .am-action-success-next-steps-card-container {
   @apply flex flex-col gap-8
 }
 .am-action-success-next-steps-card {
-  @apply w-full rounded-md border border-neutral-3 p-6 flex flex-col gap-6 body-medium
+  @apply w-full rounded-md border border-neutral-3 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium
 }
 .am-action-success-card-bullet-container {
-  @apply flex flex-col gap-2 text-neutral-8
+  @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4
 }
 .am-action-success-summary {
-  @apply w-[500px] bg-neutral-1 text-neutral-9 p-9 border-l border-l-neutral-3 overflow-auto
+  @apply w-[500px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
 }
 .am-action-success-summary-info-container {
   @apply flex flex-col gap-7 pb-20
@@ -390,10 +390,10 @@ code {
   @apply flex flex-col gap-1 p-2
 }
 .am-action-success-summary-link {
-  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-0 rounded-md
+  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-0 dark:hover:bg-neutral-9 rounded-md
 }
 .am-action-success-summary-info-name {
-  @apply text-[14px] font-light text-neutral-8;
+  @apply text-[14px] font-light text-neutral-8 dark:text-neutral-4;
   font-family: "Roboto";
 }
 .am-action-success-summary-info-data {
@@ -402,14 +402,11 @@ code {
 .am-action-success-summary-info-data-comment {
   @apply flex gap-2 items-start title-medium break-words
 }
-.am-action-success-summary-info-data img {
-  @apply h-5 w-5 stroke-neutral-4 fill-neutral-6
-}
 .am-action-success-close-button-container {
   @apply absolute right-0 bottom-0 p-6
 }
 .am-action-success-close-button {
-  @apply block text-center w-[80px] rounded-full bg-blue-9 body-medium p-[10px] text-white hover:bg-blue-8
+  @apply block text-center w-[80px] rounded-full bg-blue-9 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-8 dark:hover:bg-yellow-5
 }
 @keyframes infoCardAnimation {
   0% {

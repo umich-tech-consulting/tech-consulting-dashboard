@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { LaptopCheckOut } from "../../icons/asset-management/AssetManagementCheckoutSvgs";
 import dashboard_settings from "../../config.json"
 import UniqnameFormField from "../../components/AssetManagement/UniqnameFormField";
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
@@ -218,7 +217,11 @@ const AssetManagementCheckOut = () => {
             <div className="am-action-form-header-description">
               <div className="am-action-form-header">
                 <div>Laptop Checkout</div>
-                <LaptopCheckOut />
+                <svg className="h-5 w-fit" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="laptop_checkout">
+                  <title id="laptop_checkout">Laptop Checkout</title>
+                  <circle cx="20" cy="20" r="20" className="fill-white dark:fill-black"/>
+                  <path className="fill-[#0488E1] dark:fill-yellow-6" fill-rule="evenodd" d="M20 40c11.0462 0 20-8.9538 20-20C40 8.95384 31.0462-.00000305 20-.00000401 8.95385-.00000498 4.5e-7 8.95384-5.2e-7 20-.00000148 31.0462 8.95384 40 20 40Zm1.0872-28.7795c-.2885-.2881-.6795-.4499-1.0872-.4499-.4077 0-.7987.1618-1.0872.4499l-6.1538 6.1539c-.1512.1408-.2724.3106-.3565.4994-.0841.1887-.1293.3924-.1329.599-.0037.2065.0343.4117.1117.6033.0774.1916.1925.3656.3386.5117.1461.1461.3201.2612.5117.3386.1916.0774.3967.1154.6033.1117.2066-.0036.4103-.0488.599-.1329.1887-.0841.3586-.2053.4994-.3565l3.5282-3.5282v11.6718c0 .408.1621.7993.4506 1.0879.2886.2885.6799.4506 1.0879.4506.408 0 .7993-.1621 1.0879-.4506.2885-.2886.4506-.6799.4506-1.0879V16.0205l3.5282 3.5282c.2916.2718.6773.4197 1.0759.4127.3986-.007.7789-.1685 1.0607-.4504.2819-.2819.4434-.6621.4504-1.0607.007-.3986-.1409-.7843-.4127-1.0759l-6.1538-6.1539Z" clip-rule="evenodd"/>
+                </svg>
               </div>
               <div className="am-action-form-description">Loan a Sites at Home Windows or Mac device to a customer after approval</div>
             </div>
