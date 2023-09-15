@@ -32,7 +32,7 @@ const Home = () => {
           <div className="notification-pane flex flex-col gap-6 border border-neutral-8">
             <div className="headline-medium text-neutral-2">New look!</div>
             <div className="body-medium text-neutral-3">Welcome to the new and improved homepage! If you have any thoughts about how to improve this site, feel free to send us some feedback on the form!</div>
-            <a href="https://forms.gle/kb1CQuKLGzneFGRj8" target="blank" rel="noopener noreferrer" class="body-medium hover:bg-neutral-8 text-neutral-3 w-fit py-1 px-2 rounded-md" title="Feedback Form"><div>Feedback Form</div></a>
+            <a href="https://forms.gle/kb1CQuKLGzneFGRj8" target="blank" rel="noopener noreferrer" className="body-medium hover:bg-neutral-8 text-neutral-3 w-fit py-1 px-2 rounded-md" title="Feedback Form"><div>Feedback Form</div></a>
 
 
           </div>
