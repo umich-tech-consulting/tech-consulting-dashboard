@@ -9,7 +9,7 @@ const ResourcesLandingTabs = ({ resourcesData, activeTab, handleTabChange }) => 
   return (
     <>
       <div>
-        <div className="border-b border-neutral-4">
+        <div className="border-b border-neutral-4 dark:border-neutral-7">
           {categories.map((category, index) => {
             if (excludedCategories.includes(category)) {
               return null; // Exclude excluded categories from generating a tab
@@ -19,7 +19,7 @@ const ResourcesLandingTabs = ({ resourcesData, activeTab, handleTabChange }) => 
               <button
                 key={index}
                 className={`r-landing-tabs ${
-                  activeTab === index ? 'border-b-2 border-blue-9 text-blue-9' : ''
+                  activeTab === index ? 'border-b-2 border-blue-9 dark:border-yellow-6 text-blue-9 dark:text-yellow-6' : 'text-neutral-9 dark:text-neutral-1'
                 }`}
                 onClick={() => handleTabChange(index)}
               >

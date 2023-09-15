@@ -513,10 +513,10 @@ code {
 }
 /* Resource Landing Start */
 .r-landing-container {
-  @apply max-w-3xl w-full mt-8
+  @apply max-w-3xl w-full mt-8 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-title {
-  @apply mb-6 headline-large text-center
+  @apply mb-6 headline-large text-neutral-9 dark:text-neutral-1 text-center
 }
 .r-landing-main {
   @apply mt-14
@@ -525,7 +525,7 @@ code {
 
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
-  @apply p-3 w-60 flex items-center gap-3 shadow-light bg-white hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue rounded-lg title-small text-neutral-9;
+  @apply p-3 w-60 flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
   transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
@@ -538,13 +538,10 @@ code {
 
 /* Resource Landing Search Start */
 .r-landing-search {
-  @apply relative mt-14 w-full border border-blue-9 rounded-lg
+  @apply relative mt-14 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
 }
 .r-landing-search input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
-}
-.r-landing-search-icon {
-  @apply absolute top-0 left-0 flex items-center justify-center h-full p-3
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-landing-search-clear {
   @apply absolute top-0 right-0 flex items-center justify-center h-full p-2
@@ -553,7 +550,7 @@ code {
 
 /* Resource Landing Categories Start */
 .r-landing-categories-title {
-  @apply mb-6 headline-small text-left mt-20
+  @apply mb-6 headline-small text-left mt-20 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-categories-container {
   @apply w-full flex flex-col gap-4
@@ -562,7 +559,7 @@ code {
   @apply flex flex-col gap-4 lg:flex-row
 }
 .r-landing-categories-card {
-  @apply flex-1 flex shadow-light hover:shadow-blue bg-white p-3 rounded-md gap-4 hover:bg-blue-0 focus:bg-blue-1;
+  @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1;
   transition: ease-out 200ms;
 }
 .r-landing-categories-card img {
@@ -572,26 +569,23 @@ code {
   @apply body-medium
 }
 .r-landing-categories-training-card {
-  @apply flex items-center justify-center shadow-light hover:shadow-blue bg-white p-3 rounded-md gap-2 hover:bg-blue-0 focus:bg-blue-1 title-large;
+  @apply flex items-center justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
   transition: ease-out 400ms;
-}
-.r-landing-categories-training-card img {
-  @apply rounded-md h-10 w-10
 }
 /* Resource Landing Categories End */
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
 }
 .r-groupbuilder-searchbox {
-  @apply relative mt-8 mb-8 w-full border border-blue-9 rounded-lg
+  @apply relative mt-8 mb-8 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
 }
 .r-groupbuilder-searchbox input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-groupbuilder-searchbox-clear {
   @apply absolute top-0 right-0 h-full p-2
@@ -600,7 +594,7 @@ code {
 
 /* Resource CategoryBuilder Start */
 .r-categorybuilder-nav {
-  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
 .r-categorybuilder-title {
   @apply mb-6 headline-large text-center
@@ -612,14 +606,14 @@ code {
   @apply flex flex-col gap-4
 }
 .r-individual-link {
-  @apply shadow-light hover:shadow-blue bg-white rounded-md p-4 hover:bg-blue-0;
+  @apply shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 rounded-md p-4 hover:bg-blue-0 dark:hover:bg-neutral-8;
   transition: ease-out 400ms;
 }
 .r-individual-link-name {
-  @apply title-medium text-blue-9 mb-2
+  @apply title-medium text-blue-9 dark:text-yellow-6 mb-2
 }
 .r-individual-link-description {
-  @apply body-medium text-neutral-9
+  @apply body-medium text-neutral-9 dark:text-neutral-1
 }
 /* Resource Links End */
 
