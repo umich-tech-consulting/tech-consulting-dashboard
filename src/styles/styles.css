@@ -245,10 +245,16 @@ code {
 .am-action-container {
   @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center;
 }
-.am-action-form {
-  @apply w-full max-w-sm p-6 rounded-xl shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 flex flex-col gap-y-0 mt-16;
+.am-action-form-determine {
+  @apply flex rounded-xl mt-16 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9;
   animation: popupAnimation;
   animation-duration: 500ms;
+}
+.am-action-determine {
+  @apply w-72 bg-neutral-1 dark:bg-black p-6 border-l border-l-neutral-3 text-neutral-9 rounded-r-xl overflow-auto;
+}
+.am-action-form {
+  @apply h-fit max-w-sm p-6 flex flex-col gap-y-0 flex-grow;
 }
 .am-action-form-header-description {
   @apply flex flex-col gap-2 pb-6
