@@ -277,13 +277,12 @@ const AssetManagementCheckOut = () => {
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
             <div className="am-action-determine">
-              <div className="title-medium mb-3 text-neutral-8">Determine</div>
-              <div className="flex flex-col gap-2">
+              <div className="title-medium mb-3 text-neutral-8 absolute bg-neutral-1 w-64 px-6 pt-6 pb-3 ">Determine</div>
+              <div className="flex flex-col gap-2 px-6 mt-16">
                 <div className="title-small text-neutral-7">Is the customer approved for a loan?</div>
                 <div className="body-small text-neutral-7">Does the customer have a TDX approval email they can show you?</div>
                 <div className="title-small text-neutral-7 mt-2">What type of device is the customer approved for?</div>
-                <div className="body-small text-neutral-7">Is the customer receiving a Windows or Mac laptop?</div>
-              </div>
+                <div className="body-small text-neutral-7">Is the customer receiving a Windows or Mac laptop?</div>              </div>
             </div>
           </div>
         </div>
