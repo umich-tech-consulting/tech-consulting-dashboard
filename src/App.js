@@ -27,8 +27,8 @@ function App() {
       </div>
       <Routes>
 
-        <Route index element={<Home />} />
         <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
           <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />

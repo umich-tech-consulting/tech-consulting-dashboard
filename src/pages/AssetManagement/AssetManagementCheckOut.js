@@ -277,12 +277,14 @@ const AssetManagementCheckOut = () => {
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
             <div className="am-action-determine">
-              <div className="am-action-determine-header">Determine</div>
+              <div className="am-action-determine-header">Verify</div>
               <div className="flex flex-col gap-2 px-6">
-                <div className="am-action-determine-item">Is the customer approved for a loan?</div>
-                <div className="am-action-determine-item-details">Does the customer have a TDX approval email they can show you?</div>
-                <div className="am-action-determine-item">What type of device is the customer approved for?</div>
-                <div className="am-action-determine-item-details">Is the customer receiving a Windows or Mac laptop?</div>
+                <div className="am-action-determine-item">&#8226; Sites at Home</div>
+                <div className="am-action-determine-item-details">Is the customer here to pick up a Sites at Home Laptop or a laptop from Tech Shop?</div>
+                <div className="am-action-determine-item">&#8226; Windows or Mac</div>
+                <div className="am-action-determine-item-details">Mac tag: Red</div>
+                <div className="am-action-determine-item-details">Windows tag: Green, Yellow, Blue, Pink</div>
+                <div className="am-action-determine-item-details">Tech Repair Loaner tag: White </div>
               </div>
             </div>
           </div>

@@ -213,12 +213,18 @@ const AssetManagementReturn = () => {
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
             <div className="am-action-determine">
-              <div className="am-action-determine-header">Determine</div>
+              <div className="am-action-determine-header">Verify</div>
               <div className="flex flex-col gap-2 px-6">
-                <div className="am-action-determine-item">Is the customer approved for a loan?</div>
-                <div className="am-action-determine-item-details">Does the customer have a TDX approval email they can show you?</div>
-                <div className="am-action-determine-item">What type of device is the customer approved for?</div>
-                <div className="am-action-determine-item-details">Is the customer receiving a Windows or Mac laptop?</div>
+                <div className="am-action-determine-item">&#8226; Mac: "Find My" and iCloud</div>
+                <div className="am-action-determine-item-details">Make sure customer is signed out of "Find My" and iCloud and verify in GSX. [add link]</div>
+                <div className="am-action-determine-item">&#8226; Laptop, Charger and Sleeve</div>
+                <div className="am-action-determine-item-details">Have the customer purchase anything that is missing from the Tech Shop</div>
+                <div className="am-action-determine-item">&#8226; Device is not damaged</div>
+                <div className="am-action-determine-item-details">If damaged, document: when, how, who and where and check in for repair after returning</div>
+                <div className="am-action-determine-item">&#8226; Customer data is backed up</div>
+                <div className="am-action-determine-item-details">Ensure customer has backed up anything they want to save</div>
+                {/* <div className="am-action-determine-item">&#8226; No personal items in return</div>
+                <div className="am-action-determine-item-details pb-3">Make sure there are personal items in the sleeve or in the laptop ports</div> */}
               </div>
             </div>
           </div>
