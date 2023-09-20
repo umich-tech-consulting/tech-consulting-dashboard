@@ -151,21 +151,6 @@ const AssetManagementReturn = () => {
     uncaughtErrorFalse();
   };
 
-  useEffect(() => { // Set the height of the "determine" information on the right side of the page equal to that of the height of the form
-    if (assetInputRef.current) {
-      assetInputRef.current.focus();
-    }
-
-    // Calculate the height of am-action-form and set it to am-action-determine
-    const amActionForm = document.querySelector(".am-action-form");
-    const amActionDetermine = document.querySelector(".am-action-determine");
-
-    if (amActionForm && amActionDetermine) {
-      const formHeight = amActionForm.offsetHeight;
-      amActionDetermine.style.height = `${formHeight}px`;
-    }
-  }, [uncaughtError]);
-
 
   return (
     <>
@@ -175,7 +160,7 @@ const AssetManagementReturn = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          <div className="am-action-form-determine">
+          <div className="am-action-form-precheck">
             <div className="am-action-form">
               <div className="am-action-form-header-description">
                 <div className="am-action-form-header">
@@ -212,19 +197,19 @@ const AssetManagementReturn = () => {
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-            <div className="am-action-determine">
-              <div className="am-action-determine-header">Verify</div>
+            <div className="am-action-precheck">
+              <div className="am-action-precheck-header">Verify</div>
               <div className="flex flex-col gap-2 px-6">
-                <div className="am-action-determine-item">&#8226; Mac: "Find My" and iCloud</div>
-                <div className="am-action-determine-item-details">Make sure customer is signed out of "Find My" and iCloud and verify in GSX. [add link]</div>
-                <div className="am-action-determine-item">&#8226; Laptop, Charger and Sleeve</div>
-                <div className="am-action-determine-item-details">Have the customer purchase anything that is missing from the Tech Shop</div>
-                <div className="am-action-determine-item">&#8226; Device is not damaged</div>
-                <div className="am-action-determine-item-details">If damaged, document: when, how, who and where and check in for repair after returning</div>
-                <div className="am-action-determine-item">&#8226; Customer data is backed up</div>
-                <div className="am-action-determine-item-details">Ensure customer has backed up anything they want to save</div>
-                {/* <div className="am-action-determine-item">&#8226; No personal items in return</div>
-                <div className="am-action-determine-item-details pb-3">Make sure there are personal items in the sleeve or in the laptop ports</div> */}
+                <div className="am-action-precheck-item">Mac: "Find My" and iCloud</div>
+                <div className="am-action-precheck-item-details">&#8226; Make sure customer is signed out of "Find My" and iCloud and verify in GSX. [add link]</div>
+                <div className="am-action-precheck-item">Laptop, Charger and Sleeve</div>
+                <div className="am-action-precheck-item-details">&#8226; Have the customer purchase anything that is missing from the Tech Shop</div>
+                <div className="am-action-precheck-item">Device is not damaged</div>
+                <div className="am-action-precheck-item-details">&#8226; If damaged, document: when, how, who and where and check in for repair after returning</div>
+                <div className="am-action-precheck-item">Customer data is backed up</div>
+                <div className="am-action-precheck-item-details">&#8226; Ensure customer has backed up anything they want to save</div>
+                {/* <div className="am-action-precheck-item">&#8226; No personal items in return</div>
+                <div className="am-action-precheck-item-details pb-3">Make sure there are personal items in the sleeve or in the laptop ports</div> */}
               </div>
             </div>
           </div>

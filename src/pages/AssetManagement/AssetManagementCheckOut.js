@@ -205,21 +205,6 @@ const AssetManagementCheckOut = () => {
     uncaughtErrorFalse();
   };
 
-  useEffect(() => { // Set the height of the "determine" information on the right side of the page equal to that of the height of the form
-    if (assetInputRef.current) {
-      assetInputRef.current.focus();
-    }
-
-    // Calculate the height of am-action-form and set it to am-action-determine
-    const amActionForm = document.querySelector(".am-action-form");
-    const amActionDetermine = document.querySelector(".am-action-determine");
-
-    if (amActionForm && amActionDetermine) {
-      const formHeight = amActionForm.offsetHeight;
-      amActionDetermine.style.height = `${formHeight}px`;
-    }
-  }, [uncaughtError]);
-
   return (
     <>
       <Helmet>
@@ -228,7 +213,7 @@ const AssetManagementCheckOut = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          <div className="am-action-form-determine ">
+          <div className="am-action-form-precheck ">
             <div className="am-action-form">
               <div className="am-action-form-header-description">
                 <div className="am-action-form-header">
@@ -276,15 +261,19 @@ const AssetManagementCheckOut = () => {
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-            <div className="am-action-determine">
-              <div className="am-action-determine-header">Verify</div>
+            <div className="am-action-precheck">
+              <div className="am-action-precheck-header">Verify</div>
               <div className="flex flex-col gap-2 px-6">
-                <div className="am-action-determine-item">&#8226; Sites at Home</div>
-                <div className="am-action-determine-item-details">Is the customer here to pick up a Sites at Home Laptop or a laptop from Tech Shop?</div>
-                <div className="am-action-determine-item">&#8226; Windows or Mac</div>
-                <div className="am-action-determine-item-details">Mac tag: Red</div>
-                <div className="am-action-determine-item-details">Windows tag: Green, Yellow, Blue, Pink</div>
-                <div className="am-action-determine-item-details">Tech Repair Loaner tag: White </div>
+                <div className="am-action-precheck-item">Sites at Home</div>
+                <div className="am-action-precheck-item-details">&#8226; Is the customer here to pick up a Sites at Home Laptop or a laptop from Tech Shop?</div>
+                <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
+                <div className="am-action-precheck-item-details">&#8226; Make sure that the laptop, sleeve and charger have the same label</div>
+                <div className="am-action-precheck-item">Windows or Mac</div>
+                <div className="am-action-precheck-item-details">&#8226; Mac tag: Red</div>
+                <div className="am-action-precheck-item-details">&#8226; Windows tag: Green, Yellow, Blue, Pink</div>
+                <div className="am-action-precheck-item-details">&#8226; Tech Repair Loaner tag: White </div>
+                <div className="am-action-precheck-item">Ready for loan</div>
+                <div className="am-action-precheck-item-details">&#8226; Confirm laptop has been wiped and is on setup screen</div>
               </div>
             </div>
           </div>

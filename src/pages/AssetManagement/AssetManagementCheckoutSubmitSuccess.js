@@ -21,32 +21,21 @@ const CheckoutSubmitSuccess = () => {
             </div>
             <div className="am-action-success-next-steps-card-container">
               <div className="am-action-success-next-steps-card">
-                <div className="title-large">You Should</div>
-                <div className="am-action-success-card-bullet-container">
-                  <div>&#8226; Ensure laptop, sleeve and charger are all tied to the same asset number</div>
-                  <div>&#8226; Ensure laptop is wiped and ready to setup</div>
-                </div>
-                <div>
-                  <div className="label-large">Windows</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Connect loaner laptop to power and ethernet</div>
-                    <div>&#8226; Turn on the laptop for the customer</div>
-                  </div>
-                </div>
-              </div>
-              <div className="am-action-success-next-steps-card">
                 <div className="title-large">Have the Customer</div>
                 <div>
                   <div className="label-large">Windows</div>
                   <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Start setting up the computer</div>
+                    <ol className="list-disc pl-4">
+                      <li> Ensure loaner laptop is connected to power and ethernet</li>
+                    </ol>
+                    <div className="list-disk">&#8226; Start setting up the computer</div>
                     <div>&#8226; Sign into the computer with UMICH credentials once on the login screen</div>
                   </div>
                 </div>
                 <div>
                   <div className="label-large">Mac</div>
                   <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Set up the mac as desired, as if it was a new device, either at the Union or on their own</div>
+                    <div>&#8226; Set up the Mac as a personal device, as if it were new. UMICH email and password is not required to use the device</div>
                   </div>
                 </div>
               </div>
@@ -60,6 +49,7 @@ const CheckoutSubmitSuccess = () => {
                   <div>&#8226; If you have any issues with the computer, you can bring it in and we can troubleshoot</div>
                   <div>&#8226; The laptop is insured, if it gets damaged, bring it in and we can replace it</div>
                   <div>&#8226; If you put sensitive files on the laptop, make sure you back them up before returning the device because everything is going to be wiped once the laptop is returned</div>
+                  <div>&#8226; They will receive an email towards the end of the loan period. If the customer would like to extend the loan, they can do so at that time</div>
                 </div>
                 <div>
                   <div className="label-large">Windows</div>

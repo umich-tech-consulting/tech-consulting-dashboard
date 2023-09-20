@@ -23,13 +23,12 @@ const ReturnSubmitSuccess = () => {
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">You Should</div>
                 <div className="am-action-success-card-bullet-container">
-                  <div>&#8226; Ensure laptop, sleeve and charger are all tied to the same asset number</div>
-                  <div>&#8226; Ensure laptop is wiped and ready to setup</div>
+                  <div>&#8226; Check that the laptop, sleeve and charger have the same label. If the label is missing/incorrect have a student manager print a new one</div>
                 </div>
                 <div>
                   <div className="label-large">Windows</div>
                   <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Connect loaner laptop to power and ethernet</div>
+                    <div>&#8226; Wipe the laptop</div>
                     <div>&#8226; Turn on the laptop for the customer</div>
                   </div>
                 </div>
