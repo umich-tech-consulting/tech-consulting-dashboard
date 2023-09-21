@@ -226,8 +226,7 @@ code {
   font-family: "Roboto";
 }
 .notification-pane {
-  @apply w-[350px] fixed top-0 right-0 p-4 rounded-md m-8 text-neutral-9 body-small flex flex-col gap-6;
-  background: rgba(255, 255, 255, 1.00);
+  @apply w-[350px] fixed top-0 right-0 p-4 rounded-md m-8 text-neutral-9 dark:text-neutral-3 body-small flex flex-col gap-6 bg-white dark:bg-neutral-10 ;
 }
 .home-link-container {
   @apply text-yellow-6 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] fixed w-[calc(100%-230px)] bottom-0
