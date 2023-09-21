@@ -7,14 +7,21 @@ const DarkModeButton = () => {
       const storedDarkMode = localStorage.getItem('darkMode');
       return storedDarkMode === 'true' || userPrefersDarkMode;
     });
+    
 
     const toggleDarkMode = () => {
       const newDarkMode = !darkMode;
       setDarkMode(newDarkMode);
       localStorage.setItem('darkMode', String(newDarkMode));
-      setUserPrefersDarkMode(newDarkMode);
+      
+      const htmlElement = document.querySelector('html');
+      if (newDarkMode) {
+        htmlElement.classList.add('dark');
+      } else {
+        htmlElement.classList.remove('dark');
+      }
     };
-
+    
     useEffect(() => {
       const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       setUserPrefersDarkMode(prefersDarkMode);

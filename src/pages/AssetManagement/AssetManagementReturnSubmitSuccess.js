@@ -22,54 +22,54 @@ const ReturnSubmitSuccess = () => {
             <div className="am-action-success-next-steps-card-container">
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">You Should</div>
-                <div className="am-action-success-card-bullet-container">
-                  <div>&#8226; Check that the laptop, sleeve and charger have the same label. If the label is missing/incorrect have a student manager print a new one</div>
-                </div>
+                <ol className="am-action-success-card-bullet-container">
+                  <li>Check that the laptop, sleeve and charger have the same label. If the label is missing/incorrect have a student manager print a new one</li>
+                </ol>
                 <div>
                   <div className="label-large">Windows</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Wipe the laptop</div>
-                    <div>&#8226; Turn on the laptop for the customer</div>
-                  </div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>Wipe the laptop</li>
+                    <li>Turn on the laptop for the customer</li>
+                  </ol>
                 </div>
               </div>
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">Have the Customer</div>
                 <div>
                   <div className="label-large">Windows</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Start setting up the computer</div>
-                    <div>&#8226; Sign into the computer with UMICH credentials once on the login screen</div>
-                  </div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>Start setting up the computer</li>
+                    <li>Sign into the computer with UMICH credentials once on the login screen</li>
+                  </ol>
                 </div>
                 <div>
                   <div className="label-large">Mac</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Set up the mac as desired, as if it was a new device, either at the Union or on their own</div>
-                  </div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>Set up the mac as desired, as if it was a new device, either at the Union or on their own</li>
+                  </ol>
                 </div>
               </div>
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">Tell the Customer</div>
-                <div className="am-action-success-card-bullet-container">
-                  <div>&#8226; It is a bundle: comes with laptop, charger and case</div>
-                  <div>&#8226; Make sure to return everything when you come back, or you will be charged for what is missing</div>
-                  <div>&#8226; Use it like your own personal device, you have admin settings</div>
-                  <div>&#8226; If you have any issues with the computer, you can bring it in and we can troubleshoot</div>
-                  <div>&#8226; The laptop is insured, if it gets damaged, bring it in and we can replace it</div>
-                  <div>&#8226; If you put sensitive files on the laptop, make sure you back them up before returning the device because everything is going to be wiped once the laptop is returned</div>
-                </div>
+                <ol className="am-action-success-card-bullet-container">
+                  <li>It is a bundle: comes with laptop, charger and case</li>
+                  <li>Make sure to return everything when you come back, or you will be charged for what is missing</li>
+                  <li>Use it like your own personal device, you have admin settings</li>
+                  <li>If you have any issues with the computer, you can bring it in and we can troubleshoot</li>
+                  <li>The laptop is insured, if it gets damaged, bring it in and we can replace it</li>
+                  <li>If you put sensitive files on the laptop, make sure you back them up before returning the device because everything is going to be wiped once the laptop is returned</li>
+                </ol>
                 <div>
                   <div className="label-large">Windows</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; The username and password for the laptop will be the UMICH uniqname and password</div>
-                  </div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>The username and password for the laptop will be the UMICH uniqname and password</li>
+                  </ol>
                 </div>
                 <div>
                   <div className="label-large">Mac</div>
-                  <div className="am-action-success-card-bullet-container">
-                    <div>&#8226; Make sure that "Find My" and iCloud are signed out before bringing the laptop back</div>
-                  </div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>Make sure that "Find My" and iCloud are signed out before bringing the laptop back</li>
+                  </ol>
                 </div>
               </div>
             </div>

@@ -263,17 +263,19 @@ const AssetManagementCheckOut = () => {
             </div>
             <div className="am-action-precheck">
               <div className="am-action-precheck-header">Verify</div>
-              <div className="flex flex-col gap-2 px-6">
+              <div className="am-action-precheck-main">
                 <div className="am-action-precheck-item">Sites at Home</div>
-                <div className="am-action-precheck-item-details">&#8226; Is the customer here to pick up a Sites at Home Laptop or a laptop from Tech Shop?</div>
+                <ol><li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop?</li></ol>
                 <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
-                <div className="am-action-precheck-item-details">&#8226; Make sure that the laptop, sleeve and charger have the same label</div>
+                <ol><li>Make sure that the laptop, sleeve and charger have the same label</li></ol>
                 <div className="am-action-precheck-item">Windows or Mac</div>
-                <div className="am-action-precheck-item-details">&#8226; Mac tag: Red</div>
-                <div className="am-action-precheck-item-details">&#8226; Windows tag: Green, Yellow, Blue, Pink</div>
-                <div className="am-action-precheck-item-details">&#8226; Tech Repair Loaner tag: White </div>
+                <ol>
+                  <li>Mac tag: Red</li>
+                  <li>Windows tag: Green, Yellow, Blue, Pink</li>
+                  <li>Tech Repair Loaner tag: White</li>
+                </ol>
                 <div className="am-action-precheck-item">Ready for loan</div>
-                <div className="am-action-precheck-item-details">&#8226; Confirm laptop has been wiped and is on setup screen</div>
+                <ol><li>Confirm laptop has been wiped and is on setup screen</li></ol>
               </div>
             </div>
           </div>

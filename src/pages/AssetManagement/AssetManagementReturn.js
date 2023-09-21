@@ -199,17 +199,16 @@ const AssetManagementReturn = () => {
             </div>
             <div className="am-action-precheck">
               <div className="am-action-precheck-header">Verify</div>
-              <div className="flex flex-col gap-2 px-6">
+              <div className="am-action-precheck-main">
                 <div className="am-action-precheck-item">Mac: "Find My" and iCloud</div>
-                <div className="am-action-precheck-item-details">&#8226; Make sure customer is signed out of "Find My" and iCloud and verify in GSX. [add link]</div>
+                <ol><li>Make sure customer is signed out of "Find My" and iCloud and verify in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX
+                </a></span></li></ol>
                 <div className="am-action-precheck-item">Laptop, Charger and Sleeve</div>
-                <div className="am-action-precheck-item-details">&#8226; Have the customer purchase anything that is missing from the Tech Shop</div>
+                <ol><li>Have the customer purchase anything that is missing from the Tech Shop</li></ol>
                 <div className="am-action-precheck-item">Device is not damaged</div>
-                <div className="am-action-precheck-item-details">&#8226; If damaged, document: when, how, who and where and check in for repair after returning</div>
+                <ol><li>If damaged: Document who, when, where, & how > Return Device > Check-in for repair</li></ol>
                 <div className="am-action-precheck-item">Customer data is backed up</div>
-                <div className="am-action-precheck-item-details">&#8226; Ensure customer has backed up anything they want to save</div>
-                {/* <div className="am-action-precheck-item">&#8226; No personal items in return</div>
-                <div className="am-action-precheck-item-details pb-3">Make sure there are personal items in the sleeve or in the laptop ports</div> */}
+                <ol><li>Ensure customer has saved important files</li></ol>
               </div>
             </div>
           </div>
