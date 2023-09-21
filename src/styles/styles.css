@@ -196,30 +196,51 @@ code {
 }
 /* Home Styles Start */
 .homepage {
-  @apply bg-blue-9 w-screen h-screen;
-    background-image: url("../icons/home/homepage_background.png");
+  @apply bg-blue-9 w-full h-screen;
+    background-image: url("../icons/home/homepage_background_two.jpg");
     background-attachment: fixed;
     /* background-position: center; */
     /* background-repeat: no-repeat; */
     background-size: cover;
+}
+.top-gradient {
+  opacity: 0.95;
+  background: linear-gradient(180deg, #553A2F 0%, rgba(0, 0, 0, 0.00) 100%);
+  width: 100%;
+  height: 30vh;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+}
+.bottom-gradient {
+  opacity: 0.8;
+  background: linear-gradient(0deg, #A47044 0%, rgba(0, 0, 0, 0.00) 100%);
+  width: 100%;
+  height: 50vh;
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0
 }
 .menu-button {
   @apply text-white font-bold text-4xl flex flex-col gap-10 p-12 fixed bottom-0;
   font-family: "Roboto";
 }
 .notification-pane {
-  @apply w-[350px] rounded-md p-3;
-  background: rgba(33, 33, 33, 0.90);
+  @apply w-[350px] fixed top-0 right-0 p-4 rounded-md m-8 text-neutral-9 body-small flex flex-col gap-6;
+  background: rgba(255, 255, 255, 1.00);
 }
-.link-bg {
-  background: rgba(7, 48, 95, 0.80);
-  /* background: rgba(4, 24, 47, 0.90); */
-  font-family: "Roboto";
+.home-link-container {
+  @apply text-yellow-6 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] fixed w-[calc(100%-230px)] bottom-0
+}
+.home-link-container-main {
+  @apply flex flex-wrap gap-4
+}
+.home-link {
+  @apply rounded-lg bg-[#00274C] dark:bg-yellow-6 hover:bg-[#002F5C] dark:hover:bg-yellow-5 p-3 w-56 text-center;
 }
 /* Home Styles End */
 /* Announcements Styles Start */
 .announcement-bg {
-  /* background-image: url("../icons/announcements/campus_outline_bg.png"); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
