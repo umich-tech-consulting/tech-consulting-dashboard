@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import laptop_return from "../../icons/asset-management/laptop_return.svg"
-import laptop_check_in from "../../icons/asset-management/laptop_check_out.svg"
+import { LaptopReturn, LaptopCheckOut } from "../../icons/asset-management/AssetManagementLandingSvgs";
 // import laptop_swap from "../../icons/asset-management/laptop_swap.svg"
 // import laptop_lookup from "../../icons/asset-management/laptop_lookup.svg"
 // import laptop_warranty from "../../icons/asset-management/laptop_warranty.svg"
@@ -16,14 +15,14 @@ const AssetManagementLanding = () => {
         <title>Asset Management</title>
       </Helmet>
       <div className="w-full flex flex-col h-screen p-6 fade-in">
-        <div className="headline-small">Laptop Asset Management</div>
+        <div className="headline-small dark:text-neutral-1">Laptop Asset Management</div>
         <div className="am-landing-container mt-6">
             <Link className="am-landing-container-button" to="/asset-management/return">
-              <img src={laptop_return} alt='Laptop Return Icon'/>
+              <LaptopReturn />
               <div>Return</div>
             </Link>
             <Link className="am-landing-container-button" to="/asset-management/checkout">
-              <img src={laptop_check_in} alt='Laptop Check Out Icon'/>
+              <LaptopCheckOut />
               <div>Checkout</div>
             </Link>
             {/* <Link className="am-landing-container-button" to="/asset-management/swap">

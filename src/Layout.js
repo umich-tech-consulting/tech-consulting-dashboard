@@ -6,7 +6,7 @@ const Layout = () => {
     return (
         <>
             <div className='block'>
-                <div className={`ml-[230px] box-border min-h-screen bg-base-light`}>
+                <div className={`ml-[230px] box-border min-h-screen bg-base-light dark:bg-neutral-10`}>
                     <nav className='inset-0 fixed box-border w-fit z-50'>
                         <LeftNav />
                     </nav>

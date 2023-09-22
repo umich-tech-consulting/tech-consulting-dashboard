@@ -1,14 +1,13 @@
 import { Helmet } from "react-helmet";
 import React, { useState, useRef, useEffect } from "react";
 import dashboard_settings from "../../config.json"
-import laptop_return from "../../icons/asset-management/laptop_return.svg"
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
-import ReturnSubmitSuccess from "../../components/AssetManagement/Return/ReturnSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
-// import spinner from "../../icons/asset-management/spinner.svg";
+import { useNavigate } from "react-router";
+
 
 const AssetManagementReturn = () => {
  // Form data Start
@@ -19,16 +18,15 @@ const AssetManagementReturn = () => {
   // Form Data End
 
   // Api Data Start
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
-  const [tdxResponse, setTdxResponse] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
-  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
 
   const assetInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (assetInputRef.current) {
@@ -50,17 +48,17 @@ const AssetManagementReturn = () => {
   };
 
   const tdxReturnLoan = async () => {
+    setIsLoading(true);
     setAssetError(null);
     setAssetErrorMessage(null);
     setSubmitButtonValue(
       <>
         <div className="am-action-submit-button-spinner">
-          <div>Loading</div>
-          <svg aria-hidden="true" class="w-5 h-5 animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#0477cc"/>
-              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="#ffffff"/>
-          </svg>
-          {/* <img src={spinner} alt="Loading Spinner" /> */}
+          <div className="dot-container">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
         </div>
       </>
     );
@@ -77,14 +75,15 @@ const AssetManagementReturn = () => {
         }),
       });
       if (res.ok) {
+        setIsLoading(false);
         const data = await res.json();
-        setIsSubmitted(true);
-        setTdxResponse(data);
+        localStorage.setItem('tdxResponse', JSON.stringify(data));
+        navigate('/asset-management/return/success');
         setAssetError(null);
       }
       if (!res.ok) {
+        setIsLoading(false);
         increaseErrorCount();
-        console.log(errorCount);
         const data = await res.json();
         switch (data.error_number) {
           case 2: // Asset does not exist in TDX
@@ -122,7 +121,7 @@ const AssetManagementReturn = () => {
           case 8: // Asset already available
             setAssetError(true);
             setAssetErrorMessage(
-              `Asset has already been returned${
+              `Asset is already "In Stock - Available"${
                 data.details ? `: ${data.details}` : ""
               }`
             );
@@ -135,9 +134,10 @@ const AssetManagementReturn = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
+      setIsLoading(false);
       increaseErrorCount();
       console.log(errorCount);
-      setSubmitButtonValue("Server Offline");
+      setSubmitButtonValue("Offline");
       uncaughtErrorTrue();
     }
   };
@@ -160,16 +160,18 @@ const AssetManagementReturn = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          {isSubmitted ? ( // Check if form is submitted
-            <ReturnSubmitSuccess
-              tdxResponse={tdxResponse}
-              tdxBaseUrl={tdxBaseUrl}
-            />
-          ) : (
+          <div className="am-action-form-precheck">
             <div className="am-action-form">
-              <div className="am-action-form-header">
-                <div>Laptop Return</div>
-                <img src={laptop_return} alt="Laptop Return Icon" />
+              <div className="am-action-form-header-description">
+                <div className="am-action-form-header">
+                  <div>Laptop Return</div>
+                  <svg className="h-5 w-fit" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="laptop_return">
+                    <title id="laptop_return">Laptop Return</title>
+                    <circle cx="20" cy="20" r="20" className="fill-white dark:fill-black" transform="rotate(-180 20 20)"/>
+                    <path className="fill-[#0488E1] dark:fill-yellow-6" fillRule="evenodd" d="M20 .0000035C8.95385.00000157-.00000157 8.95385-.0000035 20-.00000543 31.0462 8.95384 40 20 40c11.0461 0 20-8.9538 20-20C40 8.95385 31.0462.00000543 20 .0000035ZM18.9128 28.7795c.2885.2881.6795.4499 1.0872.4499.4077 0 .7987-.1618 1.0872-.4499l6.1538-6.1539c.1512-.1408.2724-.3106.3565-.4994.0841-.1887.1293-.3924.1329-.599.0037-.2065-.0343-.4117-.1117-.6033-.0774-.1916-.1925-.3656-.3386-.5117-.1461-.1461-.3201-.2612-.5117-.3386-.1916-.0774-.3967-.1154-.6033-.1117-.2066.0036-.4103.0488-.599.1329-.1887.0841-.3586.2053-.4994.3565l-3.5282 3.5282V12.3077c0-.408-.1621-.7993-.4506-1.0879-.2886-.2885-.6799-.4506-1.0879-.4506-.408 0-.7993.1621-1.0879.4506-.2885.2886-.4506.6799-.4506 1.0879v11.6718l-3.5282-3.5282c-.2916-.2718-.6773-.4197-1.0759-.4127-.3986.0071-.7789.1685-1.0607.4504-.2819.2819-.4434.6621-.4504 1.0607-.007.3986.1409.7843.4127 1.0759l6.1538 6.1539Z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div className="am-action-form-description">Return a customer's Sites at Home Windows or Mac device</div>
               </div>
               <div className="am-action-component-main">
                 <AssetNumberFormField
@@ -183,17 +185,33 @@ const AssetManagementReturn = () => {
                   isSubmitDisabled={isSubmitDisabled}
                   handleSubmit={handleSubmit}
                   inputRef={assetInputRef}
+                  isLoading={isLoading}
                 />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
               <SubmitOrCancelForm
+                isLoading={isLoading}
                 submitButtonValue={submitButtonValue}
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-          )}
+            <div className="am-action-precheck">
+              <div className="am-action-precheck-header">Verify</div>
+              <div className="am-action-precheck-main">
+                <div className="am-action-precheck-item">Mac: "Find My" and iCloud</div>
+                <ol><li>Make sure customer is signed out of "Find My" and iCloud and verify in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX
+                </a></span></li></ol>
+                <div className="am-action-precheck-item">Laptop, Charger and Sleeve</div>
+                <ol><li>Have the customer purchase anything that is missing from the Tech Shop</li></ol>
+                <div className="am-action-precheck-item">Device is not damaged</div>
+                <ol><li>If damaged: Document who, when, where, & how > Return Device > Check-in for repair</li></ol>
+                <div className="am-action-precheck-item">Customer data is backed up</div>
+                <ol><li>Ensure customer has saved important files</li></ol>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

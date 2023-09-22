@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* ----------- Default Styles Start ----------- */
+html {
+  @apply bg-base-light dark:bg-neutral-10
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,22 +23,35 @@ code {
 
 /* Scrollbar start */
 ::-webkit-scrollbar {
+  @apply bg-neutral-1;
   width: 12px;
+}
+.dark ::-webkit-scrollbar {
+  @apply bg-neutral-9
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #e0e0e0;
+  @apply bg-neutral-1;
   border-radius: 10px;
   width: 12px;
 }
+.dark ::-webkit-scrollbar-track {
+  @apply bg-neutral-9;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #9e9e9e;
+  @apply bg-neutral-5;
   border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-neutral-6;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #616161;
+  @apply bg-neutral-7;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-4;
 }
 /* Scrollbar End */
 
@@ -178,13 +194,97 @@ code {
   animation: popupAnimation;
   animation-duration: 500ms;
 }
-
-
 /* ----------- Animation Styles End----------- */
+/* Home Styles Start */
+.homepage {
+  @apply bg-blue-9 w-full h-screen;
+    background-image: url("../icons/home/homepage_background_four.jpg");
+    background-attachment: fixed;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+.top-gradient {
+  opacity: 0.95;
+  background: linear-gradient(180deg, #553A2F 0%, rgba(0, 0, 0, 0.00) 100%);
+  width: 100%;
+  height: 30vh;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+}
+.bottom-gradient {
+  opacity: 0.8;
+  background: linear-gradient(0deg, #A47044 0%, rgba(0, 0, 0, 0.00) 100%);
+  width: 100%;
+  height: 50vh;
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0
+}
+.menu-button {
+  @apply text-white font-bold text-4xl flex flex-col gap-10 p-12 fixed bottom-0;
+  font-family: "Roboto";
+}
+.notification-pane {
+  @apply w-[350px] fixed top-0 right-0 p-4 rounded-md m-8 text-neutral-9 dark:text-neutral-3 body-small flex flex-col gap-6 bg-white dark:bg-neutral-10 ;
+}
+.home-link-container {
+  @apply text-yellow-6 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] fixed w-[calc(100%-230px)] bottom-0
+}
+.home-link-container-main {
+  @apply flex flex-wrap gap-4
+}
+.home-link {
+  @apply rounded-lg bg-[#00274C] dark:bg-yellow-6 hover:bg-[#002F5C] dark:hover:bg-yellow-5 p-3 w-56 text-center;
+}
+@keyframes buttonPop {
+  0% {
+    scale: 100%;
+  }
+  25% {
+    scale: 110%;
+  }
+  50% {
+    scale: 100%;
+  }
+  75% {
+    scale: 95%;
+  }
+  100% {
+    scale: 100%
+  }
+}
+.home-link {
+  animation: buttonPop .5s ease-in;
+  /* animation-delay: 0.4s; */
+}
+.home-link:nth-child(2) {
+  animation-delay: .1s;
+}
+.home-link:nth-child(3) {
+  animation-delay: .2s;
+}
+
+/* Home Styles End */
+/* Announcements Styles Start */
+.announcement-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Announcements Styles End */
 
 /* ----------- Left Nav Start----------- */
 .link-container {
   @apply pl-2 h-8 rounded-full flex content-center items-center gap-x-4;
+}
+.primary-nav-icon {
+  @apply w-5 h-5
+}
+.dashboard-logo {
+  @apply h-2 w-10
 }
 /* ----------- Left Nav End----------- */
 
@@ -194,99 +294,230 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white shadow-light hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
   transition: ease-out 400ms;
-}
-.am-landing-container img {
-  @apply h-7 w-fit
 }
 /* Default Management Component End */
 /* Asset Management Action Component Start */
 .am-action-main {
-  @apply w-full flex flex-col h-screen p-6;
+  @apply w-full flex flex-col h-screen;
 }
 .am-action-container {
-  @apply w-full h-screen p-6 flex flex-col justify-center items-center;
+  @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center;
 }
-.am-action-form {
-  @apply w-full max-w-sm p-6 rounded-xl shadow-light bg-white flex flex-col gap-y-6;
+.am-action-form-precheck {
+  @apply flex rounded-xl mt-16 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 h-full;
   animation: popupAnimation;
   animation-duration: 500ms;
 }
+/* precheck Component Start */
+.am-action-precheck {
+  @apply w-72 bg-neutral-1 dark:bg-black border-l border-l-neutral-3 dark:border-l-neutral-8 rounded-r-xl overflow-auto text-neutral-7 dark:text-neutral-4;
+}
+.am-action-precheck-header {
+  @apply title-medium mb-3 text-neutral-8 dark:text-neutral-3 px-6 pt-6
+}
+.am-action-precheck-main {
+  @apply flex flex-col gap-2 px-6
+}
+.am-action-precheck-item {
+  @apply title-small mt-5
+}
+.am-action-precheck-item:first-child {
+  @apply mt-0 title-small
+}
+.am-action-precheck-main ol {
+  @apply body-small list-disc pl-2
+}
+.am-action-precheck-item-details {
+  @apply body-small
+}
+/* precheck Component End */
+.am-action-form {
+  @apply h-fit max-w-sm p-6 flex flex-col gap-y-0 flex-grow;
+}
+.am-action-form-header-description {
+  @apply flex flex-col gap-2 pb-6
+}
 .am-action-form-header {
-  @apply flex gap-3 justify-center items-center headline-small
+  @apply flex gap-2 items-center title-large dark:text-neutral-1
+}
+.am-action-form-description {
+  @apply text-neutral-7 body-medium dark:text-neutral-5
 }
 .am-action-form-header img {
   @apply h-5 w-fit
 }
 .am-action-component-main {
-  @apply flex flex-col gap-y-1;
+  @apply flex flex-col gap-y-2;
 }
 .am-action-component-item {
   @apply body-medium flex justify-between flex-col;
 }
 .am-action-component-item-header {
-  @apply w-fit mb-2 body-medium flex items-center gap-1;
+  @apply w-fit mb-2 body-medium flex items-center gap-1 dark:text-neutral-1;
 }
 .am-action-component-item-header img {
   @apply w-fit h-[14px];
 }
 .am-action-form-default {
-  @apply bg-white rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 focus:ring-blue-9 focus:ring-2 focus:outline-none
+  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-9 dark:focus:ring-yellow-6 focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
   @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10
+  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10 dark:text-red-5
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
 }
 .am-uniqname-item {
-  @apply w-32 px-2 p-[6px];
+  @apply w-32 px-2 p-[6px] dark:text-neutral-1 bg-white dark:bg-neutral-9;
 }
 .am-laptop-item {
   @apply w-fit flex
 }
 .am-laptop-item select {
-  @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white text-neutral-9 bg-neutral-1
+  @apply w-fit p-[6px] rounded-none rounded-l-md cursor-pointer mr-[0px] focus:z-20 hover:z-10 focus:bg-white dark:focus:bg-neutral-9 text-neutral-9 dark:text-neutral-1 bg-neutral-1 dark:bg-neutral-10
 }
 .am-laptop-item input {
-  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10
+  @apply p-[6px] px-2 h-fit w-20 rounded-none rounded-r-md focus:z-20 hover:z-10 dark:text-neutral-1 bg-white dark:bg-neutral-9
 }
 .am-comments {
   @apply mb-6 flex flex-col justify-between gap-y-2
 }
 .am-comments-header {
-  @apply w-fit body-medium flex items-center gap-1;
+  @apply w-fit body-medium flex items-center gap-1 dark:text-neutral-1;
 }
 .am-comments textarea {
-  @apply bg-white w-full body-medium p-[6px] h-16 resize-none rounded-md text-neutral-9
+  @apply bg-white dark:bg-neutral-9 w-full body-medium p-[6px] h-[72px] resize-none rounded-md text-neutral-9 dark:text-neutral-1
 }
 .am-submit-cancel-container {
-  @apply w-full flex justify-between
+  @apply w-full flex gap-3 justify-end
 }
 .am-submit-close-button {
-  @apply p-3 w-[130px] label-large text-center border-none rounded-full
+  @apply w-[80px] h-[32px] label-large text-center border-none rounded-full flex justify-center items-center
 }
 .am-action-submit-button-spinner {
   @apply w-full flex justify-center
 }
+/* Start submit button loading dots */
+.dot-container {
+  display: inline-block;
+  margin-bottom: 8px
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  @apply bg-white dark:bg-neutral-10;
+  animation: jumpingAnimation 1.4s ease-in infinite;
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.4s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes jumpingAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* End submit button loading dots */
+
+
 .am-action-submit-button-spinner img, .am-action-submit-button-spinner svg {
   @apply w-5 h-5 animate-spin ml-2
 }
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-12 max-w-sm bg-white p-6 rounded-lg items-center shadow-light
+  @apply w-full flex flex-col gap-12 bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1
+}
+.am-action-success-next-steps {
+  @apply p-9 w-full flex flex-col gap-12 h-full overflow-auto
 }
 .am-action-success-header {
-  @apply title-large text-blue-9 text-center w-fit flex flex-col gap-6
+  @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
 }
-.am-action-success-header img {
-  @apply h-[78px]
+.am-action-success-next-steps-card-container {
+  @apply flex flex-col gap-8
 }
+.am-action-success-next-steps-card {
+  @apply w-full rounded-md border border-neutral-3 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium
+}
+.am-action-success-card-bullet-container {
+  @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4 list-disc pl-4
+}
+.am-action-success-summary {
+  @apply w-[400px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
+}
+.am-action-success-summary-info-container {
+  @apply flex flex-col gap-7 pb-20
+}
+.am-action-success-summary-info {
+  @apply flex flex-col gap-1 p-2
+}
+.am-action-success-summary-link {
+  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-0 dark:hover:bg-neutral-9 rounded-md
+}
+.am-action-success-summary-info-name {
+  @apply text-[14px] font-normal text-neutral-8 dark:text-neutral-4;
+  font-family: "Roboto";
+}
+.am-action-success-summary-info-data {
+  @apply flex gap-2 items-center title-medium
+}
+.am-action-success-summary-info-data-comment {
+  @apply flex gap-2 items-start title-medium break-words
+}
+.am-action-success-close-button-container {
+  @apply absolute right-0 bottom-0 p-6
+}
+.am-action-success-close-button {
+  @apply block text-center w-[80px] rounded-full bg-blue-9 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-8 dark:hover:bg-yellow-5
+}
+@keyframes infoCardAnimation {
+  0% {
+    scale: 100%;
+  }
+  40% {
+    scale: 105%;
+  }
+  100% {
+    scale: 100%
+  }
+}
+.am-action-success-next-steps-card {
+  animation: infoCardAnimation .4s ease-in;
+  animation-delay: 0.4s;
+}
+.am-action-success-next-steps-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.am-action-success-next-steps-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/* This is the old code start */
 .am-action-success-container-main {
   @apply flex flex-col gap-9 w-full
 }
@@ -318,9 +549,9 @@ code {
 .am-action-success-date-comments-info img {
   @apply h-5 w-5
 }
-.am-action-success-close-button {
-  @apply block text-center w-full rounded-full bg-blue-9 body-medium p-[10px] text-white hover:bg-blue-8
-}
+/* This is the old code End */
+
+
 /* Action Success End */
 /* High Error Alert Start */
 .am-error-alert-container {
@@ -330,16 +561,16 @@ code {
   @apply mr-8 flex flex-col gap-2 items-end
 }
 .am-error-alert-message {
-  @apply body-small bg-white p-3 rounded-md w-[240px]
+  @apply body-small bg-white dark:bg-neutral-9 dark:text-neutral-1 p-3 rounded-md w-[240px]
 }
 .am-error-alert-button-container {
   @apply flex flex-col justify-between mt-2 gap-2 w-full
 }
 .am-error-alert-close-button {
-  @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 hover:bg-neutral-3 rounded-full
+  @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 dark:bg-neutral-8 hover:bg-neutral-3 dark:hover:bg-neutral-7 dark:text-neutral-1 rounded-full
 }
 .am-error-alert-tdx-button {
-  @apply body-small text-white bg-blue-9 hover:bg-blue-8 p-2 rounded-full flex-1 text-center
+  @apply body-small text-white dark:text-neutral-10 bg-blue-9 dark:bg-yellow-6 hover:bg-blue-8 dark:hover:bg-yellow-5 p-2 rounded-full flex-1 text-center
 }
 .am-error-alert-squirrel-container {
   @apply flex w-full justify-end
@@ -350,7 +581,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-0 text-red-10 p-3 rounded-md flex items-start gap-3
+  @apply body-medium bg-red-0 dark:bg-red-10 text-red-10 dark:text-red-1 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5
@@ -368,10 +599,10 @@ code {
 }
 /* Resource Landing Start */
 .r-landing-container {
-  @apply max-w-3xl w-full mt-8
+  @apply max-w-3xl w-full mt-8 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-title {
-  @apply mb-6 headline-large text-center
+  @apply mb-6 headline-large text-neutral-9 dark:text-neutral-1 text-center
 }
 .r-landing-main {
   @apply mt-14
@@ -380,7 +611,7 @@ code {
 
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
-  @apply p-3 w-60 flex items-center gap-3 shadow-light bg-white hover:bg-blue-0 focus:bg-blue-1 hover:shadow-blue rounded-lg title-small text-neutral-9;
+  @apply p-3 w-60 flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
   transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
@@ -393,13 +624,10 @@ code {
 
 /* Resource Landing Search Start */
 .r-landing-search {
-  @apply relative mt-14 w-full border border-blue-9 rounded-lg
+  @apply relative mt-14 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
 }
 .r-landing-search input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
-}
-.r-landing-search-icon {
-  @apply absolute top-0 left-0 flex items-center justify-center h-full p-3
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-landing-search-clear {
   @apply absolute top-0 right-0 flex items-center justify-center h-full p-2
@@ -408,7 +636,7 @@ code {
 
 /* Resource Landing Categories Start */
 .r-landing-categories-title {
-  @apply mb-6 headline-small text-left mt-20
+  @apply mb-6 headline-small text-left mt-20 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-categories-container {
   @apply w-full flex flex-col gap-4
@@ -417,7 +645,7 @@ code {
   @apply flex flex-col gap-4 lg:flex-row
 }
 .r-landing-categories-card {
-  @apply flex-1 flex shadow-light hover:shadow-blue bg-white p-3 rounded-md gap-4 hover:bg-blue-0 focus:bg-blue-1;
+  @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1;
   transition: ease-out 200ms;
 }
 .r-landing-categories-card img {
@@ -427,26 +655,23 @@ code {
   @apply body-medium
 }
 .r-landing-categories-training-card {
-  @apply flex items-center justify-center shadow-light hover:shadow-blue bg-white p-3 rounded-md gap-2 hover:bg-blue-0 focus:bg-blue-1 title-large;
+  @apply flex items-center justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
   transition: ease-out 400ms;
-}
-.r-landing-categories-training-card img {
-  @apply rounded-md h-10 w-10
 }
 /* Resource Landing Categories End */
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
 }
 .r-groupbuilder-searchbox {
-  @apply relative mt-8 mb-8 w-full border border-blue-9 rounded-lg
+  @apply relative mt-8 mb-8 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
 }
 .r-groupbuilder-searchbox input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white body-medium pr-12 focus:outline-blue-9
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-groupbuilder-searchbox-clear {
   @apply absolute top-0 right-0 h-full p-2
@@ -455,7 +680,7 @@ code {
 
 /* Resource CategoryBuilder Start */
 .r-categorybuilder-nav {
-  @apply text-neutral-7 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
 .r-categorybuilder-title {
   @apply mb-6 headline-large text-center
@@ -467,14 +692,14 @@ code {
   @apply flex flex-col gap-4
 }
 .r-individual-link {
-  @apply shadow-light hover:shadow-blue bg-white rounded-md p-4 hover:bg-blue-0;
+  @apply shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 rounded-md p-4 hover:bg-blue-0 dark:hover:bg-neutral-8;
   transition: ease-out 400ms;
 }
 .r-individual-link-name {
-  @apply title-medium text-blue-9 mb-2
+  @apply title-medium text-blue-9 dark:text-yellow-6 mb-2
 }
 .r-individual-link-description {
-  @apply body-medium text-neutral-9
+  @apply body-medium text-neutral-9 dark:text-neutral-1
 }
 /* Resource Links End */
 

@@ -1,35 +1,22 @@
 import { Link } from 'react-router-dom';
+import { Apple, Clock, Document, Fishbowl, Globe, Group, Infobook, Printer, Shield, Slasheye, Tdx, Tools, Umich, Wrench } from '../../../icons/resources/GroupIconSvgs';
 import React from 'react';
-import tools from "../../../icons/resources/group-category-icons/tools.svg";
-import apple from "../../../icons/resources/group-category-icons/apple.svg";
-import clock from "../../../icons/resources/group-category-icons/clock.svg";
-import document from "../../../icons/resources/group-category-icons/document.svg";
-import fishbowl from "../../../icons/resources/group-category-icons/fishbowl.svg";
-import globe from "../../../icons/resources/group-category-icons/globe.svg";
-import group from "../../../icons/resources/group-category-icons/group.svg";
-import infobook from "../../../icons/resources/group-category-icons/infobook.svg";
-import tdx from "../../../icons/resources/group-category-icons/tdx.svg";
-import shield from "../../../icons/resources/group-category-icons/shield.svg";
-import slasheye from '../../../icons/resources/group-category-icons/slasheye.svg'
-import umich from '../../../icons/resources/group-category-icons/umich.svg'
-import printer from "../../../icons/resources/group-category-icons/printer.svg";
-import wrench from "../../../icons/resources/group-category-icons/wrench.svg";
 
 const iconMapping = {
-    apple: apple,
-    clock: clock,
-    document: document,
-    fishbowl: fishbowl,
-    globe: globe,
-    group: group,
-    infobook: infobook,
-    printer: printer,
-    shield: shield,
-    slasheye: slasheye,
-    tdx: tdx,
-    umich: umich,
-    tools: tools,
-    wrench: wrench,
+    apple: <Apple />,
+    clock: <Clock />,
+    document: <Document />,
+    fishbowl: <Fishbowl />,
+    globe: <Globe />,
+    group: <Group />,
+    infobook: <Infobook />,
+    printer: <Printer />,
+    shield: <Shield />,
+    slasheye: <Slasheye />,
+    tdx: <Tdx />,
+    umich: <Umich />,
+    tools: <Tools />,
+    wrench: <Wrench />,
 };
 
 const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
@@ -55,7 +42,7 @@ const ResourcesLandingTabsContent = ({ resourcesData, activeTab }) => {
             to={`${formattedCategory}/${formattedGroup}`}
             className="r-landing-tabgroups"
             >
-            {IconComponent && <img src={IconComponent} alt={icon} className='h-10 w-10 rounded-md' />}
+            {IconComponent}
             {group && <div>{group}</div>}
           </Link>
         );

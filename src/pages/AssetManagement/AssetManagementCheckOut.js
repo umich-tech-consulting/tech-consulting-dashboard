@@ -1,14 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import dashboard_settings from "../../config.json"
-import laptop_check_out from "../../icons/asset-management/laptop_check_out.svg";
 import UniqnameFormField from "../../components/AssetManagement/UniqnameFormField";
 import AssetNumberFormField from "../../components/AssetManagement/AssetNumberFormField";
 import CommentFormField from "../../components/AssetManagement/CommentFormField";
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
-import CheckoutSubmitSuccess from "../../components/AssetManagement/Checkout/CheckoutSubmitSuccess";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
+import { useNavigate } from "react-router";
 // import spinner from "../../icons/asset-management/spinner.svg";
 
 const AssetManagementCheckOut = () => {
@@ -21,20 +20,18 @@ const AssetManagementCheckOut = () => {
   // Form Data End
 
   // Api Data Start
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitButtonValue, setSubmitButtonValue] = useState("Submit");
-  const [tdxResponse, setTdxResponse] = useState(null);
   const [uniqnameError, setUniqnameError] = useState(null);
   const [uniqnameErrorMessage, setUniqnameErrorMessage] = useState(null);
   const [assetError, setAssetError] = useState(null);
   const [assetErrorMessage, setAssetErrorMessage] = useState(null);
   const [errorCount, setErrorCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const [uncaughtError, setUncaughtError] = useState(false); // If  TDX  returns an error message the that the api/dashboard isn't looking for, have users resolve the issue in TDX
-  const tdxBaseUrl = `https://${dashboard_settings.TDX.TDX_DOMAIN}/${dashboard_settings.TDX.USE_SANDBOX ? 'SB' : ''}TDNext/apps` // if sandbox is used, then SB will be added before TDNext
- //Api Data End
 
   const uniqnameInputRef = useRef(null);
   const assetInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (uniqnameInputRef.current) {
@@ -56,6 +53,7 @@ const AssetManagementCheckOut = () => {
   };
 
   const tdxCheckoutLoan = async () => {
+    setIsLoading(true);
     setUniqnameError(null);
     setUniqnameErrorMessage(null);
     setAssetError(null);
@@ -63,12 +61,11 @@ const AssetManagementCheckOut = () => {
     setSubmitButtonValue(
       <>
         <div className="am-action-submit-button-spinner">
-          <div>Loading</div>
-          <svg aria-hidden="true" class="w-5 h-5 animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#0477cc"/>
-              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="#ffffff"/>
-          </svg>
-          {/* <img src={spinner} alt="Loading Spinner" /> */}
+          <div className="dot-container">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
         </div>
       </>
     );
@@ -86,13 +83,15 @@ const AssetManagementCheckOut = () => {
         }),
       });
       if (res.ok) {
+        setIsLoading(false);
         const data = await res.json();
-        setIsSubmitted(true);
-        setTdxResponse(data);
+        localStorage.setItem('tdxResponse', JSON.stringify(data));
+        navigate('/asset-management/checkout/success');
         setUniqnameError(null);
         setAssetError(null);
       }
       if (!res.ok) {
+        setIsLoading(false);
         increaseErrorCount();
         console.log(errorCount);
         const data = await res.json();
@@ -100,7 +99,7 @@ const AssetManagementCheckOut = () => {
           case 1: // Uniqname does not exist in TDX
             setUniqnameError(true);
             setUniqnameErrorMessage(
-              `Uniqname ${data.attributes.uniqname} does not exist in TDX${
+              `Uniqname ${data.attributes.uniqname} not found in TDX${
                 data.details ? `: ${data.details}` : ""
               }`
             );
@@ -188,9 +187,10 @@ const AssetManagementCheckOut = () => {
         setSubmitButtonValue("Retry");
       }
     } catch (error) {
+      setIsLoading(false);
       increaseErrorCount();
       console.log(errorCount);
-      setSubmitButtonValue("Server Offline");
+      setSubmitButtonValue("Offline");
       uncaughtErrorTrue();
     }
   };
@@ -213,16 +213,18 @@ const AssetManagementCheckOut = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          {isSubmitted ? ( // Check if form is submitted
-            <CheckoutSubmitSuccess
-              tdxResponse={tdxResponse}
-              tdxBaseUrl={tdxBaseUrl}
-            />
-          ) : (
+          <div className="am-action-form-precheck ">
             <div className="am-action-form">
-              <div className="am-action-form-header">
-                <div>Laptop Checkout</div>
-                <img src={laptop_check_out} alt="Laptop Check Out Icon" />
+              <div className="am-action-form-header-description">
+                <div className="am-action-form-header">
+                  <div>Laptop Checkout</div>
+                  <svg className="h-5 w-fit" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="laptop_checkout">
+                    <title id="laptop_checkout">Laptop Checkout</title>
+                    <circle cx="20" cy="20" r="20" className="fill-white dark:fill-black"/>
+                    <path className="fill-[#0488E1] dark:fill-yellow-6" fillRule="evenodd" d="M20 40c11.0462 0 20-8.9538 20-20C40 8.95384 31.0462-.00000305 20-.00000401 8.95385-.00000498 4.5e-7 8.95384-5.2e-7 20-.00000148 31.0462 8.95384 40 20 40Zm1.0872-28.7795c-.2885-.2881-.6795-.4499-1.0872-.4499-.4077 0-.7987.1618-1.0872.4499l-6.1538 6.1539c-.1512.1408-.2724.3106-.3565.4994-.0841.1887-.1293.3924-.1329.599-.0037.2065.0343.4117.1117.6033.0774.1916.1925.3656.3386.5117.1461.1461.3201.2612.5117.3386.1916.0774.3967.1154.6033.1117.2066-.0036.4103-.0488.599-.1329.1887-.0841.3586-.2053.4994-.3565l3.5282-3.5282v11.6718c0 .408.1621.7993.4506 1.0879.2886.2885.6799.4506 1.0879.4506.408 0 .7993-.1621 1.0879-.4506.2885-.2886.4506-.6799.4506-1.0879V16.0205l3.5282 3.5282c.2916.2718.6773.4197 1.0759.4127.3986-.007.7789-.1685 1.0607-.4504.2819-.2819.4434-.6621.4504-1.0607.007-.3986-.1409-.7843-.4127-1.0759l-6.1538-6.1539Z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div className="am-action-form-description">Loan a Sites at Home Windows or Mac device to a customer after approval</div>
               </div>
               <div className="am-action-component-main">
                 <UniqnameFormField
@@ -234,6 +236,7 @@ const AssetManagementCheckOut = () => {
                   isSubmitDisabled={isSubmitDisabled}
                   handleSubmit={handleSubmit}
                   inputRef={uniqnameInputRef}
+                  isLoading={isLoading}
                 />
                 <AssetNumberFormField
                   setAssetId={setAssetId}
@@ -246,17 +249,35 @@ const AssetManagementCheckOut = () => {
                   isSubmitDisabled={isSubmitDisabled}
                   handleSubmit={handleSubmit}
                   inputRef={assetInputRef}
+                  isLoading={isLoading}
                 />
                 <CommentFormField setComment={setComment} comment={comment} />
               </div>
               <SubmitOrCancelForm
+                isLoading={isLoading}
                 submitButtonValue={submitButtonValue}
                 isSubmitDisabled={isSubmitDisabled}
                 handleSubmit={handleSubmit}
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-          )}
+            <div className="am-action-precheck">
+              <div className="am-action-precheck-header">Verify</div>
+              <div className="am-action-precheck-main">
+                <div className="am-action-precheck-item">Sites at Home</div>
+                <ol><li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop</li></ol>
+                <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
+                <ol><li>Make sure that the laptop, sleeve and charger have the same label</li></ol>
+                <div className="am-action-precheck-item">Windows or Mac</div>
+                <ol>
+                  <li>Is the customer approved for a Windows or Mac loaner laptop</li>
+                  <li>ADD TAG COLOR INFO</li>
+                </ol>
+                <div className="am-action-precheck-item">Ready for loan</div>
+                <ol><li>Confirm laptop has been wiped and is on setup screen</li></ol>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

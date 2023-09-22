@@ -1,11 +1,11 @@
-name: Github Page Deploy Workflow
+name: Self Hosted Site Deploy
 
 on:
   push:
     branches: [main]
 
 jobs:
-  setup:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
