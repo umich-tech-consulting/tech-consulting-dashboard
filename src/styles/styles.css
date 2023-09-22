@@ -198,7 +198,7 @@ code {
 /* Home Styles Start */
 .homepage {
   @apply bg-blue-9 w-full h-screen;
-    background-image: url("../icons/home/homepage_background_two.jpg");
+    background-image: url("../icons/home/homepage_background_three.jpg");
     background-attachment: fixed;
     /* background-position: center; */
     /* background-repeat: no-repeat; */
