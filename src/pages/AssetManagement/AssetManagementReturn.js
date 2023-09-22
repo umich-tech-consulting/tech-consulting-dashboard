@@ -121,7 +121,7 @@ const AssetManagementReturn = () => {
           case 8: // Asset already available
             setAssetError(true);
             setAssetErrorMessage(
-              `Asset has already been returned${
+              `Asset is already "In Stock - Available"${
                 data.details ? `: ${data.details}` : ""
               }`
             );

@@ -467,7 +467,7 @@ code {
   @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4 list-disc pl-4
 }
 .am-action-success-summary {
-  @apply w-[500px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
+  @apply w-[400px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
 }
 .am-action-success-summary-info-container {
   @apply flex flex-col gap-7 pb-20

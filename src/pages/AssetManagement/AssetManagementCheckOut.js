@@ -265,14 +265,13 @@ const AssetManagementCheckOut = () => {
               <div className="am-action-precheck-header">Verify</div>
               <div className="am-action-precheck-main">
                 <div className="am-action-precheck-item">Sites at Home</div>
-                <ol><li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop?</li></ol>
+                <ol><li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop</li></ol>
                 <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
                 <ol><li>Make sure that the laptop, sleeve and charger have the same label</li></ol>
                 <div className="am-action-precheck-item">Windows or Mac</div>
                 <ol>
-                  <li>Mac tag: Red</li>
-                  <li>Windows tag: Green, Yellow, Blue, Pink</li>
-                  <li>Tech Repair Loaner tag: White</li>
+                  <li>Is the customer approved for a Windows or Mac loaner laptop</li>
+                  <li>ADD TAG COLOR INFO</li>
                 </ol>
                 <div className="am-action-precheck-item">Ready for loan</div>
                 <ol><li>Confirm laptop has been wiped and is on setup screen</li></ol>

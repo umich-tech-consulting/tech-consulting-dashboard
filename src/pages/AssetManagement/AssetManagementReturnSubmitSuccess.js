@@ -28,12 +28,20 @@ const ReturnSubmitSuccess = () => {
                 <div>
                   <div className="label-large">Windows</div>
                   <ol className="am-action-success-card-bullet-container">
-                    <li>Wipe the laptop</li>
-                    <li>Turn on the laptop for the customer</li>
+                    <li>Wipe the laptop. Documentation [Link here]</li>
+                    <li>Once the laptop is successfully wiped, put the device in the consulting closet, on the <b>rear middle shelf</b></li>
+                  </ol>
+                </div>
+                <div>
+                  <div className="label-large">Mac</div>
+                  <ol className="am-action-success-card-bullet-container">
+                    <li>Check that "Find My" is disabled in GSX [LINK HERE] and that the customer is signed out of iCloud</li>
+                    <li>Wipe the laptop. Documentation [link here]</li>
+                    <li>Once the laptop is successfully wiped, put the device in the consulting closet, on the <b>rear bottom shelf</b></li>
                   </ol>
                 </div>
               </div>
-              <div className="am-action-success-next-steps-card">
+              {/* <div className="am-action-success-next-steps-card">
                 <div className="title-large">Have the Customer</div>
                 <div>
                   <div className="label-large">Windows</div>
@@ -48,30 +56,7 @@ const ReturnSubmitSuccess = () => {
                     <li>Set up the mac as desired, as if it was a new device, either at the Union or on their own</li>
                   </ol>
                 </div>
-              </div>
-              <div className="am-action-success-next-steps-card">
-                <div className="title-large">Tell the Customer</div>
-                <ol className="am-action-success-card-bullet-container">
-                  <li>It is a bundle: comes with laptop, charger and case</li>
-                  <li>Make sure to return everything when you come back, or you will be charged for what is missing</li>
-                  <li>Use it like your own personal device, you have admin settings</li>
-                  <li>If you have any issues with the computer, you can bring it in and we can troubleshoot</li>
-                  <li>The laptop is insured, if it gets damaged, bring it in and we can replace it</li>
-                  <li>If you put sensitive files on the laptop, make sure you back them up before returning the device because everything is going to be wiped once the laptop is returned</li>
-                </ol>
-                <div>
-                  <div className="label-large">Windows</div>
-                  <ol className="am-action-success-card-bullet-container">
-                    <li>The username and password for the laptop will be the UMICH uniqname and password</li>
-                  </ol>
-                </div>
-                <div>
-                  <div className="label-large">Mac</div>
-                  <ol className="am-action-success-card-bullet-container">
-                    <li>Make sure that "Find My" and iCloud are signed out before bringing the laptop back</li>
-                  </ol>
-                </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="am-action-success-summary">
