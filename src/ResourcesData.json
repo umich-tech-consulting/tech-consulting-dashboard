@@ -124,6 +124,11 @@
         "description": "Information on loaners for Customer Supports while their devices are being repaired"
       },
       {
+        "name": "Tech Repair Services",
+        "url": "https://docs.google.com/document/d/1MXdXoLaAWeiZJkUEV3YAAgat_rjwXppy4lw1DZYyBVU/edit#heading=h.uzk4z57i2ck5",
+        "description": "Information about what can and cannot be repaired by Tech Repair"
+      },
+      {
         "name": "Diagnostic Turnaround",
         "url": "https://docs.google.com/spreadsheets/d/1Sk9EbHlg8zTKTmNztBQxCzfQ9o8tvJSe-sRgLZDIQ1U/edit#gid=0",
         "description": "Digital Signage information about diagnostic turnaround times"
