@@ -194,6 +194,7 @@ code {
   animation: popupAnimation;
   animation-duration: 500ms;
 }
+/* ----------- Animation Styles End----------- */
 /* Home Styles Start */
 .homepage {
   @apply bg-blue-9 w-full h-screen;
@@ -237,6 +238,34 @@ code {
 .home-link {
   @apply rounded-lg bg-[#00274C] dark:bg-yellow-6 hover:bg-[#002F5C] dark:hover:bg-yellow-5 p-3 w-56 text-center;
 }
+@keyframes buttonPop {
+  0% {
+    scale: 100%;
+  }
+  25% {
+    scale: 110%;
+  }
+  50% {
+    scale: 100%;
+  }
+  75% {
+    scale: 95%;
+  }
+  100% {
+    scale: 100%
+  }
+}
+.home-link {
+  animation: buttonPop .5s ease-in;
+  /* animation-delay: 0.4s; */
+}
+.home-link:nth-child(2) {
+  animation-delay: .1s;
+}
+.home-link:nth-child(3) {
+  animation-delay: .2s;
+}
+
 /* Home Styles End */
 /* Announcements Styles Start */
 .announcement-bg {
@@ -246,8 +275,6 @@ code {
   background-size: cover;
 }
 /* Announcements Styles End */
-
-/* ----------- Animation Styles End----------- */
 
 /* ----------- Left Nav Start----------- */
 .link-container {
