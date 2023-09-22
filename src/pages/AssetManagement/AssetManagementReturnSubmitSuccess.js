@@ -41,22 +41,6 @@ const ReturnSubmitSuccess = () => {
                   </ol>
                 </div>
               </div>
-              {/* <div className="am-action-success-next-steps-card">
-                <div className="title-large">Have the Customer</div>
-                <div>
-                  <div className="label-large">Windows</div>
-                  <ol className="am-action-success-card-bullet-container">
-                    <li>Start setting up the computer</li>
-                    <li>Sign into the computer with UMICH credentials once on the login screen</li>
-                  </ol>
-                </div>
-                <div>
-                  <div className="label-large">Mac</div>
-                  <ol className="am-action-success-card-bullet-container">
-                    <li>Set up the mac as desired, as if it was a new device, either at the Union or on their own</li>
-                  </ol>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className="am-action-success-summary">

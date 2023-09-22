@@ -33,7 +33,7 @@ const Home = () => {
         <div className="home-link-container">
           <div className="home-link-container-main">
             <Link className="home-link" to="/announcements">Announcements</Link>
-            <Link className="home-link" to="/asset-management">Asset Management</Link>
+            {/* <Link className="home-link" to="/asset-management">Asset Management</Link> */}
             <Link className="home-link" to="/resources">Resources</Link>
           </div>
         </div>
