@@ -26,7 +26,6 @@ function App() {
         </Helmet>
       </div>
       <Routes>
-
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />

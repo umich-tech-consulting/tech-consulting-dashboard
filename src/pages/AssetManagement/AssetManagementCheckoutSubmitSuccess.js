@@ -40,7 +40,7 @@ const CheckoutSubmitSuccess = () => {
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">Tell the Customer</div>
                 <ol className="am-action-success-card-bullet-container">
-                  <li>Loan lasts until: <b>{tdxResponseFromStorage.loan.date}</b> (info pulled from TDX)</li>
+                  <li>Loan lasts until: <span className="font-medium">{tdxResponseFromStorage.loan.date}</span> (info pulled from TDX)</li>
                   <li>It is a bundle: comes with laptop, charger and case</li>
                   <li>Make sure to return everything when you come back, or you will be charged for what is missing</li>
                   <li>Use it like your own personal device, you have admin settings</li>
