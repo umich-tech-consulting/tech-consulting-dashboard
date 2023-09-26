@@ -40,7 +40,7 @@ const CheckoutSubmitSuccess = () => {
               <div className="am-action-success-next-steps-card">
                 <div className="title-large">Tell the Customer</div>
                 <ol className="am-action-success-card-bullet-container">
-                  <li>Loan lasts until {tdxResponseFromStorage.loan.date}</li>
+                  <li>Loan lasts until: <b>{tdxResponseFromStorage.loan.date}</b> (info pulled from TDX)</li>
                   <li>It is a bundle: comes with laptop, charger and case</li>
                   <li>Make sure to return everything when you come back, or you will be charged for what is missing</li>
                   <li>Use it like your own personal device, you have admin settings</li>
@@ -69,7 +69,12 @@ const CheckoutSubmitSuccess = () => {
             <div className="am-action-success-summary-info-container">
               <a href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponseFromStorage.asset.id}`} target="_blank"
                 rel="noreferrer noopener" className="am-action-success-summary-link">
-                <div className="am-action-success-summary-info-name">Laptop</div>
+                  <div className="flex items-center gap-1">
+                    <div className="am-action-success-summary-info-name">Laptop</div>
+                    <svg className="stroke-neutral-8 dark:stroke-neutral-2 w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </div>
                 <div className="am-action-success-summary-info-data">
                   <AssetIcon />
                   <div>{tdxResponseFromStorage.asset.tag}</div>
@@ -85,14 +90,24 @@ const CheckoutSubmitSuccess = () => {
               <a href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponseFromStorage.loan.owner_uid}`}
                 target="_blank"
                 rel="noreferrer noopener" className="am-action-success-summary-link">
-                <div className="am-action-success-summary-info-name">Customer</div>
+                  <div className="flex items-center gap-1">
+                    <div className="am-action-success-summary-info-name">Customer</div>
+                    <svg className="stroke-neutral-8 dark:stroke-neutral-2 w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </div>
                 <div className="am-action-success-summary-info-data">
                   <UserIcon />
                   <div>{tdxResponseFromStorage.loan.uniqname}</div>
                 </div>
               </a>
               <a href={`${tdxBaseUrl}/31/Tickets/TicketDet?TicketID=${tdxResponseFromStorage.ticket.id}`} target="_blank" rel="noopener noreferrer" className="am-action-success-summary-link">
-                <div className="am-action-success-summary-info-name">Request Ticket</div>
+                <div className="flex items-center gap-1">
+                    <div className="am-action-success-summary-info-name">Request Ticket</div>
+                    <svg className="stroke-neutral-8 dark:stroke-neutral-2 w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                </div>
                 <div className="am-action-success-summary-info-data">
                   <TicketIcon />
                   <div>TDX {tdxResponseFromStorage.ticket.id}</div>

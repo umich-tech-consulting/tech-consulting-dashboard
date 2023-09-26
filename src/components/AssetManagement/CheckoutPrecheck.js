@@ -9,11 +9,11 @@ const ColorTagAccordion = ({ title, content }) => {
 
   return (
     <div className="custom-accordion">
-      <button className="label-medium text-neutral-7 dark:text-neutral-4 flex gap-1" onClick={toggleAccordion}>
+      <button className="label-medium text-neutral-7 dark:text-neutral-4 flex gap-1 items-center" onClick={toggleAccordion}>
         {title}
         <div className={`${isOpen ? 'rotate-180' : ''}`}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-auto" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+            <svg className='stroke-neutral-7 dark:stroke-neutral-4 w-3 h-auto' xmlns="http://www.w3.org/2000/svg" fill="none" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
             </svg>
         </div>
       </button>
@@ -43,7 +43,7 @@ const CheckoutPrecheck = () => {
           <ColorTagAccordion
             title="Laptop Sleeve Tag Color Semantics"
             content={
-                <div className="body-small mt-1">
+                <div className="body-small mt-1 pl-2">
                     <div className='flex gap-2 items-center'>
                         <div>Windows:</div>
                         <div className='h-[10px] w-[10px] rounded-full bg-[#34C759]'></div>

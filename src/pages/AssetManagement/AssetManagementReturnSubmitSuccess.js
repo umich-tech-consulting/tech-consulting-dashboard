@@ -35,7 +35,7 @@ const ReturnSubmitSuccess = () => {
                 <div>
                   <div className="label-large">Mac</div>
                   <ol className="am-action-success-card-bullet-container">
-                    <li>Check that "Find My" is disabled in GSX [LINK HERE] and that the customer is signed out of iCloud</li>
+                    <li>Check that "Find My" is disabled in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX</a></span> and that the customer is signed out of iCloud</li>
                     <li>Wipe the laptop. Documentation [link here]</li>
                     <li>Once the laptop is successfully wiped, put the device in the consulting closet, on the <b>rear bottom shelf</b></li>
                   </ol>
@@ -48,7 +48,12 @@ const ReturnSubmitSuccess = () => {
             <div className="am-action-success-summary-info-container">
               <a href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponseFromStorage.asset.id}`} target="_blank"
                 rel="noreferrer noopener" className="am-action-success-summary-link">
-                <div className="am-action-success-summary-info-name">Laptop</div>
+                  <div className="flex items-center gap-1">
+                    <div className="am-action-success-summary-info-name">Laptop</div>
+                    <svg className="stroke-neutral-8 dark:stroke-neutral-2 w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </div>
                 <div className="am-action-success-summary-info-data">
                   <AssetIcon />
                   <div>{tdxResponseFromStorage.asset.tag}</div>
@@ -57,7 +62,12 @@ const ReturnSubmitSuccess = () => {
               <a href={`${tdxBaseUrl}/People/PersonDet.aspx?U=${tdxResponseFromStorage.previous_owner.uid}`}
                 target="_blank"
                 rel="noreferrer noopener" className="am-action-success-summary-link">
-                <div className="am-action-success-summary-info-name">Customer</div>
+                  <div className="flex items-center gap-1">
+                    <div className="am-action-success-summary-info-name">Customer</div>
+                    <svg className="stroke-neutral-8 dark:stroke-neutral-2 w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </div>
                 <div className="am-action-success-summary-info-data">
                   <UserIcon />
                   <div>{tdxResponseFromStorage.previous_owner.uniqname}</div>
