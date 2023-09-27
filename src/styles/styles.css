@@ -24,7 +24,11 @@ code {
 /* Scrollbar start */
 ::-webkit-scrollbar {
   @apply bg-neutral-1;
-  width: 12px;
+  height: 3px;
+  width: 8px;
+}
+::-webkit-scrollbar:hover {
+  height: 4px;
 }
 .dark ::-webkit-scrollbar {
   @apply bg-neutral-9
@@ -33,7 +37,8 @@ code {
 ::-webkit-scrollbar-track {
   @apply bg-neutral-1;
   border-radius: 10px;
-  width: 12px;
+  height: 3px;
+  width: 8px;
 }
 .dark ::-webkit-scrollbar-track {
   @apply bg-neutral-9;
@@ -608,14 +613,14 @@ code {
 
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
-  @apply p-3 w-60 flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
+  @apply p-3 lg:w-60 sm:w-[48%] w-full flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
   transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
 
 /* Resource Landing Tabs Start */
 .r-landing-tabs {
-  @apply py-2 px-4 title-medium focus:outline-none
+  @apply py-2 px-4 title-medium focus:outline-none min-w-fit
 }
 /* Resource Landing Tabs End */
 
@@ -639,7 +644,7 @@ code {
   @apply w-full flex flex-col gap-4
 }
 .r-landing-categories-cards {
-  @apply flex flex-col gap-4 lg:flex-row
+  @apply flex flex-col lg:flex-row gap-4
 }
 .r-landing-categories-card {
   @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1;
@@ -652,14 +657,14 @@ code {
   @apply body-medium
 }
 .r-landing-categories-training-card {
-  @apply flex items-center justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
+  @apply flex items-center lg:justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
   transition: ease-out 400ms;
 }
 /* Resource Landing Categories End */
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
@@ -679,8 +684,8 @@ code {
 .r-categorybuilder-nav {
   @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
-.r-categorybuilder-title {
-  @apply mb-6 headline-large text-center
+.r-categorybuilder-container {
+  @apply max-w-3xl w-full text-neutral-9 dark:text-neutral-1
 }
 /* Resource CategoryBuilder End */
 

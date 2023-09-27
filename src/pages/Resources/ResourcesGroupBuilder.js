@@ -71,13 +71,13 @@ const ResourceGroupBuilder = () => {
               Resources
             </Link>
             <div>/</div>
-            <Link to={`/resources/${category}`} className="hover:text-blue-9 dark:hover:text-yellow-6">
+            <Link to={`/resources/${category}`} className="hover:text-blue-9 dark:hover:text-yellow-6 min-w-fit">
               {categoryData.category}
             </Link>
             <div>/</div>
             <Link
               to={`/resources/${category}/${group}`}
-              className="hover:text-blue-9 dark:hover:text-yellow-6"
+              className="hover:text-blue-9 dark:hover:text-yellow-6 min-w-fit"
             >
               {categoryData.group}
             </Link>
@@ -86,9 +86,11 @@ const ResourceGroupBuilder = () => {
             {categoryData.group}
           </div>
           <div className="r-groupbuilder-searchbox">
+            <label className='hidden' htmlFor="searchbox">Resources Search</label>
             <input
               type="text"
               name="query"
+              id="searchbox"
               placeholder={`Search ${categoryData.group} Links`}
               value={query}
               onChange={handleSearch}
@@ -116,6 +118,12 @@ const ResourceGroupBuilder = () => {
           ) : (
             <ResourceLinks linkData={sortedLinks} />
           )}
+          {searchResults.length === 0  &&
+            <div className="flex flex-col gap-1 p-2 bg-neutral-2 dark:bg-black rounded-md">
+              <div className="title-medium text-neutral-8 dark:text-neutral-2">Your search did not return any results</div>
+              <div className="body-medium text-neutral-7 dark:text-neutral-3">Search will only look for words that exactly match the Title and/or Description of a link.</div>
+            </div>
+           }
         </div>
       </div>
     </>

@@ -9,7 +9,7 @@ const ResourcesLandingTabs = ({ resourcesData, activeTab, handleTabChange }) => 
   return (
     <>
       <div>
-        <div className="border-b border-neutral-4 dark:border-neutral-7">
+        <div className="border-b border-neutral-4 dark:border-neutral-7 w-full flex overflow-auto">
           {categories.map((category, index) => {
             if (excludedCategories.includes(category)) {
               return null; // Exclude excluded categories from generating a tab
