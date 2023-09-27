@@ -37,7 +37,7 @@ const DarkModeButton = () => {
     }, [darkMode]);
 
     return (
-      <button aria-label="Darkmode/Lightmode Toggle" className="bg-white  dark:bg-neutral-9 border border-neutral-3 dark:border-neutral-8 h-6 w-12 my-2 rounded-full flex items-center" onClick={toggleDarkMode}>
+      <button aria-label="Darkmode/Lightmode Toggle" className="bg-white  dark:bg-neutral-9 border border-neutral-3 dark:border-neutral-8 h-6 w-12 my-2 rounded-full flex items-center" onClick={toggleDarkMode} title="Dark/Light Toggle">
         <div className="m-1">
           <div className={`transition-all duration-500 ease transform ${darkMode ? 'translate-x-full' : 'translate-x-0'}`}>
             {!darkMode ?

@@ -28,7 +28,7 @@ const ReturnSubmitSuccess = () => {
                 <div>
                   <div className="label-large">Windows</div>
                   <ol className="am-action-success-card-bullet-container">
-                    <li>Wipe the laptop. Documentation [Link here]</li>
+                    <li><a href="https://docs.google.com/document/d/1i-JWRLZx5_y7q3cLZc7ZyutxVH39quZfLoKa1eYEivY/edit#heading=h.j74jw6jq026" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Wiping Sites at Home Windows">Wipe the laptop</a></li>
                     <li>Once the laptop is successfully wiped, put the device in the consulting closet, on the <b>rear middle shelf</b></li>
                   </ol>
                 </div>
@@ -36,7 +36,7 @@ const ReturnSubmitSuccess = () => {
                   <div className="label-large">Mac</div>
                   <ol className="am-action-success-card-bullet-container">
                     <li>Check that "Find My" is disabled in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX</a></span> and that the customer is signed out of iCloud</li>
-                    <li>Wipe the laptop. Documentation [link here]</li>
+                    <li><a href="https://support.apple.com/en-us/HT212749" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Erase your Mac and reset it to factory settings">Wipe the laptop</a></li>
                     <li>Once the laptop is successfully wiped, put the device in the consulting closet, on the <b>rear bottom shelf</b></li>
                   </ol>
                 </div>

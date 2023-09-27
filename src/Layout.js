@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LeftNav from './navigation/LeftNav';
 import HideNav from './components/Navigation/HideNav';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
-    const [navHidden, setNavHidden] = useState(false);
+    const [navHidden, setNavHidden] = useState(
+        JSON.parse(localStorage.getItem("navHidden")) || false
+    );
+    useEffect(() => {
+        localStorage.setItem("navHidden", JSON.stringify(navHidden));
+    }, [navHidden]);
+
 
     return (
         <>
@@ -15,7 +21,7 @@ const Layout = () => {
                     </nav>
                     <HideNav navHidden={navHidden} setNavHidden={setNavHidden} />
                     <main className='justify-center sm:justify-normal flex flex-wrap gap-10'>
-                        <Outlet />
+                        <Outlet navHidden={navHidden}/>
                     </main>
                 </div>
             </div>
