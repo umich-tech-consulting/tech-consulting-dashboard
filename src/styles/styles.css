@@ -305,7 +305,7 @@ code {
   @apply w-full flex flex-col h-screen;
 }
 .am-action-container {
-  @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center bg-base-light dark:bg-neutral-10;
+  @apply w-full p-6 flex flex-col justify-center items-center bg-base-light dark:bg-neutral-10;
 }
 .am-action-form-precheck {
   @apply flex rounded-xl md:shadow-light md:dark:shadow-dark h-full flex-wrap gap-6 md:gap-0 md:flex-nowrap my-16 md:mb-0 md:bg-white md:dark:bg-neutral-9;

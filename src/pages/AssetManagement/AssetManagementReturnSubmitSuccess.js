@@ -44,7 +44,7 @@ const ReturnSubmitSuccess = () => {
             </div>
           </div>
           <div className="am-action-success-summary">
-            <div className="title-large mb-12">Summary</div>
+            <div className="title-large mb-6 md:mb-12">Summary</div>
             <div className="am-action-success-summary-info-container">
               <a href={`${tdxBaseUrl}/32/Assets/AssetDet?AssetID=${tdxResponseFromStorage.asset.id}`} target="_blank"
                 rel="noreferrer noopener" className="am-action-success-summary-link">
