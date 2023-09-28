@@ -13,7 +13,7 @@ const ReturnSubmitSuccess = () => {
   return (
     <>
       <div className="am-action-success-container fade-in">
-        <div className="flex w-full h-full">
+        <div className="flex w-full h-full flex-wrap md:flex-nowrap">
           <div className="am-action-success-next-steps">
             <div className="am-action-success-header">
               <LottieAnimation animationData={lottie_checkmark} />
