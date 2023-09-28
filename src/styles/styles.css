@@ -451,10 +451,10 @@ code {
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-12 bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1
+  @apply w-full bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1 flex flex-col gap-12
 }
 .am-action-success-next-steps {
-  @apply p-9 w-full flex flex-col gap-12 h-full overflow-auto
+  @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-white dark:bg-neutral-9
 }
 .am-action-success-header {
   @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
@@ -469,10 +469,10 @@ code {
   @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4 list-disc pl-4
 }
 .am-action-success-summary {
-  @apply w-[400px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
+  @apply bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 pt-9 p-6 md:p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto md:w-[400px] w-full
 }
 .am-action-success-summary-info-container {
-  @apply flex flex-col gap-7 pb-20
+  @apply flex flex-col gap-7 md:pb-20
 }
 .am-action-success-summary-info {
   @apply flex flex-col gap-1 p-2
@@ -491,7 +491,7 @@ code {
   @apply flex gap-2 items-start title-medium break-words
 }
 .am-action-success-close-button-container {
-  @apply absolute right-0 bottom-0 p-6
+  @apply fixed md:absolute right-0 bottom-0 p-6
 }
 .am-action-success-close-button {
   @apply block text-center w-[80px] rounded-full bg-blue-9 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-8 dark:hover:bg-yellow-5
@@ -518,42 +518,6 @@ code {
 .am-action-success-next-steps-card:nth-child(3) {
   animation-delay: 0.8s;
 }
-
-/* This is the old code start */
-.am-action-success-container-main {
-  @apply flex flex-col gap-9 w-full
-}
-.am-action-success-asset-uniqname {
-  @apply flex gap-2
-}
-.am-action-success-asset-uniqname-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-[6px] rounded flex gap-2 body-large justify-center items-center flex-1 cursor-pointer
-}
-.am-action-success-asset-uniqname-button img {
-  @apply h-5 w-5
-}
-/* Start the edits here */
-.am-action-success-extra-info {
-  @apply flex gap-4 flex-col
-}
-.am-action-success-tdx-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-1 rounded flex gap-2 body-medium items-center justify-center cursor-pointer w-fit
-}
-.am-action-success-tdx-button img {
-  @apply h-5 w-5
-}
-.am-action-success-date-comments {
-  @apply flex flex-col gap-2 body-medium
-}
-.am-action-success-date-comments-info {
-  @apply flex gap-2
-}
-.am-action-success-date-comments-info img {
-  @apply h-5 w-5
-}
-/* This is the old code End */
-
-
 /* Action Success End */
 /* High Error Alert Start */
 .am-error-alert-container {
