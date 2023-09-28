@@ -305,16 +305,16 @@ code {
   @apply w-full flex flex-col h-screen;
 }
 .am-action-container {
-  @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center;
+  @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center bg-base-light dark:bg-neutral-10;
 }
 .am-action-form-precheck {
-  @apply flex rounded-xl mt-16 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 h-full;
+  @apply flex rounded-xl md:shadow-light md:dark:shadow-dark h-full flex-wrap gap-6 md:gap-0 md:flex-nowrap my-16 md:mb-0 md:bg-white md:dark:bg-neutral-9;
   animation: popupAnimation;
   animation-duration: 500ms;
 }
 /* precheck Component Start */
 .am-action-precheck {
-  @apply w-72 bg-neutral-1 dark:bg-black border-l border-l-neutral-3 dark:border-l-neutral-8 rounded-r-xl overflow-auto text-neutral-7 dark:text-neutral-4;
+  @apply bg-neutral-1 dark:bg-black md:border-l md:border-l-neutral-3 md:dark:border-l-neutral-8 overflow-auto text-neutral-7 dark:text-neutral-4 md:w-72 w-full rounded-xl pb-6 md:pb-0 md:rounded-r-xl md:rounded-l-none;
 }
 .am-action-precheck-header {
   @apply title-medium mb-3 text-neutral-8 dark:text-neutral-3 px-6 pt-6
@@ -336,7 +336,7 @@ code {
 }
 /* precheck Component End */
 .am-action-form {
-  @apply h-fit max-w-sm p-6 flex flex-col gap-y-0 flex-grow;
+  @apply h-fit md:max-w-sm w-fit p-6 flex flex-col gap-y-0 flex-grow bg-white dark:bg-neutral-9 rounded-xl shadow-light dark:shadow-dark md:shadow-none md:dark:shadow-none ;
 }
 .am-action-form-header-description {
   @apply flex flex-col gap-2 pb-6
