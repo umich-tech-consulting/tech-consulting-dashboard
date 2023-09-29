@@ -7,7 +7,7 @@ const HideNav = ({navHidden, setNavHidden}) => {
    }
     return (
       <>
-        <div className={`fixed ${navHidden ? "left-0 rotate-180" : "left-[194px]"} bottom-0 mb-2 z-50`} title="Show/Hide Nav">
+        <div className={`fixed ${navHidden ? "left-0 rotate-180" : "left-[194px]"} bottom-0 mb-2 z-50 hidden md:block`} title="Show/Hide Nav">
             <button className={`${navHidden ? "rounded-l-full opacity-80 border-r-0 hover:pr-3": "rounded-full"} p-1 bg-white dark:bg-neutral-9 border hover:opacity-100 hover:bg-neutral-2  dark:hover:bg-neutral-8 dark:hover:opacity-100 border-neutral-3 hover:border-neutral-4 dark:border-neutral-8 dark:hover:border-neutral-7`} onClick={toggleNavHidden}>
                 <svg className="w-5 h-5 stroke-neutral-7 dark:stroke-neutral-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" aria-labelledby="show_hide_nav">
                     <title id="show_hide_nav">Show / Hide Nav Icon</title>

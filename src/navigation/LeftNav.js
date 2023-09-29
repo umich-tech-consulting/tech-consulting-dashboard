@@ -10,11 +10,11 @@ import {
   Logo,
   ResourcesActive,
   ResourceInactive,
-} from "../icons/left-nav/NavigationSvgs";
-import slack_logo from "../icons/left-nav/slack_logo.png";
-import tdxlogo from "../icons/left-nav/tdxlogo.png";
-import gsxicon from "../icons/left-nav/gsxicon.png";
-import umichicon from "../icons/left-nav/umichicon.png";
+} from "../icons/nav/NavigationSvgs";
+import slack_logo from "../icons/nav/slack_logo.png";
+import tdxlogo from "../icons/nav/tdxlogo.png";
+import gsxicon from "../icons/nav/gsxicon.png";
+import umichicon from "../icons/nav/umichicon.png";
 import GitInfo from "react-git-info/macro";
 
 const gitInfo = GitInfo();
@@ -160,7 +160,9 @@ const LeftNav = () => {
             </a>
           </div>
         </div>
-        <DarkModeButton />
+        <div className="my-2">
+          <DarkModeButton />
+        </div>
         <div className="flex mt-2">
           <a
             href="https://forms.gle/kb1CQuKLGzneFGRj8"

@@ -565,7 +565,7 @@ code {
 }
 /* Resource Landing Start */
 .r-landing-container {
-  @apply max-w-3xl w-full mt-8 text-neutral-9 dark:text-neutral-1
+  @apply max-w-3xl w-full mt-4 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-title {
   @apply mb-6 headline-large text-neutral-9 dark:text-neutral-1 text-center
