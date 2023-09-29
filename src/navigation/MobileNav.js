@@ -45,10 +45,12 @@ const MobileNav = () => {
             <button onClick={toggleMobileNav}>
               <HamburgerMenu />
             </button>
-            <Link className="" to="/" aria-label="Home Button">
-              <MobileLogo />
-            </Link>
-            <DarkModeButton />
+            <div className="">
+              <Link to="/" aria-label="Home Button">
+                <MobileLogo />
+              </Link>
+            </div>
+            <div className="w-6"></div>
           </div>
         </div>
         <div
@@ -118,8 +120,8 @@ const MobileNav = () => {
             >
               GSX
             </a>
-            <div className="body-medium text-neutral-9 dark:text-neutral-1 mt-12">
-              <div className="gap-2 flex flex-col justify-between mt-6 mb-20">
+            <div className="body-medium flex text-neutral-9 dark:text-neutral-1 mt-20 mb-20 justify-between items-end">
+              <div className="gap-2 flex flex-col justify-between">
                 <a
                   href="https://forms.gle/kb1CQuKLGzneFGRj8"
                   target="blank"
@@ -147,6 +149,7 @@ const MobileNav = () => {
                   Git Hash: {gitInfo.commit.shortHash}
                 </a>
               </div>
+              <DarkModeButton />
             </div>
           </div>
 
