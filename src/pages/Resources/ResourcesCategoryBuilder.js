@@ -138,7 +138,7 @@ const ResourceCategoryBuilder = () => {
               <ResourceLinks linkData={groupData.links} />
             </div>
           ))}
-          {searchResults.length === 0  &&
+          {query && searchResults.length === 0  &&
             <div className="flex flex-col gap-1 p-2 bg-neutral-2 dark:bg-black rounded-md">
                 <div className="title-medium text-neutral-8 dark:text-neutral-2">Your search did not return any results</div>
                 <div className="body-medium text-neutral-7 dark:text-neutral-3">Search will only look for words that exactly match the Title and/or Description of a link.</div>
