@@ -39,8 +39,8 @@ const MobileNav = () => {
 
   return (
     <>
-      <div className="fixed w-full z-50 pb-16">
-        <div className="bg-neutral-2 dark:bg-neutral-9 shadow-light p-4 md:hidden z-50 ">
+      <div className="fixed w-full z-50 mb-16">
+        <div className="bg-white dark:bg-neutral-9 shadow-light p-4 md:hidden z-50 ">
           <div className="flex justify-between items-start">
             <button onClick={toggleMobileNav}>
               <HamburgerMenu />
