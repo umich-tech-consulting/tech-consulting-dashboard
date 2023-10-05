@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DarkModeButton from "../components/Navigation/DarkModeButton";
-import { HamburgerMenu, MobileLogo } from "../icons/nav/NavigationSvgs";
+import { HamburgerMenu, MobileLogo, CloseMenu } from "../icons/nav/NavigationSvgs";
 import GitInfo from "react-git-info/macro";
 
 const gitInfo = GitInfo();
@@ -43,7 +43,8 @@ const MobileNav = () => {
         <div className="bg-white dark:bg-neutral-9 shadow-light p-4 md:hidden z-50 ">
           <div className="flex justify-between items-start">
             <button onClick={toggleMobileNav}>
-              <HamburgerMenu />
+              {showMobileNav ? <CloseMenu /> : <HamburgerMenu /> }
+              {/* <HamburgerMenu /> */}
             </button>
             <div className="">
               <Link to="/" aria-label="Home Button">
@@ -59,26 +60,26 @@ const MobileNav = () => {
           }  h-screen bg-neutral-1 dark:bg-neutral-10 text-neutral-9 dark:text-neutral-2 z-50 p-4 absolute overflow-y-scroll w-full max-h-screen`}
         >
           <div className="flex flex-col gap-4 mt-4">
-            <Link to="/" className="headline-large" onClick={toggleMobileNav}>
+            <Link to="/" className="headline-large hover:text-blue-9 dark:hover:text-yellow-6" onClick={toggleMobileNav}>
               Home
             </Link>
             <Link
               to="/announcements"
-              className="headline-large"
+              className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
               onClick={toggleMobileNav}
             >
               Announcements
             </Link>
             <Link
               to="/asset-management"
-              className="headline-large"
+              className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
               onClick={toggleMobileNav}
             >
               Asset Management
             </Link>
             <Link
               to="/resources"
-              className="headline-large"
+              className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
               onClick={toggleMobileNav}
             >
               Resources
@@ -93,6 +94,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Clock in and out of work using the Time Reporting tab"
+              className="hover:text-blue-9 dark:hover:text-yellow-6"
             >
               TimeClock
             </a>
@@ -101,6 +103,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Information Technology Services Slack workspace"
+              className="hover:text-blue-9 dark:hover:text-yellow-6"
             >
               Slack
             </a>
@@ -109,6 +112,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Ticket and asset management system"
+              className="hover:text-blue-9 dark:hover:text-yellow-6"
             >
               TDX
             </a>
@@ -117,6 +121,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Apple Global Service Exchange login"
+              className="hover:text-blue-9 dark:hover:text-yellow-6"
             >
               GSX
             </a>

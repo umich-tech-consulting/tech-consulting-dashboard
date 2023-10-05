@@ -70,8 +70,14 @@ export const MobileLogo = () => (
 
 export const HamburgerMenu = () => (
     <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-labelledby="hamburger_menu">
-        <title id="hamburger_menu">Hamburger Menu</title>
+        <title id="hamburger_menu">Open Menu</title>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
     </svg>
-
 );
+export const CloseMenu = () => (
+    <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-labelledby="close_menu">
+        <title id="close_menu">Close Menu</title>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+);
+
