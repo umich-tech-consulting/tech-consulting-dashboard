@@ -32,10 +32,6 @@ const CheckoutPrecheck = () => {
           <ol>
             <li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop</li>
           </ol>
-          <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
-          <ol>
-            <li>Make sure that the laptop, sleeve, and charger have the same label</li>
-          </ol>
           <div className="am-action-precheck-item">Windows or Mac</div>
           <ol>
             <li>Is the customer approved for a Windows or Mac loaner laptop</li>
@@ -62,6 +58,10 @@ const CheckoutPrecheck = () => {
                 </div>
             }
           />
+          <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
+          <ol>
+            <li>Make sure that the laptop, sleeve, and charger have the same label</li>
+          </ol>
           <div className="am-action-precheck-item">Ready for loan</div>
           <ol>
             <li>Confirm laptop has been wiped and is on the setup screen</li>

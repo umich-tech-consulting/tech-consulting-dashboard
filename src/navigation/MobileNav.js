@@ -44,7 +44,6 @@ const MobileNav = () => {
           <div className="flex justify-between items-start">
             <button onClick={toggleMobileNav}>
               {showMobileNav ? <CloseMenu /> : <HamburgerMenu /> }
-              {/* <HamburgerMenu /> */}
             </button>
             <div className="">
               <Link to="/" aria-label="Home Button">
