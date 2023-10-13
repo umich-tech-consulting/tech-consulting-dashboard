@@ -33,6 +33,7 @@ const HomeQuickLinks = () => {
           </div>
           <ChevronRight />
         </Link>
+        <hr className="border-[1.4px] border-base-light"></hr>
         <Link
           to="/resources"
           className="flex w-full justify-between p-6 hover:bg-blue-0 rounded-b-xl"

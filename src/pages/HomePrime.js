@@ -17,15 +17,24 @@ const HomePrime = () => {
         {/* container for everything */}
         <div className="flex flex-col xl:flex-row gap-6 mt-6 pb-6">
           {/* container for the left side */}
-          {/* To make the cards appear in the correct order have everything in the left card but hide the stuff on the right and then show it when you are in a small screen and then hide everything on the right side */}
           <div className="flex-1 flex flex-col gap-6">
             <HomeAnnouncement />
+            <div className="block xl:hidden">
+                <HomeQuickLinks />
+            </div>
             <HomeFastActions />
+            <div className="block xl:hidden">
+                <HomePages />
+            </div>
           </div>
           {/* container for the right side */}
           <div className="flex-1 flex flex-col gap-6">
-            <HomeQuickLinks />
-            <HomePages />
+            <div className="hidden xl:block">
+                <HomeQuickLinks />
+            </div>
+            <div className="hidden xl:block">
+                <HomePages />
+            </div>
           </div>
         </div>
       </div>
