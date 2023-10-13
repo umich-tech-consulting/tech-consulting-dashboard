@@ -10,7 +10,7 @@ const ReturnPrecheck = () => {
             <div className="am-action-precheck-item">Laptop, Charger and Sleeve</div>
             <ol><li>Have the customer purchase anything that is missing from the Tech Shop</li></ol>
             <div className="am-action-precheck-item">Device is not damaged</div>
-            <ol><li>If damaged: Document who, when, where, & how > Return Device > Check-in for repair</li></ol>
+            <ol><li>If damaged: Document who, when, where, & how > Return device > Check-in for repair</li></ol>
             <div className="am-action-precheck-item">Customer data is backed up</div>
             <ol><li>Ensure customer has saved important files</li></ol>
             </div>
