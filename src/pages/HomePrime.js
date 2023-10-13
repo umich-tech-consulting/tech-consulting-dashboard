@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 import HomeTopbar from "../components/Home/HomeTopbar";
 import HomeAnnouncement from "../components/Home/HomeAnnouncement";
 import HomeQuickLinks from "../components/Home/HomeQuickLinks";
 import HomeFastActions from "../components/Home/HomeFastActions";
+import HomePages from "../components/Home/HomePages";
 
 const HomePrime = () => {
   return (
@@ -25,6 +25,7 @@ const HomePrime = () => {
           {/* container for the right side */}
           <div className="flex-1 flex flex-col gap-6">
             <HomeQuickLinks />
+            <HomePages />
           </div>
         </div>
       </div>

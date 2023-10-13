@@ -23,9 +23,16 @@ export const ResourcesLogo = () => (
     </svg>
 )
 export const AssetManagementLogo = () => (
-    <svg className="stroke-neutral-9 dark:stroke-neutral-2 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <svg className="stroke-neutral-9 dark:stroke-neutral-2 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-labelledby="assetmanagement_logo">
+        <title id="assetmanagement_logo">Asset Management Logo</title>
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 17.25v1.007c.00005.3941-.07756.7844-.22838 1.1485-.15082.3641-.37191.6949-.65062.9735L7.5 21h9l-.621-.621c-.2787-.2786-.4998-.6094-.6506-.9735-.1508-.3641-.2284-.7544-.2284-1.1485V17.25m6-12V15c0 .5967-.2371 1.169-.659 1.591-.422.4219-.9943.659-1.591.659H5.25c-.59674 0-1.16903-.2371-1.59099-.659C3.23705 16.169 3 15.5967 3 15V5.25m18 0c0-.59674-.2371-1.16903-.659-1.59099C19.919 3.23705 19.3467 3 18.75 3H5.25c-.59674 0-1.16903.23705-1.59099.65901C3.23705 4.08097 3 4.65326 3 5.25m18 0V12c0 .5967-.2371 1.169-.659 1.591-.422.4219-.9943.659-1.591.659H5.25c-.59674 0-1.16903-.2371-1.59099-.659C3.23705 13.169 3 12.5967 3 12V5.25"/>
   </svg>
+)
+export const AnnouncementsLogo = () => (
+    <svg className="stroke-neutral-9 dark:stroke-neutral-2 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-labelledby="announcements_logo">
+        <title id="announcements_logo">Announcements Logo</title>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5c-1.19347 0-2.33807-.4741-3.18198-1.318C3.47411 13.5881 3 12.4435 3 11.25s.47411-2.33807 1.31802-3.18198C5.16193 7.22411 6.30653 6.75 7.5 6.75h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461-.63371-1.3709-1.11654-2.8067-1.44-4.282m3.102.069c-.39302-1.4983-.59132-3.041-.59-4.59 0-1.586.205-3.124.59-4.59m0 9.18c3.0815.2641 6.0822 1.1251 8.835 2.535M10.34 6.66c3.0815-.26408 6.0823-1.12507 8.835-2.535m0 14.25c-.118.38-.245.754-.38 1.125m.38-1.125c.544-1.7534.8842-3.5637 1.014-5.395m-1.014-8.855c-.1173-.37811-.244-.75323-.38-1.125m.38 1.125c.544 1.75344.8842 3.5637 1.014 5.395m0 0c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46c.0821 1.1519.0821 2.3081 0 3.46"/>
+    </svg>
 )
 export const BoxLogo = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 36 36">

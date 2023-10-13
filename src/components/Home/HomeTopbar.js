@@ -11,8 +11,8 @@ const HomeTopbar = () => {
             <div className="flex items-center gap-[14px]">
                 <UserIcon />
                 <div className="flex flex-col">
-                    <div className="title-medium">Logged In</div>
-                    <div className="body-medium text-neutral-7 dark:text-neutral-4">Coming Soon</div>
+                    <div className="title-medium">Signed In</div>
+                    <div className="body-medium text-neutral-7 dark:text-neutral-4">Firstname Lastname</div>
                 </div>
             </div>
         </div>
