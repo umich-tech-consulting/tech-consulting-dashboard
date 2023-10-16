@@ -9,12 +9,12 @@ import {
 const HomeQuickLinks = () => {
   return (
     <>
-      <div className="w-full bg-white rounded-xl shadow-light dark:shadow-dark flex flex-col title-medium text-neutral-8">
-        <div className="title-large text-neutral-9 p-6">Pages</div>
-        <hr className="border-[1.4px] border-base-light"></hr>
+      <div className="w-full bg-white dark:bg-neutral-9 rounded-xl shadow-light dark:shadow-dark flex flex-col title-medium text-neutral-8 dark:text-neutral-3">
+        <div className="title-large text-neutral-9 dark:text-neutral-2 p-6">Pages</div>
+        <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/announcements"
-          className="flex w-full justify-between p-6 hover:bg-blue-0"
+          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <AnnouncementsLogo />
@@ -22,10 +22,10 @@ const HomeQuickLinks = () => {
           </div>
           <ChevronRight />
         </Link>
-        <hr className="border-[1.4px] border-base-light"></hr>
+        <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/asset-management"
-          className="flex w-full justify-between p-6 hover:bg-blue-0"
+          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <AssetManagementLogo />
@@ -33,10 +33,10 @@ const HomeQuickLinks = () => {
           </div>
           <ChevronRight />
         </Link>
-        <hr className="border-[1.4px] border-base-light"></hr>
+        <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/resources"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 rounded-b-xl"
+          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <ResourcesLogo />

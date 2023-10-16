@@ -11,7 +11,7 @@ const HomePrime = () => {
       <Helmet>
         <title>Asset Management</title>
       </Helmet>
-      <div className="w-full flex flex-col h-screen p-6 fade-in">
+      <div className="w-full flex flex-col p-6 fade-in">
         <div className="headline-small dark:text-neutral-1">Home</div>
         <HomeTopbar />
         {/* container for everything */}

@@ -5,11 +5,11 @@ const HomeFastActions = () => {
 
      return (
        <>
-          <div className="w-full bg-white rounded-xl shadow-light dark:shadow-dark flex flex-col gap-[18px]">
+          <div className="w-full bg-white dark:bg-neutral-9 rounded-xl shadow-light dark:shadow-dark flex flex-col gap-[18px]">
                 <div className="p-6 flex flex-col gap-6">
                     <div className="flex flex-col gap-[6px] ">
-                        <div className="title-large text-neutral-9">Fast Actions</div>
-                        <div className="title-small text-neutral-8">Sites at Home (SAH) Loaner laptop management actions</div>
+                        <div className="title-large text-neutral-9 dark:text-neutral-2">Fast Actions</div>
+                        <div className="title-small text-neutral-8 dark:text-neutral-3">Sites at Home (SAH) Loaner laptop management actions</div>
                     </div>
                     <div className="flex gap-6 title-medium">
                         <Link className="am-landing-container-button" to="/asset-management/checkout">
@@ -23,11 +23,11 @@ const HomeFastActions = () => {
                     </div>
                 </div>
                 <div>
-                    <hr className="border-[1.4px] border-base-light"></hr>
-                    <Link to="/asset-management" className="flex w-full justify-between p-6 hover:bg-blue-0 rounded-b-xl">
+                    <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
+                    <Link to="/asset-management" className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]">
                         <div className="flex items-center gap-4">
                             <AssetManagementLogo />
-                            <div className="title-medium text-neutral-8">Asset Management</div>
+                            <div className="title-medium text-neutral-8 dark:text-neutral-3">Asset Management</div>
                         </div>
                         <ChevronRight />
                     </Link>
