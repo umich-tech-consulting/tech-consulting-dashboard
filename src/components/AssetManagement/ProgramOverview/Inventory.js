@@ -5,7 +5,7 @@ import {
 const Inventory = () => {
   return (
     <>
-      <div className="mt-8 mb-2 title-medium text-neutral-9">Inventory</div>
+      <div className="mt-8 mb-2 title-large text-neutral-9">Inventory</div>
       <div className="w-full flex gap-8">
         <div className="flex-1 bg-white p-4 rounded-lg flex items-center shadow-light">
           <div className="flex flex-col gap-1 grow">
