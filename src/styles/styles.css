@@ -309,7 +309,7 @@ code {
 }
 /* precheck Component Start */
 .am-action-precheck {
-  @apply bg-white dark:bg-neutral-10 md:border-l md:border-l-neutral-3 md:dark:border-l-neutral-8 md:overflow-auto text-neutral-7 dark:text-neutral-4 lg:w-96 md:w-80 w-full lg:p-4 pt-9 rounded-xl md:rounded-none pb-9;
+  @apply bg-white dark:bg-neutral-10 border border-neutral-2 dark:border-neutral-8 md:border-l md:border-l-neutral-3 md:dark:border-l-neutral-8 md:overflow-auto text-neutral-7 dark:text-neutral-4 lg:w-96 md:w-80 w-full lg:p-4 pt-9 rounded-xl md:rounded-none pb-9;
 }
 .am-action-precheck-header {
   @apply title-large mb-6 text-neutral-9 dark:text-neutral-3 px-6
@@ -329,7 +329,7 @@ code {
   @apply w-full flex md:pt-16 justify-center md:overflow-auto md:p-4
 }
 .am-action-form {
-  @apply h-fit md:max-w-sm w-fit p-6 flex flex-col gap-y-0 flex-grow bg-white dark:bg-neutral-9 rounded-xl shadow-none dark:shadow-none md:shadow-light md:dark:shadow-dark;
+  @apply h-fit md:max-w-sm w-fit p-6 flex flex-col gap-y-0 flex-grow bg-white dark:bg-neutral-9 rounded-xl border border-neutral-2 dark:border-neutral-8;
   animation: popupAnimation;
   animation-duration: 500ms;
 }
@@ -449,7 +449,7 @@ code {
   @apply w-full bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1 flex flex-col gap-12
 }
 .am-action-success-next-steps {
-  @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-white dark:bg-neutral-9
+  @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-base-light dark:bg-neutral-10
 }
 .am-action-success-header {
   @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
@@ -458,13 +458,13 @@ code {
   @apply flex flex-col gap-8
 }
 .am-action-success-next-steps-card {
-  @apply w-full rounded-md border border-neutral-3 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium
+  @apply w-full rounded-md border border-neutral-2 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium bg-white
 }
 .am-action-success-card-bullet-container {
   @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4 list-disc pl-4
 }
 .am-action-success-summary {
-  @apply bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 pt-9 p-6 md:p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto md:w-[400px] w-full
+  @apply bg-white dark:bg-neutral-9 text-neutral-9 dark:text-neutral-1 pt-9 p-6 md:p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto md:w-[400px] w-full
 }
 .am-action-success-summary-info-container {
   @apply flex flex-col gap-7 md:pb-20

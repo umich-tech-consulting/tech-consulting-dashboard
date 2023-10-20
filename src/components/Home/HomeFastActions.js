@@ -8,7 +8,7 @@ const HomeFastActions = () => {
           <div className="w-full bg-white dark:bg-neutral-9 rounded-xl flex flex-col gap-[18px] relative border border-neutral-2 dark:border-neutral-8">
                 <div className="absolute bg-neutral-3 h-full w-full bg-opacity-60 rounded-md">
                     <div className="title-medium flex w-full h-full items-center justify-center">
-                        <div className="rotate-12 bg-black text-yellow-7">Coming Soon</div>
+                        <div className="rotate-12 bg-black text-yellow-7">WIP</div>
                     </div>
                 </div>
                 <div className="p-6 flex flex-col gap-6">
