@@ -28,15 +28,14 @@ const CheckoutPrecheck = () => {
       <div className="am-action-precheck">
         <div className="am-action-precheck-header">Verify</div>
         <div className="am-action-precheck-main">
-          <div className="am-action-precheck-item">Sites at Home</div>
-          <ol>
-            <li>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop</li>
-          </ol>
-          <div className="am-action-precheck-item">Windows or Mac</div>
-          <ol>
-            <li>Is the customer approved for a Windows or Mac loaner laptop</li>
-          </ol>
-          <ColorTagAccordion
+          <div className='am-action-precheck-card'>
+            <div>Sites at Home</div>
+            <div className='am-action-precheck-card-info'>Is the customer here to pick up a Sites at Home laptop or a laptop from Tech Shop</div>
+          </div>
+          <div className='am-action-precheck-card'>
+            <div>Windows or Mac</div>
+            <div className='am-action-precheck-card-info'>Is the customer approved for a Windows or Mac loaner laptop</div>
+            <ColorTagAccordion
             title="Laptop Sleeve Tag Color Semantics"
             content={
                 <div className="body-small mt-1 pl-2">
@@ -57,15 +56,16 @@ const CheckoutPrecheck = () => {
                     </div>
                 </div>
             }
-          />
-          <div className="am-action-precheck-item">Laptop, Sleeve, Charger label</div>
-          <ol>
-            <li>Make sure that the laptop, sleeve, and charger have the same label</li>
-          </ol>
-          <div className="am-action-precheck-item">Ready for loan</div>
-          <ol>
-            <li>Confirm laptop has been wiped and is on the setup screen</li>
-          </ol>
+            />
+          </div>
+          <div className='am-action-precheck-card'>
+            <div>Laptop, Sleeve, Charger label</div>
+            <div className='am-action-precheck-card-info'>Make sure that the laptop, sleeve, and charger have the same label</div>
+          </div>
+          <div className='am-action-precheck-card'>
+            <div>Ready for loan</div>
+            <div className='am-action-precheck-card-info'>Confirm laptop has been wiped and is on the setup screen</div>
+          </div>
         </div>
       </div>
     </>

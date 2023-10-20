@@ -5,7 +5,12 @@ const HomeFastActions = () => {
 
      return (
        <>
-          <div className="w-full bg-white dark:bg-neutral-9 rounded-xl shadow-light dark:shadow-dark flex flex-col gap-[18px]">
+          <div className="w-full bg-white dark:bg-neutral-9 rounded-xl flex flex-col gap-[18px] relative border border-neutral-2 dark:border-neutral-8">
+                <div className="absolute bg-neutral-3 h-full w-full bg-opacity-60 rounded-md">
+                    <div className="title-medium flex w-full h-full items-center justify-center">
+                        <div className="rotate-12 bg-black text-yellow-7">Coming Soon</div>
+                    </div>
+                </div>
                 <div className="p-6 flex flex-col gap-6">
                     <div className="flex flex-col gap-[6px] ">
                         <div className="title-large text-neutral-9 dark:text-neutral-2">Fast Actions</div>

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 // import { WindowsLogo, AppleLogo } from "../../icons/asset-management/ProgramOverviewSvgs";
 import Inventory from "../../components/AssetManagement/ProgramOverview/Inventory.js"
 import PendingWork from "../../components/AssetManagement/ProgramOverview/PendingWork.js"
+import AssetBreakdown from "../../components/AssetManagement/ProgramOverview/AssetBreakdown.js";
 // import HomeAnnouncement from "../components/Home/HomeAnnouncement";
 // import HomeQuickLinks from "../components/Home/HomeQuickLinks";
 // import HomeFastActions from "../components/Home/HomeFastActions";
@@ -11,12 +12,13 @@ const ProgramOverview = () => {
   return (
     <>
       <Helmet>
-        <title>Asset Management</title>
+        <title>Program Overview</title>
       </Helmet>
       <div className="w-full flex flex-col p-6 fade-in text-neutral-9">
         <div className="headline-small dark:text-neutral-1">Sites at Home Program Overview</div>
         <Inventory />
         <PendingWork />
+        <AssetBreakdown />
         {/* <div className="w-full bg-white p-6 rounded-lg mt-5 flex items-center shadow-light">
             <div className="flex flex-col gap-3 grow">
                 <div className="headline-medium text-neutral-8">Total Devices</div>

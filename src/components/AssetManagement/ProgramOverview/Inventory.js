@@ -5,9 +5,9 @@ import {
 const Inventory = () => {
   return (
     <>
-      <div className="mt-8 mb-2 title-large text-neutral-9">Inventory</div>
+      <div className="mt-8 mb-2 title-medium text-neutral-9">Inventory</div>
       <div className="w-full flex gap-8">
-        <div className="flex-1 bg-white p-4 rounded-lg flex items-center shadow-light">
+        <div className="flex-1 bg-white p-4 rounded-lg flex items-center border border-neutral-2">
           <div className="flex flex-col gap-1 grow">
             <div className="title-medium text-neutral-8">Total Devices</div>
             <div className="display-small">1000</div>
@@ -23,7 +23,7 @@ const Inventory = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 bg-white p-4 rounded-lg flex items-center shadow-light">
+        <div className="flex-1 bg-white p-4 rounded-lg flex items-center border border-neutral-2">
           <div className="flex flex-col gap-1 grow">
             <div className="title-medium text-neutral-8">Available</div>
             <div className="display-small">400</div>
@@ -39,7 +39,7 @@ const Inventory = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 bg-white p-4 rounded-lg flex items-center shadow-light">
+        <div className="flex-1 bg-white p-4 rounded-lg flex items-center border border-neutral-2">
           <div className="flex flex-col gap-1 grow">
             <div className="title-medium text-neutral-8">On Loan</div>
             <div className="display-small">600</div>

@@ -161,7 +161,7 @@ const AssetManagementReturn = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          <div className="am-action-form-precheck">
+          <div className="am-action-form-container">
             <div className="am-action-form">
               <div className="am-action-form-header-description">
                 <div className="am-action-form-header">
@@ -198,8 +198,8 @@ const AssetManagementReturn = () => {
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-            <ReturnPrecheck />
           </div>
+          <ReturnPrecheck />
         </div>
       </div>
     </>

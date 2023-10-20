@@ -214,7 +214,7 @@ const AssetManagementCheckOut = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          <div className="am-action-form-precheck ">
+          <div className="am-action-form-container">
             <div className="am-action-form">
               <div className="am-action-form-header-description">
                 <div className="am-action-form-header">
@@ -262,8 +262,8 @@ const AssetManagementCheckOut = () => {
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-            <CheckoutPrecheck />
           </div>
+          <CheckoutPrecheck />
         </div>
       </div>
     </>

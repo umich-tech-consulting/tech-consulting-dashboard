@@ -12,7 +12,7 @@ import gsxicon from "../../icons/nav/gsxicon.png";
 const HomeQuickLinks = () => {
   return (
     <>
-      <div className="w-full bg-white dark:bg-neutral-9 rounded-xl shadow-light dark:shadow-dark flex flex-col title-medium text-neutral-8 dark:text-neutral-3">
+      <div className="w-full bg-white dark:bg-neutral-9 rounded-xl flex flex-col title-medium text-neutral-8 dark:text-neutral-3 border border-neutral-2 dark:border-neutral-8">
         <div className="title-large text-neutral-9 dark:text-neutral-2 p-6">Quick Links</div>
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <a

@@ -3,7 +3,7 @@ const HomeAnnouncement = () => {
 
      return (
        <>
-          <div className="w-full bg-white dark:bg-neutral-9 p-6 rounded-xl shadow-light dark:shadow-dark flex flex-col gap-7">
+          <div className="w-full bg-white dark:bg-neutral-9 p-6 rounded-xl flex flex-col gap-7 border border-neutral-2 dark:border-neutral-8">
               <BoxLogo />
               <div className="flex flex-col gap-[18px]">
                 <div className="title-large text-neutral-9 dark:text-neutral-2">Tech Consulting Dashboard (TCD)</div>
