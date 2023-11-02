@@ -41,7 +41,7 @@ jobs:
       #       echo $RSYNC_STDOUT
 
   deploy-gh-pages:
-    needs: setup
+    needs: build-and-deploy
     runs-on: ubuntu-latest
     permissions:
       pages: write
