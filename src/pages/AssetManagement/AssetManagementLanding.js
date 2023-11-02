@@ -1,6 +1,10 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { LaptopReturn, LaptopCheckOut, ProgramOverview } from "../../icons/asset-management/AssetManagementLandingSvgs";
+import {
+  LaptopReturn,
+  LaptopCheckOut,
+  ProgramOverview
+} from "../../icons/asset-management/AssetManagementLandingSvgs";
 
 const AssetManagementLanding = () => {
 
@@ -42,7 +46,7 @@ const AssetManagementLanding = () => {
               </div>
             </div>
             <Link className="am-landing-container-button" to="/asset-management/checkout">
-              <LaptopReturn />
+              <LaptopCheckOut />
               <div>Checkout</div>
             </Link>
           </div>
@@ -53,7 +57,7 @@ const AssetManagementLanding = () => {
               </div>
             </div>
             <Link className="am-landing-container-button" to="/asset-management/program-overview">
-              <LaptopReturn />
+              <ProgramOverview />
               <div>Program Overview</div>
             </Link>
           </div>
