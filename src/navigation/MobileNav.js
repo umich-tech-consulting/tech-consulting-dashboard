@@ -40,7 +40,7 @@ const MobileNav = () => {
   return (
     <>
       <div className="fixed w-full z-50 mb-16">
-        <div className="bg-white dark:bg-neutral-9 shadow-light p-4 md:hidden z-50 ">
+        <div className="bg-white dark:bg-neutral-9 shadow-light dark:shadow-dark p-4 md:hidden z-50 ">
           <div className="flex justify-between items-start">
             <button onClick={toggleMobileNav}>
               {showMobileNav ? <CloseMenu /> : <HamburgerMenu /> }
@@ -69,13 +69,13 @@ const MobileNav = () => {
             >
               Announcements
             </Link>
-            <Link
+            {/* <Link
               to="/asset-management"
               className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
               onClick={toggleMobileNav}
             >
               Asset Management
-            </Link>
+            </Link> */}
             <Link
               to="/resources"
               className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"

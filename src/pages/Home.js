@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import HomeTopbar from "../components/Home/HomeTopbar";
 import HomeAnnouncement from "../components/Home/HomeAnnouncement";
 import HomeQuickLinks from "../components/Home/HomeQuickLinks";
-import HomeFastActions from "../components/Home/HomeFastActions";
+// import HomeFastActions from "../components/Home/HomeFastActions";
 import HomePages from "../components/Home/HomePages";
 
 const Home = () => {
@@ -22,19 +22,20 @@ const Home = () => {
             <div className="block xl:hidden">
                 <HomeQuickLinks />
             </div>
-            <HomeFastActions />
-            <div className="block xl:hidden">
+            {/* <HomeFastActions /> */}
+            {/* <div className="block xl:hidden">
                 <HomePages />
-            </div>
+            </div> */}
+            <HomePages />
           </div>
           {/* container for the right side */}
           <div className="flex-1 flex flex-col gap-6">
             <div className="hidden xl:block">
                 <HomeQuickLinks />
             </div>
-            <div className="hidden xl:block">
+            {/* <div className="hidden xl:block">
                 <HomePages />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
   ChevronRight,
   ResourcesLogo,
-  AssetManagementLogo,
+  // AssetManagementLogo,
   AnnouncementsLogo
 } from "../../icons/home/HomeSvgs";
 
@@ -22,7 +22,7 @@ const HomeQuickLinks = () => {
           </div>
           <ChevronRight />
         </Link>
-        <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
+        {/* <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/asset-management"
           className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
@@ -32,7 +32,7 @@ const HomeQuickLinks = () => {
             <div>Asset Management</div>
           </div>
           <ChevronRight />
-        </Link>
+        </Link> */}
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/resources"
