@@ -24,7 +24,11 @@ code {
 /* Scrollbar start */
 ::-webkit-scrollbar {
   @apply bg-neutral-1;
-  width: 12px;
+  height: 3px;
+  width: 8px;
+}
+::-webkit-scrollbar:hover {
+  height: 4px;
 }
 .dark ::-webkit-scrollbar {
   @apply bg-neutral-9
@@ -33,7 +37,8 @@ code {
 ::-webkit-scrollbar-track {
   @apply bg-neutral-1;
   border-radius: 10px;
-  width: 12px;
+  height: 3px;
+  width: 8px;
 }
 .dark ::-webkit-scrollbar-track {
   @apply bg-neutral-9;
@@ -197,7 +202,7 @@ code {
 /* ----------- Animation Styles End----------- */
 /* Home Styles Start */
 .homepage {
-  @apply bg-blue-9 w-full h-screen;
+  @apply bg-blue-9 w-full h-screen flex flex-col items-center;
     background-image: url("../icons/home/homepage_background_four.jpg");
     background-attachment: fixed;
     /* background-position: center; */
@@ -228,9 +233,6 @@ code {
 }
 .notification-pane {
   @apply w-[350px] fixed top-0 right-0 p-4 rounded-md m-8 text-neutral-9 dark:text-neutral-3 body-small flex flex-col gap-6 bg-white dark:bg-neutral-10 ;
-}
-.home-link-container {
-  @apply text-yellow-6 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] fixed w-[calc(100%-230px)] bottom-0
 }
 .home-link-container-main {
   @apply flex flex-wrap gap-4
@@ -303,38 +305,33 @@ code {
   @apply w-full flex flex-col h-screen;
 }
 .am-action-container {
-  @apply w-full p-0 lg:p-0 sm:p-6 flex flex-col justify-center items-center;
-}
-.am-action-form-precheck {
-  @apply flex rounded-xl mt-16 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 h-full;
-  animation: popupAnimation;
-  animation-duration: 500ms;
+  @apply w-full md:h-full flex md:flex-row flex-col gap-4 md:gap-0 p-4 md:p-0
 }
 /* precheck Component Start */
 .am-action-precheck {
-  @apply w-72 bg-neutral-1 dark:bg-black border-l border-l-neutral-3 dark:border-l-neutral-8 rounded-r-xl overflow-auto text-neutral-7 dark:text-neutral-4;
+  @apply bg-white dark:bg-neutral-10 border border-neutral-2 dark:border-neutral-8 md:border-l md:border-l-neutral-3 md:dark:border-l-neutral-8 md:overflow-auto text-neutral-7 dark:text-neutral-4 lg:w-96 md:w-80 w-full lg:p-4 pt-9 rounded-xl md:rounded-none pb-9;
 }
 .am-action-precheck-header {
-  @apply title-medium mb-3 text-neutral-8 dark:text-neutral-3 px-6 pt-6
+  @apply title-large mb-6 text-neutral-9 dark:text-neutral-3 px-6
 }
 .am-action-precheck-main {
-  @apply flex flex-col gap-2 px-6
+  @apply flex flex-col gap-7 px-6
 }
-.am-action-precheck-item {
-  @apply title-small mt-5
+.am-action-precheck-card {
+  @apply title-medium flex flex-col gap-2
 }
-.am-action-precheck-item:first-child {
-  @apply mt-0 title-small
-}
-.am-action-precheck-main ol {
-  @apply body-small list-disc pl-2
-}
-.am-action-precheck-item-details {
-  @apply body-small
+.am-action-precheck-card-info {
+  @apply body-medium text-neutral-7 text-neutral-4
+
 }
 /* precheck Component End */
+.am-action-form-container {
+  @apply w-full flex md:pt-16 justify-center md:overflow-auto md:p-4
+}
 .am-action-form {
-  @apply h-fit max-w-sm p-6 flex flex-col gap-y-0 flex-grow;
+  @apply h-fit md:max-w-sm w-fit p-6 flex flex-col gap-y-0 flex-grow bg-white dark:bg-neutral-9 rounded-xl border border-neutral-2 dark:border-neutral-8;
+  animation: popupAnimation;
+  animation-duration: 500ms;
 }
 .am-action-form-header-description {
   @apply flex flex-col gap-2 pb-6
@@ -449,10 +446,10 @@ code {
 /* Default Action Component End */
 /* Action Success Start */
 .am-action-success-container {
-  @apply w-full flex flex-col gap-12 bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1
+  @apply w-full bg-white dark:bg-neutral-9 items-center h-screen text-neutral-9 dark:text-neutral-1 flex flex-col gap-12
 }
 .am-action-success-next-steps {
-  @apply p-9 w-full flex flex-col gap-12 h-full overflow-auto
+  @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-base-light dark:bg-neutral-10
 }
 .am-action-success-header {
   @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
@@ -461,16 +458,16 @@ code {
   @apply flex flex-col gap-8
 }
 .am-action-success-next-steps-card {
-  @apply w-full rounded-md border border-neutral-3 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium
+  @apply w-full rounded-md border border-neutral-2 dark:border-neutral-8 p-6 flex flex-col gap-6 body-medium bg-white
 }
 .am-action-success-card-bullet-container {
   @apply flex flex-col gap-2 text-neutral-8 dark:text-neutral-4 list-disc pl-4
 }
 .am-action-success-summary {
-  @apply w-[400px] bg-base-light dark:bg-neutral-10 text-neutral-9 dark:text-neutral-1 p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto
+  @apply bg-white dark:bg-neutral-9 text-neutral-9 dark:text-neutral-1 pt-9 p-6 md:p-9 border-l border-l-neutral-3 dark:border-l-neutral-8 overflow-auto md:w-[400px] w-full
 }
 .am-action-success-summary-info-container {
-  @apply flex flex-col gap-7 pb-20
+  @apply flex flex-col gap-7 md:pb-20
 }
 .am-action-success-summary-info {
   @apply flex flex-col gap-1 p-2
@@ -489,7 +486,7 @@ code {
   @apply flex gap-2 items-start title-medium break-words
 }
 .am-action-success-close-button-container {
-  @apply absolute right-0 bottom-0 p-6
+  @apply fixed md:absolute right-0 bottom-0 p-6
 }
 .am-action-success-close-button {
   @apply block text-center w-[80px] rounded-full bg-blue-9 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-8 dark:hover:bg-yellow-5
@@ -516,42 +513,6 @@ code {
 .am-action-success-next-steps-card:nth-child(3) {
   animation-delay: 0.8s;
 }
-
-/* This is the old code start */
-.am-action-success-container-main {
-  @apply flex flex-col gap-9 w-full
-}
-.am-action-success-asset-uniqname {
-  @apply flex gap-2
-}
-.am-action-success-asset-uniqname-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-[6px] rounded flex gap-2 body-large justify-center items-center flex-1 cursor-pointer
-}
-.am-action-success-asset-uniqname-button img {
-  @apply h-5 w-5
-}
-/* Start the edits here */
-.am-action-success-extra-info {
-  @apply flex gap-4 flex-col
-}
-.am-action-success-tdx-button {
-  @apply bg-base-light hover:bg-neutral-2 active:bg-neutral-3 p-1 rounded flex gap-2 body-medium items-center justify-center cursor-pointer w-fit
-}
-.am-action-success-tdx-button img {
-  @apply h-5 w-5
-}
-.am-action-success-date-comments {
-  @apply flex flex-col gap-2 body-medium
-}
-.am-action-success-date-comments-info {
-  @apply flex gap-2
-}
-.am-action-success-date-comments-info img {
-  @apply h-5 w-5
-}
-/* This is the old code End */
-
-
 /* Action Success End */
 /* High Error Alert Start */
 .am-error-alert-container {
@@ -561,7 +522,7 @@ code {
   @apply mr-8 flex flex-col gap-2 items-end
 }
 .am-error-alert-message {
-  @apply body-small bg-white dark:bg-neutral-9 dark:text-neutral-1 p-3 rounded-md w-[240px]
+  @apply body-small bg-neutral-1 dark:bg-neutral-9 dark:text-neutral-1 p-3 border border-neutral-3 dark:border-neutral-7 rounded-md w-[240px]
 }
 .am-error-alert-button-container {
   @apply flex flex-col justify-between mt-2 gap-2 w-full
@@ -599,7 +560,7 @@ code {
 }
 /* Resource Landing Start */
 .r-landing-container {
-  @apply max-w-3xl w-full mt-8 text-neutral-9 dark:text-neutral-1
+  @apply max-w-3xl w-full mt-4 text-neutral-9 dark:text-neutral-1
 }
 .r-landing-title {
   @apply mb-6 headline-large text-neutral-9 dark:text-neutral-1 text-center
@@ -611,14 +572,14 @@ code {
 
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
-  @apply p-3 w-60 flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
+  @apply p-3 lg:w-60 sm:w-[48%] w-full flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
   transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
 
 /* Resource Landing Tabs Start */
 .r-landing-tabs {
-  @apply py-2 px-4 title-medium focus:outline-none
+  @apply py-2 px-4 title-medium focus:outline-none min-w-fit
 }
 /* Resource Landing Tabs End */
 
@@ -642,7 +603,7 @@ code {
   @apply w-full flex flex-col gap-4
 }
 .r-landing-categories-cards {
-  @apply flex flex-col gap-4 lg:flex-row
+  @apply flex flex-col lg:flex-row gap-4
 }
 .r-landing-categories-card {
   @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1;
@@ -655,14 +616,14 @@ code {
   @apply body-medium
 }
 .r-landing-categories-training-card {
-  @apply flex items-center justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
+  @apply flex items-center lg:justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
   transition: ease-out 400ms;
 }
 /* Resource Landing Categories End */
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
@@ -682,8 +643,8 @@ code {
 .r-categorybuilder-nav {
   @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
 }
-.r-categorybuilder-title {
-  @apply mb-6 headline-large text-center
+.r-categorybuilder-container {
+  @apply max-w-3xl w-full text-neutral-9 dark:text-neutral-1
 }
 /* Resource CategoryBuilder End */
 

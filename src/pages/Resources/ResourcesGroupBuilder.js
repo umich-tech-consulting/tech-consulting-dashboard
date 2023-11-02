@@ -71,13 +71,13 @@ const ResourceGroupBuilder = () => {
               Resources
             </Link>
             <div>/</div>
-            <Link to={`/resources/${category}`} className="hover:text-blue-9 dark:hover:text-yellow-6">
+            <Link to={`/resources/${category}`} className="hover:text-blue-9 dark:hover:text-yellow-6 min-w-fit">
               {categoryData.category}
             </Link>
             <div>/</div>
             <Link
               to={`/resources/${category}/${group}`}
-              className="hover:text-blue-9 dark:hover:text-yellow-6"
+              className="hover:text-blue-9 dark:hover:text-yellow-6 min-w-fit"
             >
               {categoryData.group}
             </Link>
@@ -86,16 +86,18 @@ const ResourceGroupBuilder = () => {
             {categoryData.group}
           </div>
           <div className="r-groupbuilder-searchbox">
+            <label className='hidden' htmlFor="searchbox">Resources Search</label>
             <input
               type="text"
               name="query"
+              id="searchbox"
               placeholder={`Search ${categoryData.group} Links`}
               value={query}
               onChange={handleSearch}
             />
             <svg className='absolute top-0 left-0 flex items-center justify-center h-full p-3 stroke-blue-9 dark:stroke-yellow-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" role="img" aria-labelledby="search_icon">
               <title id="search_icon">Search Icon</title>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="M12.25 12.2505 9.21845 9.21887m0 0c.82045-.8205 1.28145-1.93334 1.28145-3.09371 0-1.16036-.461-2.2732-1.28145-3.0937C8.39794 2.21095 7.2851 1.75 6.12474 1.75c-1.16037 0-2.27321.46095-3.09371 1.28146-.8205.8205-1.28146 1.93334-1.28146 3.0937 0 1.16037.46096 2.27321 1.28146 3.09371.8205.82053 1.93334 1.28143 3.09371 1.28143 1.16036 0 2.2732-.4609 3.09371-1.28143Z"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=".875" d="M12.25 12.2505 9.21845 9.21887m0 0c.82045-.8205 1.28145-1.93334 1.28145-3.09371 0-1.16036-.461-2.2732-1.28145-3.0937C8.39794 2.21095 7.2851 1.75 6.12474 1.75c-1.16037 0-2.27321.46095-3.09371 1.28146-.8205.8205-1.28146 1.93334-1.28146 3.0937 0 1.16037.46096 2.27321 1.28146 3.09371.8205.82053 1.93334 1.28143 3.09371 1.28143 1.16036 0 2.2732-.4609 3.09371-1.28143Z"/>
             </svg>
             {query && (
               <button
@@ -112,6 +114,12 @@ const ResourceGroupBuilder = () => {
           {query ? (
             <div className="r-landing-container">
               <ResourceLinks linkData={searchResults} />
+              {searchResults.length === 0  &&
+                <div className="flex flex-col gap-1 p-2 bg-neutral-2 dark:bg-black rounded-md">
+                  <div className="title-medium text-neutral-8 dark:text-neutral-2">Your search did not return any results</div>
+                  <div className="body-medium text-neutral-7 dark:text-neutral-3">Search will only look for words that exactly match the Title and/or Description of a link.</div>
+                </div>
+               }
             </div>
           ) : (
             <ResourceLinks linkData={sortedLinks} />

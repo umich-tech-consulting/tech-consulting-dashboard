@@ -6,6 +6,7 @@ import CommentFormField from "../../components/AssetManagement/CommentFormField"
 import SubmitOrCancelForm from "../../components/AssetManagement/SubmitOrCancelForm";
 import HighErrorAlert from "../../components/AssetManagement/HighErrorAlert";
 import UncaughtErrorAlert from "../../components/AssetManagement/UncaughtErrorAlert";
+import ReturnPrecheck from "../../components/AssetManagement/ReturnPrecheck";
 import { useNavigate } from "react-router";
 
 
@@ -160,12 +161,12 @@ const AssetManagementReturn = () => {
       <div className="am-action-main">
         {errorCount > 1 && <HighErrorAlert resetErrorCount={resetErrorCount} />}
         <div className="am-action-container">
-          <div className="am-action-form-precheck">
+          <div className="am-action-form-container">
             <div className="am-action-form">
               <div className="am-action-form-header-description">
                 <div className="am-action-form-header">
                   <div>Laptop Return</div>
-                  <svg className="h-5 w-fit" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="laptop_return">
+                  <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" role="img" aria-labelledby="laptop_return">
                     <title id="laptop_return">Laptop Return</title>
                     <circle cx="20" cy="20" r="20" className="fill-white dark:fill-black" transform="rotate(-180 20 20)"/>
                     <path className="fill-[#0488E1] dark:fill-yellow-6" fillRule="evenodd" d="M20 .0000035C8.95385.00000157-.00000157 8.95385-.0000035 20-.00000543 31.0462 8.95384 40 20 40c11.0461 0 20-8.9538 20-20C40 8.95385 31.0462.00000543 20 .0000035ZM18.9128 28.7795c.2885.2881.6795.4499 1.0872.4499.4077 0 .7987-.1618 1.0872-.4499l6.1538-6.1539c.1512-.1408.2724-.3106.3565-.4994.0841-.1887.1293-.3924.1329-.599.0037-.2065-.0343-.4117-.1117-.6033-.0774-.1916-.1925-.3656-.3386-.5117-.1461-.1461-.3201-.2612-.5117-.3386-.1916-.0774-.3967-.1154-.6033-.1117-.2066.0036-.4103.0488-.599.1329-.1887.0841-.3586.2053-.4994.3565l-3.5282 3.5282V12.3077c0-.408-.1621-.7993-.4506-1.0879-.2886-.2885-.6799-.4506-1.0879-.4506-.408 0-.7993.1621-1.0879.4506-.2885.2886-.4506.6799-.4506 1.0879v11.6718l-3.5282-3.5282c-.2916-.2718-.6773-.4197-1.0759-.4127-.3986.0071-.7789.1685-1.0607.4504-.2819.2819-.4434.6621-.4504 1.0607-.007.3986.1409.7843.4127 1.0759l6.1538 6.1539Z" clipRule="evenodd"/>
@@ -197,21 +198,8 @@ const AssetManagementReturn = () => {
               />
               {uncaughtError && <UncaughtErrorAlert />}
             </div>
-            <div className="am-action-precheck">
-              <div className="am-action-precheck-header">Verify</div>
-              <div className="am-action-precheck-main">
-                <div className="am-action-precheck-item">Mac: "Find My" and iCloud</div>
-                <ol><li>Make sure customer is signed out of "Find My" and iCloud and verify in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX
-                </a></span></li></ol>
-                <div className="am-action-precheck-item">Laptop, Charger and Sleeve</div>
-                <ol><li>Have the customer purchase anything that is missing from the Tech Shop</li></ol>
-                <div className="am-action-precheck-item">Device is not damaged</div>
-                <ol><li>If damaged: Document who, when, where, & how > Return Device > Check-in for repair</li></ol>
-                <div className="am-action-precheck-item">Customer data is backed up</div>
-                <ol><li>Ensure customer has saved important files</li></ol>
-              </div>
-            </div>
           </div>
+          <ReturnPrecheck />
         </div>
       </div>
     </>

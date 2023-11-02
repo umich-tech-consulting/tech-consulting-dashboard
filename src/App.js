@@ -10,6 +10,7 @@ import CheckoutSubmitSuccess from './pages/AssetManagement/AssetManagementChecko
 import AssetManagementReturn from './pages/AssetManagement/AssetManagementReturn';
 import ReturnSubmitSuccess from './pages/AssetManagement/AssetManagementReturnSubmitSuccess';
 import AssetManagementSwap from './pages/AssetManagement/AssetManagementSwap';
+import ProgramOverview from './pages/AssetManagement/ProgramOverview';
 // Asset Management End
 import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/Resources/ResourcesLanding';
@@ -26,7 +27,6 @@ function App() {
         </Helmet>
       </div>
       <Routes>
-
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="asset-management" element={<AssetManagementLanding />} />
@@ -35,6 +35,7 @@ function App() {
           <Route path="asset-management/return" element={<AssetManagementReturn />} />
           <Route path="asset-management/return/success" element={<ReturnSubmitSuccess />} />
           <Route path="asset-management/swap" element={<AssetManagementSwap />} />
+          <Route path="asset-management/program-overview" element={<ProgramOverview />} />
           <Route path="announcements" element={<Announcements />} />
           <Route path="resources/" element={<ResourcesLanding />} />
           <Route path="resources/:category" element={<ResourceCategoryBuilder />} />
