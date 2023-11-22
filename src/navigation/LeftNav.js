@@ -5,6 +5,8 @@ import {
   HomeActive,
   AnnouncementsInactive,
   AnnouncementsActive,
+  WarrantyInactive,
+  WarrantyActive,
   // AssetManagementActive,
   // AssetManagementInactive,
   Logo,
@@ -67,6 +69,29 @@ const LeftNav = () => {
             }`}
           >
             Announcements
+          </div>
+        </Link>
+        <Link
+          to="/warranty"
+          className={`link-container ${
+            location.pathname === "/warranty"
+              ? "bg-blue-9 dark:bg-yellow-6"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+          }`}
+        >
+          {location.pathname === "/warranty" ? (
+            <WarrantyActive />
+          ) : (
+            <WarrantyInactive />
+          )}
+          <div
+            className={`body-medium leading-none ${
+              location.pathname === "/warranty"
+                ? "text-neutral-1 dark:text-neutral-9"
+                : "text-neutral-9 dark:text-neutral-1"
+            }`}
+          >
+            Warranty
           </div>
         </Link>
         {/* <Link

@@ -29,6 +29,19 @@ export const AnnouncementsInactive = () => (
     </svg>
 );
 
+export const WarrantyActive = () => (
+    <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="warranty_active">
+        <title id="warranty_active">Warranty Active</title>
+        <path fill-rule="evenodd" d="M10.43 1.808a.625.625 0 0 0-.86 0 9.34 9.34 0 0 1-6.564 2.567.625.625 0 0 0-.602.429 10.616 10.616 0 0 0-.529 3.32c0 4.952 3.387 9.112 7.97 10.29.101.027.209.027.31 0 4.583-1.178 7.97-5.338 7.97-10.29 0-1.158-.186-2.274-.53-3.32a.625.625 0 0 0-.6-.43h-.12a9.34 9.34 0 0 1-6.445-2.566Zm2.578 6.68a.624.624 0 1 0-1.016-.727l-2.697 3.776-1.353-1.354a.625.625 0 0 0-.884.883l1.875 1.875a.625.625 0 0 0 .95-.078l3.125-4.375Z" clip-rule="evenodd"/>
+    </svg>
+);
+export const WarrantyInactive = () => (
+    <svg className="primary-nav-icon stroke-neutral-10 dark:stroke-neutral-1" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="warranty_inactive">
+        <title id="warranty_inactive">Warranty Inactive</title>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" d="M7.5 10.625 9.375 12.5 12.5 8.125M10 2.262A9.966 9.966 0 0 1 2.998 5 9.992 9.992 0 0 0 2.5 8.124c0 4.66 3.187 8.575 7.5 9.686 4.313-1.11 7.5-5.025 7.5-9.685A9.991 9.991 0 0 0 17.002 5h-.127A9.963 9.963 0 0 1 10 2.262Z"/>
+    </svg>
+);
+
 export const AssetManagementActive = () => (
     <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="asset_management_active">
         <title id="asset_management_active">Asset Management Active</title>
