@@ -57,6 +57,9 @@ module.exports = {
         9: '#FFEDB0',
         10: '#FFF9E0'
       },
+      'green': {
+        1:"34C759"
+      },
       'base': {
         light: '#F6F8FC'
       }
