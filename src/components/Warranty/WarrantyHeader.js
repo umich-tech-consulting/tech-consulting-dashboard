@@ -1,4 +1,9 @@
-import { WarrantyCheckDefault, WarrantyShieldFullCoverage, WarrantyShieldNoCoverage, WarrantyShieldPartialCoverage } from "../../icons/warranty/WarrantySvgs";
+import {
+  WarrantyCheckDefault,
+  // WarrantyShieldFullCoverage,
+  // WarrantyShieldNoCoverage,
+  // WarrantyShieldPartialCoverage
+} from "../../icons/warranty/WarrantySvgs";
 const WarrantyHeader = () => {
   return (
     <>
