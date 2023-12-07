@@ -40,6 +40,13 @@ export const ExternalLink = () => (
         <path d="M2.5 10.5a.963.963 0 0 1-.706-.294A.963.963 0 0 1 1.5 9.5v-7c0-.275.098-.51.294-.706A.963.963 0 0 1 2.5 1.5H6v1H2.5v7h7V6h1v3.5c0 .275-.098.51-.294.706a.963.963 0 0 1-.706.294h-7Zm2.35-2.65-.7-.7L8.8 2.5H7v-1h3.5V5h-1V3.2L4.85 7.85Z"/>
     </svg>
 );
+export const LaptopDevice = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-5" fill="none"><path fill="#616161" d="M0 16.667V15h3.333v-.833c-.458 0-.85-.163-1.177-.49a1.605 1.605 0 0 1-.49-1.177V4.167c0-.459.164-.851.49-1.177.327-.327.719-.49 1.177-.49h13.334c.458 0 .85.163 1.177.49.326.326.49.718.49 1.177V12.5c0 .458-.164.85-.49 1.177-.327.327-.719.49-1.177.49V15H20v1.667H0ZM3.333 12.5h13.334V4.167H3.333V12.5Z"/></svg>
+    // <svg className="stroke-neutral-7 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"><path d="M0 17.083v-1.667h3.333v-.833c-.458 0-.85-.164-1.177-.49a1.605 1.605 0 0 1-.49-1.177V4.583c0-.459.164-.851.49-1.177.327-.327.719-.49 1.177-.49h13.334c.458 0 .85.163 1.177.49.326.326.49.718.49 1.177v8.333c0 .458-.164.85-.49 1.177-.327.326-.719.49-1.177.49v.833H20v1.667H0Zm3.333-4.167h13.334V4.583H3.333v8.333Z"/></svg>
+);
+export const SerialNumber = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-neutral-7 stroke-neutral-7" fill="none"><path d="M4.375 6.875h12.5Zm-1.25 6.25h12.5Zm11-11.25-3.25 16.25Zm-5 0-3.25 16.25Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M4.375 6.875h12.5m-13.75 6.25h12.5m-1.5-11.25-3.25 16.25m-1.75-16.25-3.25 16.25"/></svg>
+);
 
 // export const WarrantyShieldDefault = () => (
 //     <svg className="w-16 h-16 stroke-blue-9" xmlns="http://www.w3.org/2000/svg" fill="none" aria-labelledby="warranty_shield_default">
