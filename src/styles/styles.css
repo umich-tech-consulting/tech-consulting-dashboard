@@ -321,7 +321,7 @@ code {
   @apply title-medium flex flex-col gap-2
 }
 .am-action-precheck-card-info {
-  @apply body-medium text-neutral-7 text-neutral-4
+  @apply body-medium text-neutral-7 dark:text-neutral-4
 
 }
 /* precheck Component End */
