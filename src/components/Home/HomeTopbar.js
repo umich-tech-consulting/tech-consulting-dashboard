@@ -6,7 +6,7 @@ const HomeTopbar = () => {
          <div className="w-full flex justify-between mt-5 text-neutral-9 dark:text-neutral-2">
             <div className="flex flex-col gap-[6px]">
                 <div className="title-medium">Tech Consulting Dashboard</div>
-                <div className="title-small text-neutral-7 dark:text-neutral-4">Version: Beta 2</div>
+                <div className="title-small text-neutral-7 dark:text-neutral-4">Version: Beta 3</div>
             </div>
             <div className="flex items-center gap-[14px]">
                 <UserIcon />

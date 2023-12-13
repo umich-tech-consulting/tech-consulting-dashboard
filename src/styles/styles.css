@@ -267,7 +267,10 @@ code {
 .home-link:nth-child(3) {
   animation-delay: .2s;
 }
-
+.c5 {
+  padding: 0px;
+  @apply bg-white dark:bg-black
+}
 /* Home Styles End */
 /* Announcements Styles Start */
 .announcement-bg {
