@@ -68,9 +68,9 @@ const WarrantySearchbox = () => {
             htmlFor="device_type"
             className={`absolute left-11 cursor-pointer title-medium text-neutral-7 duration-300 transform ${
               deviceBrand
-                ? "-translate-y-4 scale-75 top-1 -translate-x-6 text-neutral-9"
-                : "top-[20%] scale-100"
-            } z-10 origin-[0] bg-white peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:-translate-x-8 peer- peer-focus:text-neutral-9 peer-focus:font-medium start-1`}
+                ? "-translate-y-4 scale-75 top-1 translate-x-4 text-neutral-9"
+                : "top-[20%] scale-100 translate-x-10"
+            } z-10 origin-[0] bg-white peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:translate-x-2 peer- peer-focus:text-neutral-9 peer-focus:font-medium start-1`}
           >
             Device Type
           </label>
@@ -161,9 +161,9 @@ const WarrantySearchbox = () => {
             htmlFor="serial_number"
             className={`absolute left-11 cursor-text title-medium text-neutral-7 duration-300 transform ${
               serialNumber
-                ? "-translate-y-4 scale-75 top-1 -translate-x-6 text-neutral-9"
-                : "top-[50%] scale-100"
-            } z-10 origin-[0] bg-white peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:-translate-x-8 peer- peer-focus:text-neutral-9 peer-focus:font-medium start-1`}
+                ? "-translate-y-4 scale-75 top-1 translate-x-4 text-neutral-9"
+                : "top-[50%] scale-100 translate-x-10"
+            } z-10 origin-[0] bg-white peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:translate-x-2 peer- peer-focus:text-neutral-9 peer-focus:font-medium start-1`}
           >
             Serial Number
           </label>

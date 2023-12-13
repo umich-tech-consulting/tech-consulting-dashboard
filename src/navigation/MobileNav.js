@@ -69,13 +69,20 @@ const MobileNav = () => {
             >
               Announcements
             </Link>
-            {/* <Link
+            <Link
+              to="/warranty"
+              className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
+              onClick={toggleMobileNav}
+            >
+              Warranty
+            </Link>
+            <Link
               to="/asset-management"
               className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"
               onClick={toggleMobileNav}
             >
               Asset Management
-            </Link> */}
+            </Link>
             <Link
               to="/resources"
               className="headline-large hover:text-blue-9 dark:hover:text-yellow-6"

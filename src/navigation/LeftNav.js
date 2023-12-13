@@ -7,8 +7,8 @@ import {
   AnnouncementsActive,
   WarrantyInactive,
   WarrantyActive,
-  // AssetManagementActive,
-  // AssetManagementInactive,
+  AssetManagementActive,
+  AssetManagementInactive,
   Logo,
   ResourcesActive,
   ResourceInactive,
@@ -94,7 +94,7 @@ const LeftNav = () => {
             Warranty
           </div>
         </Link>
-        {/* <Link
+        <Link
           to="/asset-management"
           className={`link-container ${
             location.pathname.startsWith("/asset-management")
@@ -114,7 +114,7 @@ const LeftNav = () => {
           }`}>
             Asset Management
           </div>
-        </Link> */}
+        </Link>
         <Link
           to="/resources"
           className={`link-container ${
