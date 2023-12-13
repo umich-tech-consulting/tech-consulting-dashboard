@@ -21,7 +21,7 @@ export const WarrantyShieldPartialCoverage = () => (
     </svg>
 );
 export const TooltipIcon = () => (
-    <svg className="stroke-neutral-9 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <svg className="stroke-neutral-9 dark:stroke-neutral-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
     </svg>
 );
@@ -42,16 +42,7 @@ export const ExternalLink = () => (
 );
 export const LaptopDevice = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-5" fill="none"><path fill="#616161" d="M0 16.667V15h3.333v-.833c-.458 0-.85-.163-1.177-.49a1.605 1.605 0 0 1-.49-1.177V4.167c0-.459.164-.851.49-1.177.327-.327.719-.49 1.177-.49h13.334c.458 0 .85.163 1.177.49.326.326.49.718.49 1.177V12.5c0 .458-.164.85-.49 1.177-.327.327-.719.49-1.177.49V15H20v1.667H0ZM3.333 12.5h13.334V4.167H3.333V12.5Z"/></svg>
-    // <svg className="stroke-neutral-7 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"><path d="M0 17.083v-1.667h3.333v-.833c-.458 0-.85-.164-1.177-.49a1.605 1.605 0 0 1-.49-1.177V4.583c0-.459.164-.851.49-1.177.327-.327.719-.49 1.177-.49h13.334c.458 0 .85.163 1.177.49.326.326.49.718.49 1.177v8.333c0 .458-.164.85-.49 1.177-.327.326-.719.49-1.177.49v.833H20v1.667H0Zm3.333-4.167h13.334V4.583H3.333v8.333Z"/></svg>
 );
 export const SerialNumber = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-neutral-7 stroke-neutral-7" fill="none"><path d="M4.375 6.875h12.5Zm-1.25 6.25h12.5Zm11-11.25-3.25 16.25Zm-5 0-3.25 16.25Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M4.375 6.875h12.5m-13.75 6.25h12.5m-1.5-11.25-3.25 16.25m-1.75-16.25-3.25 16.25"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-neutral-7 dark:fill-neutral-3 stroke-neutral-7 dark:stroke-neutral-3" fill="none"><path d="M4.375 6.875h12.5Zm-1.25 6.25h12.5Zm11-11.25-3.25 16.25Zm-5 0-3.25 16.25Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M4.375 6.875h12.5m-13.75 6.25h12.5m-1.5-11.25-3.25 16.25m-1.75-16.25-3.25 16.25"/></svg>
 );
-
-// export const WarrantyShieldDefault = () => (
-//     <svg className="w-16 h-16 stroke-blue-9" xmlns="http://www.w3.org/2000/svg" fill="none" aria-labelledby="warranty_shield_default">
-//         <title id="warranty_shield_default">Warranty Shield</title>
-//     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M32 7.238a31.89 31.89 0 0 1-22.405 8.763A31.974 31.974 0 0 0 8 25.998c0 14.912 10.197 27.44 24 30.995C45.803 53.44 56 40.913 56 26c0-3.493-.56-6.856-1.595-10.003H54a31.88 31.88 0 0 1-22-8.76Z"
-//     />
-//   </svg>
-// );

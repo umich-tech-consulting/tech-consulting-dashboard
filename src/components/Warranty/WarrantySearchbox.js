@@ -1,25 +1,28 @@
 import { useState, useEffect, useRef } from "react";
-import { LaptopDevice, SerialNumber } from "../../icons/warranty/WarrantySvgs";
+import {
+  // LaptopDevice,
+  SerialNumber
+} from "../../icons/warranty/WarrantySvgs";
 const WarrantySearchbox = () => {
   const [serialNumber, setSerialNumber] = useState("");
-  const [deviceBrand, setDeviceBrand] = useState("");
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  // const [deviceBrand, setDeviceBrand] = useState("");
+  // const [dropdownVisible, setDropdownVisible] = useState(false);
   const serialNumberRef = useRef(null);
   const deviceBrandRef = useRef(null);
 
   const handleSerialChange = (e) => {
     setSerialNumber(e.target.value);
   };
-  const handleDeviceChange = (e) => {
-    setDeviceBrand(e.target.value);
-  };
-  const toggleDropdown = () => {
-    setDropdownVisible(!dropdownVisible);
-  };
-  const handleSelect = (value) => {
-    setDeviceBrand(value);
-    setDropdownVisible(false);
-  };
+  // const handleDeviceChange = (e) => {
+  //   setDeviceBrand(e.target.value);
+  // };
+  // const toggleDropdown = () => {
+  //   setDropdownVisible(!dropdownVisible);
+  // };
+  // const handleSelect = (value) => {
+  //   setDeviceBrand(value);
+  //   setDropdownVisible(false);
+  // };
   const focusInput = (inputRef) => {
     if (document.activeElement !== inputRef.current) {
       inputRef.current.focus();
@@ -35,7 +38,7 @@ const WarrantySearchbox = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (deviceBrandRef.current && !deviceBrandRef.current.contains(event.target)) {
-        setDropdownVisible(false);
+        // setDropdownVisible(false);
       }
     };
 
@@ -48,8 +51,8 @@ const WarrantySearchbox = () => {
 
   return (
     <>
-      <div className="max-w-3xl w-full rounded-[10px] border border-neutral-2 bg-white p-9 flex gap-6">
-        <div className="relative w-full rounded-md flex gap-3 items-center px-3 border border-neutral-5 hover:border-neutral-6">
+      <div className="max-w-3xl w-full rounded-[10px] border border-neutral-2 dark:border-neutral-8 bg-white dark:bg-neutral-9 p-9 flex gap-6">
+        {/* <div className="relative w-full rounded-md flex gap-3 items-center px-3 border border-neutral-5 hover:border-neutral-6">
           <div onClick={toggleDropdown}>
             <LaptopDevice />
           </div>
@@ -122,7 +125,7 @@ const WarrantySearchbox = () => {
               </ul>
             </div>
           )}
-        </div>
+        </div> */}
         {/* <div className="relative w-full rounded-md">
           <input
             type="text"
@@ -151,7 +154,7 @@ const WarrantySearchbox = () => {
           <input
             type="text"
             id="serial_number"
-            className="block title-medium text-neutral-9 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-9 py-2.5 peer"
+            className="block title-medium text-neutral-9 dark:text-neutral-1 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-9 py-2.5 dark:bg-neutral-9 peer"
             placeholder=""
             value={serialNumber}
             ref={serialNumberRef}
@@ -159,11 +162,11 @@ const WarrantySearchbox = () => {
           />
           <label
             htmlFor="serial_number"
-            className={`absolute left-11 cursor-text title-medium text-neutral-7 duration-300 transform ${
+            className={`absolute left-11 cursor-text title-medium text-neutral-7 dark:text-neutral-3 duration-300 transform ${
               serialNumber
-                ? "-translate-y-4 scale-75 top-1 translate-x-4 text-neutral-9"
+                ? "-translate-y-4 scale-75 top-1 translate-x-4 text-neutral-9 dark:text-neutral-1"
                 : "top-[50%] scale-100 translate-x-10"
-            } z-10 origin-[0] bg-white peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:translate-x-2 peer- peer-focus:text-neutral-9 peer-focus:font-medium start-1`}
+            } z-10 origin-[0] bg-white dark:bg-neutral-9 peer-focus:mx-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:translate-x-2 peer- peer-focus:text-neutral-9 dark:peer-focus:text-neutral-1 peer-focus:font-medium start-1`}
           >
             Serial Number
           </label>
