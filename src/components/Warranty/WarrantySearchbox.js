@@ -171,7 +171,7 @@ const WarrantySearchbox = () => {
             Serial Number
           </label>
         </div>
-        <div className="bg-blue-9 text-neutral-1 label-large flex items-center justify-center rounded-full w-full max-w-[120px] ">
+        <div className="bg-blue-9 dark:bg-yellow-6 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-full max-w-[120px] ">
           Search
         </div>
       </div>
