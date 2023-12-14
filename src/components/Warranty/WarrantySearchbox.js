@@ -51,7 +51,7 @@ const WarrantySearchbox = () => {
 
   return (
     <>
-      <div className="max-w-3xl w-full rounded-[10px] border border-neutral-2 dark:border-neutral-8 bg-white dark:bg-neutral-9 p-9 flex gap-6">
+      <div className="max-w-3xl w-full rounded-[10px] border border-neutral-2 dark:border-neutral-8 bg-white dark:bg-neutral-9 md:p-9 p-4 flex gap-6 flex-col sm:flex-row">
         {/* <div className="relative w-full rounded-md flex gap-3 items-center px-3 border border-neutral-5 hover:border-neutral-6">
           <div onClick={toggleDropdown}>
             <LaptopDevice />
@@ -171,8 +171,10 @@ const WarrantySearchbox = () => {
             Serial Number
           </label>
         </div>
-        <div className="bg-blue-9 dark:bg-yellow-6 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-full max-w-[120px] ">
-          Search
+        <div className="w-full sm:w-fit flex justify-center">
+          <div className="bg-blue-9 dark:bg-yellow-6 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-[120px] h-[44px] ">
+            Search
+          </div>
         </div>
       </div>
     </>

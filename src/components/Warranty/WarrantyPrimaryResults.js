@@ -9,17 +9,17 @@ const WarrantyPrimaryResults = () => {
   return (
     <>
       <div className="max-w-3xl w-full rounded-[10px] border border-neutral-2 dark:border-neutral-8 bg-white dark:bg-neutral-9 p-6 flex flex-col gap-6">
-        <div className="flex items-center">
-          <div className="w-full flex gap-3 items-center">
+        <div className="flex items-center md:flex-row md:gap-0 flex-col gap-10">
+          <div className="w-full flex gap-3 items-center lg:flex-row lg:justify-start flex-col">
             <img src='https://support.lenovo.com/dist/images/pcg/laptops-and-netbooks.png' alt='Device' className="w-full h-[100px] max-w-[100px]"/>
             <div className="flex flex-col gap-3">
               <div className="title-large text-neutral-9 dark:text-neutral-1">
                 Surface Laptop Studio - i7/16/512
               </div>
-              <div className="label-medium text-neutral-7 dark:text-neutral-3">#1234567890</div>
+              <div className="label-medium text-neutral-7 dark:text-neutral-3  md:text-left text-center">#1234567890</div>
             </div>
           </div>
-          <div className='h-full w-[1px] bg-neutral-4 dark:bg-neutral-7 rounded-full mx-[24px]'></div>
+          <div className='h-full w-[1px] bg-neutral-4 dark:bg-neutral-7 rounded-full mx-[24px] md:block hidden'></div>
           <div className="w-full flex flex-col gap-9 py-3">
             <div className="flex flex-col gap-3">
               <div className="flex gap-2 items-center">
@@ -52,7 +52,7 @@ const WarrantyPrimaryResults = () => {
         </button>
         {showDetails && (
             <div className='flex flex-col gap-6'>
-              <div className='bg-white dark:bg-neutral-9 p-3 border border-neutral-2 dark:border-neutral-8 rounded-lg flex justify-between'>
+              <div className='bg-white dark:bg-neutral-9 p-3 border border-neutral-2 dark:border-neutral-8 rounded-lg flex justify-between sm:flex-row flex-col-reverse sm:gap-0 gap-2'>
                 <div className='flex gap-2.5'>
                   <div className='h-full w-[4px] bg-green-1 rounded-full'></div>
                   <div className='flex flex-col gap-[2px]'>
@@ -64,7 +64,7 @@ const WarrantyPrimaryResults = () => {
                   <div className='label-small px-1.5 py-1 bg-neutral-2 dark:bg-neutral-8 text-neutral-9 dark:text-neutral-1 rounded-sm w-fit h-fit'>Parts/Labor</div>
                 </div>
               </div>
-              <div className='bg-white dark:bg-neutral-9 p-3 border border-neutral-2 dark:border-neutral-8 rounded-lg flex justify-between'>
+              <div className='bg-white dark:bg-neutral-9 p-3 border border-neutral-2 dark:border-neutral-8 rounded-lg flex justify-between sm:flex-row flex-col-reverse sm:gap-0 gap-2'>
                 <div className='flex gap-2.5'>
                   <div className='h-full w-[4px] bg-red-5 rounded-full'></div>
                   <div className='flex flex-col gap-[2px]'>
@@ -79,7 +79,6 @@ const WarrantyPrimaryResults = () => {
               </div>
             </div>
           )}
-
       </div>
     </>
   );
