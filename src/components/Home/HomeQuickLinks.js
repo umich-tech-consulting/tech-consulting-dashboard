@@ -19,7 +19,7 @@ const HomeQuickLinks = () => {
           href="https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700"
           target="blank"
           rel="noopener noreferrer"
-          className="flex w-full justify-between px-6 py-5 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between px-6 py-5 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <img className="w-6 h-6" src={umichicon} alt="Umich Logo" />
@@ -32,7 +32,7 @@ const HomeQuickLinks = () => {
           href="http://umich-its-annarbor.slack.com/"
           target="blank"
           rel="noopener noreferrer"
-          className="flex w-full justify-between px-6 py-5 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between px-6 py-5 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <img className="w-6 h-6" src={slack_logo} alt="Slack Logo" />
@@ -45,7 +45,7 @@ const HomeQuickLinks = () => {
           href="https://teamdynamix.umich.edu/"
           target="blank"
           rel="noopener noreferrer"
-          className="flex w-full justify-between px-6 py-5 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between px-6 py-5 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <img className="w-6 h-6" src={tdxlogo} alt="TDX Logo" />
@@ -58,7 +58,7 @@ const HomeQuickLinks = () => {
           href="http://gsx2.apple.com/"
           target="blank"
           rel="noopener noreferrer"
-          className="flex w-full justify-between px-6 py-5 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between px-6 py-5 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <img className="w-6 h-6" src={gsxicon} alt="GSX Logo" />
@@ -69,7 +69,7 @@ const HomeQuickLinks = () => {
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/resources"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]"
+          className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <ResourcesLogo />

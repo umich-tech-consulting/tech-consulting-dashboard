@@ -24,7 +24,7 @@ const HomeFastActions = () => {
                 </div>
                 <div>
                     <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
-                    <Link to="/asset-management" className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]">
+                    <Link to="/asset-management" className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]">
                         <div className="flex items-center gap-4">
                             <AssetManagementLogo />
                             <div className="title-medium text-neutral-8 dark:text-neutral-3">Asset Management</div>

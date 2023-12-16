@@ -6,7 +6,7 @@ const ReturnPrecheck = () => {
             <div className="am-action-precheck-main">
             <div className='am-action-precheck-card'>
               <div>Mac: "Find My" and iCloud</div>
-                <div className='am-action-precheck-card-info'>Make sure customer is signed out of "Find My" and iCloud and verify in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-0 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX</a></span>
+                <div className='am-action-precheck-card-info'>Make sure customer is signed out of "Find My" and iCloud and verify in <span><a href="http://gsx2.apple.com/" target="blank" rel="noopener noreferrer" class="underline hover:bg-blue-1 dark:hover:bg-neutral-8" title="Apple Global Service Exchange login">GSX</a></span>
                 </div>
             </div>
             <div className='am-action-precheck-card'>

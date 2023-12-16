@@ -47,7 +47,7 @@ const WarrantyPrimaryResults = () => {
           </div>
         </div>
         <button onClick={toggleDetails} className="flex justify-center gap-2">
-          <div className="body-medium text-blue-9 dark:text-yellow-6">Details</div>
+          <div className="body-medium text-blue-10 dark:text-yellow-6">Details</div>
           <div className={`transform transition-transform duration-300 ${!showDetails ? '-rotate-180' : ''}`}><DetailsDropdown /></div>
         </button>
         {showDetails && (

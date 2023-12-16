@@ -15,7 +15,7 @@ const HomeQuickLinks = () => {
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/announcements"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <AnnouncementsLogo />
@@ -26,7 +26,7 @@ const HomeQuickLinks = () => {
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/warranty"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <WarrantyLogo />
@@ -37,7 +37,7 @@ const HomeQuickLinks = () => {
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/asset-management"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
+          className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <AssetManagementLogo />
@@ -48,7 +48,7 @@ const HomeQuickLinks = () => {
         <hr className="border-[1px] border-base-light dark:border-neutral-10"></hr>
         <Link
           to="/resources"
-          className="flex w-full justify-between p-6 hover:bg-blue-0 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]"
+          className="flex w-full justify-between p-6 hover:bg-blue-1 dark:hover:bg-neutral-8 rounded-b-xl transition ease-in duration-[450ms]"
         >
           <div className="flex items-center gap-4">
             <ResourcesLogo />
