@@ -364,10 +364,10 @@ code {
   @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-10 dark:focus:ring-yellow-6 focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
-  @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
+  @apply bg-white rounded-md ring-1 ring-red-6 focus:ring-red-6 focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10 dark:text-red-5
+  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-11 dark:text-red-6
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
@@ -545,7 +545,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-0 dark:bg-red-10 text-red-10 dark:text-red-1 p-3 rounded-md flex items-start gap-3 mt-6
+  @apply body-medium bg-red-1 dark:bg-red-11 text-red-11 dark:text-red-2 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5

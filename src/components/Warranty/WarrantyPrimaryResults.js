@@ -66,7 +66,7 @@ const WarrantyPrimaryResults = () => {
               </div>
               <div className='bg-white dark:bg-neutral-9 p-3 border border-neutral-2 dark:border-neutral-8 rounded-lg flex justify-between sm:flex-row flex-col-reverse sm:gap-0 gap-2'>
                 <div className='flex gap-2.5'>
-                  <div className='h-full w-[4px] bg-red-5 rounded-full'></div>
+                  <div className='h-full w-[4px] bg-red-6 rounded-full'></div>
                   <div className='flex flex-col gap-[2px]'>
                     <div className='title-medium text-neutral-9 dark:text-neutral-1'>Safeware</div>
                     <div className='body-medium text-neutral-7 dark:text-neutral-3'>01/01/2021 - 01/01/2022</div>

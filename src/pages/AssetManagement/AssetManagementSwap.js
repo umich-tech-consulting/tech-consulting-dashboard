@@ -112,7 +112,7 @@ const AssetManagementSwap = () => {
               </div>
             </div>
             <div className="am-submit-cancel-container">
-              <Link to="/asset-management" className="text-base-red flex items-center">Cancel</Link>
+              <Link to="/asset-management" className="flex items-center">Cancel</Link>
               <button
                 className={`am-submit-button ${
                   isSubmitDisabled

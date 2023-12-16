@@ -9,7 +9,7 @@ export const WarrantyShieldFullCoverage = () => (
     </svg>
 );
 export const WarrantyShieldNoCoverage = () => (
-    <svg className="stroke-red-5 w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <svg className="stroke-red-6 w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M32 7a31.89 31.89 0 0 1-22.405 8.763A31.973 31.973 0 0 0 8 25.76C8 40.672 18.197 53.2 32 56.755c13.803-3.552 24-16.08 24-30.992 0-3.494-.56-6.856-1.595-10.003H54A31.88 31.88 0 0 1 32 7Z"/>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.8" d="m24.5 40.5 15-15m-15 0 15 15"/>
     </svg>
