@@ -238,7 +238,7 @@ code {
   @apply flex flex-wrap gap-4
 }
 .home-link {
-  @apply rounded-lg bg-[#00274C] dark:bg-yellow-6 hover:bg-[#002F5C] dark:hover:bg-yellow-5 p-3 w-56 text-center;
+  @apply rounded-lg bg-[#00274C] dark:bg-yellow-5 hover:bg-[#002F5C] dark:hover:bg-yellow-6 p-3 w-56 text-center;
 }
 @keyframes buttonPop {
   0% {
@@ -361,7 +361,7 @@ code {
   @apply w-fit h-[14px];
 }
 .am-action-form-default {
-  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-10 dark:focus:ring-yellow-6 focus:ring-2 focus:outline-none
+  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-10 dark:focus:ring-yellow-5 focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
   @apply bg-white rounded-md ring-1 ring-red-6 focus:ring-red-6 focus:ring-2 focus:outline-none
@@ -455,7 +455,7 @@ code {
   @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-base-light dark:bg-neutral-10
 }
 .am-action-success-header {
-  @apply headline-large text-blue-10 dark:text-yellow-6 flex items-center gap-2
+  @apply headline-large text-blue-10 dark:text-yellow-5 flex items-center gap-2
 }
 .am-action-success-next-steps-card-container {
   @apply flex flex-col gap-8
@@ -492,7 +492,7 @@ code {
   @apply fixed md:absolute right-0 bottom-0 p-6
 }
 .am-action-success-close-button {
-  @apply block text-center w-[80px] rounded-full bg-blue-10 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-9 dark:hover:bg-yellow-5
+  @apply block text-center w-[80px] rounded-full bg-blue-10 dark:bg-yellow-5 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-9 dark:hover:bg-yellow-6
 }
 @keyframes infoCardAnimation {
   0% {
@@ -534,7 +534,7 @@ code {
   @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 dark:bg-neutral-8 hover:bg-neutral-3 dark:hover:bg-neutral-7 dark:text-neutral-1 rounded-full
 }
 .am-error-alert-tdx-button {
-  @apply body-small text-white dark:text-neutral-10 bg-blue-10 dark:bg-yellow-6 hover:bg-blue-9 dark:hover:bg-yellow-5 p-2 rounded-full flex-1 text-center
+  @apply body-small text-white dark:text-neutral-10 bg-blue-10 dark:bg-yellow-5 hover:bg-blue-9 dark:hover:bg-yellow-6 p-2 rounded-full flex-1 text-center
 }
 .am-error-alert-squirrel-container {
   @apply flex w-full justify-end
@@ -588,10 +588,10 @@ code {
 
 /* Resource Landing Search Start */
 .r-landing-search {
-  @apply relative mt-14 w-full border border-blue-10 dark:border-yellow-6 rounded-lg
+  @apply relative mt-14 w-full border border-blue-10 dark:border-yellow-5 rounded-lg
 }
 .r-landing-search input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10 dark:focus:ring-yellow-5 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-landing-search-clear {
   @apply absolute top-0 right-0 flex items-center justify-center h-full p-2
@@ -632,10 +632,10 @@ code {
   @apply max-w-3xl w-full
 }
 .r-groupbuilder-searchbox {
-  @apply relative mt-8 mb-8 w-full border border-blue-10 dark:border-yellow-6 rounded-lg
+  @apply relative mt-8 mb-8 w-full border border-blue-10 dark:border-yellow-5 rounded-lg
 }
 .r-groupbuilder-searchbox input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10 dark:focus:ring-yellow-5 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-groupbuilder-searchbox-clear {
   @apply absolute top-0 right-0 h-full p-2
@@ -660,7 +660,7 @@ code {
   transition: ease-out 400ms;
 }
 .r-individual-link-name {
-  @apply title-medium text-blue-10 dark:text-yellow-6 mb-2
+  @apply title-medium text-blue-10 dark:text-yellow-5 mb-2
 }
 .r-individual-link-description {
   @apply body-medium text-neutral-9 dark:text-neutral-1

@@ -172,7 +172,7 @@ const WarrantySearchbox = () => {
           </label>
         </div>
         <div className="w-full sm:w-fit flex justify-center">
-          <div className="bg-blue-10 dark:bg-yellow-6 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-[120px] h-[44px] ">
+          <div className="bg-blue-10 dark:bg-yellow-5 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-[120px] h-[44px] ">
             Search
           </div>
         </div>

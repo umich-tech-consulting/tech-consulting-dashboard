@@ -30,7 +30,7 @@ const OldHome = () => {
               <div>- Or use <span><a href="https://msetup.its.umich.edu/" target="blank" rel="noopener noreferrer"><u>Msetup</u></a></span>.</div>
             </div>
           </div> */}
-          <div className={`text-yellow-6 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] relative h-full w-full bottom-0`}>
+          <div className={`text-yellow-5 dark:text-[#00274C] title-medium flex justify-center items-end pb-[20vh] relative h-full w-full bottom-0`}>
             <div className="home-link-container-main justify-center">
               <Link className="home-link" to="/announcements">Announcements</Link>
               <Link className="home-link" to="/asset-management">Asset Management</Link>

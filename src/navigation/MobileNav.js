@@ -59,33 +59,33 @@ const MobileNav = () => {
           }  h-screen bg-neutral-1 dark:bg-neutral-10 text-neutral-9 dark:text-neutral-2 z-50 p-4 absolute overflow-y-scroll w-full max-h-screen`}
         >
           <div className="flex flex-col gap-4 mt-4">
-            <Link to="/" className="headline-large hover:text-blue-10 dark:hover:text-yellow-6" onClick={toggleMobileNav}>
+            <Link to="/" className="headline-large hover:text-blue-10 dark:hover:text-yellow-5" onClick={toggleMobileNav}>
               Home
             </Link>
             <Link
               to="/announcements"
-              className="headline-large hover:text-blue-10 dark:hover:text-yellow-6"
+              className="headline-large hover:text-blue-10 dark:hover:text-yellow-5"
               onClick={toggleMobileNav}
             >
               Announcements
             </Link>
             <Link
               to="/warranty"
-              className="headline-large hover:text-blue-10 dark:hover:text-yellow-6"
+              className="headline-large hover:text-blue-10 dark:hover:text-yellow-5"
               onClick={toggleMobileNav}
             >
               Warranty
             </Link>
             <Link
               to="/asset-management"
-              className="headline-large hover:text-blue-10 dark:hover:text-yellow-6"
+              className="headline-large hover:text-blue-10 dark:hover:text-yellow-5"
               onClick={toggleMobileNav}
             >
               Asset Management
             </Link>
             <Link
               to="/resources"
-              className="headline-large hover:text-blue-10 dark:hover:text-yellow-6"
+              className="headline-large hover:text-blue-10 dark:hover:text-yellow-5"
               onClick={toggleMobileNav}
             >
               Resources
@@ -100,7 +100,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Clock in and out of work using the Time Reporting tab"
-              className="hover:text-blue-10 dark:hover:text-yellow-6"
+              className="hover:text-blue-10 dark:hover:text-yellow-5"
             >
               TimeClock
             </a>
@@ -109,7 +109,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Information Technology Services Slack workspace"
-              className="hover:text-blue-10 dark:hover:text-yellow-6"
+              className="hover:text-blue-10 dark:hover:text-yellow-5"
             >
               Slack
             </a>
@@ -118,7 +118,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Ticket and asset management system"
-              className="hover:text-blue-10 dark:hover:text-yellow-6"
+              className="hover:text-blue-10 dark:hover:text-yellow-5"
             >
               TDX
             </a>
@@ -127,7 +127,7 @@ const MobileNav = () => {
               target="blank"
               rel="noopener noreferrer"
               title="Apple Global Service Exchange login"
-              className="hover:text-blue-10 dark:hover:text-yellow-6"
+              className="hover:text-blue-10 dark:hover:text-yellow-5"
             >
               GSX
             </a>
