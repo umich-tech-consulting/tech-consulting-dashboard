@@ -340,7 +340,7 @@ code {
   @apply flex flex-col gap-2 pb-6
 }
 .am-action-form-header {
-  @apply flex gap-2 items-center title-large dark:text-neutral-1
+  @apply flex gap-2 items-center title-large text-neutral-9 dark:text-neutral-1
 }
 .am-action-form-description {
   @apply text-neutral-7 body-medium dark:text-neutral-5
@@ -355,7 +355,7 @@ code {
   @apply body-medium flex justify-between flex-col;
 }
 .am-action-component-item-header {
-  @apply w-fit mb-2 body-medium flex items-center gap-1 dark:text-neutral-1;
+  @apply w-fit mb-2 body-medium flex items-center gap-1 text-neutral-9 dark:text-neutral-1;
 }
 .am-action-component-item-header img {
   @apply w-fit h-[14px];
@@ -545,7 +545,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-1 dark:bg-red-11 text-red-11 dark:text-red-2 p-3 rounded-md flex items-start gap-3 mt-6
+  @apply body-medium bg-red-1 dark:bg-red-11 text-neutral-8 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5
