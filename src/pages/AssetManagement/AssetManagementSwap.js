@@ -50,7 +50,7 @@ const AssetManagementSwap = () => {
               <div className="flex flex-wrap justify-between gap-y-4">
                 <div className="am-action-component-item">
                   <label for="oldasset">
-                    Old Asset Number <span className="text-blue-10">*</span>
+                    Old Asset Number <span className="text-blue-10*">*</span>
                   </label>
                   <div className="am-laptop-item">
                     <select
@@ -74,7 +74,7 @@ const AssetManagementSwap = () => {
                 </div>
                 <div className="am-action-component-item">
                   <label for="newasset">
-                    New Asset Number <span className="text-blue-10">*</span>
+                    New Asset Number <span className="text-blue-10*">*</span>
                   </label>
                   <div className="am-laptop-item">
                     <select
@@ -117,7 +117,7 @@ const AssetManagementSwap = () => {
                 className={`am-submit-button ${
                   isSubmitDisabled
                     ? "bg-neutral-2 text-neutral-4 cursor-not-allowed"
-                    : "bg-blue-10 text-white"
+                    : "bg-blue-10* text-white"
                 }`}
                 disabled={isSubmitDisabled}
               >

@@ -60,7 +60,7 @@ const WarrantySearchbox = () => {
             <input
               type="text"
               id="device_type"
-              className="block title-medium text-neutral-9 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-10 py-2.5 cursor-pointer peer"
+              className="block title-medium text-neutral-9 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-10* py-2.5 cursor-pointer peer"
               value={deviceBrand}
               onChange={handleDeviceChange}
               onClick={toggleDropdown}
@@ -130,7 +130,7 @@ const WarrantySearchbox = () => {
           <input
             type="text"
             id="serial_number"
-            className="block title-medium text-neutral-9 px-3 py-2.5 w-full text-sm bg-transparent rounded-md border border-neutral-5 hover:border-neutral-6 appearance-none focus:outline-none focus:ring-0 focus:border-blue-10 peer"
+            className="block title-medium text-neutral-9 px-3 py-2.5 w-full text-sm bg-transparent rounded-md border border-neutral-5 hover:border-neutral-6 appearance-none focus:outline-none focus:ring-0 focus:border-blue-10* peer"
             placeholder=""
             value={serialNumber}
             onChange={handleSerialChange}
@@ -154,7 +154,7 @@ const WarrantySearchbox = () => {
           <input
             type="text"
             id="serial_number"
-            className="block title-medium text-neutral-9 dark:text-neutral-1 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-10 py-2.5 dark:bg-neutral-9 peer"
+            className="block title-medium text-neutral-9 dark:text-neutral-1 w-full text-sm bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-blue-10* py-2.5 dark:bg-neutral-9 peer"
             placeholder=""
             value={serialNumber}
             ref={serialNumberRef}
@@ -172,7 +172,7 @@ const WarrantySearchbox = () => {
           </label>
         </div>
         <div className="w-full sm:w-fit flex justify-center">
-          <div className="bg-blue-10 dark:bg-yellow-5 text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-[120px] h-[44px] ">
+          <div className="bg-blue-10* dark:bg-yellow-5* text-neutral-1 dark:text-neutral-9 label-large flex items-center justify-center rounded-full w-[120px] h-[44px] ">
             Search
           </div>
         </div>
