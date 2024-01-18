@@ -43,17 +43,18 @@ const ResourceGroupBuilder = () => {
     const value = event.target.value;
     setQuery(value);
 
-    const lowercaseValue = value.toLowerCase();
+    const lowercaseValues = value.toLowerCase().split(' ').filter(Boolean);
 
-    if (lowercaseValue === "") {
+    if (lowercaseValues.length === 0) {
       setSearchResults([]);
       return;
     }
 
-    const results = sortedLinks.filter(
-      (link) =>
-        link.name.toLowerCase().includes(lowercaseValue) ||
-        link.description.toLowerCase().includes(lowercaseValue)
+    const results = sortedLinks.filter((link) =>
+      lowercaseValues.every((word) =>
+        link.name.toLowerCase().includes(word) ||
+        link.description.toLowerCase().includes(word)
+      )
     );
 
     setSearchResults(results);
