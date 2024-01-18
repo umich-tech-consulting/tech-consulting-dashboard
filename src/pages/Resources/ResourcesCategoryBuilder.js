@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link, useParams } from "react-router-dom";
 import resourcesData from '../../ResourcesData.json';
 import ResourceLinks from "../../components/Resources/ResourceLinks";
+import NoSearchResults from "../../components/Resources/NoSearchResults";
 
 const ResourceCategoryBuilder = () => {
   const { category } = useParams();
@@ -143,10 +144,7 @@ const ResourceCategoryBuilder = () => {
             </div>
           ))}
           {query && searchResults.length === 0  &&
-            <div className="flex flex-col gap-1 p-2 bg-neutral-2 dark:bg-black rounded-md">
-                <div className="title-medium text-neutral-8 dark:text-neutral-2">Your search did not return any results</div>
-                <div className="body-medium text-neutral-7 dark:text-neutral-3">Search will only look for words that exactly match the Title and/or Description of a link.</div>
-            </div>
+            <NoSearchResults />
            }
         </div>
       </div>

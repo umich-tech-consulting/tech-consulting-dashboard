@@ -588,7 +588,7 @@ code {
 
 /* Resource Landing Search Start */
 .r-landing-search {
-  @apply relative mt-14 w-full border border-blue-10* dark:border-yellow-5* rounded-lg
+  @apply relative mt-14 mb-6 w-full border border-blue-10* dark:border-yellow-5* rounded-lg
 }
 .r-landing-search input {
   @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10* dark:focus:ring-yellow-5* dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1

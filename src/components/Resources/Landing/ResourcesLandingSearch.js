@@ -1,41 +1,12 @@
 import React, { useState } from 'react';
 import resourcesData from '../../../ResourcesData.json'
 import ResourceLinks from '../ResourceLinks';
+import NoSearchResults from '../NoSearchResults';
 
 const ResourcesLandingSearch = () => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  // const handleSearch = (event) => {
-  //   const value = event.target.value;
-  //   setQuery(value);
-
-  //   const lowercaseValue = value.toLowerCase(); // Convert to lowercase
-
-  //   if (lowercaseValue === '') {
-  //     setSearchResults([]);
-  //     return;
-  //   }
-
-  //   const results = resourcesData.reduce((accumulator, categoryData) => {
-  //     const matchingLinks = categoryData.links.filter(
-  //       (link) =>
-  //         link.name.toLowerCase().includes(lowercaseValue) || // Use lowercase value for comparison
-  //         link.description.toLowerCase().includes(lowercaseValue) // Use lowercase value for comparison
-  //     );
-
-  //     if (matchingLinks.length > 0) {
-  //       accumulator.push({
-  //         ...categoryData,
-  //         links: matchingLinks
-  //       });
-  //     }
-
-  //     return accumulator;
-  //   }, []);
-
-  //   setSearchResults(results);
-  // };
   const handleSearch = (event) => {
     const value = event.target.value;
     setQuery(value);
@@ -109,10 +80,7 @@ const ResourcesLandingSearch = () => {
         </div>
       ))}
       {query && searchResults.length === 0  &&
-        <div className="flex flex-col gap-1 p-2 bg-neutral-2 dark:bg-black rounded-md mt-8">
-            <div className="title-medium text-neutral-8 dark:text-neutral-2">Your search did not return any results</div>
-            <div className="body-medium text-neutral-7 dark:text-neutral-3">Search will only look for words that exactly match the Title and/or Description of a link.</div>
-        </div>
+        <NoSearchResults />
       }
     </>
   );
