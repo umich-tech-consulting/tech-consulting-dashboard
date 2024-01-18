@@ -626,7 +626,7 @@ code {
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1
+  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1 body-large
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
@@ -644,7 +644,7 @@ code {
 
 /* Resource CategoryBuilder Start */
 .r-categorybuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1 body-large
 }
 .r-categorybuilder-container {
   @apply max-w-3xl w-full text-neutral-9 dark:text-neutral-1
