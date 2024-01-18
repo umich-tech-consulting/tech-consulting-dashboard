@@ -53,21 +53,25 @@ const ResourceCategoryBuilder = () => {
       return;
     }
   
+    const searchTerms = lowercaseValue.split(" ").filter(term => term.trim() !== "");
+  
     // Filter groups and links based on the search query
     const results = sortedCategoryData
       .filter((groupData) =>
-        groupData.links.some(
-          (link) =>
-            link.name.toLowerCase().includes(lowercaseValue) ||
-            link.description.toLowerCase().includes(lowercaseValue)
+        groupData.links.some((link) =>
+          searchTerms.every(term =>
+            link.name.toLowerCase().includes(term) ||
+            link.description.toLowerCase().includes(term)
+          )
         )
       )
       .map((groupData) => ({
         ...groupData,
-        links: groupData.links.filter(
-          (link) =>
-            link.name.toLowerCase().includes(lowercaseValue) ||
-            link.description.toLowerCase().includes(lowercaseValue)
+        links: groupData.links.filter((link) =>
+          searchTerms.every(term =>
+            link.name.toLowerCase().includes(term) ||
+            link.description.toLowerCase().includes(term)
+          )
         ),
       }));
   
