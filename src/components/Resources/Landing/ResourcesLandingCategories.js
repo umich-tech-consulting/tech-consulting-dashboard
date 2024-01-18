@@ -20,7 +20,7 @@ const ResourcesLandingCategories = () => {
             </svg>
                 <div className='r-landing-categories-card-content'>
                     <div className='title-large pb-7'>Customer Support</div>
-                    <div>Resources for assisting customers.</div>
+                    <div>Resources for assisting customers</div>
                     <div className='text-neutral-7 dark:text-neutral-4'>E.g. Repairs and Printing</div>
                 </div>
             </Link>
@@ -31,7 +31,7 @@ const ResourcesLandingCategories = () => {
             </svg>
                 <div className='r-landing-categories-card-content'>
                     <div className='title-large pb-7'>Employee Resources</div>
-                    <div>Employment related resources.</div>
+                    <div>Employment related resources</div>
                     <div className='text-neutral-7 dark:text-neutral-4'>E.g. Timeclock and Employee Handbook</div>
                 </div>
             </Link>

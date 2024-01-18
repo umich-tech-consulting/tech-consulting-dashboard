@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import resourcesData from '../../../ResourcesData.json'
 import ResourceLinks from '../ResourceLinks';
 import NoSearchResults from '../NoSearchResults';
+import { Link } from 'react-router-dom';
 
 const ResourcesLandingSearch = () => {
   const [query, setQuery] = useState('');
@@ -72,10 +73,13 @@ const ResourcesLandingSearch = () => {
           </button>
         )}
       </div>
-
+  
       {searchResults.map((categoryData, index) => (
         <div key={index} className="r-landing-container">
-          <div className="title-medium mb-3"><span className='text-neutral-7 dark:text-neutral-4'>{categoryData.category} /</span> {categoryData.group}</div>
+          <div className="title-medium mb-3 flex gap-1">
+            <Link className='text-neutral-7 dark:text-neutral-4 hover:text-blue-10* dark:hover:text-yellow-5*' to={`/resources/${categoryData.category.toLowerCase().replace(/\s+/g, "").replace(/[^a-zA-Z0-9-]/g, "-")}`}>{categoryData.category}</Link>
+            <div>/</div>
+            <Link className='hover:text-blue-10* dark:hover:text-yellow-5*' to={`/resources/${categoryData.category.toLowerCase().replace(/\s+/g, "").replace(/[^a-zA-Z0-9-]/g, "-")}/${categoryData.group.toLowerCase().replace(/\s+/g, "").replace(/[^a-zA-Z0-9-]/g, "-")}`}>{categoryData.group}</Link>          </div>
           <ResourceLinks linkData={categoryData.links} />
         </div>
       ))}
