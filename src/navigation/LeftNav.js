@@ -18,6 +18,7 @@ import tdxlogo from "../icons/nav/tdxlogo.png";
 import gsxicon from "../icons/nav/gsxicon.png";
 import umichicon from "../icons/nav/umichicon.png";
 import GitInfo from "react-git-info/macro";
+import LoginUi from "../components/Navigation/LoginUi";
 
 const gitInfo = GitInfo();
 const LeftNav = () => {
@@ -140,6 +141,7 @@ const LeftNav = () => {
         </Link>
       </div>
       <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9 dark:text-neutral-1">
+        <LoginUi />
         <div className="bg-white dark:bg-neutral-9 p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">

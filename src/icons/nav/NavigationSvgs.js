@@ -93,4 +93,10 @@ export const CloseMenu = () => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
+export const ChevronDown = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-neutral-9 dark:stroke-neutral-1" width="12" height="12" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth=".75" d="M9.75 4.125 6 7.875l-3.75-3.75"/></svg>
+);
+export const Signout = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" className="stroke-red-11 dark:stroke-red-6*"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.125" d="M6.188 6.75V3.937A1.687 1.687 0 0 1 7.875 2.25h4.5a1.687 1.687 0 0 1 1.688 1.688v10.124a1.687 1.687 0 0 1-1.688 1.688h-4.5a1.687 1.687 0 0 1-1.688-1.688V11.25M9 6.75 11.25 9m0 0L9 11.25M11.25 9H1.687"/></svg>
+);
 
