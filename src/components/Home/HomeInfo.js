@@ -1,5 +1,5 @@
 import { BoxLogo } from "../../icons/home/HomeSvgs"
-const HomeAnnouncement = () => {
+const HomeInfo = () => {
 
      return (
        <>
@@ -18,4 +18,4 @@ const HomeAnnouncement = () => {
        </>
      )
  }
- export default HomeAnnouncement
+ export default HomeInfo

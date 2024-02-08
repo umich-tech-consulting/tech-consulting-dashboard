@@ -5,8 +5,10 @@ import {
   HomeActive,
   AnnouncementsInactive,
   AnnouncementsActive,
-  // AssetManagementActive,
-  // AssetManagementInactive,
+  WarrantyInactive,
+  WarrantyActive,
+  AssetManagementActive,
+  AssetManagementInactive,
   Logo,
   ResourcesActive,
   ResourceInactive,
@@ -16,6 +18,7 @@ import tdxlogo from "../icons/nav/tdxlogo.png";
 import gsxicon from "../icons/nav/gsxicon.png";
 import umichicon from "../icons/nav/umichicon.png";
 import GitInfo from "react-git-info/macro";
+import LoginUi from "../components/Navigation/LoginUi";
 
 const gitInfo = GitInfo();
 const LeftNav = () => {
@@ -31,8 +34,8 @@ const LeftNav = () => {
           to="/"
           className={`pl-2 h-8 rounded-full flex content-center items-center gap-x-4 ${
             location.pathname === "/"
-              ? "bg-blue-9 dark:bg-yellow-6"
-              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
           }`}
         >
           {location.pathname === "/" ? <HomeActive /> : <HomeInactive />}
@@ -50,8 +53,8 @@ const LeftNav = () => {
           to="/announcements"
           className={`link-container ${
             location.pathname === "/announcements"
-              ? "bg-blue-9 dark:bg-yellow-6"
-              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
           }`}
         >
           {location.pathname === "/announcements" ? (
@@ -69,12 +72,35 @@ const LeftNav = () => {
             Announcements
           </div>
         </Link>
-        {/* <Link
+        <Link
+          to="/warranty"
+          className={`link-container ${
+            location.pathname === "/warranty"
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
+          }`}
+        >
+          {location.pathname === "/warranty" ? (
+            <WarrantyActive />
+          ) : (
+            <WarrantyInactive />
+          )}
+          <div
+            className={`body-medium leading-none ${
+              location.pathname === "/warranty"
+                ? "text-neutral-1 dark:text-neutral-9"
+                : "text-neutral-9 dark:text-neutral-1"
+            }`}
+          >
+            Warranty
+          </div>
+        </Link>
+        <Link
           to="/asset-management"
           className={`link-container ${
             location.pathname.startsWith("/asset-management")
-              ? "bg-blue-9 dark:bg-yellow-6"
-              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
           }`}
         >
           {location.pathname.startsWith("/asset-management") ? (
@@ -89,13 +115,13 @@ const LeftNav = () => {
           }`}>
             Asset Management
           </div>
-        </Link> */}
+        </Link>
         <Link
           to="/resources"
           className={`link-container ${
             location.pathname.startsWith("/resources")
-              ? "bg-blue-9 dark:bg-yellow-6"
-              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
           }`}
         >
           {location.pathname.startsWith("/resources") ? (
@@ -115,6 +141,7 @@ const LeftNav = () => {
         </Link>
       </div>
       <div className="absolute bottom-0 pb-2 w-[213.3px] body-medium text-neutral-9 dark:text-neutral-1">
+        <LoginUi />
         <div className="bg-white dark:bg-neutral-9 p-3 rounded-md">
           <div className="mb-4 title-small">Quick Links</div>
           <div className="flex flex-col gap-2">
@@ -122,7 +149,7 @@ const LeftNav = () => {
               href="https://wolverineaccess.umich.edu/launch-task/all/employee-self-service?taskReferrerCenterId=1700"
               target="blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
+              className="flex items-center gap-2 hover:bg-blue-1 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
               title="Clock in and out of work using the Time Reporting tab"
             >
               <img className="w-4 h-4" src={umichicon} alt="Umich Icon" />
@@ -132,7 +159,7 @@ const LeftNav = () => {
               href="http://umich-its-annarbor.slack.com/"
               target="blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
+              className="flex items-center gap-2 hover:bg-blue-1 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
               title="Information Technology Services Slack workspace"
             >
               <img className="w-4 h-4" src={slack_logo} alt="Slack Logo" />
@@ -142,7 +169,7 @@ const LeftNav = () => {
               href="https://teamdynamix.umich.edu/"
               target="blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
+              className="flex items-center gap-2 hover:bg-blue-1 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
               title="Ticket and asset management system"
             >
               <img className="w-4 h-4" src={tdxlogo} alt="TDX Logo" />
@@ -152,7 +179,7 @@ const LeftNav = () => {
               href="http://gsx2.apple.com/"
               target="blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
+              className="flex items-center gap-2 hover:bg-blue-1 dark:hover:bg-neutral-8 w-fit py-1 px-2 rounded-md"
               title="Apple Global Service Exchange login"
             >
               <img className="w-4 h-4" src={gsxicon} alt="GSX Icon" />
@@ -168,7 +195,7 @@ const LeftNav = () => {
             href="https://forms.gle/kb1CQuKLGzneFGRj8"
             target="blank"
             rel="noopener noreferrer"
-            className="hover:bg-blue-0 dark:hover:bg-neutral-9 w-fit py-1 px-2 rounded-md"
+            className="hover:bg-blue-1 dark:hover:bg-neutral-9 w-fit py-1 px-2 rounded-md"
             title="Feedback Form"
           >
             <div className="body-small">Feedback</div>
@@ -177,7 +204,7 @@ const LeftNav = () => {
             href="https://drive.google.com/drive/folders/1sVpM8OqohlyAYyO8vc_9vOE845Q3UEgG?usp=drive_link"
             target="blank"
             rel="noopener noreferrer"
-            className="hover:bg-blue-0 dark:hover:bg-neutral-9 w-fit py-1 px-2 rounded-md"
+            className="hover:bg-blue-1 dark:hover:bg-neutral-9 w-fit py-1 px-2 rounded-md"
             title="Dashboard Documentation"
           >
             <div className="body-small">Documentation</div>

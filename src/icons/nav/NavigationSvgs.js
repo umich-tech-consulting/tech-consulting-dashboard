@@ -29,6 +29,19 @@ export const AnnouncementsInactive = () => (
     </svg>
 );
 
+export const WarrantyActive = () => (
+    <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="warranty_active">
+        <title id="warranty_active">Warranty Active</title>
+        <path fillRule="evenodd" d="M10.43 1.808a.625.625 0 0 0-.86 0 9.34 9.34 0 0 1-6.564 2.567.625.625 0 0 0-.602.429 10.616 10.616 0 0 0-.529 3.32c0 4.952 3.387 9.112 7.97 10.29.101.027.209.027.31 0 4.583-1.178 7.97-5.338 7.97-10.29 0-1.158-.186-2.274-.53-3.32a.625.625 0 0 0-.6-.43h-.12a9.34 9.34 0 0 1-6.445-2.566Zm2.578 6.68a.624.624 0 1 0-1.016-.727l-2.697 3.776-1.353-1.354a.625.625 0 0 0-.884.883l1.875 1.875a.625.625 0 0 0 .95-.078l3.125-4.375Z" clipRule="evenodd"/>
+    </svg>
+);
+export const WarrantyInactive = () => (
+    <svg className="primary-nav-icon stroke-neutral-10 dark:stroke-neutral-1" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="warranty_inactive">
+        <title id="warranty_inactive">Warranty Inactive</title>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" d="M7.5 10.625 9.375 12.5 12.5 8.125M10 2.262A9.966 9.966 0 0 1 2.998 5 9.992 9.992 0 0 0 2.5 8.124c0 4.66 3.187 8.575 7.5 9.686 4.313-1.11 7.5-5.025 7.5-9.685A9.991 9.991 0 0 0 17.002 5h-.127A9.963 9.963 0 0 1 10 2.262Z"/>
+    </svg>
+);
+
 export const AssetManagementActive = () => (
     <svg className="primary-nav-icon fill-neutral-1 dark:fill-neutral-10" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-labelledby="asset_management_active">
         <title id="asset_management_active">Asset Management Active</title>
@@ -69,15 +82,21 @@ export const MobileLogo = () => (
 );
 
 export const HamburgerMenu = () => (
-    <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-labelledby="hamburger_menu">
+    <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" aria-labelledby="hamburger_menu">
         <title id="hamburger_menu">Open Menu</title>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
     </svg>
 );
 export const CloseMenu = () => (
-    <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-labelledby="close_menu">
+    <svg className="stroke-neutral-10 dark:stroke-neutral-1 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" aria-labelledby="close_menu">
         <title id="close_menu">Close Menu</title>
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
+);
+export const ChevronDown = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-neutral-9 dark:stroke-neutral-1" width="12" height="12" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth=".75" d="M9.75 4.125 6 7.875l-3.75-3.75"/></svg>
+);
+export const Signout = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" className="stroke-red-11 dark:stroke-red-6*"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.125" d="M6.188 6.75V3.937A1.687 1.687 0 0 1 7.875 2.25h4.5a1.687 1.687 0 0 1 1.688 1.688v10.124a1.687 1.687 0 0 1-1.688 1.688h-4.5a1.687 1.687 0 0 1-1.688-1.688V11.25M9 6.75 11.25 9m0 0L9 11.25M11.25 9H1.687"/></svg>
 );
 

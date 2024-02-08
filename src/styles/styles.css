@@ -202,7 +202,7 @@ code {
 /* ----------- Animation Styles End----------- */
 /* Home Styles Start */
 .homepage {
-  @apply bg-blue-9 w-full h-screen flex flex-col items-center;
+  @apply bg-blue-10* w-full h-screen flex flex-col items-center;
     background-image: url("../icons/home/homepage_background_four.jpg");
     background-attachment: fixed;
     /* background-position: center; */
@@ -238,7 +238,7 @@ code {
   @apply flex flex-wrap gap-4
 }
 .home-link {
-  @apply rounded-lg bg-[#00274C] dark:bg-yellow-6 hover:bg-[#002F5C] dark:hover:bg-yellow-5 p-3 w-56 text-center;
+  @apply rounded-lg bg-[#00274C] dark:bg-yellow-5* hover:bg-[#002F5C] dark:hover:bg-yellow-6 p-3 w-56 text-center;
 }
 @keyframes buttonPop {
   0% {
@@ -267,7 +267,10 @@ code {
 .home-link:nth-child(3) {
   animation-delay: .2s;
 }
-
+.c5 {
+  padding: 0px;
+  @apply bg-white dark:bg-black
+}
 /* Home Styles End */
 /* Announcements Styles Start */
 .announcement-bg {
@@ -296,7 +299,7 @@ code {
   @apply flex flex-wrap gap-6 title-medium text-neutral-9;
 }
 .am-landing-container-button {
-  @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
+  @apply bg-white dark:bg-neutral-9 dark:text-neutral-1 shadow-light dark:shadow-dark hover:bg-blue-1 dark:hover:bg-neutral-8 focus:bg-blue-2 hover:shadow-blue dark:hover:shadow-yellow items-center rounded-lg w-[200px] py-3 px-4 flex flex-col gap-2 text-left;
   transition: ease-out 400ms;
 }
 /* Default Management Component End */
@@ -321,7 +324,7 @@ code {
   @apply title-medium flex flex-col gap-2
 }
 .am-action-precheck-card-info {
-  @apply body-medium text-neutral-7 text-neutral-4
+  @apply body-medium text-neutral-7 dark:text-neutral-4
 
 }
 /* precheck Component End */
@@ -337,7 +340,7 @@ code {
   @apply flex flex-col gap-2 pb-6
 }
 .am-action-form-header {
-  @apply flex gap-2 items-center title-large dark:text-neutral-1
+  @apply flex gap-2 items-center title-large text-neutral-9 dark:text-neutral-1
 }
 .am-action-form-description {
   @apply text-neutral-7 body-medium dark:text-neutral-5
@@ -352,19 +355,19 @@ code {
   @apply body-medium flex justify-between flex-col;
 }
 .am-action-component-item-header {
-  @apply w-fit mb-2 body-medium flex items-center gap-1 dark:text-neutral-1;
+  @apply w-fit mb-2 body-medium flex items-center gap-1 text-neutral-9 dark:text-neutral-1;
 }
 .am-action-component-item-header img {
   @apply w-fit h-[14px];
 }
 .am-action-form-default {
-  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-9 dark:focus:ring-yellow-6 focus:ring-2 focus:outline-none
+  @apply bg-white dark:bg-neutral-9 rounded-md ring-1 ring-neutral-5 hover:ring-neutral-6 dark:ring-neutral-4 dark:hover:ring-neutral-3 focus:ring-blue-10* dark:focus:ring-yellow-5* focus:ring-2 focus:outline-none
 }
 .am-action-form-error {
-  @apply bg-white rounded-md ring-1 ring-red-5  focus:ring-red-5 focus:ring-2 focus:outline-none
+  @apply bg-white rounded-md ring-1 ring-red-6* focus:ring-red-6* focus:ring-2 focus:outline-none
 }
 .am-action-form-error-message {
-  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-10 dark:text-red-5
+  @apply min-h-[20px] mt-[4px] body-medium flex items-start gap-1 text-red-11 dark:text-red-6*
 }
 .am-action-form-error-message img {
   @apply mt-[2px]
@@ -452,7 +455,7 @@ code {
   @apply pt-9 p-3 md:p-9 w-full flex flex-col gap-12  h-fit md:h-full overflow-auto bg-base-light dark:bg-neutral-10
 }
 .am-action-success-header {
-  @apply headline-large text-blue-9 dark:text-yellow-6 flex items-center gap-2
+  @apply headline-large text-blue-10* dark:text-yellow-5* flex items-center gap-2
 }
 .am-action-success-next-steps-card-container {
   @apply flex flex-col gap-8
@@ -473,7 +476,7 @@ code {
   @apply flex flex-col gap-1 p-2
 }
 .am-action-success-summary-link {
-  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-0 dark:hover:bg-neutral-9 rounded-md
+  @apply flex flex-col gap-1 p-2 w-fit hover:bg-blue-1 dark:hover:bg-neutral-9 rounded-md
 }
 .am-action-success-summary-info-name {
   @apply text-[14px] font-normal text-neutral-8 dark:text-neutral-4;
@@ -489,7 +492,7 @@ code {
   @apply fixed md:absolute right-0 bottom-0 p-6
 }
 .am-action-success-close-button {
-  @apply block text-center w-[80px] rounded-full bg-blue-9 dark:bg-yellow-6 label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-8 dark:hover:bg-yellow-5
+  @apply block text-center w-[80px] rounded-full bg-blue-10* dark:bg-yellow-5* label-large p-[10px] text-white dark:text-neutral-10 hover:bg-blue-9 dark:hover:bg-yellow-6
 }
 @keyframes infoCardAnimation {
   0% {
@@ -531,7 +534,7 @@ code {
   @apply body-small flex-1 text-neutral-9 p-2 bg-neutral-2 dark:bg-neutral-8 hover:bg-neutral-3 dark:hover:bg-neutral-7 dark:text-neutral-1 rounded-full
 }
 .am-error-alert-tdx-button {
-  @apply body-small text-white dark:text-neutral-10 bg-blue-9 dark:bg-yellow-6 hover:bg-blue-8 dark:hover:bg-yellow-5 p-2 rounded-full flex-1 text-center
+  @apply body-small text-white dark:text-neutral-10 bg-blue-10* dark:bg-yellow-5* hover:bg-blue-9 dark:hover:bg-yellow-6 p-2 rounded-full flex-1 text-center
 }
 .am-error-alert-squirrel-container {
   @apply flex w-full justify-end
@@ -542,7 +545,7 @@ code {
 /* High Error Alert End */
 /* Uncaught Error Alert Start */
 .am-action-uncaught-error-alert {
-  @apply body-medium bg-red-0 dark:bg-red-10 text-red-10 dark:text-red-1 p-3 rounded-md flex items-start gap-3 mt-6
+  @apply body-medium bg-red-1 dark:bg-red-11 text-neutral-8 p-3 rounded-md flex items-start gap-3 mt-6
 }
 .am-action-uncaught-error-alert img {
   @apply h-5 w-5
@@ -572,7 +575,7 @@ code {
 
 /* Resource Landing Tabgroups Start */
 .r-landing-tabgroups {
-  @apply p-3 lg:w-60 sm:w-[48%] w-full flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
+  @apply p-3 lg:w-60 sm:w-[48%] w-full flex items-center gap-3 shadow-light dark:shadow-dark bg-white dark:bg-neutral-9 hover:bg-blue-1 dark:hover:bg-neutral-8 focus:bg-blue-2 hover:shadow-blue dark:hover:shadow-yellow rounded-lg title-small text-neutral-9 dark:text-neutral-1;
   transition: ease-out 400ms;
 }
 /* Resource Landing Tabgroups End */
@@ -585,10 +588,10 @@ code {
 
 /* Resource Landing Search Start */
 .r-landing-search {
-  @apply relative mt-14 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
+  @apply relative mt-14 mb-6 w-full border border-blue-10* dark:border-yellow-5* rounded-lg
 }
 .r-landing-search input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10* dark:focus:ring-yellow-5* dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-landing-search-clear {
   @apply absolute top-0 right-0 flex items-center justify-center h-full p-2
@@ -606,7 +609,7 @@ code {
   @apply flex flex-col lg:flex-row gap-4
 }
 .r-landing-categories-card {
-  @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1;
+  @apply flex-1 flex shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-4 hover:bg-blue-1 dark:hover:bg-neutral-8 focus:bg-blue-2 text-neutral-9 dark:text-neutral-1;
   transition: ease-out 200ms;
 }
 .r-landing-categories-card img {
@@ -616,23 +619,23 @@ code {
   @apply body-medium
 }
 .r-landing-categories-training-card {
-  @apply flex items-center lg:justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-0 dark:hover:bg-neutral-8 focus:bg-blue-1 text-neutral-9 dark:text-neutral-1 title-large;
+  @apply flex items-center lg:justify-center shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 p-3 rounded-md gap-2 hover:bg-blue-1 dark:hover:bg-neutral-8 focus:bg-blue-2 text-neutral-9 dark:text-neutral-1 title-large;
   transition: ease-out 400ms;
 }
 /* Resource Landing Categories End */
 
 /* Resource GroupBuilder Start */
 .r-groupbuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1
+  @apply text-neutral-7 dark:text-neutral-4 max-w-3xl flex min-w-full overflow-auto gap-1 body-large
 }
 .r-groupbuilder-container {
   @apply max-w-3xl w-full
 }
 .r-groupbuilder-searchbox {
-  @apply relative mt-8 mb-8 w-full border border-blue-9 dark:border-yellow-6 rounded-lg
+  @apply relative mt-8 mb-8 w-full border border-blue-10* dark:border-yellow-5* rounded-lg
 }
 .r-groupbuilder-searchbox input {
-  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-9 dark:focus:ring-yellow-6 dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
+  @apply w-full pl-10 rounded-lg p-3 bg-white dark:bg-neutral-9 body-medium pr-12 focus:outline-blue-10* dark:focus:ring-yellow-5* dark:focus:ring dark:focus-visible:outline-none text-neutral-9 dark:text-neutral-1
 }
 .r-groupbuilder-searchbox-clear {
   @apply absolute top-0 right-0 h-full p-2
@@ -641,7 +644,7 @@ code {
 
 /* Resource CategoryBuilder Start */
 .r-categorybuilder-nav {
-  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1
+  @apply text-neutral-7 dark:text-neutral-4 w-full max-w-3xl flex gap-1 body-large
 }
 .r-categorybuilder-container {
   @apply max-w-3xl w-full text-neutral-9 dark:text-neutral-1
@@ -653,11 +656,11 @@ code {
   @apply flex flex-col gap-4
 }
 .r-individual-link {
-  @apply shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 rounded-md p-4 hover:bg-blue-0 dark:hover:bg-neutral-8;
+  @apply shadow-light dark:shadow-dark hover:shadow-blue dark:hover:shadow-yellow bg-white dark:bg-neutral-9 rounded-md p-4 hover:bg-blue-1 dark:hover:bg-neutral-8;
   transition: ease-out 400ms;
 }
 .r-individual-link-name {
-  @apply title-medium text-blue-9 dark:text-yellow-6 mb-2
+  @apply title-medium text-blue-10* dark:text-yellow-5* mb-2
 }
 .r-individual-link-description {
   @apply body-medium text-neutral-9 dark:text-neutral-1
