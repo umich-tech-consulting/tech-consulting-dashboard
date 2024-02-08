@@ -20,6 +20,7 @@ import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder'
 import ScrollToTop from './components/ScrollTop';
 // Auth
 import AuthCallback from './utils/AuthCallback';
+import PrivateRoute from './utils/PrivateRoute';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
           <Route index element={<Home />} />
 
           <Route path="redirect_uri" element={<AuthCallback />} />
+          {/* <Route
+            path="asset-management"
+            element={<PrivateRoute component={AssetManagementLanding} />}
+          /> */}
+          <PrivateRoute component={AssetManagementLanding} />
 
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
