@@ -5,12 +5,9 @@ import './styles/styles.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from 'react-oidc-context';
+import { IDENTITY_CONFIG } from './utils/AuthConst';
 
-const oidcConfig = {
-  authority: "https://shibboleth.umich.edu/.well-known/openid-configuration",
-  client_id: "4d9cbf8b-41fb-41bc-8fb8-a633f40e512b",
-  redirect_uri: "https://tech-consulting.it.umich.edu/redirect_uri"
-}
+
 
 // ReactDOM.render(
 //   <AuthProvider {...oidcConfig}>
@@ -21,7 +18,7 @@ const oidcConfig = {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthProvider {...oidcConfig}>
+    <AuthProvider {...IDENTITY_CONFIG}>
         <App />
     </AuthProvider>
   </React.StrictMode>

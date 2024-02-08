@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 import Home from './pages/Home';
@@ -18,10 +18,12 @@ import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
 import ScrollToTop from './components/ScrollTop';
+// Auth
+import AuthCallback from './utils/AuthCallback';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div>
         <Helmet>
           <title>Asset Management</title>
@@ -30,6 +32,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+
+          <Route path="redirect_uri" element={<AuthCallback />} />
+
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
           <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />
@@ -45,7 +50,7 @@ function App() {
         </Route>
       </Routes>
       <ScrollToTop />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
