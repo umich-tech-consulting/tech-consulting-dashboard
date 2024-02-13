@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
@@ -19,9 +19,38 @@ import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
 import ScrollToTop from './components/ScrollTop';
 // Auth
-import AuthCallback from './utils/AuthCallback';
+import { UserManager, WebStorageStateStore } from "oidc-client-ts";
+import authConfig from "./authConfig";
+import Login from "./components/Login";
+import Callback from "./components/Callback";
 
 function App() {
+  const userManager = new UserManager({
+    userStore: new WebStorageStateStore({ store: window.localStorage }),
+    ...authConfig,
+  });
+
+  function authorize() {
+    userManager.signinRedirect({ state: "a2123a67ff11413fa19217a9ea0fbad5" });
+  }
+
+  function clearAuth() {
+    userManager.signoutRedirect();
+  }
+
+  const [authenticated, setAuthenticated] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    userManager.getUser().then((user) => {
+      if (user) {
+        setAuthenticated(true);
+      } else {
+        setAuthenticated(false);
+      }
+    });
+  }, [userManager]);
+
   return (
     <BrowserRouter>
       <div>
@@ -32,9 +61,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-
-          <Route path="redirect_uri" element={<AuthCallback />} />
-
+          <Route
+            path="/login"
+            element={<Login auth={authenticated} handleLogin={authorize} />}
+          />
+          <Route
+            path="/redirect_uri"
+            element={
+              <Callback
+                auth={authenticated}
+                setAuth={setAuthenticated}
+                userInfo={userInfo}
+                setUserInfo={setUserInfo}
+                handleLogout={clearAuth}
+                userManager={userManager}
+              />
+            }
+          />
           <Route path="asset-management" element={<AssetManagementLanding />} />
           <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
           <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />

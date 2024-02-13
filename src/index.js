@@ -4,8 +4,6 @@ import './styles/normalize.css';
 import './styles/styles.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AuthProvider } from 'react-oidc-context';
-import { IDENTITY_CONFIG } from './utils/AuthConst';
 
 
 
@@ -18,9 +16,7 @@ import { IDENTITY_CONFIG } from './utils/AuthConst';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthProvider {...IDENTITY_CONFIG}>
         <App />
-    </AuthProvider>
   </React.StrictMode>
 );
 
