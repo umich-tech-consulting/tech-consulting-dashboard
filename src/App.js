@@ -17,6 +17,8 @@ import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
 import ScrollToTop from './components/ScrollTop';
+import Mcards from './pages/Mcards'
+
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route path="asset-management/swap" element={<AssetManagementSwap />} />
           <Route path="asset-management/program-overview" element={<ProgramOverview />} />
           <Route path="announcements" element={<Announcements />} />
+          <Route path="mcards" element={<Mcards />} />
           <Route path="resources/" element={<ResourcesLanding />} />
           <Route path="resources/:category" element={<ResourceCategoryBuilder />} />
           <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />

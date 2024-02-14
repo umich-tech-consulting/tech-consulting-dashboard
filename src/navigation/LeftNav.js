@@ -5,6 +5,8 @@ import {
   HomeActive,
   AnnouncementsInactive,
   AnnouncementsActive,
+  McardActive,
+  McardInactive,
   // AssetManagementActive,
   // AssetManagementInactive,
   Logo,
@@ -69,27 +71,27 @@ const LeftNav = () => {
             Announcements
           </div>
         </Link>
-        {/* <Link
-          to="/asset-management"
+        <Link
+          to="/mcards"
           className={`link-container ${
-            location.pathname.startsWith("/asset-management")
+            location.pathname.startsWith("/mcards")
               ? "bg-blue-9 dark:bg-yellow-6"
               : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
           }`}
         >
-          {location.pathname.startsWith("/asset-management") ? (
-            <AssetManagementActive />
+          {location.pathname.startsWith("/mcards") ? (
+            <McardActive />
           ) : (
-            <AssetManagementInactive />
+            <McardInactive />
           )}
           <div className={`body-medium leading-none ${
-            location.pathname.startsWith("/asset-management")
+            location.pathname.startsWith("/mcards")
               ? "text-neutral-1 dark:text-neutral-9"
               : "text-neutral-9 dark:text-neutral-1"
           }`}>
-            Asset Management
+            Mcards
           </div>
-        </Link> */}
+        </Link>
         <Link
           to="/resources"
           className={`link-container ${
