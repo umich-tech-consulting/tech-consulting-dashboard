@@ -9,6 +9,8 @@ import {
   WarrantyActive,
   AssetManagementActive,
   AssetManagementInactive,
+  McardActive,
+  McardInactive,
   Logo,
   ResourcesActive,
   ResourceInactive,
@@ -137,6 +139,29 @@ const LeftNav = () => {
             }`}
           >
             Resources
+          </div>
+        </Link>
+        <Link
+          to="/mcards"
+          className={`link-container ${
+            location.pathname.startsWith("/mcards")
+              ? "bg-blue-10* dark:bg-yellow-5*"
+              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-1 dark:hover:bg-neutral-9"
+          }`}
+        >
+          {location.pathname.startsWith("/mcards") ? (
+            <McardActive />
+          ) : (
+            <McardInactive />
+          )}
+          <div
+            className={`body-medium leading-none ${
+              location.pathname.startsWith("/mcards")
+                ? "text-neutral-1 dark:text-neutral-9"
+                : "text-neutral-9 dark:text-neutral-1"
+            }`}
+          >
+            Mcards
           </div>
         </Link>
       </div>

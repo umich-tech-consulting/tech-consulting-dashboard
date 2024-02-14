@@ -90,6 +90,13 @@ const MobileNav = () => {
             >
               Resources
             </Link>
+            <Link
+              to="/mcards"
+              className="headline-large hover:text-blue-10* dark:hover:text-yellow-5*"
+              onClick={toggleMobileNav}
+            >
+              Mcards
+            </Link>
           </div>
           <div className="flex flex-col gap-4 mt-8 headline-small">
             <div className="title-medium text-neutral-7 dark:text-neutral-4 mt-8">

@@ -17,46 +17,47 @@ import Announcements from './pages/Announcements';
 import ResourcesLanding from './pages/Resources/ResourcesLanding';
 import ResourceGroupBuilder from './pages/Resources/ResourcesGroupBuilder';
 import ResourceCategoryBuilder from './pages/Resources/ResourcesCategoryBuilder';
+import Mcards from './pages/Mcards'
 import ScrollToTop from './components/ScrollTop';
 // Auth
-import AuthCallback from './utils/AuthCallback';
-import PrivateRoute from './utils/PrivateRoute';
+// import AuthCallback from './utils/AuthCallback';
+// import PrivateRoute from './utils/PrivateRoute';
+// import OidcProvider from '@axa-fr/react-oidc';
+// import AuthConst from './utils/AuthConst';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Helmet>
-          <title>Asset Management</title>
-        </Helmet>
-      </div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+    // <OidcProvider configuration={AuthConst}>
+      <BrowserRouter>
+        <div>
+          <Helmet>
+            <title>Asset Management</title>
+          </Helmet>
+        </div>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
 
-          <Route path="redirect_uri" element={<AuthCallback />} />
-          {/* <Route
-            path="asset-management"
-            element={<PrivateRoute component={AssetManagementLanding} />}
-          /> */}
-          <PrivateRoute component={AssetManagementLanding} />
+            {/* <Route path="redirect_uri" element={<AuthCallback />} /> */}
 
-          <Route path="asset-management" element={<AssetManagementLanding />} />
-          <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
-          <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />
-          <Route path="asset-management/return" element={<AssetManagementReturn />} />
-          <Route path="asset-management/return/success" element={<ReturnSubmitSuccess />} />
-          <Route path="asset-management/swap" element={<AssetManagementSwap />} />
-          <Route path="asset-management/program-overview" element={<ProgramOverview />} />
-          <Route path="announcements" element={<Announcements />} />
-          <Route path="warranty" element={<Warranty />} />
-          <Route path="resources/" element={<ResourcesLanding />} />
-          <Route path="resources/:category" element={<ResourceCategoryBuilder />} />
-          <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />
-        </Route>
-      </Routes>
-      <ScrollToTop />
-    </BrowserRouter>
+            <Route path="asset-management" element={<AssetManagementLanding />} />
+            <Route path="asset-management/checkout" element={<AssetManagementCheckOut />} />
+            <Route path="asset-management/checkout/success" element={<CheckoutSubmitSuccess />} />
+            <Route path="asset-management/return" element={<AssetManagementReturn />} />
+            <Route path="asset-management/return/success" element={<ReturnSubmitSuccess />} />
+            <Route path="asset-management/swap" element={<AssetManagementSwap />} />
+            <Route path="asset-management/program-overview" element={<ProgramOverview />} />
+            <Route path="announcements" element={<Announcements />} />
+            <Route path="warranty" element={<Warranty />} />
+            <Route path="resources/" element={<ResourcesLanding />} />
+            <Route path="resources/:category" element={<ResourceCategoryBuilder />} />
+            <Route path="resources/:category/:group" element={<ResourceGroupBuilder />} />
+            <Route path="mcards/" element={<Mcards />} />
+          </Route>
+        </Routes>
+        <ScrollToTop />
+      </BrowserRouter>
+    // </OidcProvider>
   );
 }
 
