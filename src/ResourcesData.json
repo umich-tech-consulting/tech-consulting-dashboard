@@ -319,6 +319,11 @@
         "description": "Information Technology Services Slack workspace"
       },
       {
+        "name": "Mcard Supplies Inventory",
+        "url": "https://docs.google.com/spreadsheets/d/1lzOVpVnS51avTbWCqGroFvYq1Zru78NMGAGWh4HBUDw/edit#gid=1972638685",
+        "description": "Mcard Supplies Inventory Spreadsheet"
+      },
+      {
         "name": "GSX Login",
         "url": "http://gsx2.apple.com/",
         "description": "Apple Global Service Exchange login"
