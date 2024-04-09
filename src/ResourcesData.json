@@ -275,6 +275,11 @@
         "description": "Info about S@H asset, ticket, and device management"
       },
       {
+        "name": "Wipe Sites at Home",
+        "url": "https://docs.google.com/document/d/1dTGTD5ql6tZMZH_zavjax_OavAtp9BDCuaa3HhmZK8g/edit#heading=h.qwjm7r98p4rl",
+        "description": "How to Wipe a Sites at Home laptop"
+      },
+      {
         "name": "Checkout a Tech Repair Order (MyLinc)",
         "url": "https://mylinccontent.dsc.umich.edu/mais/html/TechShop_CheckoutTechRepairOrder.html",
         "description": "Step-by-step procedure demonstrating how to checkout a Tech Repair order using the Point of Sale (POS) application"
