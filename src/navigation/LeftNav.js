@@ -71,27 +71,29 @@ const LeftNav = () => {
             Announcements
           </div>
         </Link>
-        <Link
-          to="/mcards"
-          className={`link-container ${
-            location.pathname.startsWith("/mcards")
-              ? "bg-blue-9 dark:bg-yellow-6"
-              : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
-          }`}
-        >
-          {location.pathname.startsWith("/mcards") ? (
-            <McardActive />
-          ) : (
-            <McardInactive />
-          )}
-          <div className={`body-medium leading-none ${
-            location.pathname.startsWith("/mcards")
-              ? "text-neutral-1 dark:text-neutral-9"
-              : "text-neutral-9 dark:text-neutral-1"
-          }`}>
-            Mcards
-          </div>
-        </Link>
+        {/*
+          <Link
+            to="/mcards"
+            className={`link-container ${
+              location.pathname.startsWith("/mcards")
+                ? "bg-blue-9 dark:bg-yellow-6"
+                : "bg-base-light dark:bg-neutral-10 hover:bg-blue-0 dark:hover:bg-neutral-9"
+            }`}
+          >
+            {location.pathname.startsWith("/mcards") ? (
+              <McardActive />
+            ) : (
+              <McardInactive />
+            )}
+            <div className={`body-medium leading-none ${
+              location.pathname.startsWith("/mcards")
+                ? "text-neutral-1 dark:text-neutral-9"
+                : "text-neutral-9 dark:text-neutral-1"
+            }`}>
+              Mcards
+            </div>
+          </Link>
+        */}
         <Link
           to="/resources"
           className={`link-container ${
