@@ -125,6 +125,23 @@
   },
   {
     "category": "Customer Support",
+    "group": "Mcard",
+    "icon": "umich",
+    "links": [
+      {
+        "name": "Mcard Policies",
+        "url": "https://docs.google.com/document/d/1w-0JIqzOQRH8SPavMOEkZ8T6tgA4P7KKaWpKzQPpM98",
+        "description": "Mcard policies to follow at the Union Tech Shop"
+      },
+      {
+        "name": "Mcard Procedures",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vQcjbHcRQhTNcALgvYk4N3lCgmEIwyY6ahU6jGVkT3PZumhIQLykIWY94XRCnT5Ka-NH2-gP0BR1TKz/embed#slide=id.g2b0f85a1b27_1_55",
+        "description": "Mcard procedures to follow at the Union Tech Shop"
+      },
+    ]
+  }
+  {
+    "category": "Customer Support",
     "group": "Repairs & Loaners",
     "icon": "tools",
     "links": [
