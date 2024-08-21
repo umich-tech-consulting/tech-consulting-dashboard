@@ -142,6 +142,11 @@
         "name": "Additional Mcard Documentation",
         "url": "https://um-mcard.dsc.umich.edu/idstations/",
         "description": "Official Mcard documentation"
+      },
+      {
+        "name": "Mcard Account Unlock and Password Reset",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=x~GX5to7sf0_&RequestorType=Service",
+        "description": "Reset your Mcard password or unlock your Mcard account"
       }
     ]
   },
