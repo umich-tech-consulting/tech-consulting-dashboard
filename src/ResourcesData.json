@@ -52,6 +52,11 @@
     "icon": "fishbowl",
     "links": [
       {
+        "name": "Fishbowl Poster Printing",
+        "url": "https://docs.google.com/document/d/1iMsGjhiuaN9A7lJpKn2yKvnZoiH0VEkGk20a1nXkYXo/edit",
+        "description": "Guide that explains how to print a poster at Fishbowl"
+      },
+      {
         "name": "Fishbowl Instructor Station Guide",
         "url": "https://docs.google.com/document/d/1szQqdrahOqV9boghvz6PeFiMfD_DbLjJciF6TKwXZMA/edit",
         "description": "Guide that explains how instructors can use the Fishbowl hardware to teach classes"
