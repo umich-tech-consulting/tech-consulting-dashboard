@@ -161,6 +161,11 @@
     "icon": "tools",
     "links": [
       {
+        "name": "Tech Repair Macbook Keyboard Replacement",
+        "url": "https://docs.google.com/document/d/1sWeGDYFiYOxK1DJKr-7W1Pvx6vsMdfjF_P_oPT-zH2Y/edit?tab=t.0",
+        "description": "Information on Macbook key and keycap replacements"
+      },
+      {
         "name": "Tech Repair Loaner Program",
         "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit",
         "description": "Information on loaners for Customer Supports while their devices are being repaired"
