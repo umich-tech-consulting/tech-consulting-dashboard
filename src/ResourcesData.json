@@ -161,6 +161,11 @@
     "icon": "tools",
     "links": [
       {
+        "name": "Sites at Home Charger Replacement",
+        "url": "https://docs.google.com/document/d/1YZN8Gzqew2U8A-EnmTQDcWK8VgX0i-IQrsWJrxsXJng",
+        "description": "How to replace chargers for Sites at Home laptops"
+      },
+      {
         "name": "Tech Repair Macbook Keycap Replacement",
         "url": "https://docs.google.com/document/d/1sWeGDYFiYOxK1DJKr-7W1Pvx6vsMdfjF_P_oPT-zH2Y/edit?tab=t.0",
         "description": "Information on Macbook key and keycap replacements"
@@ -217,11 +222,6 @@
     "group": "UMICH",
     "icon": "umich",
     "links": [
-      {
-        "name": "Sites at Home Charger Replacementt",
-        "url": "https://docs.google.com/document/d/1YZN8Gzqew2U8A-EnmTQDcWK8VgX0i-IQrsWJrxsXJng",
-        "description": "How to replace chargers for Sites at Home laptops"
-      },
       {
         "name": "Campus Computing Software List",
         "url": "https://its.umich.edu/computing/computers-software/campus-computing-sites/software",
