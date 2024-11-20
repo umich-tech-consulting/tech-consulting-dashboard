@@ -173,7 +173,7 @@
       {
         "name": "Tech Repair Loaner Program",
         "url": "https://docs.google.com/document/d/1vA9l_knpk60tbScaJHLJedfAJLOhEhQcyK51UgmaQ2U/edit",
-        "description": "Information on loaners for Customer Supports while their devices are being repaired"
+        "description": "Information on loaners for customers while their devices are being repaired"
       },
       {
         "name": "Tech Repair Services",
@@ -196,9 +196,9 @@
         "description": "Digital Signage information about data transfer turnaround times"
       },
       {
-        "name": "Loaner Attestation Form",
+        "name": "Non-affiliate Repair Form",
         "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service",
-        "description": "Form Customer Supports need to fill out to obtain a loaner"
+        "description": "Repair form for non-affiliates, does not include loaner agreement"
       },
       {
         "name": "Repair Ticket Guide",
