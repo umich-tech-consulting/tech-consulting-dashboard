@@ -52,6 +52,11 @@
     "icon": "fishbowl",
     "links": [
       {
+        "name": "Fishbowl Classroom AV Guide",
+        "url": "https://docs.google.com/document/d/1aa2bkGcaPxQOM3meSzRYigMaLm91Uk6Jtc4KLuYZHX8",
+        "description": "Guide that explains how to use classroom AV equipment in Fishbowl classrooms"
+      },
+      {
         "name": "Fishbowl Poster Printing",
         "url": "https://docs.google.com/document/d/1iMsGjhiuaN9A7lJpKn2yKvnZoiH0VEkGk20a1nXkYXo/edit",
         "description": "Guide that explains how to print a poster at Fishbowl"
