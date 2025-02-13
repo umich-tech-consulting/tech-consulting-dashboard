@@ -53,7 +53,7 @@
     "links": [
       {
         "name": "Fishbowl Printer Status",
-        "url": "https://mprint.umich.edu/beta/info#status=Deactivated;search=g440;environment=Campus%20Computing%20Sites",
+        "url": "https://mprint.umich.edu/info#status=Deactivated;search=g440;environment=Campus%20Computing%20Sites",
         "description": "Status of Printers in the Fishbowl"
       },
       {
