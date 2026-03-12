@@ -162,6 +162,11 @@
         "name": "Mcard Account Unlock and Password Reset",
         "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=x~GX5to7sf0_&RequestorType=Service",
         "description": "Reset your Mcard password or unlock your Mcard account"
+      },
+      {
+        "name": "Mcard Lost and Found Card Form",
+        "url": "https://teamdynamix.umich.edu/TDClient/40/Portal/Requests/TicketRequests/NewForm?ID=uoo8eq0AulU_&RequestorType=Service",
+        "description": "Notify a cardholder that their card has been found and turned in"
       }
     ]
   },
