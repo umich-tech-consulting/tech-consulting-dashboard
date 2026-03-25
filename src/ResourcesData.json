@@ -229,6 +229,26 @@
         "name": "Wipe and reinstall MacOS for loaners (Intel Silicon)",
         "url": "https://support.apple.com/en-us/HT208496",
         "description": "How to erase (format) the built-in startup disk of an Intel-based Mac"
+      },
+      {
+        "name": "Sites at Home Pick Up Form",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomepickup?__cust=umich",
+        "description": "Form used to assign a Sites at Home loaner device to an authorized user"
+      },
+      {
+        "name": "Sites at Home Return Form",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomereturn?__cust=umich",
+        "description": "Form used to accept a Sites at Home return"
+      },
+      {
+        "name": "Sites at Home Swap Form",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomeswap?__cust=umich",
+        "description": "Form used to swap an On Loan device that is having issues with a working device"
+      },
+      {
+        "name": "Sites at Home Extension Form",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomeextension?__cust=umich",
+        "description": "Form used to extend an existing Sites at Home loan"
       }
     ]
   },
