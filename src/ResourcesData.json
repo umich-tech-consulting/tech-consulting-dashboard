@@ -252,7 +252,7 @@
       },
       {
         "name": "Sites at Home Damaged Device Form",
-        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomedamage?__cust=umich",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomedamaged?__cust=umich",
         "description": "Form used to dispo a damaged Sites at Home device"
       }
     ]
