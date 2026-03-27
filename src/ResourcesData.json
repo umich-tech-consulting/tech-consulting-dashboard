@@ -249,6 +249,11 @@
         "name": "Sites at Home Extension Form",
         "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomeextension?__cust=umich",
         "description": "Form used to extend an existing Sites at Home loan"
+      },
+      {
+        "name": "Sites at Home Damaged Device Form",
+        "url": "https://us1.teamdynamix.com/tdapp/form/sitesathomedamage?__cust=umich",
+        "description": "Form used to dispo a damaged Sites at Home device"
       }
     ]
   },
