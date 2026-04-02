@@ -276,6 +276,11 @@
         "name": "Union Opening and Closing Procedures",
         "url": "https://docs.google.com/document/d/13Z23nDJoa5uAn23juOmG9TcrFF8lbWGEFtby4qMpZ4w",
         "description": "How to open and close the Union Tech Shop for Consultants"
+      },
+      {
+        "name": "Okta Temporary Access Code Request",
+        "url": "https://us1.teamdynamix.com/tdapp/form/oktatacrequest?__cust=umich",
+        "description": "Request a bypass code for Okta walk-up support"
       }
     ]
   },
