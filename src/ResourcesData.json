@@ -281,6 +281,11 @@
         "name": "Okta Temporary Access Code Request",
         "url": "https://us1.teamdynamix.com/tdapp/form/oktatacrequest?__cust=umich",
         "description": "Request a bypass code for Okta walk-up support"
+      },
+      {
+        "name": "Okta Self Service Recovery",
+        "url": "https://recovery.it.umich.edu",
+        "description": "Persona Okta Self Service Recovery for Students"
       }
     ]
   },
