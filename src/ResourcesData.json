@@ -144,6 +144,11 @@
     "icon": "umich",
     "links": [
       {
+        "name": "MCard Troubleshooting",
+        "url": "https://its.umich.edu/enterprise/administrative-systems/mcard/troubleshooting",
+        "description": "Key troubleshooting resources for MCard printing"
+      },
+      {
         "name": "Mcard Policies",
         "url": "https://docs.google.com/document/d/1w-0JIqzOQRH8SPavMOEkZ8T6tgA4P7KKaWpKzQPpM98",
         "description": "Mcard policies to follow at the Union Tech Shop"
@@ -167,11 +172,6 @@
         "name": "Mcard Lost and Found Card Form",
         "url": "https://teamdynamix.umich.edu/TDClient/40/Portal/Requests/TicketRequests/NewForm?ID=uoo8eq0AulU_&RequestorType=Service",
         "description": "Notify a cardholder that their card has been found and turned in"
-      },
-      {
-        "name": "MCard Troubleshooting",
-        "url": "https://its.umich.edu/enterprise/administrative-systems/mcard/troubleshooting",
-        "description": "Key troubleshooting resources for MCard printing"
       }
     ]
   },
