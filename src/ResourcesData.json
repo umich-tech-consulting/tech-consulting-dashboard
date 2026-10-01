@@ -5,6 +5,11 @@
     "icon": "apple",
     "links": [
       {
+        "name": "Apple Repair Check In Guide",
+        "url": "https://docs.google.com/document/d/1Ys7Lj8csj4m0M9uqMkjbJo3pZ5JyTfItANgRJt6wYhQ/edit?usp=sharing",
+        "description": "Guide to Ready for Repair/Find My Device requirements for Apple Repair Check-ins"
+      },
+      {
         "name": "How to reset NVRAM on a Mac",
         "url": "https://support.apple.com/en-us/HT204063",
         "description": "If one or more settings stored in NVRAM don't work as expected on an Intel-based Mac, resetting NVRAM might help."
