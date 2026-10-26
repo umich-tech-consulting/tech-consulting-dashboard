@@ -169,6 +169,11 @@
         "description": "Official Mcard documentation"
       },
       {
+        "name": "McardConnect Record Search",
+        "url": "https://mcardconnect.it.umich.edu/Admin/MCardRecordSearch",
+        "description": "Approve photos and lookup MCard records"
+      },
+      {
         "name": "Mcard Account Unlock and Password Reset",
         "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=x~GX5to7sf0_&RequestorType=Service",
         "description": "Reset your Mcard password or unlock your Mcard account"
