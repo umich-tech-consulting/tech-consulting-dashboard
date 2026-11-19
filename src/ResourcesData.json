@@ -226,6 +226,11 @@
         "description": "Digital Signage information about data transfer turnaround times"
       },
       {
+        "name": "Affiliate Repair Form",
+        "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/Service/286/ITS-Tech-Help/Request",
+        "description": "Repair form for university affiliates, includes loaner agreement"
+      },
+      {
         "name": "Non-affiliate Repair Form",
         "url": "https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=9ux%7eRsVVoK8_&RequestorType=Service",
         "description": "Repair form for non-affiliates, does not include loaner agreement"
